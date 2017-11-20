@@ -1,0 +1,165 @@
+/*CREATE TABLE joc_tip (
+joc_tip_id INT NOT NULL,
+nume VARCHAR(45) NOT NULL,
+descriere VARCHAR(45) NOT NULL,
+PRIMARY KEY (joc_tip_id),
+CONSTRAINT joc_tip_nume UNIQUE (nume));*/
+
+/*CREATE TABLE joc_categorie (
+joc_categorie_id INT NOT NULL,
+nume VARCHAR(45) NOT NULL,
+descriere VARCHAR(45) NOT NULL,
+PRIMARY KEY (joc_categorie_id),
+CONSTRAINT joc_categorie_nume UNIQUE (nume));*/
+
+/*CREATE TABLE joc_numar_jucatori (
+joc_numar_jucatori_id INT NOT NULL,
+valoare VARCHAR(2) NOT NULL,
+descriere VARCHAR(45) NOT NULL,
+PRIMARY KEY (joc_numar_jucatori_id),
+CONSTRAINT joc_numar_jucatori_valoare UNIQUE (valoare));*/
+
+/*CREATE TABLE joc_producator (
+joc_producator_id INT NOT NULL,
+nume VARCHAR(45) NOT NULL,
+tara VARCHAR(45) NOT NULL,
+PRIMARY KEY (joc_producator_id),
+CONSTRAINT joc_producator_nume UNIQUE (nume));*/
+
+/*CREATE TABLE adresa (
+adresa_id INT NOT NULL,
+strada VARCHAR(45) NOT NULL,
+numar VARCHAR(5) NOT NULL,
+oras VARCHAR(45) NOT NULL,
+PRIMARY KEY (adresa_id));*/
+
+/*CREATE TABLE client (
+client_id INT NOT NULL,
+nume VARCHAR(45) NOT NULL,
+telefon NUMBER(10) NOT NULL,
+email VARCHAR(45) NOT NULL,
+adresa INT NOT NULL,
+PRIMARY KEY (client_id),
+FOREIGN KEY (adresa) REFERENCES adresa(adresa_id));*/
+
+/*CREATE TABLE factura_client (
+factura_client_id INT NOT NULL,
+data_inceput DATE NOT NULL,
+data_sfarsit DATE NOT NULL,
+data_returnare DATE NOT NULL, 
+client_id INT NOT NULL,
+PRIMARY KEY (factura_client_id),
+FOREIGN KEY (client_id) REFERENCES client(client_id));*/
+
+/*CREATE TABLE joc_evaluare (
+joc_evaluare_id INT NOT NULL,
+nota NUMBER(1) NOT NULL,
+client_id INT NOT NULL,
+PRIMARY KEY (joc_evaluare_id),
+FOREIGN KEY (client_id) REFERENCES client(client_id));*/
+
+/*CREATE TABLE joc (
+joc_id INT NOT NULL,
+nume VARCHAR(128) NOT NULL,
+imagine VARCHAR2(256) NOT NULL,
+descriere VARCHAR2(500) NOT NULL, 
+an_publicare INT NOT NULL,
+joc_categorie_id INT NOT NULL,
+joc_producator_id INT NOT NULL,
+joc_tip_id INT NOT NULL,
+joc_numar_jucatori_id INT NOT NULL,
+joc_evaluare_id INT NOT NULL,
+PRIMARY KEY (joc_id),
+FOREIGN KEY (joc_categorie_id) REFERENCES joc_categorie(joc_categorie_id),
+FOREIGN KEY (joc_producator_id) REFERENCES joc_producator(joc_producator_id),
+FOREIGN KEY (joc_tip_id) REFERENCES joc_tip(joc_tip_id),
+FOREIGN KEY (joc_numar_jucatori_id) REFERENCES joc_numar_jucatori(joc_numar_jucatori_id),
+FOREIGN KEY (joc_evaluare_id) REFERENCES joc_evaluare(joc_evaluare_id));*/
+
+/*CREATE TABLE magazin (
+magazin_id INT NOT NULL,
+nume VARCHAR2(64) NOT NULL,
+adresa_id INT NOT NULL,
+PRIMARY KEY (magazin_id),
+FOREIGN KEY (adresa_id) REFERENCES adresa(adresa_id));*/
+
+/*CREATE TABLE imprumut_joc (
+imprumut_joc_id INT NOT NULL,
+joc_id INT NOT NULL,
+magazin_id INT NOT NULL,
+factura_client_id INT NOT NULL,
+PRIMARY KEY (magazin_id),
+FOREIGN KEY (joc_id) REFERENCES joc(joc_id),
+FOREIGN KEY (magazin_id) REFERENCES magazin(magazin_id),
+FOREIGN KEY (factura_client_id) REFERENCES factura_client(factura_client_id));*/
+
+/*CREATE TABLE joc_magazin (
+joc_id INT NOT NULL,
+magazin_id INT NOT NULL,
+cantitate INT NOT NULL,
+disponibil INT NOT NULL,
+PRIMARY KEY (joc_id, magazin_id),
+FOREIGN KEY (joc_id) REFERENCES joc(joc_id),
+FOREIGN KEY (magazin_id) REFERENCES magazin(magazin_id));*/
+
+/*CREATE TABLE magazin_eveniment (
+magazin_eveniment_id INT NOT NULL,
+nume VARCHAR(128) NOT NULL,
+descriere VARCHAR(500) NOT NULL,
+data_eveniment DATE NOT NULL,
+magazin_id INT NOT NULL,
+joc_id INT NOT NULL,
+PRIMARY KEY (magazin_eveniment_id),
+FOREIGN KEY (joc_id) REFERENCES joc(joc_id),
+FOREIGN KEY (magazin_id) REFERENCES magazin(magazin_id));*/
+
+/*CREATE TABLE magazin_departament (
+magazin_departament_id INT NOT NULL,
+nume VARCHAR(128) NOT NULL,
+magazin_id INT NOT NULL,
+PRIMARY KEY (magazin_departament_id),
+FOREIGN KEY (magazin_id) REFERENCES magazin(magazin_id));*/
+
+/*CREATE TABLE angajat_pozitie (
+angajat_pozitie_id INT NOT NULL,
+titlu VARCHAR(30) NOT NULL,
+descriere VARCHAR(500) NOT NULL,
+PRIMARY KEY (angajat_pozitie_id));*/
+
+/*CREATE TABLE angajat_nivel_salarial (
+angajat_nivel_salarial_id INT NOT NULL,
+valoare NUMERIC(6,2) NOT NULL,
+PRIMARY KEY (angajat_nivel_salarial_id));*/
+
+/*CREATE TABLE angajat_contract (
+angajat_contract_id INT NOT NULL,
+data_inceput DATE NOT NULL,
+data_sfarsit DATE,
+angajat_nivel_salarial_id INT NOT NULL,
+PRIMARY KEY (angajat_contract_id),
+FOREIGN KEY (angajat_nivel_salarial_id) REFERENCES angajat_nivel_salarial(angajat_nivel_salarial_id));*/
+
+/*CREATE TABLE angajat (
+angajat_id INT NOT NULL,
+nume VARCHAR(128) NOT NULL,
+cnp NUMBER(13) NOT NULL,
+adresa INT NOT NULL,
+telefon NUMBER(10) NOT NULL,
+magazin_departament_id INT NOT NULL,
+angajat_contract_id INT NOT NULL,
+angajat_pozitie_id INT NOT NULL,
+PRIMARY KEY (angajat_id),
+FOREIGN KEY (magazin_departament_id) REFERENCES magazin_departament(magazin_departament_id),
+FOREIGN KEY (angajat_contract_id) REFERENCES angajat_contract(angajat_contract_id),
+FOREIGN KEY (angajat_pozitie_id) REFERENCES angajat_pozitie(angajat_pozitie_id));*/
+
+
+
+
+
+
+
+
+
+
+
