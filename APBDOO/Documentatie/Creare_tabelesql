@@ -88,7 +88,7 @@ imprumut_joc_id INT NOT NULL,
 joc_id INT NOT NULL,
 magazin_id INT NOT NULL,
 factura_client_id INT NOT NULL,
-PRIMARY KEY (magazin_id),
+PRIMARY KEY (imprumut_joc_id),
 FOREIGN KEY (joc_id) REFERENCES joc(joc_id),
 FOREIGN KEY (magazin_id) REFERENCES magazin(magazin_id),
 FOREIGN KEY (factura_client_id) REFERENCES factura_client(factura_client_id));*/
