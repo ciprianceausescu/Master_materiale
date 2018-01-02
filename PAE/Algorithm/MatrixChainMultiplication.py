@@ -2,6 +2,7 @@
 # Chain Multiplication. See the Cormen book for details
 # of the following algorithm
 import sys
+from pprint import pprint
 
 # Matrix Mi has dimension p[i-1] x p[i] for i = 1..n
 def MatrixChainOrder(p, n):
@@ -9,6 +10,7 @@ def MatrixChainOrder(p, n):
 	# extra column are allocated in m[][]. 0th row and 0th
 	# column of m[][] are not used
 	m = [[0 for x in range(n)] for x in range(n)]
+	s = [[0 for x in range(n)] for x in range(n)]
 
 	# m[i,j] = Minimum number of scalar multiplications needed
 	# to compute the matrix A[i]A[i+1]...A[j] = A[i..j] where
@@ -29,14 +31,17 @@ def MatrixChainOrder(p, n):
 				q = m[i][k] + m[k+1][j] + p[i-1]*p[k]*p[j]
 				if q < m[i][j]:
 					m[i][j] = q
+					s[i][j] = k
 
-	return m[1][n-1]
+	#return m[1][n-1]
+	return m, s
 
 # Driver program to test above function
 def run():
 	arr = [13, 5, 89, 3, 34]
 	size = len(arr)
 
-	print("Minimum number of multiplications is " + str(MatrixChainOrder(arr, size)))
+	#print("Minimum number of multiplications is " + str(MatrixChainOrder(arr, size)))
+	pprint(MatrixChainOrder(arr, size))
 
 run()
