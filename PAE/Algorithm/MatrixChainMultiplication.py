@@ -39,6 +39,7 @@ def MatrixChainOrder(p, n):
 # Driver program to test above function
 def run():
 	arr = [13, 5, 89, 3, 34]
+	arr = [30, 35, 15, 5, 10, 20, 25]
 	size = len(arr)
 
 	#print("Minimum number of multiplications is " + str(MatrixChainOrder(arr, size)))

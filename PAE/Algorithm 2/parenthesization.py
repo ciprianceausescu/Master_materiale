@@ -58,3 +58,6 @@ def main():
 
 if __name__ == '__main__':
   main()
+
+#python parenthesization.py 30 35 15 5 10 20 25
+#python parenthesization.py 13 5 89 3 34
