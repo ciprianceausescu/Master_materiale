@@ -34,7 +34,7 @@ def MatrixChainOrder(p, n):
 					s[i][j] = k
 
 	#return m[1][n-1]
-	return m, s
+	#return m, s
 
 # Driver program to test above function
 def run():
@@ -43,6 +43,6 @@ def run():
 	size = len(arr)
 
 	#print("Minimum number of multiplications is " + str(MatrixChainOrder(arr, size)))
-	pprint(MatrixChainOrder(arr, size))
+	#pprint(MatrixChainOrder(arr, size))
 
 run()
