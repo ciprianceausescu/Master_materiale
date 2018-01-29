@@ -55,9 +55,7 @@ iregula([Cuvant|X], [Categorie|X], Numere, [Numar | Numere], Arbore, [[Categorie
 % Lexiconul este:
 cuvant(n, singular, ana).
 cuvant(n, plural, mere).
-cuvant(n, plural, baietii).
 cuvant(v, singular, are).
-cuvant(v, plural, au).
 cuvant(det, plural, multe).
 
 % Exemplu apel: parse_sentence([ana, are, mere], A).

@@ -18,9 +18,9 @@ regula(vp, Numar, [Numar, _], [v, np]).
 regula(np, Numar, [Numar], [n]).
 regula(np, Numar, [Numar, Numar], [det, n]).
 
-cuvant(n, singular, ana).
-cuvant(n, plural, mere).
-cuvant(n, plural, baietii).
+cuvant(n, singular, matei).
+cuvant(n, plural, pere).
+cuvant(n, plural, fete).
 cuvant(v, singular, are).
 cuvant(v, plural, au).
 cuvant(det, plural, multe).
