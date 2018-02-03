@@ -1,0 +1,14 @@
+1) Se cauta dupa numarul problemei, dar in Cormen editia 3
+https://notebookbft.wordpress.com/2015/10/11/introduction-to-algorithms-clrs-solutions-collection/
+
+https://ita.skanev.com/index.html
+
+Alte surse :
+1) http://www.chegg.com/homework-help/introduction-to-algorithms-3rd-edition-solutions-9780262033848
+2) http://waxworksmath.com/Authors/A_F/Cormen/WriteUp/Weatherwax_Cormen_Solutions.pdf
+3) https://github.com/gzc/CLRS
+4) http://www.slader.com/textbook/9780262033848-introduction-to-algorithms-3rd-edition/
+5) https://gatecse.in/w/images/7/7d/IntroductiontoAlgorithms-CormenSolution.pdf
+6) https://yinyanghu.github.io/files/clrs.pdf
+7) https://www.quora.com/Where-can-I-get-the-answers-to-exercises-in-Introduction-to-Algorithms-3rd-Edition-by-CLRS
+8) https://www.quora.com/Are-there-solutions-to-ALL-Introduction-to-Algorithms-CLRS-problems-online
