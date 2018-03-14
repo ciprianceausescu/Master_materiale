@@ -1,0 +1,1044 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY OntologyTemaPWS "http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#" >
+    <!ENTITY subgen_Blues "http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#subgen_Blues&amp;" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#"
+     xml:base="http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:OntologyTemaPWS="http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#"
+     xmlns:subgen_Blues="&OntologyTemaPWS;subgen_Blues&amp;"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#apartineGenului -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;apartineGenului">
+        <rdfs:comment>proprietate definita pe multimea pieselor
+ia valori in multimea genurilor muzicale
+Ex: nume_piesa apartineGenului nume_gen</rdfs:comment>
+        <owl:inverseOf rdf:resource="&OntologyTemaPWS;esteReprezentatDe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#apartineSubgenului -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;apartineSubgenului">
+        <rdfs:comment>pentru individul piesa_din_acid_Blues am adaugat proprietatea apartineSubgenului subgen_Acid_BLues
+iar reasoner-ul a dedus:
+piesa_din_acid_BLues apartineGenului gen_BLues
+</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&OntologyTemaPWS;apartineGenului"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#areSubgen -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;areSubgen">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment>proprietate definita pe multimea genurilor muzicale
+defineste o relatie de ordine intre genurile din aceasi categorie
+Ex: Blues areSubgen AcidBlues</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#esteExecutataLa -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;esteExecutataLa">
+        <rdfs:comment>proprietate definita pe multimea pieselor muzicale
+ia valori in multimea instrumentelor
+Ex: nume_piesa esteExecutataLa denumire_instrument</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#esteFolositPentruAInterpreta -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;esteFolositPentruAInterpreta">
+        <rdfs:comment>un instrument este folosit pentru a interpreta una sau mai multe piese
+</rdfs:comment>
+        <owl:inverseOf rdf:resource="&OntologyTemaPWS;esteExecutataLa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#esteInterpretataDe -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;esteInterpretataDe">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>proprietate definita pe multimea pieselor muzicale
+ia valori in multimea artistilor
+Ex: nume_piesa esteInterpretataDe nume_artist</rdfs:comment>
+        <rdfs:comment>o piesa este interpretata de un singur artist</rdfs:comment>
+        <owl:inverseOf rdf:resource="&OntologyTemaPWS;interpreteazaPiesa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#esteReprezentatDe -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;esteReprezentatDe">
+        <rdfs:comment>porprietate definita pe multimea genurilor muzicale
+ia valori din multimea pieselor
+ex: gen_muzical esteReprezentatDe nume_piesa
+</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#esteSubgenAl -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;esteSubgenAl">
+        <owl:inverseOf rdf:resource="&OntologyTemaPWS;areSubgen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#interpreteazaPiesa -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;interpreteazaPiesa">
+        <rdfs:comment>un artist poate interpreta mai multe piese</rdfs:comment>
+        <rdfs:comment>Ex: nume_artist interpreteazaPiesa nume_piesa</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#subgenReprezentatDePiesa -->
+
+    <owl:ObjectProperty rdf:about="&OntologyTemaPWS;subgenReprezentatDePiesa">
+        <owl:inverseOf rdf:resource="&OntologyTemaPWS;apartineSubgenului"/>
+        <rdfs:subPropertyOf rdf:resource="&OntologyTemaPWS;esteReprezentatDe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#etimologie -->
+
+    <owl:DatatypeProperty rdf:about="&OntologyTemaPWS;etimologie">
+        <rdfs:domain rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#origine -->
+
+    <owl:DatatypeProperty rdf:about="&OntologyTemaPWS;origine">
+        <rdfs:domain rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#perioadaAparitie -->
+
+    <owl:DatatypeProperty rdf:about="&OntologyTemaPWS;perioadaAparitie">
+        <rdfs:domain rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#popularitate -->
+
+    <owl:DatatypeProperty rdf:about="&OntologyTemaPWS;popularitate">
+        <rdfs:domain rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+        <rdfs:range rdf:resource="&xsd;Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Artist -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Artist">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;interpreteazaPiesa"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;interpreteazaPiesa"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Folclorica -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Folclorica">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_De_Consum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Gen_Muzical -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Gen_Muzical">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteReprezentatDe"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;areSubgen"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteSubgenAl"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;areSubgen"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteSubgenAl"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteReprezentatDe"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Instrument -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Instrument">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteFolositPentruAInterpreta"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteFolositPentruAInterpreta"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Piesa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Moderna -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Moderna">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_De_Consum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_Culta -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_Culta">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+        <owl:disjointWith rdf:resource="&OntologyTemaPWS;Muzica_De_Consum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_De_Camera -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_De_Camera">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_Culta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_De_Consum -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_De_Consum">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_Simfonica -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_Simfonica">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_Culta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_Vocal-Simfonica_si_Scenica -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_Vocal-Simfonica_si_Scenica">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_Culta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_Vocala -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Muzica_Vocala">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_Culta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Piesa -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Piesa">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteInterpretataDe"/>
+                <owl:onClass rdf:resource="&OntologyTemaPWS;Artist"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteExecutataLa"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;apartineSubgenului"/>
+                <owl:someValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;apartineSubgenului"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteInterpretataDe"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Artist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;esteExecutataLa"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OntologyTemaPWS;apartineGenului"/>
+                <owl:allValuesFrom rdf:resource="&OntologyTemaPWS;Gen_Muzical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Religioasa -->
+
+    <owl:Class rdf:about="&OntologyTemaPWS;Religioasa">
+        <rdfs:subClassOf rdf:resource="&OntologyTemaPWS;Muzica_De_Consum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Bagatela -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Bagatela">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_De_Camera"/>
+        <origine>Franta</origine>
+        <popularitate>Redusa</popularitate>
+        <etimologie>Cuvântul bagatelă se referă la un lucru ușor, un fleac</etimologie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Blues -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Blues">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+        <origine>Sudul SUA</origine>
+        <popularitate>Ridicata</popularitate>
+        <etimologie>Stare de spirit de tristete, melancolie si chiar depresie.</etimologie>
+        <perioadaAparitie>1870 - 1900</perioadaAparitie>
+        <areSubgen rdf:resource="&OntologyTemaPWS;subgen_Acid_Blues"/>
+        <areSubgen rdf:resource="&OntologyTemaPWS;subgen_Blues&amp;Soul"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Colind -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Colind">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Folclorica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Concert -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Concert">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Simfonica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Doina -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Doina">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Folclorica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Eric_Clapton -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Eric_Clapton">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;Wonderful_Tonight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Folk -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Folk">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Fuga -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Fuga">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_De_Camera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Gospel -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Gospel">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Religioasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Jazz -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Jazz">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+        <etimologie>Se face trimitere la cuvandul Jezebel, numele unei prostituate din New Orleans</etimologie>
+        <origine>Are la origine genurile Blues, Folk.</origine>
+        <perioadaAparitie>Inceputul secolului 20, SUA</perioadaAparitie>
+        <popularitate>Ridicata</popularitate>
+        <esteReprezentatDe rdf:resource="&OntologyTemaPWS;piesa_Hello_Day"/>
+        <esteReprezentatDe rdf:resource="&OntologyTemaPWS;piesa_My_Funny_Valentine"/>
+        <esteReprezentatDe rdf:resource="&OntologyTemaPWS;piesa_Send_Me_The_Pillow"/>
+        <esteReprezentatDe rdf:resource="&OntologyTemaPWS;piesa_Summertime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Madrigal -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Madrigal">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Vocala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Motet -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Motet">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Vocala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_ambientala -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Muzica_ambientala">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Vocal-Simfonica_si_Scenica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Muzica_de_balet -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Muzica_de_balet">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Vocal-Simfonica_si_Scenica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Opera -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Opera">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Vocal-Simfonica_si_Scenica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Pop -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Pop">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Reggae -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Reggae">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Rock -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Rock">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Romanta -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Romanta">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_De_Camera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Simfonie -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Simfonie">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_Simfonica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Sonata -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Sonata">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Muzica_De_Camera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#Wonderful_Tonight -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;Wonderful_Tonight">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Blues"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Bass"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Vioara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_BB_King -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_BB_King">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Georgia_on_my_mind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Benny_Goodman -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Benny_Goodman">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Dean_Martin -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Dean_Martin">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Ella_Fitzgerald -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Ella_Fitzgerald">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_My_Funny_Valentine"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Summertime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_François_Couperin -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_François_Couperin">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Les_Bagatelles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Louis_Armstrong -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Louis_Armstrong">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_What_a_wonderful_world"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Ludwig_van_Beethoven -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Ludwig_van_Beethoven">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Fur_Elise"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Opus33"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#artist_Ray_Charles -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;artist_Ray_Charles">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Artist"/>
+        <interpreteazaPiesa rdf:resource="&OntologyTemaPWS;piesa_Key_to_the_Hignway"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Bass -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Bass">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Chitara -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Chitara">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Flaut -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Flaut">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Pian -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Pian">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Saxofon -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Saxofon">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Tobe -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Tobe">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Trombon -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Trombon">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Trompeta -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Trompeta">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#instrument_Vioara -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;instrument_Vioara">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Instrument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Carmen_Miranda -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Carmen_Miranda">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Jazz"/>
+        <esteInterpretataDe rdf:resource="&OntologyTemaPWS;artist_Ray_Charles"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Flaut"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Tobe"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Fur_Elise -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Fur_Elise">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Bagatela"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Georgia_on_my_mind -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Georgia_on_my_mind">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Blues"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Hello_Day -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Hello_Day">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Jazz"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Tobe"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Key_to_the_Hignway -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Key_to_the_Hignway">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Blues"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Bass"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Vioara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Les_Bagatelles -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Les_Bagatelles">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Bagatela"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Vioara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_My_Funny_Valentine -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_My_Funny_Valentine">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Flaut"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Vioara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Opus33 -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Opus33">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Bagatela"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Flaut"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Send_Me_The_Pillow -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Send_Me_The_Pillow">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_Summertime -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_Summertime">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Jazz"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_What_a_wonderful_world -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_What_a_wonderful_world">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineGenului rdf:resource="&OntologyTemaPWS;Blues"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Bass"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Pian"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Saxofon"/>
+        <esteExecutataLa rdf:resource="&OntologyTemaPWS;instrument_Trompeta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#piesa_din_adcid_Blues -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;piesa_din_adcid_Blues">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Piesa"/>
+        <apartineSubgenului rdf:resource="&OntologyTemaPWS;subgen_Acid_Blues"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#subgen_Acid_Blues -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;subgen_Acid_Blues">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+        <areSubgen rdf:resource="&OntologyTemaPWS;subgen_Super_Acid_Blues"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#subgen_Blues&amp;Soul -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;subgen_Blues&amp;Soul">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vali/ontologies/2014/2/OntologyTemaPWS.owl#subgen_Super_Acid_Blues -->
+
+    <owl:NamedIndividual rdf:about="&OntologyTemaPWS;subgen_Super_Acid_Blues">
+        <rdf:type rdf:resource="&OntologyTemaPWS;Moderna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Bass"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Chitara"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Flaut"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Pian"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Saxofon"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Tobe"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Trombon"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Trompeta"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;instrument_Vioara"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Wonderful_Tonight"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Carmen_Miranda"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Fur_Elise"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Georgia_on_my_mind"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Hello_Day"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Key_to_the_Hignway"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Les_Bagatelles"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_My_Funny_Valentine"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Opus33"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Send_Me_The_Pillow"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Summertime"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_What_a_wonderful_world"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Muzica_De_Camera"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Muzica_Simfonica"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Muzica_Vocal-Simfonica_si_Scenica"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Muzica_Vocala"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Folclorica"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Moderna"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Religioasa"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Artist"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Gen_Muzical"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Instrument"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;Piesa"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Carmen_Miranda"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Fur_Elise"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Georgia_on_my_mind"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Hello_Day"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Key_to_the_Hignway"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Les_Bagatelles"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_My_Funny_Valentine"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Opus33"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Send_Me_The_Pillow"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_Summertime"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_What_a_wonderful_world"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;piesa_din_adcid_Blues"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Eric_Clapton"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_BB_King"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Benny_Goodman"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Dean_Martin"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Ella_Fitzgerald"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_François_Couperin"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Louis_Armstrong"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Ludwig_van_Beethoven"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;artist_Ray_Charles"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&OntologyTemaPWS;Blues"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;subgen_Acid_Blues"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;subgen_Blues&amp;Soul"/>
+            <rdf:Description rdf:about="&OntologyTemaPWS;subgen_Super_Acid_Blues"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/immgit2k18/ontologies/2018/2/pws_sgbd"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/immgit2k18/ontologies/2018/2/pws_sgbd">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#ActiveDB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Administrator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Analysis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#App"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attributes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CloudDB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColumnStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Connection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ControlFiles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DBDriverAPI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DBMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DBType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Debugging"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Features"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Functions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GraphStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HierarchicalDBMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InMemoryDB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indexes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JavaApp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KeyValueStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MSApp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Methods"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultiModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewSQL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoSQLDB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoSQLDBMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OODB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OODBMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherApp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PLSQL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procedures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RDBMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelDB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SQL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sequences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TSQL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Triggers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Types"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Views"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pgSQL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#create"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#delete"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#friendOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#getConnectionWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFeature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAlteredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDeletedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIncludedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isManagedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUsedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#uses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Accumulo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ApacheCouchDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ApacheIgnite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BaseX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cassandra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ciprian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CloudSQL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Druid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DynamoDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExtremeDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FlockDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FoundationDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#George"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IBM_IMS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InfinityDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JDBC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JavaApp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JavaApp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MSApp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MSApp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marcel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MariaDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MicrosoftAzureSQL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MongoSGBD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MySQL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neo4j"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ODBC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OLEDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObjectDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObjectStore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ObjectivityDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oracle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrientDB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OtherApp1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OtherApp2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PostgreSQL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Raul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Redis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SQLServer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SQLite"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ActiveDB"/>
+        <Class IRI="#DBType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <Class IRI="#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#alter"/>
+            <Class IRI="#DB"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#alter"/>
+            <Class IRI="#DBDriverAPI"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#alter"/>
+            <Class IRI="#DBMS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#create"/>
+            <Class IRI="#DB"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#create"/>
+            <Class IRI="#DBDriverAPI"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#create"/>
+            <Class IRI="#DBMS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#delete"/>
+            <Class IRI="#DBDriverAPI"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#delete"/>
+            <Class IRI="#DBMS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Administrator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#delete"/>
+            <Class IRI="#DBType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Analysis"/>
+        <Class IRI="#Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#App"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#getConnectionWith"/>
+            <Class IRI="#DBDriverAPI"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#App"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isUsedBy"/>
+            <Class IRI="#User"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attributes"/>
+        <Class IRI="#OODB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CloudDB"/>
+        <Class IRI="#DBType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColumnStore"/>
+        <Class IRI="#NoSQLDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <Class IRI="#Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ControlFiles"/>
+        <Class IRI="#RelDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DB"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAlteredBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DB"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isCreatedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DB"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDeletedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DB"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isManagedBy"/>
+            <Class IRI="#DBMS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DB"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isUsedBy"/>
+            <Class IRI="#User"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBDriverAPI"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#getConnectionWith"/>
+            <Class IRI="#App"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBDriverAPI"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAlteredBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBDriverAPI"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isCreatedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBDriverAPI"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDeletedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAlteredBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isCreatedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isDeletedBy"/>
+            <Class IRI="#Administrator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isUsedBy"/>
+            <Class IRI="#User"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DBMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#manage"/>
+            <Class IRI="#DB"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data"/>
+        <Class IRI="#RelDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Debugging"/>
+        <Class IRI="#Features"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentStore"/>
+        <Class IRI="#NoSQLDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Functions"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GraphStore"/>
+        <Class IRI="#NoSQLDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HierarchicalDBMS"/>
+        <Class IRI="#DBMS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InMemoryDB"/>
+        <Class IRI="#DBType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indexes"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JavaApp"/>
+        <Class IRI="#App"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KeyValueStore"/>
+        <Class IRI="#NoSQLDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logs"/>
+        <Class IRI="#RelDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MSApp"/>
+        <Class IRI="#App"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methods"/>
+        <Class IRI="#OODB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultiModel"/>
+        <Class IRI="#NoSQLDB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSQL"/>
+        <Class IRI="#RDBMS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoSQLDB"/>
+        <Class IRI="#DB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoSQLDBMS"/>
+        <Class IRI="#DBMS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OODB"/>
+        <Class IRI="#DB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OODBMS"/>
+        <Class IRI="#DBMS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherApp"/>
+        <Class IRI="#App"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherUser"/>
+        <Class IRI="#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PLSQL"/>
+        <Class IRI="#SQL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procedures"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RDBMS"/>
+        <Class IRI="#DBMS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelDB"/>
+        <Class IRI="#DB"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sequences"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TSQL"/>
+        <Class IRI="#SQL"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tables"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Triggers"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Types"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#friendOf"/>
+            <Class IRI="#User"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#uses"/>
+            <Class IRI="#App"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#uses"/>
+            <Class IRI="#DB"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#uses"/>
+            <Class IRI="#DBMS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#Nume"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Views"/>
+        <Class IRI="#Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pgSQL"/>
+        <Class IRI="#SQL"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#ColumnStore"/>
+        <NamedIndividual IRI="#Accumulo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DocumentStore"/>
+        <NamedIndividual IRI="#ApacheCouchDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InMemoryDB"/>
+        <NamedIndividual IRI="#ApacheIgnite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DocumentStore"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GraphStore"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InMemoryDB"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#KeyValueStore"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiModel"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NoSQLDBMS"/>
+        <NamedIndividual IRI="#ArangoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DocumentStore"/>
+        <NamedIndividual IRI="#BaseX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColumnStore"/>
+        <NamedIndividual IRI="#Cassandra"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Administrator"/>
+        <NamedIndividual IRI="#Ciprian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudDB"/>
+        <NamedIndividual IRI="#CloudSQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColumnStore"/>
+        <NamedIndividual IRI="#Druid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudDB"/>
+        <NamedIndividual IRI="#DynamoDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InMemoryDB"/>
+        <NamedIndividual IRI="#ExtremeDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NoSQLDBMS"/>
+        <NamedIndividual IRI="#ExtremeDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GraphStore"/>
+        <NamedIndividual IRI="#FlockDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiModel"/>
+        <NamedIndividual IRI="#FoundationDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Administrator"/>
+        <NamedIndividual IRI="#George"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HierarchicalDBMS"/>
+        <NamedIndividual IRI="#IBM_IMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#KeyValueStore"/>
+        <NamedIndividual IRI="#InfinityDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiModel"/>
+        <NamedIndividual IRI="#InfinityDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DBDriverAPI"/>
+        <NamedIndividual IRI="#JDBC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#JavaApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JavaApp"/>
+        <NamedIndividual IRI="#JavaApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#JavaApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JavaApp"/>
+        <NamedIndividual IRI="#JavaApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#MSApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MSApp"/>
+        <NamedIndividual IRI="#MSApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#MSApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MSApp"/>
+        <NamedIndividual IRI="#MSApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherUser"/>
+        <NamedIndividual IRI="#Marcel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActiveDB"/>
+        <NamedIndividual IRI="#MariaDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RDBMS"/>
+        <NamedIndividual IRI="#MariaDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#MariaDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CloudDB"/>
+        <NamedIndividual IRI="#MicrosoftAzureSQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NoSQLDBMS"/>
+        <NamedIndividual IRI="#MongoSGBD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActiveDB"/>
+        <NamedIndividual IRI="#MySQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RDBMS"/>
+        <NamedIndividual IRI="#MySQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#MySQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GraphStore"/>
+        <NamedIndividual IRI="#Neo4j"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DBDriverAPI"/>
+        <NamedIndividual IRI="#ODBC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DBDriverAPI"/>
+        <NamedIndividual IRI="#OLEDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODB"/>
+        <NamedIndividual IRI="#ObjectDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODBMS"/>
+        <NamedIndividual IRI="#ObjectDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODB"/>
+        <NamedIndividual IRI="#ObjectStore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODBMS"/>
+        <NamedIndividual IRI="#ObjectStore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODB"/>
+        <NamedIndividual IRI="#ObjectivityDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OODBMS"/>
+        <NamedIndividual IRI="#ObjectivityDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RDBMS"/>
+        <NamedIndividual IRI="#Oracle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#Oracle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GraphStore"/>
+        <NamedIndividual IRI="#OrientDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MultiModel"/>
+        <NamedIndividual IRI="#OrientDB"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#OtherApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherApp"/>
+        <NamedIndividual IRI="#OtherApp1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#App"/>
+        <NamedIndividual IRI="#OtherApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OtherApp"/>
+        <NamedIndividual IRI="#OtherApp2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#PostgreSQL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Administrator"/>
+        <NamedIndividual IRI="#Raul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#KeyValueStore"/>
+        <NamedIndividual IRI="#Redis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ActiveDB"/>
+        <NamedIndividual IRI="#SQLServer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#SQLServer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelDB"/>
+        <NamedIndividual IRI="#SQLite"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#friendOf"/>
+        <NamedIndividual IRI="#Ciprian"/>
+        <NamedIndividual IRI="#Raul"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#friendOf"/>
+        <NamedIndividual IRI="#Ciprian"/>
+        <NamedIndividual IRI="#George"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#friendOf"/>
+        <NamedIndividual IRI="#George"/>
+        <NamedIndividual IRI="#Raul"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#friendOf"/>
+        <NamedIndividual IRI="#George"/>
+        <NamedIndividual IRI="#Ciprian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#friendOf"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Ciprian"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAlteredBy"/>
+        <ObjectProperty IRI="#alter"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#create"/>
+        <ObjectProperty IRI="#isCreatedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#delete"/>
+        <ObjectProperty IRI="#isDeletedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFeature"/>
+        <ObjectProperty IRI="#isIncludedIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isManagedBy"/>
+        <ObjectProperty IRI="#manage"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#uses"/>
+        <ObjectProperty IRI="#isUsedBy"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#friendOf"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isA"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isManagedBy"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#manage"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#friendOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isManagedBy"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#manage"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#isA"/>
+    </ReflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#friendOf"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#getConnectionWith"/>
+        <Class IRI="#DBDriverAPI"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#friendOf"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#getConnectionWith"/>
+        <Class IRI="#App"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,57 @@
+TO DO:
+
+
+== App == ok
+
+==== DB =======
++ isManagedBy some DBMS
+(Inverse: manage)
+
+Particular
+NoSQLDB isManagedBy some NoSQLDBMS
+(NoSQLDBMS manage some NoSQLDB)
+RelDB isManagedBy some RDBMS
+OODB isManagedBy some OODBMS
+
+(ObjectPropries au fost adaugate trebuie doar legaturile
+George, ai legatura)
+
+
+
+
+
+
+==== DBDriverApi =====
++ getConnectionWith some DB
+
+Trebuie modificat getConnectionWith some App in functie
+de instanta:
+JDBC getConnectionWith some JavaApp
+OLEDB getConnectionWith some MSApp
+...
+
+
+
+
+
+
+
+=== DBMS =====
+(automat, inversul de la isManagedBy: manage pt. toate subclasele:
+NoSQLDBMS manage NoSQLDB , etc.
++ hasFeature some Features
+(inversul: isIncludedIn)
+
+
+== DBType ====
+RelDB isA ActiveDB
+Nu avem exemple la CloudDB ...
+
+
+=== Features ===
+isIncludedIn (inversul lui hasFeature de la DBMS) some DBMS (la general, nu
+stam sa vedem fiecare DBMS ce features are/n-are)
+
+
+
+
