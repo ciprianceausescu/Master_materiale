@@ -1,6 +1,0 @@
-Matematica este în general definită ca știința ce studiază relațiile cantitative, modelele de structură, de schimbare și de spațiu. În sens modern, este investigarea structurilor abstracte definite în mod axiomatic folosind logica formală.
-
-Structurile anume investigate de își au deseori rădăcinile în științele naturale, cel mai adesea în fizică. definește și investighează și structuri și teorii proprii, în special pentru a sintetiza și unifica multiple câmpuri sub o teorie unică, o metodă ce facilitează în general metode generice de calcul. Ocazional, studiază unele domenii ale strict pentru interesul abstract exercitat de acestea, ceea ce le transformă într-o abordare mai degrabă legată de artă decât de știință.
-
-nu este doar o culegere de fapte sau "rezultate"; este de asemenea un set de proceduri pentru izolarea problemelor sau pentru rezolvarea lor, un set de prezumţii şi deducţii admisibile, un mod de gândire despre lucruri.
-
