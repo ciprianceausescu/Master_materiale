@@ -620,12 +620,12 @@
       <workItem from="1523369766721" duration="7600000" />
       <workItem from="1523385895548" duration="4004000" />
       <workItem from="1523423302637" duration="3117000" />
-      <workItem from="1523426462028" duration="300000" />
+      <workItem from="1523426462028" duration="692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27495000" />
+    <option name="totallyTimeSpent" value="27887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -969,7 +969,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>IR_TEST</last-edited>
+          <last-edited>IR_Project</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
