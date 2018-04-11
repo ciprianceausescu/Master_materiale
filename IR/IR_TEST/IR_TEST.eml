@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/IR_TEST"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="lucene-core-6.4.2.jar" scope="COMPILE">
+		<srcroot url="jar://$USER_HOME$/.ideaLibSources/lucene-core-6.4.2-sources.jar!/"/>
+	</lib>
+</component>

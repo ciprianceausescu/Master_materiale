@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/IR_TEST/src"/>
+	<classpathentry kind="src" path="/IR_TEST"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/lucene-analyzers-common-6.4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/apache-commons.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/lucene-core-6.4.2.jar" sourcepath="C:/Users/Ciprian Mihai/.ideaLibSources/lucene-core-6.4.2-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/commons-io-2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/lucene-queryparser-6.5.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/tika-core-1.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ciprian Mihai/Desktop/Master_materiale/IR/lucene-highlighter-4.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
