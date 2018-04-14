@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>FD Predicates - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="prev" href="Monotonicity-of-Indexicals.html#Monotonicity-of-Indexicals" title="Monotonicity of Indexicals">
+<link rel="next" href="Execution-of-Propagating-Indexicals.html#Execution-of-Propagating-Indexicals" title="Execution of Propagating Indexicals">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.5 FD Predicates</h5>
+
+<p><a name="index-FD-predicate-3453"></a><a name="index-predicate_002c-FD-3454"></a>The following example defines the constraint X+Y=T as an FD
+predicate in terms of three indexicals.  Each indexical is a rule
+responsible for removing values detected as incompatible from one
+particular constraint argument.  Indexicals are <em>not</em> Prolog
+goals; thus, the example does not express a conjunction. 
+However, an indexical may make the store contradictory, in which case
+backtracking is triggered:
+
+<pre class="example">     plus(X,Y,T) +:
+             X in min(T) - max(Y) .. max(T) - min(Y),
+             Y in min(T) - max(X) .. max(T) - min(X),
+             T in min(X) + min(Y) .. max(X) + max(Y).
+</pre>
+   <p>The above definition contains a single clause used for constraint
+solving.  The first indexical wakes up whenever the bounds of
+S(T) or S(Y) are updated, and removes from D(X,S)
+any values that are not compatible with the new bounds of T and
+Y.  Note that in the event of &ldquo;holes&rdquo; in the domains of
+T or Y, D(X,S) may contain some values that are
+incompatible with X+Y=T but go undetected.  Like most built-in
+arithmetic constraints, the above definition maintains
+bound-consistency, which is significantly cheaper to maintain than
+arc-consistency and suffices in most cases.  The constraint could for
+example be used as follows:
+
+<pre class="example">     | ?- <kbd>X in 1..5, Y in 2..8, plus(X,Y,T).</kbd>
+     X in 1..5,
+     Y in 2..8,
+     T in 3..13
+</pre>
+   <p class="noindent">Thus, when an FD predicate is called, the `<samp><span class="samp">+:</span></samp>' clause
+is activated.
+
+   <p>The definition of a user constraint has to specify what domain
+constraints should be added to the constraint store when the constraint
+is posted.  Therefore the FD predicate contains a set of
+indexicals, each representing a domain constraint to be added to the
+constraint store.  The actual domain constraint depends on the
+constraint store itself.  For example, the third indexical in the above
+FD predicate prescribes the domain constraint `<samp><span class="samp">T :: 3..13</span></samp>' if
+the store contains `<samp><span class="samp">X :: 1..5, Y :: 2..8</span></samp>'.  As the domain of some
+variables gets smaller, the indexical may enforce a new, stricter
+constraint on some other variables.  Therefore such an indexical
+(called a propagating indexical) can be viewed as an agent reacting to
+the changes in the store by enforcing further changes in the store.
+
+   <p>In general there are three stages in the lifetime of a propagating
+indexical.  When it is posted it may not be evaluated immediately
+(e.g. has to wait until some variables are ground before
+being able to modify the store).  Until the preconditions for the
+evaluation are satisfied, the agent does not enforce any constraints. 
+When the indexical becomes evaluable the resulting domain constraint is
+added to the store.  The agent then waits and reacts to changes in the
+domains of variables occurring in the indexical by re-evaluating
+it and adding the new, stricter constraint to the store.  Eventually the
+computation reaches a phase when no further refinement of the store can
+result in a more precise constraint (the indexical is entailed by the
+store), and then the agent can cease to exist.
+
+   <p>A necessary condition for the FD predicate to be correctly defined
+is the following: for any store mapping each variable to a
+singleton domain the execution of the indexicals should succeed without
+contradiction exactly when the predicate is intended to be true.
+
+   <p>There can be several alternative definitions for the same user
+constraint with different strengths in propagation.  For example, the
+definition of <code>plusd</code> below encodes the same <code>X+Y=T</code>
+constraint as the <code>plus</code> predicate above, but maintaining
+arc-consistency:
+
+<pre class="example">     plusd(X,Y,T) +:
+             X in dom(T) - dom(Y),
+             Y in dom(T) - dom(X),
+             T in dom(X) + dom(Y).
+     
+     | ?- <kbd>X in {1}\/{3}, Y in {10}\/{20}, plusd(X, Y, T).</kbd>
+     X in{1}\/{3},
+     Y in{10}\/{20},
+     T in{11}\/{13}\/{21}\/{23}
+</pre>
+   <p>This costs more in terms of execution time, but gives more precise
+results. For singleton domains <code>plus</code> and <code>plusd</code> behave in
+the same way.
+
+   <p>In our design, general indexicals can only appear in the context of
+FD predicate definitions.  The rationale for this restriction is
+the need for general indexicals to be able to suspend and resume, and
+this ability is only provided by the FD predicate mechanism.
+
+   <p>If the program merely posts a constraint, it suffices for the
+definition to contain a single clause for solving the constraint. 
+If a constraint is reified or occurs in a propositional formula, the
+definition must contain four clauses for solving and checking
+entailment of the constraint and its negation.  The role of each
+clause is reflected in the &ldquo;neck&rdquo; operator.  The following
+table summarizes the different forms of indexical clauses
+corresponding to a constraint C.  In all cases, <var>Head</var> should
+be a compound term with all arguments being distinct
+variables:
+
+     <dl>
+<dt><var>Head</var><code> +: </code><var>Indexicals</var><code>.</code><dd>The clause consists of propagating indexicals for solving <var>C</var>.
+
+     <br><dt><var>Head</var><code> -: </code><var>Indexicals</var><code>.</code><dd>The clause consists of propagating indexicals for solving the
+negation of <var>C</var>.
+
+     <br><dt><var>Head</var><code> +? </code><var>Indexical</var><code>.</code><dd>The clause consists of a single checking indexical for testing
+entailment of <var>C</var>.
+
+     <br><dt><var>Head</var><code> -? </code><var>Indexical</var><code>.</code><dd>The clause consists of a single checking indexical for testing
+entailment of the negation of <var>C</var>. 
+</dl>
+
+   <p>When a constraint is reified, the solver spawns two reactive agents
+corresponding to detecting entailment and disentailment.  Eventually,
+one of them will succeed in this and consequently will bind
+<var>B</var> to 0 or 1.  A third agent is spawned, waiting for <var>B</var> to
+become assigned, at which time the constraint (or its negation) is
+posted.  In the mean time, the constraint may have been detected as
+(dis)entailed, in which case the third agent is dismissed.  The waiting
+is implemented by means of the coroutining facilities of SICStus Prolog.
+
+   <p>As an example of a constraint with all methods defined, consider the
+following library constraint defining a disequation between two domain
+variables:
+
+<pre class="example">     'x\\=y'(X,Y) +:
+             X in \{Y},
+             Y in \{X}.
+     'x\\=y'(X,Y) -:
+             X in dom(Y),
+             Y in dom(X).
+     'x\\=y'(X,Y) +?
+             X in \dom(Y).
+     'x\\=y'(X,Y) -?
+             X in {Y}.
+</pre>
+   <p>The following sections provide more precise coding rules and operational
+details for indexicals.  <code>X in R</code> denotes an indexical
+corresponding to a constraint C.  S denotes the current store.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Execution-of-Propagating-Indexicals.html#Execution-of-Propagating-Indexicals">Next</a>
+<li><a rel="previous" accesskey="p" href="Monotonicity-of-Indexicals.html#Monotonicity-of-Indexicals">Previous</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/FD-Predicates.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/FD-Predicates.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

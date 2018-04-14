@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Bindings</TITLE>
+</HEAD>
+<HR>
+<H2><FONT size="-1">
+se.sics.prologbeans</FONT>
+<BR>
+Class Bindings</H2>
+<HR>
+<P>
+<code>Bindings</code> handles the variable bindings in the
+ communication with the prolog server. Using variable bindings
+ ensures that the values are properly quoted when sent to the
+ prolog server.<P>
+<HR>
+&nbsp;
+<A NAME="constructor_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="Bindings.html#Bindings()">Bindings</A></B>()</CODE>
+<BR>
+Creates a new <code>Bindings</code> instance with no variable bindings.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="Bindings.html#Bindings(Bindings)">Bindings</A></B>(<A HREF="Bindings.html">Bindings</A>&nbsp;binds)</CODE>
+<BR>
+Creates a new <code>Bindings</code> instance and copies all existing
+ variable bindings from the specified bindings.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="method_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, int)">bind</A></B>(string&nbsp;name, int&nbsp;intvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, long)">bind</A></B>(string&nbsp;name, long&nbsp;longvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, float)">bind</A></B>(string&nbsp;name, float&nbsp;floatvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, double)">bind</A></B>(string&nbsp;name, double&nbsp;doublevalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, string)">bind</A></B>(string&nbsp;name, string&nbsp;stringvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bind(string, PBTerm)">bind</A></B>(string&nbsp;name, <A HREF="PBTerm.html">PBTerm</A>&nbsp;termvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;Bindings</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#bindAtom(string, string)">bindAtom</A></B>(string&nbsp;name, string&nbsp;atomvalue)</CODE>
+<BR>
+Adds the specified variable binding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#getValue(string)">getValue</A></B>(string&nbsp;name)</CODE>
+<BR>
+Returns the value for the specified variable or <code>null</code>
+ if the variable is not bound.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="Bindings.html#toString()">toString</A></B>()</CODE>
+<BR>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+&nbsp;
+<A NAME="constructor_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="Bindings()"></A>
+<H3>Bindings</H3>
+<PRE>
+<B>Bindings</B>()</PRE>
+<DL>
+<DD>Creates a new <code>Bindings</code> instance with no variable bindings.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="Bindings(Bindings)"></A>
+<H3>Bindings</H3>
+<PRE>
+<B>Bindings</B>(Bindings&nbsp;binds)</PRE>
+<DL>
+<DD>Creates a new <code>Bindings</code> instance and copies all existing
+ variable bindings from the specified bindings.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>binds</CODE>
+ - the variable bindings to copy</DL>
+</DD>
+</DL>
+<HR>
+&nbsp;
+<A NAME="method_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="bind(string, int)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, int&nbsp;intvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>intvalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bind(string, long)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, long&nbsp;longvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>longvalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bind(string, float)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, float&nbsp;floatvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>floatvalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bind(string, double)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, double&nbsp;doublevalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>doublevalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bind(string, string)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, string&nbsp;stringvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>stringvalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bind(string, PBTerm)"></A>
+<H3>bind</H3>
+<PRE>
+public&nbsp;Bindings <B>bind</B>(string&nbsp;name, PBTerm&nbsp;termvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>termvalue</CODE>
+ - the value to bind to the variable<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bindAtom(string, string)"></A>
+<H3>bindAtom</H3>
+<PRE>
+public&nbsp;Bindings <B>bindAtom</B>(string&nbsp;name, string&nbsp;atomvalue)</PRE>
+<DL>
+<DD>Adds the specified variable binding. The variable name must start
+ with an upper case letter or '_'. The value will be bound as an
+ atom.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - a prolog variable name<DD><CODE>atomvalue</CODE>
+ - the value to bind to the variable as an atom<DT><B>Returns: </B><DD>a reference to this <code>Bindings</code> object<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalArgumentException if the name is not a
+ valid prolog variable name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getValue(string)"></A>
+<H3>getValue</H3>
+<PRE>
+public&nbsp;PBTerm <B>getValue</B>(string&nbsp;name)</PRE>
+<DL>
+<DD>Returns the value for the specified variable or <code>null</code>
+ if the variable is not bound.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - the name of the variable<DT><B>Returns: </B><DD>the value of the variable as a <code>Term</code> or
+ <code>null</code> if the variable is not bound</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="toString()"></A>
+<H3>toString</H3>
+<PRE>
+public&nbsp;string <B>toString</B>()</PRE>
+<DL>
+<DD><P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>

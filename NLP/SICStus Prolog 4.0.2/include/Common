@@ -1,0 +1,439 @@
+#
+# Copyright (C) 1988-1995 Swedish Institute of Computer Science.
+#
+#
+# Common definitions for SICStus Prolog Makefiles. Contains mostly
+# configuration stuff coming from configure.
+#
+
+
+
+
+SHELL=/bin/sh
+
+# Useful when used with make functions, see
+# GNU Make Manual, Section "Functions for Transforming Text"
+comma := ,
+empty :=
+space := $(empty) $(empty)
+hash  := \#
+
+prefix=/usr/local
+
+SP_DIRNAME=sicstus-4.0.2
+SP_RTSYS_DIRNAME=sp-4.0.2
+SP_BINDIST_TOP_LEVEL_DOC=yes
+
+# [PM] 3.11.2 export CYGWIN=nontsec on WinCE, otherwise empty
+
+
+# [PM] 4.0.1. export MACOSX_DEPLOYMENT_TARGET=10.4 on Mac OS X, otherwise empty
+
+
+# [PD] 3.10.2beta1 Once upon a time Jesper thought it would be a good
+#           idea to keep this list sorted. Since he left SICS nobody
+#           really cared enough to keep it sorted. The comment below
+#           has been left untouched so his dream can be alive ...
+# Keep this list sorted!
+AR=
+ARFLAGS=
+#[PD] 3.8.7 perhaps AS and ASM should be one and same?
+AS=false
+ASFLAGS=
+ASM=/c/PROGRA~1/MI2578~1/Windows/v6.0/VC/Bin/ml.exe
+ASM_FLAGS= /safeseh
+BDBINC=-IC:/PROGRA~1/Oracle/BERKEL~1.20/include
+BDBLIB=C:/PROGRA~1/Oracle/BERKEL~1.20/lib/libdb45.lib
+BDB_MODULE=bdb.po
+BENCH_ITERATIONS_SCALE=100
+CANDLE="/c/WiX-2.0.4820.0/candle.exe"
+LIGHT="/c/WiX-2.0.4820.0/light.exe"
+CC=cl.exe
+CXX=cl.exe
+# [PM] 3.11.2+ $(cflags_extra) should always be empty. It is a hook for passing extra flags while debugging
+CFLAGS= -nologo  /MD   /Z7 /GF /Ox   -D_CRT_SECURE_NO_DEPRECATE /fp:strict /fp:except- -D_WIN32_WINNT=0x500 -DWIN32=100 /WX -DWIN32_LEAN_AND_MEAN /W3 /wd4619 /wd4826  -Ispio /Gr -D_UNICODE -DUNICODE $(cflags_extra)
+CC_WERROR=/WX
+CL_LEGACY_FORSCOPE_OPTION=/Zc:forScope-
+CHARMAINOBJ=charmain.obj cmdproc.obj intrpt.obj 
+CHMOD=chmod
+CODETYPE=compactcode
+COMCLIENTLIB=
+CP=cp
+#[PD] 4.0.0
+CPUCOUNTCOMMAND=:
+#[PD] C# compiler (.NET)
+CSC=csc.exe
+#[PD] 3.11.3beta1 Flags for the C# compiler (.NET)
+CSCFLAGS=/platform:x86 /optimize+ /debug+ /warn:4 /warnaserror+ /nologo
+#[PD] J# compiler (.NET)
+VJC=vjc.exe
+#[PD] 4.0.0beta2 Flags for the J# compiler (.NET)
+VJCFLAGS=/optimize+ /debug+ /warn:4 /warnaserror+ /nologo
+CYGPATH=cygpath -m
+CYGPATHBACKSLASH=cygpath -w
+# numeric value of -DDBG, 'yes' if default 'no' if no debug info.
+DBGFLAG=yes
+# yes if we are building with extra debugging (-DDBG>0)
+DEBUG_BUILD=no
+
+# [PM] 3.11.1 Do not use CYGPATH explicitly in make files. Instead of,
+# e.g., '$(shell $(CYGPATH) "$<")' do '$(call NATIVEPATH, $<)' (note
+# the absense of double quotes). This avoids calling the shell on
+# non-windows platforms. NATIVEPATH will give a path with forward
+# slashes which works for most Win32 cases and avoids quoting
+# issues. NATIVEPATHBACKSLASH and CYGPATHBACKSLASH generates the fully
+# native paths with backslash (similar to what CYGPATH did pre 3.11.1)
+#
+NATIVEPATH=$(shell $(CYGPATH) "$(strip $(1))")
+NATIVEPATHBACKSLASH=$(shell $(CYGPATHBACKSLASH) "$(strip $(1))")
+DBLIB=
+DB_MODULE=
+DSEXT=
+DS_CAN_LICENSE_DIALOG=yes
+DSMAINOBJ=main.obj
+
+DT_CC = 
+DT_CC_PATH = 
+DT_OUTPUT_OPT = 
+DT_CFLAGS = 
+DT_CPPFLAGS = 
+DT_LIBS = 
+DT_ENV_INCLUDE = 
+DT_ENV_LIB = 
+
+DVIPS=/usr/bin/dvips
+ENABLE_DOTNET=yes
+# [PM] 3.11.2 gone, always true: ENABLE_SP_DISPATCH_API=@ENABLE_SP_DISPATCH_API@
+ENABLE_MULTI_SP=yes
+# [PM] 3.9.1 SP_NO_MULTI_SP_FEATURE is yes on particular platforms where multi-sp is disabled
+SP_NO_MULTI_SP_FEATURE=no
+ENABLE_PTRSPFUNC=yes
+ENABLE_STATLIB=yes
+ENABLE_WAM_ASM_PEEP=yes
+
+ENABLE_MULTITHREADED_LIBS=yes
+ENABLE_CLPFD=yes
+ENABLE_CLPFD_MULTI_SP=yes
+ENABLE_SYSTEM_SINGLE_THREADED=$(ENABLE_MULTITHREADED_LIBS)
+
+# [PM] 3.9b4 the new pthreads based timeout.c (ignored on windows)
+ENABLE_PTHREAD_TIMEOUT=no
+
+EXPECT_WARNINGS_MULTI_SP_C=no
+EXPFILE_SYMBOL_PREFIX=
+
+SP_FOREIGN_SPENV=yes
+# DEFAULT_KERNEL_IMPLIB=@DEFAULT_KERNEL_IMPLIB@
+DEFAULT_KERNEL_IMPLIB=$(error DEFAULT_KERNEL_IMPLIB should not be used)
+ETAGS=/bin/etags
+EMACS_ETAGS=no
+EXEEXT=.exe
+FLI_FILE=fli_win.c
+FLI_APPLY_ASM_FILE=fli_x86_win32.c
+
+GCCLIB=
+GCC_PROG_NAME_LD=ld
+KERNEL_SHLD_GENIMPLIB=
+GZIP=/usr/bin/gzip
+IMPLIB=sprt4-0-2.lib
+INCR_CFLAGS= /MD 
+INSTALL=/bin/install -c
+INSTALL_DATA=${INSTALL} -m 644
+INSTALL_RO_DATA=${INSTALL} -m 444
+ENABLE_JAVA=yes
+ENABLE_JAVA_JNI=no
+HIGH_RESOLUTION_TIME_CP=yes
+JAR=/c/PROGRA~1/Java/JDK15~1.0_0/bin/jar
+JASPER_MODULE=
+JASPER_SPLFR_FLAGS=
+JAVAC=/c/PROGRA~1/Java/JDK15~1.0_0/bin/javac
+JAVACFLAGS=-source 1.5 -encoding ISO-8859-1
+# [PM] 3.8.6 autoconf naively looks for AC_ so this can not be JAVAC_DBGFLAGS
+JAVACDBGFLAGS=-g 
+JAVADOC=/c/PROGRA~1/Java/JDK15~1.0_0/bin/javadoc
+JAVADOCFLAGS= -breakiterator
+JAVAEXEC=/c/PROGRA~1/Java/JDK15~1.0_0/bin/java
+JAVAH=/c/PROGRA~1/Java/JDK15~1.0_0/bin/javah
+JAVAINC=
+JAVALIB=
+JAVA_CLASSPATH=
+JAVA_EXECOPTS= 
+JAVA_PRELOAD=
+LD=dummy_ld
+# [PM] 4.0 malloc debug environment vars.
+# On RH set to, e.g. env MALLOC_PERTURB_=47
+# Mac OS X also has similar things, others?
+MALLOC_ENV=
+
+# [PM] 4.0 on MacOS X we need to limit MALLOC_ENV for some OS tools
+MACOSX_MALLOC_SCRIBBLE_KLUDGE := 
+
+
+# [PM] 3.11.2 PrologBeans server module is always built (does not require Java)
+PROLOGBEANS_MODULE := prologbeans.po
+
+# [PM] 3.9.1 LDFLAGS is obsolete, no longer used. LDFLAGS used to
+# contain what is now in SPLD_EXE_LIBS, SPLD_EXE_LDFLAGS and
+# SPLM_LIBS.
+
+LDFLAGS=surely_this_is_an_illegal_arg_if_ever_used_by_mistake
+SPAUXOBJ=spaux.obj
+SPLM_LIBS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib
+SPLD_EXE_LDFLAGS=-nologo 
+SPLD_EXE_LIBS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib
+WIN32_SPLD_CC_SPECIAL=/link  /NXCOMPAT /SAFESEH
+WIN32_EMBED_MANIFESTS=yes
+SPLD_CONFIG_FILE_BASENAME=spconfig-4.0.2
+LD_R=
+CC_ROPT=
+SHLD_ROPT=
+
+SPLFR_LD_r_FLAGS=
+# [PM] 3.9.1 renamed from LINK_OUTPUT_OPT
+SHLD_OUTPUT_OPT=-OUT:
+LN=cp -Ruv
+M4=m4
+M4_FLAGS=-U builtin -U format
+MT=mt.exe
+MAKEINFO=/usr/bin/makeinfo
+MV=mv
+# [PM] 3.11.3 NOT quoted! Use short path-name or quote at usage
+# [PD] 3.11.3 .NET document generator
+NDOC=/c/PROGRA~1/NDOC1~1.2/bin/NET-1~1.1/NDOCCO~1.EXE
+NDOCHELPDOCUMENTER=HtmlHelp2
+ENABLE_HtmlHelp2=no
+NMEDIT=
+NOLINK_OPT=-c
+NOLINK_OUTPUT_OPT=-Fo
+NO_UNKNOWN_PRAGMAS=
+OBJEXT=obj
+# [PM] WinCE: Gone OPTIONS=@OPTIONS@
+OUTPUT_OPT=-Fe
+PARMAKE=
+## [PM] 3.8.6 Note: When setting PATH you should always use colon
+## (:). PATHSEP is for PATH-like arguments to possibly non-UNIX
+## programs (i.e., not to cygwin programs, nor sh/bash builtins).
+PATHSEP=;
+PCACHE=./platform.cache
+PDFTEX=/usr/bin/pdftex
+PERL=/usr/bin/perl
+PERLAPP=/c/Perl/bin/PerlApp.exe
+PERLAPP_MODE=-freestanding '-info=internalname=SICStus;companyname=SICS;FileDescription=SICStus Prolog build tool;comments=See the manual for details;legalcopyright=Copyright (c) 2007 SICS;fileversion=4.0.2.1000;productnumber=4.0.2.1000;productname=SICStus Prolog 4.0.2'
+PERLAPP_ENABLED=yes
+PLATFORM=x86-win32-nt-4
+LICENSE_PLATFORM=x86-win32-nt-4
+LICENSE_PRODUCT=sicstus4.0_x86-win32-nt-4
+PLFLAGS=compactcode
+QUOTECHAR="
+RANLIB=:
+RM=rm
+# RTKERNEL=@RTKERNEL@
+RTKERNEL_BASENAME_SANS_SUFFIX=sprt4-0-2
+RTKERNEL_BASENAME_WITH_DSO_SUFFIX=sprt4-0-2.dll
+RTKERNEL_BASENAME_WITH_STAT_SUFFIX=sprt4-0-2_static.lib
+RTKERNEL_INSTANCE_TEMPLATE=sprt4-0-2-instance-XX
+
+RTKERNEL_POST_PROCESS=$(MT) -manifest "$@.manifest" "-outputresource:$@;$(hash)2"
+# KERNEL_STATLIB=@KERNEL_STATLIB@
+KERNEL_STATLIB=$(error KERNEL_STATLIB should not be used, use RTKERNEL_BASENAME_WITH_STAT_SUFFIX instead)
+KERNEL_SHLD_FLAGS=
+SHLD=link.exe
+SHLDFLAGS=-nologo -dll /INCREMENTAL:NO /SAFESEH /NXCOMPAT kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib -debug
+KERNEL_SHLD_LIBS=
+MAPFILEOPT=
+RTKERNEL_EXPFILE=
+RELEASE_YEAR=2007
+
+SHLD_RTKERNELEXP=
+SHPRE=
+SHSFX=dll
+FLI_SHSFX=dll
+JNI_SHSFX=dll
+SHVER=
+SICSTUS_MAJOR_VERSION=4
+SICSTUS_MINOR_VERSION=0
+SICSTUS_REVISION_VERSION=2
+SICSTUS_BETA_VERSION=0
+SICSTUS_MICRO_VERSION=1000
+SICSTUS_BUILD_VERSION=4.0.2.1000
+SICSTUS_VERSION_STRING=4.0.2
+SPIO_CFLAGS_DISABLE_WREDUNDANT_DECLS=
+SPIO_PATH=spio
+SLEEP=
+SOCKETLIB=wsock32.lib
+SP_BINAUXDIR=/tmp/sp-xp-x32-sp-4-build-20071106-144423/srcdir/bin
+SP_BIGENDIAN=no
+SPACEOUT_MODULE=
+SPLD_CONFIG_FILE=/tmp/sp-xp-x32-sp-4-build-20071106-144423/srcdir/bin/spconfig-4.0.2
+SPLD_DSFLAGS=
+SPLD_TOOLFLAGS=
+SPLD_OPT_MOVEABLE_NEEDS_WRAPPER=no
+SPLD_OPT_WRAPPER_DEFAULT=no
+# SPVER=40
+SPVER=$(error [PM] 4.0 SPVER should not be used)
+STSFX=lib
+SYSTEMLIB=
+# [PD] 3.10.2 TAR is now STDTAR
+STDTAR=/bin/tar
+# [PD] 3.10.2beta1
+GNUTAR=/usr/bin/tar
+# [PM] 4.0.1
+POSIX_GREP=/usr/bin/grep
+RMDUMMY=
+TCLINC=-IC:/Tcl-8.4.13/include -IC:/include  
+TCLLIB=C:/Tcl-8.4.13/lib/tcl84.lib C:/Tcl-8.4.13/lib/tk84.lib  
+TCLTK_MODULE=tcltk.po
+TEX=/usr/bin/tex
+TEXI2DVI=/usr/bin/texi2dvi
+TEXINDEX=/usr/bin/texindex
+THREADED=no
+TIMEOUT_MODULE=timeout.po
+TOP_SRCDIR=/tmp/sp-xp-x32-sp-4-build-20071106-144423/srcdir
+ULIMIT_DATA=
+ULIMIT_CMD=
+
+UNZIP=/usr/bin/unzip
+
+UUIDGEN=/c/PROGRA~1/MI2578~1/Windows/v6.0/Bin/uuidgen.exe
+UUIDGENARGS=
+MSIVAL2=
+MSVC_ML_COMDAT_BUG=no
+ENABLE_VBSP=no
+WIN32=yes
+WINCE=no
+WIN32_EXTRAOBJS=win32.obj
+WINMAINOBJ=winmain.obj cmdproc.obj intrpt.obj 
+
+MSSDK_POSIX_PATH=/c/PROGRA~1/MI2578~1/Windows/v6.0
+IEXPRESS=iexpress.exe
+USE_IEXPRESS=yes
+SEVENZIP=
+SEVENZIP_PATH=
+USE_SEVENZIP=
+WIX_PRODUCTCODE=F0F8D41A-3D35-4EC6-9B21-C741B861FD93
+WIX_UPGRADECODE=2391CE0E-DE6C-4551-8DEA-58D592C53040
+ISETUPPROPNAME_INSTLOCATION=ftp://ftp.sics.se/pub/archive/sicstus4/auxfiles/win32/
+
+ifeq ($(CODETYPE),profiledcode)
+PLATFORM_BSTRAP=$(PLATFORM)
+CODE=pql
+endif
+ifeq ($(CODETYPE),compactcode)
+PLATFORM_BSTRAP=$(PLATFORM)
+CODE=cql
+endif
+
+# [PM] 3.9.1 the prolog code library directory (.../lib/sicstus-3.9.1beta1/library)
+SP_LIBRARY_DIR=/tmp/sp-xp-x32-sp-4-build-20071106-144423/srcdir/library
+
+ifeq ($(WIN32),yes)
+SP_LIBDIR=$(prefix)
+LOCAL_PREFIX=$(TOP_SRCDIR)
+LOCAL_BOOTSTRAP_PREFIX=$(TOP_SRCDIR)
+else
+SP_LIBDIR=$(prefix)/lib/$(SP_DIRNAME)
+LOCAL_PREFIX=$(TOP_SRCDIR)/Utils/$(PLATFORM)
+LOCAL_BOOTSTRAP_PREFIX=$(TOP_SRCDIR)/Utils/$(PLATFORM_BSTRAP)
+endif
+SP_BINDIR=$(prefix)/bin
+
+
+# Executables.
+OLDSICSTUS=
+OLDSICSTUSARGS=
+
+SICSTUS=$(prefix)/bin/sicstus$(EXEEXT)
+# [PM] 3.9.2 SPLD_EXEEXT empty except when perlapp is used on Win32 (in which case it is .exe)
+SPLD_EXEEXT=.exe
+SPLD=$(prefix)/bin/spld$(SPLD_EXEEXT)
+SPLFR=$(prefix)/bin/splfr$(SPLD_EXEEXT)
+
+SPLM=$(prefix)/bin/splm$(EXEEXT)
+SPDET=$(prefix)/bin/spdet$(EXEEXT)
+SPXREF=$(prefix)/bin/spxref$(EXEEXT)
+
+# Misc scripts
+MKDIR=mkdir -p
+
+PROTOTYPE_CORRECT_SIG_XXX=/NEWLINE//hash/define SP_SIG_IGN ((SP_SigFun*)SIG_IGN)/NEWLINE//hash/define SP_SIG_DFL ((SP_SigFun*)SIG_DFL)/NEWLINE//hash/define SP_SIG_ERR ((SP_SigFun*)SIG_ERR)/NEWLINE//hash/define SP_SIGINT SIGINT/NEWLINE//hash/define SP_SIGQUIT SIGBREAK/NEWLINE//hash/define SP_SIGBREAK SIGBREAK/NEWLINE/
+
+# [PM] WinCE
+SP_BIGENDIAN=no
+
+MKDISTR_COMPRESS=compress
+MKDISTR_COMPRESS_ARGS=
+SP_INSTALL_ZCAT=zcat
+SP_MERGE_CRT=yes
+
+# [PD] 3.10.2
+USE_PAX=yes
+
+COMP_QL= Compiler
+BIPS_QL= Bips
+USE_NONNATIVE_KERNEL_O = no
+
+# [PM] 3.11.0 current_version.{pl,ql} is gone in 3.11.0
+# CURRENT_VERSION_FILE_BASENAME := current_version
+CURRENT_VERSION_FILE_BASENAME :=
+
+## [PM] 3.9 Common defines for making sicstus exit with error code if
+##          an error or warning occurs (e.g., during compile).
+##          Prefix any goal sent to sicstus with $(BARF_ON_ERROR), e.g.,
+##          echo "$(BARF_ON_ERROR), fcompile(foo)." | sicstus -f
+## [PD] 3.9 FIXME: BARF_ERROR_38 affects SICStus 3.9, so BARF_ERROR below
+##          cannot be defined as both BARF_ERROR_38 and BARF_ERROR_39.
+
+# [PM] Temporary while removing the Ql/cql symlink
+USE_CQL_SUBDIR := yes
+
+SPIO_USE_LAYER_THREADDEVICE=no
+
+# barf if we get error
+# [PM] 3.9 OLDSICSTUS may be 3.8 or 3.9
+
+# [PM] 3.9b5 broken: BARF_ERROR := $(BARF_ERROR_38) $(BARF_ERROR_39)
+# [PM] 3.9b5 works in 3.8 and 3.9
+# [PM] 3.12.2 must be "recursively expanded" variable so we can override CUT_FAIL_FOR_IGNORED_PROLOG_ERRORS
+BARF_ERROR = asserta(user:(portray_message(error, _Message) :- $(CUT_FAIL_FOR_IGNORED_PROLOG_ERRORS) abolish(user:portray_message/2), print_message(error, _Message), halt(1))), 
+
+# [PM] 3.12.2 now define FAIL_FOR_IGNORED_PROLOG_WARNINGS only where needed
+# # [PM] 3.10 Do not barf at ... is previously loaded into module user now it is reloaded into module dummy
+# #           reload(File,OldM,NewM)
+# #           Could use \+ but afraid the backslash would confuse the shell
+# FAIL_FOR_IGNORED_PROLOG_WARNINGS := ((_Message=reload(_File,_OldM,_NewM), _OldM==user, _NewM==dummy) -> fail; true),
+
+# Barf if we get error or warning
+# [PM] 3.9b5 works in 3.8 and 3.9
+# [PM] 3.12.2 must be "recursively expanded" variable so we can override FAIL_FOR_IGNORED_PROLOG_WARNINGS
+BARF_WARNING = asserta(user:(portray_message(warning, _Message) :- $(FAIL_FOR_IGNORED_PROLOG_WARNINGS) abolish(user:portray_message/2), print_message(warning, _Message), halt(1))), 
+
+
+# Barf only on errors
+# BARF_ON_ERROR := $(BARF_ERROR)
+# Barf on errors and warnings (there should be no warnings).
+
+# [PM] 3.12.2 must be "recursively expanded" variable so we can
+#      override CUT_FAIL_FOR_IGNORED_PROLOG_ERRORS and
+#      FAIL_FOR_IGNORED_PROLOG_WARNINGS
+BARF_ON_ERROR = $(BARF_WARNING) $(BARF_ERROR)
+
+
+# Make sure that nobody runs the clean-targets by mistake
+.PHONY: def_internal
+def_internal:
+	$(error There is no default target in this Makefile. Use explicit target(s) instead.)
+	@echo "There is no default target in this Makefile"
+	@echo "Use explicit target(s) instead."
+
+# Default values for clean-targets
+.PHONY: clean distclean maintainerclean mostlyclean
+
+# [PM] 3.10.2 SPRM 5244 Emulator/Makefile deletes more in clean target than in distclean
+# distclean: clean
+
+# [PM] 3.9 delete failed targets (GNU Make specific)
+# NO_DELETE_ON_ERROR is set from Suite/Makefile
+ifneq ($(NO_DELETE_ON_ERROR),yes)
+.DELETE_ON_ERROR:
+endif
+

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Basic Debug - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Debug-Intro.html#Debug-Intro" title="Debug Intro">
+<link rel="prev" href="Procedure-Box.html#Procedure-Box" title="Procedure Box">
+<link rel="next" href="Plain-Spypoint.html#Plain-Spypoint" title="Plain Spypoint">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">5.2 Basic Debugging Predicates</h3>
+
+<p><a name="index-debugging-predicates-1659"></a><a name="index-predicates_002c-debugging-1660"></a>
+Development systems provide a range of built-in predicates
+for control of the debugging facilities.  The most basic
+predicates are as follows:
+
+     <dl>
+<dt><code>debug  </code><dfn>development</dfn><dd><a name="index-debug_002f0-_0028built_002din_0029-1661"></a><a name="index-debug_002f0-_0028built_002din_0029-1662"></a>
+Switches the debugger on, and ensures that the next time control reaches
+a spypoint, it will be activated. In basic usage this means that a
+message will be produced and you will be prompted for a command.  In
+order for the full range of control flow information to be available it
+is necessary to have the debugger on from the start.  When it is off the
+system does not remember invocations that are being executed.  (This is
+because it is expensive and not required for normal running of
+programs.)  You can switch <var>Debug Mode</var> on in the middle of
+execution, either from within your program or after a <kbd>^C</kbd>
+(see <code>trace/0</code> below), but information prior to this will be
+unavailable.
+
+     <br><dt><code>zip  </code><dfn>development</dfn><dd><a name="index-zip_002f0-_0028built_002din_0029-1663"></a><a name="index-zip_002f0-_0028built_002din_0029-1664"></a>
+Same as <code>debug/0</code>, except no debugging information is being
+collected, and so is almost as fast as running with the debugger
+switched off.
+
+     <br><dt><code>trace  </code><dfn>development</dfn><dd><a name="index-trace_002f0-_0028built_002din_0029-1665"></a><a name="index-trace_002f0-_0028built_002din_0029-1666"></a>
+Switches the debugger on, and ensures that the next time control enters
+an invocation box, a message will be produced and you will be
+prompted for a command.  The effect of <code>trace/0</code> can also be
+achieved by typing <kbd>t</kbd> after a <kbd>^C</kbd> interruption of a
+program.
+
+     <p class="noindent">At this point you have a number of options.  See <a href="Debug-Commands.html#Debug-Commands">Debug Commands</a>.  In
+particular, you can just type &lt;RET&gt; to creep (or single-step)
+into your program.  If you continue to creep through your
+program you will see every entry and exit to/from every
+invocation box, including compiled code, except for code
+belonging to hidden modules (see <a href="ref_002dmod.html#ref_002dmod">ref-mod</a>).  You will
+notice that the debugger stops at all ports.  However, if this is
+not what you want, the next predicate gives full
+control over the ports at which you are prompted.
+
+     <br><dt><code>leash(</code><var>+Mode</var><code>)  </code><dfn>development</dfn><dd><a name="index-leash_002f1-_0028built_002din_0029-1667"></a><a name="index-leash_002f1-_0028built_002din_0029-1668"></a>
+Leashing Mode is set to <var>Mode</var>.  Leashing Mode
+determines the ports of invocation boxes at which you are to
+be prompted when you creep through your program.  At
+unleashed ports a tracing message is still output, but
+program execution does not stop to allow user interaction.  Note
+that <code>leash/1</code> does not apply to spypoints, the
+leashing mode of these can be set using the advanced debugger
+features; see <a href="Advanced-Debugging.html#Advanced-Debugging">Advanced Debugging</a>.  Block and Unblock ports
+cannot be leashed.  <var>Mode</var> can be a subset of the following,
+specified as a list of the following:
+
+          <dl>
+<dt><code>call</code><dd><a name="index-call-_0028leashing-mode_0029-1669"></a>Prompt on Call.
+
+          <br><dt><code>exit</code><dd><a name="index-exit-_0028leashing-mode_0029-1670"></a>Prompt on Exit.
+
+          <br><dt><code>redo</code><dd><a name="index-redo-_0028leashing-mode_0029-1671"></a>Prompt on Redo.
+
+          <br><dt><code>fail</code><dd><a name="index-fail-_0028leashing-mode_0029-1672"></a>Prompt on Fail.
+
+          <br><dt><code>exception</code><dd><a name="index-exception-_0028leashing-mode_0029-1673"></a>Prompt on Exception. 
+</dl>
+
+     <p class="noindent">The following shorthands are also allowed:
+
+          <dl>
+<dt><code>leash(full).</code><dd>Same as <code>leash([call,exit,redo,fail,exception]).</code>.
+
+          <br><dt><code>leash(half).</code><dd>Same as <code>leash([call,redo]).</code>.
+
+          <br><dt><code>leash(none).</code><dd>Same as <code>leash([]).</code>. 
+</dl>
+
+     <p class="noindent">The initial value of <var>Leashing Mode</var> is
+<code>[call,exit,redo,fail,exception]</code> (full leashing).
+
+     <br><dt><code>nodebug  </code><dfn>development</dfn><dt><code>notrace  </code><dfn>development</dfn><dt><code>nozip  </code><dfn>development</dfn><dd><a name="index-nodebug_002f0-_0028built_002din_0029-1674"></a><a name="index-nodebug_002f0-_0028built_002din_0029-1675"></a>
+<a name="index-notrace_002f0-_0028built_002din_0029-1676"></a><a name="index-notrace_002f0-_0028built_002din_0029-1677"></a>
+<a name="index-nozip_002f0-_0028built_002din_0029-1678"></a><a name="index-nozip_002f0-_0028built_002din_0029-1679"></a>
+Switches the debugger off.  Any spypoints set will be kept but will never be activated.
+
+     <br><dt><code>debugging  </code><dfn>development</dfn><dd><a name="index-debugging_002f0-_0028built_002din_0029-1680"></a><a name="index-debugging_002f0-_0028built_002din_0029-1681"></a>
+Prints information about the current
+debugging state.  This will show:
+
+          <ol type=1 start=1>
+<li>Whether undefined predicates are being trapped. 
+<li>What breakpoints have been set (see below). 
+<li>What mode of leashing is in force (see above).
+          </ol>
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Plain-Spypoint.html#Plain-Spypoint">Next</a>
+<li><a rel="previous" accesskey="p" href="Procedure-Box.html#Procedure-Box">Previous</a>
+<li><a rel="up" accesskey="u" href="Debug-Intro.html#Debug-Intro">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Basic-Debug.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Basic-Debug.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

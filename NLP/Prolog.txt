@@ -1,0 +1,1 @@
+schimbati extensia din .txt in .rar. Rulati spwin.exe si introduceti informatiile din licenta.txt atunci cand sunt cerute.

@@ -1,0 +1,10 @@
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (1, 'Marketing', 2);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (2, 'Marketing', 1);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (3, 'Human Resources', 3);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (4, 'Accounting', 4);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (5, 'Sales', 1);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (6, 'Purchasing', 5);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (7, 'Sales', 5);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (8, 'Human Resources', 3);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (9, 'R&D', 1);
+INSERT INTO ANDREEA."store_department" ("department_id", "name", "store_id") VALUES (10, 'Purchasing', 4);

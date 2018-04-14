@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Platform specific UNIX notes - SICStus Prolog Release Notes</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog Release Notes">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Release-Notes-and-Installation-Guide-for-UNIX.html#Release-Notes-and-Installation-Guide-for-UNIX" title="Release Notes and Installation Guide for UNIX">
+<link rel="prev" href="UNIX-installation.html#UNIX-installation" title="UNIX installation">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">3.2 Platform Specific Notes</h3>
+
+<p>This section contains some installation notes that are platform
+specific under UNIX.
+
+     <dl>
+<dt><strong>Solaris SPARC 64-bit</strong><dd>You cannot install (or build) the 64 bit version of SICStus using
+<samp><span class="command">gcc 2.x</span></samp>. You need to use the Sun Workshop/Forte compiler,
+version 5.0 or later. <code>InstallSICStus</code> will try to find it during
+installation but if that fails, you can set the environment variable
+<samp><span class="env">CC</span></samp> to e.g. <samp><span class="file">/opt/SUNWspro/bin/cc</span></samp> before invoking
+<code>InstallSICStus</code>. Using <samp><span class="command">gcc 3.x</span></samp> does seem to work but
+has not yet received much testing. To install with <samp><span class="command">gcc 3.x</span></samp>,
+set the environment variable <samp><span class="env">CC</span></samp> appropriately before invoking
+<code>InstallSICStus</code>.
+
+     <p>The following libraries are not supported: <code>library(bdb)</code>,
+<code>library(tcltk)</code>.
+
+     <br><dt><strong>Solaris 8</strong><dd>Library <code>timeout</code> does not work with the default thread
+implementation in Solaris 8. Instead the &ldquo;Alternate Thread Library (T2)&rdquo;
+must be used. This is ensured automatically for executables built with
+the <samp><span class="command">spld</span></samp> tool. See
+<a href="http://developers.sun.com/solaris/articles/alt_thread_lib.html">http://developers.sun.com/solaris/articles/alt_thread_lib.html</a>
+for further information.
+
+     <p>This problem does not affect Solaris 9 or later.
+
+     <!-- @ifset MACOSXSUPPORTED -->
+<br><dt><strong>Mac OS X</strong><dd><!-- [PD] 4.0.0 On Mac OS X 10.4 Tcl/Tk is installed by default. -->
+<!-- Installing and using @code{library(tcltk)} requires @code{Tk}, which is -->
+<!-- not installed under Mac OS X by default (@pxref{Tcl/Tk Notes}). -->
+
+     <p>An executable built with <samp><span class="command">spld</span></samp> will only work if there is a
+properly configured subdirectory <samp><span class="file">sp-4.0.2</span></samp> in the
+same directory as the executable; see <a href="../sicstus/Runtime-Systems-on-UNIX-Target-Machines.html#Runtime-Systems-on-UNIX-Target-Machines">Runtime Systems on UNIX Target Machines</a>.
+
+     <p>Alternatively, the option <samp><span class="option">--wrapper</span></samp> can be passed to <samp><span class="command">spld</span></samp>. 
+In this case a wrapper script is created that will set up various
+environment variables and invoke the real executable.
+
+     <p>When using third-party products like <code>BDB</code>, you may
+need to set up <samp><span class="env">DYLD_LIBRARY_PATH</span></samp> so that the Mac OS X dynamic
+linker can find them. When using the SICStus development executable
+(<samp><span class="command">sicstus</span></samp>), this should happen automatically.
+
+     <p>Sometimes, the default limit on the process's data-segment is
+unreasonably small, which may lead to unexpected memory allocation
+failures. To check this limit, do
+     <pre class="example">          tcsh&gt; <kbd>limit data</kbd>
+          datasize 	6144 kbytes
+          bash&gt; <kbd>ulimit -d</kbd>
+          6144
+     </pre>
+     <p>This indicates that the maximum size of the data-segment is only 6
+Mb. To remove the limit, do
+     <pre class="example">          tcsh&gt; <kbd>limit datasize unlimited</kbd>
+          datasize 	unlimited
+          bash&gt; <kbd>ulimit -d unlimited</kbd>
+          bash&gt; <kbd>ulimit -d</kbd>
+          unlimited
+     </pre>
+     <!-- [PM] 3.9b4 @strong{Note}: will be mistaken for a cross reference by -->
+<!-- Info. See the texinfo documentation for @strong{}. -->
+<blockquote>
+<strong>Please note</strong>: <samp><span class="command">limit</span></samp> (<samp><span class="command">ulimit</span></samp>) is a shell built-in
+in <samp><span class="command">csh</span></samp>/<samp><span class="command">tcsh</span></samp> (<samp><span class="command">sh</span></samp>/<samp><span class="command">bash</span></samp>). It may have a
+different name in other shells. 
+</blockquote>
+
+     <blockquote>
+<strong>Please note</strong>: The limit will also affect SICStus when started
+from within Emacs, e.g. with <kbd>M-x run-prolog</kbd>. To change the
+limit used by Emacs and its sub-processes (such as SICStus) you will
+need to change the limit in the shell used to start Emacs. Alternatively
+you can create a shell wrapper for the <samp><span class="command">emacs</span></samp> command. 
+</blockquote>
+
+     <p>As of SICStus 4.0.1 SICStus will set the data segment size of itself
+according to the value of the environment variable
+<samp><span class="env">SP_ULIMIT_DATA_SEGMENT_SIZE</span></samp>. If you set this variable in the
+initialization file for your shell you do not have to use the
+<samp><span class="command">ulimit</span></samp> command.
+
+     <p><code>library(timeout)</code> does not work reliably when Mac OS X runs on a
+multi-CPU machine. In particular, timeouts tend to happen much later than
+they should. This is caused by an OS bug. One workaround is to disable
+all but one CPU using the &ldquo;Processor&rdquo; control in the &ldquo;System
+Preferences&rdquo; or the <samp><span class="command">hwprefs</span></samp> command. These utilities are part
+of &ldquo;CHUD&rdquo; which can be installed as part of Apple XCode. The
+underlying bug is related to <code>setitimer(ITIMER_VIRTUAL)</code> and has
+been observed at least up to Mac OS X 10.4.8 (Darwin 8.8.1).
+
+     <p>File names are encoded in UTF-8 under Mac OS X. This is
+handled correctly by SICStus.
+
+     <p>If SICStus encounters a file name that is not encoded in UTF-8, it
+<!-- will interpret the name as Latin 1 (ISO 8859/1) instead. -->
+will silently ignore the file or directory. 
+This can happen on file systems where files have been created by some
+other OS than Mac OS X, e.g. on network file servers accessed by
+other UNIX flavors or Windows.
+
+     <p>The default character encoding for the SICStus standard streams is
+based on the current locale which is POSIX/C, i.e. US ASCII, by
+default on Mac OS X. 
+<!-- (@pxref{WCX Environment Variables, , WCX Environment Variables, sicstus, the SICStus Prolog Manual}). -->
+This will come in
+conflict with the default character encoding for the Terminal
+application which is UTF-8. A clickable launcher for SICStus is
+optionally installed in the Applications folder. This launcher will set
+the character encoding of the standard streams to UTF-8 for both the
+Terminal and SICStus.
+
+     <p>The SICStus binaries are not built as universal binaries, and neither
+<samp><span class="command">spld</span></samp> nor <samp><span class="command">splfr</span></samp> supports building universal
+binaries. You can however build a universal binary of your SICStus
+application by running <samp><span class="command">spld</span></samp> from a SICStus
+PowerPC-installation (this may be done on an Intel-Mac using Rosetta)
+and running <samp><span class="command">spld</span></samp> from a SICStus Intel-installation, and then
+joining the two generated binaries with <samp><span class="command">lipo</span></samp>. The following example
+assumes that your program is in <samp><span class="file">myprog.pl</span></samp> and the paths to your
+PowerPC-installation and your Intel-installation are
+<samp><span class="env">SP-i386-BINPATH</span></samp> and <samp><span class="env">SP-PPC-BINPATH</span></samp> respectively.
+     <pre class="example">          $(SP-i386-BINPATH)/sicstus -l myprog.pl --goal "save_program(myprog), halt."
+          $(SP-i386-BINPATH)/spld --main=restore myprog.sav -static -o myprog-i386
+          $(SP-PPC-BINPATH)/spld --main=restore myprog.sav -static -o myprog-ppc
+          lipo myprog-i386 myprog-ppc -create -output myprog
+     </pre>
+     <p>You cannot install a PowerPC-based SICStus on an Intel-Mac with the
+SICStus Installer Tool. You must unpack the tar file and run the
+script InstallSICStus with the <samp><span class="option">--all-questions</span></samp>
+argument. When asked if you want to install the prebuilt version
+of SICStus, answer &ldquo;yes&rdquo;.
+
+     <br><dt><dd><strong>Mac OS X 64-bit</strong>
+The following libraries are not supported: <code>library(bdb)</code>,
+<code>library(tcltk)</code>.
+
+     <!-- @end ifset MACOSXSUPPORTED -->
+<!-- @item @strong{irix} -->
+<!-- @code{spld -moveable} implies @option{-wrapper}. this is due to -->
+<!-- limitations in the irix run-time loader. -->
+<!-- @item @strong{irix} -->
+<!-- pre-linked dynamic resources will not be found at run-time if the -->
+<!-- executable was built with @code{spld -moveable}. this should not be a -->
+<!-- problem; pre-linked dynamic resources are not recommended anyway. -->
+<!-- @item @strong{aix} -->
+<!-- applications that embed the sicstus run-time need to use the @samp{large -->
+<!-- address-space model}. this is done automatically by @command{spld}. if you -->
+<!-- do not use @command{spld}, you need to set this option yourself. this is -->
+<!-- achieved by linking the executable using the @option{-bmaxdata} option. an -->
+<!-- alternative may be to set the environment variable @env{ldr_cntrl} -->
+<!-- appropriately. see the documentation for the aix command @command{ld}. -->
+<!-- @item AIX -->
+<!-- @code{library(bdb)} does not work properly unless Berkeley DB is -->
+<!-- built like this: -->
+<!-- @example -->
+<!-- @group -->
+<!-- % @kbd{make LIBSO_LIBS=-lpthread} -->
+<!-- @end group -->
+<!-- @end example -->
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">Release Notes</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="previous" accesskey="p" href="UNIX-installation.html#UNIX-installation">Previous</a>
+<li><a rel="up" accesskey="u" href="Release-Notes-and-Installation-Guide-for-UNIX.html#Release-Notes-and-Installation-Guide-for-UNIX">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/relnotes/Platform-specific-UNIX-notes.html&amp;body=Feedback%20on%20documentation%20node%20html/relnotes/Platform-specific-UNIX-notes.html%20in%20Release%20Notes.">Send feedback on this subject.</mailto>
+   </body></html>
+

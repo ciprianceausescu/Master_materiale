@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Goal Expanded Constraints - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="prev" href="Execution-of-Checking-Indexicals.html#Execution-of-Checking-Indexicals" title="Execution of Checking Indexicals">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.8 Goal Expanded Constraints</h5>
+
+<p>The arithmetic, membership, and propositional constraints described
+earlier are transformed at compile time to conjunctions of
+goals of library constraints.
+
+   <p>Although space economic (linear in the size of the source code),
+the expansion of a constraint to library goals can have an
+overhead compared to expressing the constraint in terms of indexicals. 
+Temporary variables holding intermediate values may have to be
+introduced, and the grain size of the constraint solver invocations can
+be rather small.  The translation of constraints to library goals
+has been greatly improved in the current version, so these problems have
+virtually disappeared.  However, for backward compatibility, an
+implementation by compilation to indexicals of the same
+constraints is also provided.
+
+   <p>The following two constructions are semantically equivalent:
+
+<pre class="example">     <var>Head</var> +: <var>LinExpr</var> <var>RelOp</var> <var>LinExpr</var>.
+     
+     <var>Head</var> :- <var>LinExpr</var> <var>RelOp</var> <var>LinExpr</var>.
+</pre>
+   <p class="noindent">where <var>Head</var> only contains unique variables mentioned in the
+linear arithmetic expressions <var>LinExpr</var> (see <a href="Syntax-of-Indexicals.html#Syntax-of-Indexicals">Syntax of Indexicals</a>).  The alternative version of <code>sum/8</code> in <a href="Send-More-Money.html#Send-More-Money">Send More Money</a> illustrates this technique.
+
+   <p>Similarly, the following two constructions are semantically equivalent:
+
+<pre class="example">     <var>Pred(X,Y)</var> +: element(<var>X</var>, <var>CList</var>, <var>Y</var>).
+     
+     <var>Pred(X,Y)</var> :- element(<var>X</var>, <var>CList</var>, <var>Y</var>).
+</pre>
+   <p class="noindent">where <var>CList</var> is a ground list of integers.  This technique is
+used in some demo programs in <code>library('clpfd/examples')</code>. 
+<strong>Please note</strong>: the generated indexical will assume that the
+domains of <var>X</var> and <var>Y</var> do not contain values incompatible with
+<var>CList</var>.
+
+   <p>Similarly, the following two constructions are semantically
+equivalent:
+
+<pre class="example">     <var>Pred(X1,...,Xn)</var> +: table(<var>CTable</var>).
+     
+     <var>Pred(X1,...,Xn)</var> :- table(<var>[[X1,...Xn]]</var>, <var>CTable</var>).
+</pre>
+   <p class="noindent">where <var>CTable</var> is an <var>n</var>-ary relation given by extension, as
+for the constraint <code>table/[2,3]</code>.  <strong>Please note</strong>: the
+generated indexical will assume that the domains of <var>X1,...Xn</var> do
+not contain values incompatible with <var>CTable</var>.
+
+   <p>In the body of an FD predicate, <code>element/3</code> and <code>table/1</code>
+expressions expand to indexicals recursively built up from
+<code>switch/2</code> and <code>unionof/3</code> expressions.  For example, the
+following constraint:
+
+<pre class="example">     p(X, Y) +: table([[1,1],[2,1..2],[3,1..3]]).
+</pre>
+   <p class="noindent">expands to:
+
+<pre class="example">     q(X, Y) +:
+             X in unionof(B,dom(Y),switch(B,[1-{1,2,3},2-{2,3},3-{3}])),
+             Y in unionof(B,dom(X),switch(B,[1-{1},2-{1,2},3-{1,2,3}])).
+</pre>
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="previous" accesskey="p" href="Execution-of-Checking-Indexicals.html#Execution-of-Checking-Indexicals">Previous</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Goal-Expanded-Constraints.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Goal-Expanded-Constraints.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

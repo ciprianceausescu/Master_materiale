@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>CPL Notes - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Mixing-C-and-Prolog.html#Mixing-C-and-Prolog" title="Mixing C and Prolog">
+<link rel="next" href="Calling-C-from-Prolog.html#Calling-C-from-Prolog" title="Calling C from Prolog">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">6.1 Notes</h3>
+
+     <dl>
+<!-- [PM] 4.0 There are no non-ANSI/ISO compilers anymore -->
+<!-- @item ANSI Conformance -->
+<!-- @cindex ANSI conformance -->
+<!-- @cindex conformance, ANSI -->
+<!-- Only C compilers that support ANSI C (or similar) are supported. -->
+<!-- @c Throughout this chapter, @code{void *} in the function definitions may -->
+<!-- @c be changed to @code{char *} on non ANSI conforming C compilers. -->
+
+     <dt><em>The SP_PATH variable</em><dd><a name="index-SP_005fPATH-_0028environment_0029-1975"></a>It is normally not necessary to set this environment variable, but its
+value will be used, as a fall-back, at runtime if no explicit boot path
+is given when initializing a runtime or development system.  In
+this chapter, the environment variable <samp><span class="env">SP_PATH</span></samp> is used as a
+shorthand
+<!-- FIXME [PM] 3.9b5 Terminology: SP_PATH is not the answer to the -->
+<!-- InstallSICStus question: "Install where?" -->
+for the SICStus Prolog installation directory,
+whose default location for SICStus 4.0.2 is
+<samp><span class="file">/usr/local/lib/sicstus-4.0.2</span></samp>) for UNIX and
+<samp><span class="file">C:\Program Files\SICStus Prolog 4.0.2</span></samp> for Windows. 
+See <a href="too_002dsicstus.html#too_002dsicstus">too-sicstus</a>.
+
+     <blockquote>
+<strong>Windows note</strong>:
+Explicit use of the <samp><span class="env">SP_PATH</span></samp> variable is discouraged,
+since Windows applications can find out for themselves where they were
+started from.  <samp><span class="env">SP_PATH</span></samp> is only used if the directory where
+<samp><span class="file">sprt4-0-2.dll</span></samp> is loaded from does not contain
+<code>sp-4.0.2</code> (a directory), <samp><span class="file">sprt.sav</span></samp>, or
+<samp><span class="file">spre.sav</span></samp>.  If <samp><span class="env">SP_PATH</span></samp> is used, SICStus expects it to be set
+such that <code>%SP_PATH%\bin</code> contains <samp><span class="file">sprt.sav</span></samp> or
+<samp><span class="file">spre.sav</span></samp>.  See <a href="Runtime-Systems-on-Target-Machines.html#Runtime-Systems-on-Target-Machines">Runtime Systems on Target Machines</a>. 
+</blockquote>
+
+     <br><dt><em>Definitions and declarations</em><dd>Type definitions and function declarations for the interface
+are found in the header file <samp><span class="file">&lt;sicstus/sicstus.h&gt;</span></samp>.
+
+     <br><dt><em>Error Codes</em><dd><a name="index-SP_005fSUCCESS-_0028C-macro_0029-1976"></a><a name="index-SP_005fFAILURE-_0028C-macro_0029-1977"></a><a name="index-SP_005fERROR-_0028C-macro_0029-1978"></a>
+<!-- FIXME [PM] 3.9b5 the following paragraph is bogus (PRM 3071) -->
+
+     <p>The value of many support functions is a return code, namely:
+<code>SP_SUCCESS</code> for success, <code>SP_FAILURE</code> for failure,
+<code>SP_ERROR</code> if an error condition occurred, or if an uncaught
+exception was raised during a call from C to Prolog. 
+If the value is <code>SP_ERROR</code>, the macro <code>SP_errno</code> will return a
+value describing the error condition:
+
+     <p><a name="index-SP_005ferrno-_0028C-macro_0029-1979"></a><a name="index-SP_005ferror_005fmessage_0028_0029-_0028C-function_0029-1980"></a>
+     <pre class="example">          int SP_errno
+     </pre>
+     <p>The function <code>SP_error_message()</code> returns a pointer to the diagnostic
+message corresponding to a specified error number.
+
+     <br><dt><em>Wide Characters</em><dd><a name="index-encoded-string-1981"></a><a name="index-string_002c-encoded-1982"></a><a name="index-UTF_002d8-encoding-1983"></a><a name="index-encoding_002c-UTF_002d8-1984"></a>The foreign interface supports wide characters. Whenever a sequence of
+possibly wide character codes is to be passed to or from a C
+function it is encoded as a sequence of bytes, using the UTF-8 encoding. 
+<!-- @pxref{WCX Concepts}. -->
+Unless noted otherwise the encoded form is
+terminated by a NUL byte. This sequence of bytes will be called an
+<dfn>encoded string</dfn>, representing the given sequence of character
+codes.  Note that it is a property of the UTF-8 encoding that it does
+not change ASCII character code sequences.
+
+     <p>If a foreign function is specified to return an encoded string, an
+exception will be raised if, on return to Prolog, the actual string is
+malformed (is not a valid sequence of UTF-8 encoded characters). The
+exception raised is
+<code>representation_error(...,...,mis_encoded_string)</code>.
+
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Calling-C-from-Prolog.html#Calling-C-from-Prolog">Next</a>
+<li><a rel="up" accesskey="u" href="Mixing-C-and-Prolog.html#Mixing-C-and-Prolog">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/CPL-Notes.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/CPL-Notes.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

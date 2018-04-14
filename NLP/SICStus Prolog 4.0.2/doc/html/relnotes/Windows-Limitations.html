@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Windows Limitations - SICStus Prolog Release Notes</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog Release Notes">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Release-Notes-and-Installation-Guide-for-Windows.html#Release-Notes-and-Installation-Guide-for-Windows" title="Release Notes and Installation Guide for Windows">
+<link rel="prev" href="The-Console-Window.html#The-Console-Window" title="The Console Window">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">4.6 Windows Limitations</h3>
+
+     <ul>
+<li>File paths with both `<samp><span class="samp">/</span></samp>' and `<samp><span class="samp">\</span></samp>' as separator are accepted. SICStus
+returns paths using `<samp><span class="samp">/</span></samp>'. Note that `<samp><span class="samp">\</span></samp>', since it is escape
+character, must be given as `<samp><span class="samp">\\</span></samp>'.
+
+     <li>All file names and paths are normalized when expanded by
+<code>absolute_file_name/3</code>. This is to simulate the case
+insensitivity used by Windows file systems. This means that files
+created by SICStus may have names on disk that differs in case from
+what was specified when the file was created.
+
+     <!-- @item -->
+<!-- @c [PM] 3.9 TODO update (and fix the code) for use of $HOME and $HOMESHARE -->
+<!-- File paths of the form @file{~/} are expanded using the values of the -->
+<!-- environment variables @env{HOMEDRIVE} and -->
+<!-- @samp{HOMEPATH}. The form -->
+<!-- @c @samp{~}@var{username}@samp{/} -->
+<!-- @var{~username/} -->
+<!-- is not -->
+<!-- expanded. The form -->
+<!-- @c @samp{$}@var{VAR}@samp{/} -->
+<!-- @var{$VAR} -->
+<!-- is expanded using the value -->
+<!-- of the environment variable @var{VAR}.  The form -->
+<!-- @c @samp{%}@var{VAR}@samp{%/} -->
+<!-- @var{%VAR%} -->
+<!-- is not recognized. -->
+<!-- [PM] 4.0 problem fixed with SPIO -->
+<!-- @item -->
+<!-- @c [PM] updated for 3.9 -->
+<!-- Interruption by @kbd{C-c} only works in certain circumstances -->
+<!-- @itemize @minus -->
+<!-- @item -->
+<!-- @kbd{C-c} always works while Prolog code is executing. This is true -->
+<!-- for both @command{sicstus} and @command{spwin}. -->
+<!-- @item -->
+<!-- @kbd{C-c} always works while @command{spwin} is in a  blocking -->
+<!-- read from the GUI window. -->
+<!-- @item -->
+<!-- @kbd{C-c} will interrupt a blocking read from the (default) standard input if -->
+<!-- @command{sicstus} is attached to a console window. That is, if it is -->
+<!-- started from a command prompt window. -->
+<!-- @item -->
+<!-- @kbd{C-c} will not interrupt a blocking read from a pipe or other -->
+<!-- non-terminal. In particular, it will not interrupt a blocking read in -->
+<!-- SICStus if SICStus gets its input from a pipe, such as when running -->
+<!-- SICStus within Emacs. -->
+<!-- @item -->
+<!-- Blocking system calls, such as those used by -->
+<!-- @code{library(sockets)}, are not interruptible by @kbd{C-c} in any kind -->
+<!-- of SICStus executable. -->
+<!-- @end itemize -->
+<!-- [PM] 4.0 user_error uses auto flush -->
+<!-- @item -->
+<!-- In the windowed executable, the @code{user_error} stream is line buffered. -->
+<li>Emacs Issues:
+Running under Emacs has been tried with recent versions of GNU Emacs and
+XEmacs.  See <a href="The-Emacs-Interface.html#The-Emacs-Interface">The Emacs Interface</a>.
+
+     <!-- BETA FIXME -->
+<!-- @strong{Please note:} The Emacs information has not been updated for SICStus 4: -->
+<ul>
+<li>In both GNU Emacs and XEmacs <kbd>C-c C-c</kbd>
+(<code>comint-interrupt-subprocess</code>) will <em>not</em> interrupt a
+blocking read from standard input. The interrupt will be noted as soon
+as some character is sent to SICStus. The characters typed will not be
+discarded but will instead be used as debugger commands, sometimes
+leading to undesirable results.
+
+          <li>Choosing `<samp><span class="samp">Send EOF</span></samp>' from the menu, i.e. <code>comint-send-eof</code>),
+closes the connection to the SICStus process. This will cause SICStus to
+exit. This problem cannot be fixed in SICStus; it is a limitation of
+current versions of FSF Emacs and XEmacs (at least up to FSF Emacs 20.7
+and XEmacs 21.5).
+
+          <p>Instead of sending and end of file, you can enter the symbol
+<code>end_of_file</code> followed by a period. Alternatively, a <kbd>C-z</kbd> can
+be generated by typing <kbd>C-q C-z</kbd>.
+
+     </ul>
+
+     <li>Under Windows, <code>statistics(runtime, ...)</code> measures
+user time of the thread running SICStus (the main thread) instead of
+process user time. This makes <code>statistics(runtime, ...)</code>
+meaningful also in a multi-threaded program.
+
+     <!-- For a single-threaded program this is the same as process user time. -->
+<!-- [PM] 4.0 top_level_events works now. -->
+<!-- @item -->
+<!-- Tcl/Tk: The @code{top_level_events} option to @code{tk_new/2} is not -->
+<!-- supported. -->
+<!-- [PM] 4.0 Supported in all windows versions so no need to say anything -->
+<!-- @item -->
+<!-- @code{library(timeout)} is supported. -->
+<!-- The time is user time of the main thread under Windows 2000/XP. -->
+<!-- [PM] 4.0 AF_UNIX not supported even under UNIX (yet) -->
+<!-- @item -->
+<!-- @code{library(sockets)}: The @code{AF_UNIX} address family is (unsurprisingly) -->
+<!-- not supported; @code{socket_select/7} supports socket streams only. -->
+<!-- [PM] 4.0 library(process) fixes this -->
+<!-- @item -->
+<!-- @code{library(system)}: @code{popen/3} is not supported. -->
+<!-- @code{kill/2} attempts to terminate the requested -->
+<!-- process irrespectively of the 2nd arg. You should not use it as it -->
+<!-- bypasses the killed process cleanup routines. -->
+<!-- @item -->
+<!-- @c SPRM 4354 -->
+<!-- @code{library(system)}: @code{shell/[1,2]} does not work reliably except -->
+<!-- for the simple case of a single command with no embedded spaces or -->
+<!-- quote characters. This is because of limitations of agument passing in -->
+<!-- Windows. A possible workaround is to create a temporary file and invoke -->
+<!-- that instead. -->
+</ul>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">Release Notes</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="previous" accesskey="p" href="The-Console-Window.html#The-Console-Window">Previous</a>
+<li><a rel="up" accesskey="u" href="Release-Notes-and-Installation-Guide-for-Windows.html#Release-Notes-and-Installation-Guide-for-Windows">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/relnotes/Windows-Limitations.html&amp;body=Feedback%20on%20documentation%20node%20html/relnotes/Windows-Limitations.html%20in%20Release%20Notes.">Send feedback on this subject.</mailto>
+   </body></html>
+

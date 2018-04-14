@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Term Expressions - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="prev" href="Range-Expressions.html#Range-Expressions" title="Range Expressions">
+<link rel="next" href="Monotonicity-of-Indexicals.html#Monotonicity-of-Indexicals" title="Monotonicity of Indexicals">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.3 Term Expressions</h5>
+
+<p>A term expression has one of the following forms, where T_1
+and T_2 denote term expressions, X denotes a
+variable, I denotes an integer, and S denotes the
+current store.
+
+     <dl>
+<dt><code>min(X)</code><dd>evaluates to the minimum of D(X,S)
+
+     <br><dt><code>max(X)</code><dd>evaluates to the maximum of D(X,S)
+
+     <br><dt><code>card(X)</code><dd>evaluates to the size of D(X,S)
+
+     <br><dt><code>X</code><dd>evaluates to the integer value of X. 
+The indexical will suspend until X is assigned.
+
+     <br><dt><code>I</code><dd>an integer
+
+     <br><dt><code>inf</code><dd>minus infinity
+
+     <br><dt><code>sup</code><dd>plus infinity
+
+     <br><dt><code>-T_1</code><dd>evaluates to S(T_1) negated
+
+     <br><dt><code>T_1+T_2</code><dd>evaluates to the sum of S(T_1) and S(T_2)
+
+     <br><dt><code>T_1-T_2</code><dd>evaluates to the difference of S(T_1) and S(T_2)
+
+     <br><dt><code>T_1*T_2</code><dd>evaluates to the product of S(T_1) and S(T_2),
+where S(T_2) must not be negative
+
+     <br><dt><code>T_1/&gt;T_2</code><dd>evaluates to the quotient of S(T_1) and S(T_2), rounded up,
+where S(T_2) must be positive
+
+     <br><dt><code>T_1/&lt;T_2</code><dd>evaluates to the quotient of S(T_1) and S(T_2), rounded down,
+where S(T_2) must be positive
+
+     <br><dt><code>T_1 mod T_2</code><dd>evaluates to the modulo of S(T_1) and S(T_2)
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Monotonicity-of-Indexicals.html#Monotonicity-of-Indexicals">Next</a>
+<li><a rel="previous" accesskey="p" href="Range-Expressions.html#Range-Expressions">Previous</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Term-Expressions.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Term-Expressions.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

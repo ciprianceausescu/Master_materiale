@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>ref-mgc-ove-sta - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="ref_002dmgc_002dove.html#ref_002dmgc_002dove" title="ref-mgc-ove">
+<link rel="prev" href="ref_002dmgc_002dove_002drsp.html#ref_002dmgc_002dove_002drsp" title="ref-mgc-ove-rsp">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">4.10.1.2 Displaying Statistics</h5>
+
+<p><a name="index-memory-statistics-1288"></a><a name="index-statistics_002c-memory-1289"></a>
+<a name="index-statistics_002f_005b0_002c2_005d-_0028built_002din_0029-1290"></a><a name="index-statistics_002f_005b0_002c2_005d-_0028built_002din_0029-1291"></a>
+
+   <p><a name="index-displaying-statistics-1292"></a><a name="index-statistics_002c-displaying-1293"></a>
+
+   <p>Statistics relating to memory usage, run time, and garbage collection,
+including information about which areas of memory have overflowed and
+how much time has been spent expanding them, can be displayed by
+calling <code>statistics/0</code>.
+
+   <p>The output from <code>statistics/0</code> looks like this:
+
+<pre class="example">     memory (total)       1718512 bytes
+        global stack       185472 bytes:       1784 in use,    183688 free
+        local stack         10496 bytes:        308 in use,     10188 free
+        trail stack         92750 bytes:        244 in use,     92506 free
+        control stack       92722 bytes:        216 in use,     92506 free
+        atoms              109849 bytes:       3698 in use,   1044877 free
+        program space     1337072 bytes:    1048136 in use,    288936 free
+        program space breakdown:
+                 compiled code               469800 bytes
+                 predicate                   134624 bytes
+                 try_node                    129632 bytes
+                 atom                        123064 bytes
+                 sw_on_key                    92592 bytes
+                 incore_info                  43392 bytes
+                 atom table                   36864 bytes
+                 interpreted code              7656 bytes
+                 atom buffer                   2560 bytes
+                 miscellaneous                 2096 bytes
+                 BDD hash table                1560 bytes
+                 numstack                      1024 bytes
+                 FLI stack                     1024 bytes
+                 SP_malloc                      952 bytes
+                 int_info                       688 bytes
+                 source info (itable)           368 bytes
+                 module                         128 bytes
+                 source info (lheap)             80 bytes
+                 foreign resource                32 bytes
+         No memory resource errors
+     
+            0.000 sec. for 3 global, 21 local, and 0 control space overflows
+            0.000 sec. for 0 garbage collections which collected 0 bytes
+            0.000 sec. for 0 atom garbage collections which collected 0 atoms 0 bytes
+            0.010 sec. for 1 memory defragmentations
+            0.420 sec. runtime
+           26.100 sec. elapsed time
+</pre>
+   <p>Note the use of indentation to indicate sub-areas.  That is, memory
+contains the program space, global space, and local stack, and the global
+space contains the global stack and trail.
+
+   <p>The memory (total) figure shown as &ldquo;in use&rdquo; is the sum of the spaces
+for the program space and stacks. The &ldquo;free&rdquo; figures for the stacks
+are for free space within those areas.  However, this free space is
+considered used as far as the memory (total) area is concerned,
+because it has been allocated to the stacks. The program space is not
+considered to have its own free space.  It always allocates new space
+from the general memory (total) free area.
+
+   <p>If a memory resource error has occurred previously in the execution,
+the memory area for which memory could not be allocated is displayed.
+
+   <p>Individual statistics can be obtained by <code>statistics/2</code>, which
+accepts a keyword and returns a list of statistics related to that
+keyword.
+
+   <p>The keys and values for <code>statistics(</code><var>Keyword</var><code>, </code><var>List</var><code>)</code>
+are summarized below.  The keywords <code>core</code> and <code>heap</code> are
+included to retain compatibility with other Prologs.  Times are given
+in milliseconds and sizes are given in bytes.
+
+     <dl>
+<dt><var>Keyword</var><dd><var>List</var>
+
+     <br><dt><code>global_stack</code><dd><a name="index-global_005fstack-_0028statistics-key_0029-1294"></a><code>[</code><var>size used</var><code>,</code><var>free</var><code>]</code><br> This refers to the global stack,
+where compound terms are stored. The values are gathered before
+the list holding the answers is allocated.
+
+     <br><dt><code>local_stack</code><dd><a name="index-local_005fstack-_0028statistics-key_0029-1295"></a><code>[</code><var>size used</var><code>,</code><var>free</var><code>]</code><br> This refers to the local stack,
+where recursive predicate environments are stored.
+
+     <br><dt><code>trail</code><dd><a name="index-trail-_0028statistics-key_0029-1296"></a><code>[</code><var>size used</var><code>,</code><var>free</var><code>]</code><br> This refers to the trail stack,
+where conditional variable bindings are recorded.
+
+     <br><dt><code>choice</code><dd><a name="index-choice-_0028statistics-key_0029-1297"></a><code>[</code><var>size used</var><code>,</code><var>free</var><code>]</code><br> This refers to the
+choicepoint stack, where partial states are stored for
+backtracking purposes.
+
+     <br><dt><code>core</code><dd><a name="index-core-_0028statistics-key_0029-1298"></a><dt><code>memory</code><dd><a name="index-memory-_0028statistics-key_0029-1299"></a><code>[</code><var>size used</var><code>,0]</code><br>
+These refer to the amount of memory actually allocated by the
+Prolog engine.  The zero is there for compatibility with other Prolog
+implementations.
+
+     <br><dt><code>heap</code><dd><a name="index-heap-_0028statistics-key_0029-1300"></a><dt><code>program</code><dd><a name="index-program-_0028statistics-key_0029-1301"></a><code>[</code><var>size used</var><code>,</code><var>size free</var><code>]</code><br> These refer to the amount of
+memory allocated for the database, symbol tables, and the like.
+
+     <br><dt><code>runtime</code><dd><a name="index-runtime-_0028statistics-key_0029-1302"></a><code>[</code><var>since start of Prolog</var><code>,</code><var>since previous statistics</var><code>]</code>
+These refer to CPU time used while executing, excluding time spent
+garbage collecting, stack shifting, or in system calls. 
+The second element is the time since the last call to
+<code>statistics/2</code> with this key. It is not affected by calls to
+<code>statistics/0</code>.
+
+     <br><dt><code>total_runtime</code><dd><a name="index-total_005fruntime-_0028statistics-key_0029-1303"></a><code>[</code><var>since start of Prolog</var><code>,</code><var>since previous statistics</var><code>]</code>
+These refer to total CPU time used while executing, including memory
+management such as garbage collection but excluding system calls. 
+The second element is the time since the last call to
+<code>statistics/2</code> with this key. It is not affected by calls to
+<code>statistics/0</code>.
+
+     <br><dt><code>walltime</code><dd><a name="index-walltime-_0028statistics-key_0029-1304"></a><code>[</code><var>since start of Prolog</var><code>,</code><var>since previous statistics</var><code>]</code>
+These refer to absolute time elapsed. 
+The second element is the time since the last call to
+<code>statistics/2</code> with this key. It is not affected by calls to
+<code>statistics/0</code>.
+
+     <br><dt><code>garbage_collection</code><dd><a name="index-garbage_005fcollection-_0028statistics-key_0029-1305"></a><code>[</code><var>no. of GCs</var><code>,</code><var>bytes freed</var><code>,</code><var>time spent</var><code>]</code>
+
+     <br><dt><code>stack_shifts</code><dd><a name="index-stack_005fshifts-_0028statistics-key_0029-1306"></a><code>[</code><var>no. of global shifts</var><code>,</code><var>no. of local/trailtrail shifts</var><code>,</code><var>time spent</var><code>]</code>
+
+     <br><dt><code>atoms</code><dd><a name="index-atoms-_0028statistics-key_0029-1307"></a><code>[</code><var>no. of atoms</var><code>,</code><var>bytes used</var><code>,</code><var>atoms free</var><code>]</code>
+The number of atoms free is the number of atoms allocated (the
+first element in the list) subtracted from the maximum number of atoms,
+i.e. 262143 (33554431) on 32-bit (64-bit) architectures. Note that
+atom garbage collection may be able to reclaim some of the
+allocated atoms.
+
+     <br><dt><code>atom_garbage_collection</code><dd><a name="index-atom_005fgarbage_005fcollection-_0028statistics-key_0029-1308"></a><code>[</code><var>no. of AGCs</var><code>,</code><var>bytes freed</var><code>,</code><var>time spent</var><code>]</code>
+
+     <br><dt><code>defragmentation</code><dd><a name="index-defragmentation-_0028statistics-key_0029-1309"></a><code>[</code><var>no. of defragmentations</var><code>,</code><var>time spent</var><code>]</code>
+
+   </dl>
+
+   <p>To see an example of the use of each of these keywords, type
+<pre class="example">     | ?- <kbd>statistics(K, L).</kbd>
+</pre>
+   <p class="noindent">and then repeatedly type `<samp><span class="samp">;</span></samp>' to backtrack through all the possible
+keywords.  As an additional example, to report information on the runtime of
+a predicate <code>p/0</code>, add the following to your program:
+
+<pre class="example">     :- statistics(runtime, [T0| _]),
+        p,
+        statistics(runtime, [T1|_]),
+        T is T1 - T0,
+        format('p/0 took ~3d sec.~n', [T]).
+</pre>
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="previous" accesskey="p" href="ref_002dmgc_002dove_002drsp.html#ref_002dmgc_002dove_002drsp">Previous</a>
+<li><a rel="up" accesskey="u" href="ref_002dmgc_002dove.html#ref_002dmgc_002dove">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dmgc_002dove_002dsta.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dmgc_002dove_002dsta.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

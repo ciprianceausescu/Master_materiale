@@ -1,0 +1,913 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Combinatorial Constraints - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Available-Constraints.html#Available-Constraints" title="Available Constraints">
+<link rel="prev" href="Propositional-Constraints.html#Propositional-Constraints" title="Propositional Constraints">
+<link rel="next" href="User_002dDefined-Constraints.html#User_002dDefined-Constraints" title="User-Defined Constraints">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.3.4 Combinatorial Constraints</h5>
+
+<p>The constraints listed here are sometimes called symbolic constraints. 
+They are currently not reifiable.  Unless documented otherwise, they
+maintain (at most) bound-consistency in their arguments;
+see <a href="The-Constraint-System.html#The-Constraint-System">The Constraint System</a>.
+
+     <dl>
+<dt><code>global_cardinality(</code><var>+Xs</var><code>,</code><var>+Vals</var><code>)</code><dt><code>global_cardinality(</code><var>+Xs</var><code>,</code><var>+Vals</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-global_005fcardinality_002f_005b2_002c3_005d-_0028clpfd_0029-3193"></a><a name="index-global_005fcardinality_002f_005b2_002c3_005d-_0028clpfd_0029-3194"></a>
+where <var>Xs</var> = [X_1,\ldots,X_d] is a list of integers or
+domain variables, and <var>Vals</var> = [K_1-V_1,\ldots,K_n-V_n]
+is a list of pairs where each key K_i is a unique
+integer and V_i is a domain variable or an integer.  True
+if every element of <var>Xs</var> is equal to some key and for each
+pair K_i-V_i, exactly V_i elements of <var>Xs</var> are
+equal to K_i.
+
+     <p>If either <var>Xs</var> or <var>Vals</var> is ground, and in many other
+special cases, <code>global_cardinality/[2,3]</code> maintains
+arc-consistency, but generally, bound-consistency cannot be
+guaranteed.  An arc-consistency algorithm [Regin 96] is used, roughly
+linear in the total size of the domains.
+
+     <p><var>Options</var> is a list of zero or more of the following:
+
+          <dl>
+<dt><code>consistency(</code><var>Cons</var><code>)</code><dd><a name="index-consistency_002f1-_0028global_005fcardinality_002f3-option_0029-3195"></a>Which filtering algorithm to use.  One of the following:
+               <dl>
+<dt><code>domain</code><dd><a name="index-domain-_0028global_005fcardinality_002f3-consistency_002f1-value_0029-3196"></a>The constraint will use the algorithm mentioned above. 
+Implies <code>on(dom)</code>.  The default. 
+<br><dt><code>bound</code><dd><a name="index-bound-_0028global_005fcardinality_002f3-consistency_002f1-value_0029-3197"></a>The constraint will use the algorithm mentioned above. 
+Implies <code>on(minmax)</code>. 
+<br><dt><code>value</code><dd><a name="index-value-_0028global_005fcardinality_002f3-consistency_002f1-value_0029-3198"></a>The constraint will use a simple algorithm, which prevents too few or
+too many of the <var>Xs</var> from taking values among the <var>Vals</var>. 
+Implies <code>on(val)</code>. 
+</dl>
+
+          <br><dt><code>on(</code><var>On</var><code>)</code><dd><a name="index-on_002f1-_0028global_005fcardinality_002f3-option_0029-3199"></a>How eagerly to wake up the constraint.  One of the following:
+               <dl>
+<dt><code>dom</code><dd><a name="index-dom-_0028global_005fcardinality_002f3-on_002f1-value_0029-3200"></a>to wake up when the domain of a variable is changed (the default);
+<br><dt><code>minmax</code><dd><a name="index-minmax-_0028global_005fcardinality_002f3-on_002f1-value_0029-3201"></a>to wake up when the domain bound of a variable is changed;
+<br><dt><code>val</code><dd><a name="index-val-_0028global_005fcardinality_002f3-on_002f1-value_0029-3202"></a>to wake up when a variable becomes ground. 
+</dl>
+
+          <br><dt><code>cost(</code><var>Cost</var><code>,</code><var>Matrix</var><code>)</code><dd><a name="index-cost_002f2-_0028global_005fcardinality_002f3-option_0029-3203"></a>Overrides any <code>consistency/1</code> option value. 
+A cost is associated with the constraint and reflected into the domain
+variable <var>Cost</var>.  <var>Matrix</var> should be a d\times n
+matrix, represented as a list of d lists, each of
+length n.  Assume that each X_i equals K_(p_i). 
+The cost of the constraint is then
+\Matrix[1,p_1]+\cdots+\Matrix[d,p_d].
+
+          <p>With this option,
+an arc-consistency algorithm [Regin 99] is used, the complexity
+of which is roughly O(d(m + n \log n)) where m is the
+total size of the domains. 
+</dl>
+
+     <br><dt><code>element(</code><var>?X</var><code>,</code><var>+List</var><code>,</code><var>?Y</var><code>)</code><dd><a name="index-element_002f3-_0028clpfd_0029-3204"></a><a name="index-element_002f3-_0028clpfd_0029-3205"></a>
+where <var>X</var> and <var>Y</var> are integers or domain variables and
+<var>List</var> is a list of integers or domain variables.  True
+if the <var>X</var>:th element of <var>List</var> is <var>Y</var>.  Operationally, the
+domains of <var>X</var> and <var>Y</var> are constrained so that for every element
+in the domain of <var>X</var>, there is a compatible element in the domain of
+<var>Y</var>, and vice versa.
+
+     <p>Maintains arc-consistency in <var>X</var> and
+bound-consistency in <var>List</var> and <var>Y</var>. 
+Corresponds to <code>nth1/3</code> in <code>library(lists)</code>.
+
+     <br><dt><code>table(</code><var>+Tuples</var><code>,</code><var>+Extension</var><code>)</code><dt><code>table(</code><var>+Tuples</var><code>,</code><var>+Extension</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-table_002f_005b2_002c3_005d-_0028clpfd_0029-3206"></a><a name="index-table_002f_005b2_002c3_005d-_0028clpfd_0029-3207"></a>
+Defines an n-ary constraint by extension.  <var>Extension</var> should be a
+list of lists of integers, each of length <var>n</var>.  <var>Tuples</var> should
+be a list of lists of domain variables or integers, each also of length
+<var>n</var>.  The constraint holds if every <var>Tuple</var> in <var>Tuples</var>
+occurs in the <var>Extension</var>.
+
+     <p>For convenience, <var>Extension</var> may contain <var>ConstantRange</var> (see <a href="Syntax-of-Indexicals.html#Syntax-of-Indexicals">Syntax of Indexicals</a>) expressions in addition to integers.
+
+     <p><var>Options</var> is a list of zero or more of the following.  It can
+be used to control the waking and pruning conditions of the constraint:
+
+          <dl>
+<dt><code>consistency(</code><var>Cons</var><code>)</code><dd><a name="index-consistency_002f1-_0028table_002f3-option_0029-3208"></a>The value is one of the following:
+               <dl>
+<dt><code>domain</code><dd><a name="index-domain-_0028table_002f3-consistency_002f1-value_0029-3209"></a>The constraint will maintain arc-consistency (the default). 
+<br><dt><code>bound</code><dd><a name="index-bound-_0028table_002f3-consistency_002f1-value_0029-3210"></a>The constraint will maintain bound-consistency. 
+<br><dt><code>value</code><dd><a name="index-value-_0028table_002f3-consistency_002f1-value_0029-3211"></a>The constraint will wake up when a variable has become ground, and
+only prune a variables when its domain has been reduced to a singleton. 
+</dl>
+          </dl>
+
+     <p><code>table/[2,3]</code> is implemented in terms of
+the following, more general constraint, with which arbitrary relations
+can be defined compactly:
+
+     <br><dt><code>case(</code><var>+Template</var><code>, </code><var>+Tuples</var><code>, </code><var>+Dag</var><code>)</code><dt><code>case(</code><var>+Template</var><code>, </code><var>+Tuples</var><code>, </code><var>+Dag</var><code>, </code><var>+Options</var><code>)</code><dd><a name="index-case_002f_005b3_002c4_005d-_0028clpfd_0029-3212"></a><a name="index-case_002f_005b3_002c4_005d-_0028clpfd_0029-3213"></a>
+
+     <p><var>Template</var> is an arbitrary non-ground Prolog term.  Its
+variables are merely place-holders; they should not occur outside
+the constraint nor inside <var>Tuples</var>.
+
+     <p><var>Tuples</var> is a list of terms of the same shape as
+<var>Template</var>.  They should not share any variables with
+<var>Template</var>.
+
+     <p><var>Dag</var> is a list of <dfn>nodes</dfn> of the form
+<code>node(</code><var>ID</var><code>,</code><var>X</var><code>,</code><var>Successors</var><code>)</code>, where <var>X</var> is a
+place-holder variable.  The set of all <var>X</var> should equal the
+set of variables in <var>Template</var>.  The first node in the
+list is the <dfn>root node</dfn>.  Let <var>rootID</var> denote its ID.
+
+     <p>Nodes are either <var>internal nodes</var> or <var>leaf nodes</var>.  In the
+former case, <var>Successors</var> is a list of terms
+<code>(</code><var>Min</var><code>..</code><var>Max</var><code>)-</code><var>ID2</var>, where the <var>ID2</var> refers to a
+child node.  In the latter case, <var>Successors</var> is a list of
+terms <code>(</code><var>Min</var><code>..</code><var>Max</var><code>)</code>.  In both cases, the
+<code>(</code><var>Min</var><code>..</code><var>Max</var><code>)</code> should form disjoint intervals.
+
+     <p><var>ID</var> is a unique, integer identifier of a node.
+
+     <p>Each path from the root node to a leaf node corresponds to one set of
+tuples admitted by the relation expressed by the constraint.  Each
+variable in <var>Template</var> should occur exactly once on each path,
+and there must not be any cycles.
+
+     <p><var>Options</var> is a list of zero or more of the following.  It can
+be used to control the waking and pruning conditions of the constraint,
+as well as to identify the leaf nodes reached by the tuples:
+
+          <dl>
+<dt><code>leaves(</code><var>TLeaf</var><code>,</code><var>Leaves</var><code>)</code><dd><a name="index-leaves_002f2-_0028case_002f4-option_0029-3214"></a><var>TLeaf</var> is a place-holder variable.  <var>Leaves</var> is a
+list of variables of the same length as <var>Tuples</var>.  This
+option effectively extends the relation by one argument,
+corresponding to the ID of the leaf node reached by a particular tuple.
+
+          <br><dt><code>on(</code><var>Spec</var><code>)</code><dd><a name="index-on_002f1-_0028case_002f4-option_0029-3215"></a>Specifies how eagerly the constraint should react to domain changes of <var>X</var>.
+
+          <br><dt><code>prune(</code><var>Spec</var><code>)</code><dd><a name="index-prune_002f1-_0028case_002f4-option_0029-3216"></a>Specifies the extent to which the constraint should prune the domain of <var>X</var>. 
+</dl>
+
+     <p><var>Spec</var> is one of the following, where <var>X</var> is a place-holder
+variable occurring in <var>Template</var> or equal to <var>TLeaf</var>:
+
+          <dl>
+<dt><code>dom(</code><var>X</var><code>)</code><dd><a name="index-dom_002f1-_0028case_002f4-on_002f1-value_0029-3217"></a>wake up when the domain of <var>X</var> has changed, resp.  perform full
+pruning on <var>X</var>.  This is the default for all variables
+mentioned in the constraint.
+
+          <br><dt><code>min(</code><var>X</var><code>)</code><dd><a name="index-min_002f1-_0028case_002f4-on_002f1-value_0029-3218"></a>wake up when the lower bound of <var>X</var> has changed, resp. 
+prune only the lower bound of <var>X</var>.
+
+          <br><dt><code>max(</code><var>X</var><code>)</code><dd><a name="index-max_002f1-_0028case_002f4-on_002f1-value_0029-3219"></a>wake up when the upper bound of <var>X</var> has changed, resp. 
+prune only the upper bound of <var>X</var>.
+
+          <br><dt><code>minmax(</code><var>X</var><code>)</code><dd><a name="index-minmax_002f1-_0028case_002f4-on_002f1-value_0029-3220"></a>wake up when the lower or upper bound of <var>X</var> has changed, resp. 
+prune only the bounds of <var>X</var>.
+
+          <br><dt><code>val(</code><var>X</var><code>)</code><dd><a name="index-val_002f1-_0028case_002f4-on_002f1-value_0029-3221"></a>wake up when <var>X</var> has become ground, resp.  only prune <var>X</var>
+when its domain has been reduced to a singleton.
+
+          <br><dt><code>none(</code><var>X</var><code>)</code><dd><a name="index-none_002f1-_0028case_002f4-on_002f1-value_0029-3222"></a>ignore domain changes of <var>X</var>, resp. never prune <var>X</var>. 
+</dl>
+
+     <p>The constraint holds if <var>path(rootID,Tuple,Leaf)</var> holds for each
+<var>Tuple</var> in <var>Tuples</var> and <var>Leaf</var> is the corresponding element
+of <var>Leaves</var> if given (otherwise, <var>Leaf</var> is a free
+variable).
+
+     <p><var>path(ID,Tuple,Leaf)</var> holds if <var>Dag</var> contains a term
+<code>node(</code><var>ID</var><code>,</code><var>Var</var><code>,</code><var>Successors</var><code>)</code>, <var>Var</var> is the
+unique <var>k</var>:th element of <var>Template</var>, <var>i</var> is the <var>k</var>:th
+element of <var>Tuple</var>, and:
+
+          <ul>
+<li>The node is an internal node, and
+               <ol type=1 start=1>
+<li><var>Successors</var> contains a term
+<code>(</code><var>Min</var><code>..</code><var>Max</var><code>)-</code><var>Child</var>,
+<li>\Min \leq i \leq \Max, and
+<li><var>path(Child,Tuple,Leaf)</var> holds; or
+               </ol>
+
+          <li>The node is a leaf node, and
+               <ol type=1 start=1>
+<li><var>Successors</var> contains a term <code>(</code><var>Min</var><code>..</code><var>Max</var><code>)</code>,
+<li>\Min \leq i \leq \Max, and <var>Leaf = ID</var>.
+               </ol>
+</ul>
+
+     <!-- A node @code{node(@var{K},@var{X},@var{Successors})} evaluates to @code{true} -->
+<!-- wrt.@: the @var{i}:th tuple iff: -->
+<!-- @itemize @bullet -->
+<!-- @item -->
+<!-- @var{Y} is a domain variable or integer in the tuple -->
+<!-- corresponding to @var{X} in @var{Template}, and -->
+<!-- @item -->
+<!-- @var{Leaf} is the @var{i}:th element of @var{Leaves}, if given. -->
+<!-- Otherwise, @var{Leaf} is a free variable. -->
+<!-- @itemize @minus -->
+<!-- @item -->
+<!-- The node is an internal node. -->
+<!-- @var{Successors} contains a term @code{(@var{Min}..@var{Max})-@var{ID}} -->
+<!-- where @var{Min}..@var{Max} intersects the domain of @var{Y} and the node -->
+<!-- identified by @var{ID} evaluates to @code{true} wrt.@: the tuple, or -->
+<!-- @item -->
+<!-- The node is a leaf node. -->
+<!-- @var{Successors} contains a term @code{(@var{Min}..@var{Max})} -->
+<!-- where @var{Min}..@var{Max} intersects the domain of @var{Y} -->
+<!-- and @var{K} is in the domain of @var{Leaf}. -->
+<!-- @end itemize -->
+<!-- @end itemize -->
+<!-- The constraint holds if the root node evaluates to @code{true} -->
+<!-- wrt.@: each tuple in @var{Tuples}. -->
+<p>For example, recall that <code>element(</code><var>X</var><code>,</code><var>L</var><code>,</code><var>Y</var><code>)</code> wakes
+up when the domain of <var>X</var> or the lower or upper bound of <var>Y</var> has
+changed, performs full pruning of <var>X</var>, but only prunes the bounds of
+<var>Y</var>.  The following two constraints:
+
+     <pre class="example">          element(X, [1,1,1,1,2,2,2,2], Y),
+          element(X, [10,10,20,20,10,10,30,30], Z)
+     </pre>
+     <p class="noindent">can be replaced by the following single constraint, which is equivalent
+declaratively as well as wrt. pruning and waking.  The fourth
+argument illustrates the leaf feature:
+
+     <pre class="example">          elts(X, Y, Z, L) :-
+              case(f(A,B,C), [f(X,Y,Z)],
+                   [node(0, A,[(1..2)-1,(3..4)-2,(5..6)-3,(7..8)-4]),
+                    node(1, B,[(1..1)-5]),
+                    node(2, B,[(1..1)-6]),
+                    node(3, B,[(2..2)-5]),
+                    node(4, B,[(2..2)-7]),
+                    node(5, C,[(10..10)]),
+                    node(6, C,[(20..20)]),
+                    node(7, C,[(30..30)])],
+                   [on(dom(A)),on(minmax(B)),on(minmax(C)),
+                    prune(dom(A)),prune(minmax(B)),prune(minmax(C)),
+                    leaves(_,[L])]).
+     </pre>
+     <p>The DAG of the previous example has the following shape:
+
+     <pre class="sp">
+     
+     </pre>
+     <img src="images/clpfd1.png" alt="images/clpfd1.png">
+<div align="center">DAG corresponding to <code>elts/4</code></div>
+
+     <p>A couple of sample queries:
+
+     <pre class="example">          | ?- <kbd>elts(X, Y, Z, L).</kbd>
+          L in 5..7,
+          X in 1..8,
+          Y in 1..2,
+          Z in 10..30
+          
+          | ?- <kbd>elts(X, Y, Z, L), Z #&gt;= 15.</kbd>
+          L in 6..7,
+          X in(3..4)\/(7..8),
+          Y in 1..2,
+          Z in 20..30
+          
+          | ?- <kbd>elts(X, Y, Z, L), Y = 1.</kbd>
+          Y = 1,
+          L in 5..6,
+          X in 1..4,
+          Z in 10..20
+          
+          | ?- <kbd>elts(X, Y, Z, L), L = 5.</kbd>
+          Z = 10,
+          X in(1..2)\/(5..6),
+          Y in 1..2
+     </pre>
+     <br><dt><code>all_different(</code><var>+Variables</var><code>)</code><dt><code>all_different(</code><var>+Variables</var><code>, </code><var>+Options</var><code>)</code><dt><code>all_distinct(</code><var>+Variables</var><code>)</code><dt><code>all_distinct(</code><var>+Variables</var><code>, </code><var>+Options</var><code>)</code><dd><a name="index-all_005fdifferent_002f_005b1_002c2_005d-_0028clpfd_0029-3223"></a><a name="index-all_005fdifferent_002f_005b1_002c2_005d-_0028clpfd_0029-3224"></a>
+<a name="index-all_005fdistinct_002f_005b1_002c2_005d-_0028clpfd_0029-3225"></a><a name="index-all_005fdistinct_002f_005b1_002c2_005d-_0028clpfd_0029-3226"></a>
+where <var>Variables</var> is a list of domain variables
+or integers.  Each variable is constrained to take
+a value that is unique among the variables.  Declaratively, this
+is equivalent to an inequality constraint for each pair of
+variables.
+
+     <p><var>Options</var> is a list of zero or more of the following:
+
+          <dl>
+<dt><code>consistency(</code><var>Cons</var><code>)</code><dd><a name="index-consistency_002f1-_0028all_005fdifferent_002f2-option_0029-3227"></a><a name="index-consistency_002f1-_0028all_005fdistinct_002f2-option_0029-3228"></a>Which algorithm to use, one of the following:
+
+               <dl>
+<dt><code>domain</code><dd><a name="index-domain-_0028all_005fdifferent_002f2-consistency_002f1-value_0029-3229"></a><a name="index-domain-_0028all_005fdistinct_002f2-consistency_002f1-value_0029-3230"></a>The default for <code>all_distinct/[1,2]</code> and <code>assignment/[2,3]</code>. 
+an arc-consistency algorithm [Regin 94] is used, roughly linear in the
+total size of the domains.  Implies <code>on(dom)</code>.
+
+               <br><dt><code>bound</code><dd><a name="index-bound-_0028all_005fdifferent_002f2-consistency_002f1-value_0029-3231"></a><a name="index-bound-_0028all_005fdistinct_002f2-consistency_002f1-value_0029-3232"></a>a bound-consistency algorithm [Mehlhorn 00] is used.  This algorithm
+is nearly linear in the number of variables and values. 
+Implies <code>on(minmax)</code>.
+
+               <br><dt><code>value</code><dd><a name="index-value-_0028all_005fdifferent_002f2-consistency_002f1-value_0029-3233"></a><a name="index-value-_0028all_005fdistinct_002f2-consistency_002f1-value_0029-3234"></a>The default for <code>all_different/[1,2]</code>.  An algorithm achieving
+exactly the same pruning as a set of pairwise inequality constraints is
+used, roughly linear in the number of variables. 
+Implies <code>on(val)</code>. 
+</dl>
+
+          <br><dt><code>on(</code><var>On</var><code>)</code><dd><a name="index-on_002f1-_0028all_005fdifferent_002f2-option_0029-3235"></a><a name="index-on_002f1-_0028all_005fdistinct_002f2-option_0029-3236"></a>How eagerly to wake up the constraint.  One of the following:
+               <dl>
+<dt><code>dom</code><dd><a name="index-dom-_0028all_005fdifferent_002f2-on_002f1-value_0029-3237"></a><a name="index-dom-_0028all_005fdistinct_002f2-on_002f1-value_0029-3238"></a>(the default for <code>all_distinct/[1,2]</code> and <code>assignment/[2,3]</code>),
+to wake up when the domain of a variable is changed;
+<br><dt><code>min</code><dd><a name="index-min-_0028all_005fdifferent_002f2-on_002f1-value_0029-3239"></a><a name="index-min-_0028all_005fdistinct_002f2-on_002f1-value_0029-3240"></a>to wake up when the lower bound of a domain is changed;
+<br><dt><code>max</code><dd><a name="index-max-_0028all_005fdifferent_002f2-on_002f1-value_0029-3241"></a><a name="index-max-_0028all_005fdistinct_002f2-on_002f1-value_0029-3242"></a>to wake up when the upper bound of a domain is changed;
+<br><dt><code>minmax</code><dd><a name="index-minmax-_0028all_005fdifferent_002f2-on_002f1-value_0029-3243"></a><a name="index-minmax-_0028all_005fdistinct_002f2-on_002f1-value_0029-3244"></a>to wake up when some bound of a domain is changed;
+<br><dt><code>val</code><dd><a name="index-val-_0028all_005fdifferent_002f2-on_002f1-value_0029-3245"></a><a name="index-val-_0028all_005fdistinct_002f2-on_002f1-value_0029-3246"></a>(the default for <code>all_different/[1,2]</code>), to wake up when a variable becomes ground. 
+</dl>
+          </dl>
+
+     <br><dt><code>nvalue(</code><var>?N</var><code>, </code><var>+Variables</var><code>)</code><dd><a name="index-nvalue_002f2-_0028clpfd_0029-3247"></a><a name="index-nvalue_002f2-_0028clpfd_0029-3248"></a>
+where <var>Variables</var> is a list of domain variables with finite bounds
+or integers, and <var>N</var> is an integer or a domain variable.  True if
+<var>N</var> is the number of distinct values taken by <var>Variables</var>. 
+Approximates bound-consistency in <var>N</var> and arc-consistency in
+<var>Variables</var>.  Can be thought of as a relaxed version of
+<code>all_distinct/2</code>. 
+</dl>
+
+   <p>The following is a constraint over two lists of length n of
+variables.  Each variable is constrained to take a value in
+[1,n] that is unique for its list.  Furthermore, the
+lists are dual in a sense described below.
+
+     <dl>
+<dt><code>assignment(</code><var>+Xs</var><code>, </code><var>+Ys</var><code>)</code><dt><code>assignment(</code><var>+Xs</var><code>, </code><var>+Ys</var><code>, </code><var>+Options</var><code>)</code><dd><a name="index-assignment_002f_005b2_002c3_005d-_0028clpfd_0029-3249"></a><a name="index-assignment_002f_005b2_002c3_005d-_0028clpfd_0029-3250"></a>
+where <var>Xs</var> = [X_1,\ldots,X_n] and <var>Ys</var> =
+[Y_1,\ldots,Y_n] are lists of domain variables or
+integers.  True if all X_i, Y_i \in [1,n] and X_i=j \equiv
+Y_j=i.
+
+     <p><var>Options</var> is a list of zero or more of the following, where
+<var>Boolean</var> must be <code>true</code> or <code>false</code> (<code>false</code> is the
+default):
+
+          <dl>
+<dt><code>on(</code><var>On</var><code>)</code><dd><a name="index-on_002f1-_0028assignment_002f3-option_0029-3251"></a>Same meaning as for <code>all_different/2</code>.
+
+          <br><dt><code>consistency(</code><var>Cons</var><code>)</code><dd><a name="index-consistency_002f1-_0028assignment_002f3-option_0029-3252"></a>Same meaning as for <code>all_different/2</code>.
+
+          <br><dt><code>circuit(</code><var>Boolean</var><code>)</code><dd><a name="index-circuit_002f1-_0028assignment_002f3-option_0029-3253"></a>If <code>true</code>, <code>circuit(</code><var>Xs</var><code>,</code><var>Ys</var><code>)</code> must hold for the
+constraint to be true.
+
+          <br><dt><code>cost(</code><var>Cost</var><code>,</code><var>Matrix</var><code>)</code><dd><a name="index-cost_002f2-_0028assignment_002f3-option_0029-3254"></a>A cost is associated with the constraint and reflected into the domain
+variable <var>Cost</var>.  <var>Matrix</var> should be an n\times n
+matrix, represented as a list of lists.  The cost of the
+constraint is \Matrix[1,X_1]+\cdots+\Matrix[n,X_n].
+
+          <p>With this option,
+an arc-consistency algorithm [Sellmann 02] is used, the complexity
+of which is roughly O(n(m + n \log n)) where m is the
+total size of the domains. 
+</dl>
+     </dl>
+
+   <p>The following constraint can be thought of as constraining n
+nodes in a graph to form a Hamiltonian circuit.  The nodes are
+numbered from 1 to n.  The circuit starts in node 1, visits each
+node, and returns to the origin.
+
+     <dl>
+<dt><code>circuit(</code><var>+Succ</var><code>)</code><dt><code>circuit(</code><var>+Succ</var><code>, </code><var>+Pred</var><code>)</code><dd><a name="index-circuit_002f_005b1_002c2_005d-_0028clpfd_0029-3255"></a><a name="index-circuit_002f_005b1_002c2_005d-_0028clpfd_0029-3256"></a>
+where <var>Succ</var> is a list of length n of domain
+variables or integers.  The i:th element of <var>Succ</var>
+(<var>Pred</var>) is the successor (predecessor) of i in the graph. 
+True if the values form a Hamiltonian circuit. 
+</dl>
+
+   <p>The following constraint can be thought of as constraining n
+tasks so that the total resource consumption does not exceed a given
+limit at any time:
+
+     <dl>
+<dt><code>cumulative(</code><var>+Tasks</var><code>)</code><dt><code>cumulative(</code><var>+Tasks</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-cumulative_002f_005b1_002c2_005d-_0028clpfd_0029-3257"></a><a name="index-cumulative_002f_005b1_002c2_005d-_0028clpfd_0029-3258"></a>
+
+     <p>A task is represented by a term
+<code>task(O_i,D_i,E_i,H_i,T_i)</code> where O_i is the start
+time, D_i the non-negative duration, E_i the end time,
+H_i the non-negative resource consumption, and T_i the
+task identifier.  All fields are domain variables with bounded
+domains, or integers.
+
+     <p>Let <var>L</var> be a global resource limit (by default 1, but see below),
+and:
+
+     <pre class="example">          <var>a</var> = min(<var>S1</var>,...,<var>Sn</var>),
+          <var>b</var> = max(<var>S1</var>+<var>D1</var>,...,<var>Sn</var>+<var>Dn</var>)
+          <var>Rij</var> = <var>Rj</var>, if <var>Sj</var> =&lt; <var>i</var> &lt; <var>Sj</var>+<var>Dj</var>
+          <var>Rij</var> = 0 <span class="roman">otherwise</span>
+     </pre>
+     <p>The constraint holds if:
+
+          <ol type=1 start=1>
+<li>For every task i, <var>Si+Di=Ei</var>. 
+<li>
+          <pre class="example">               <var>Ri1</var>+...+<var>Rin</var> =&lt; <var>L</var>, <span class="roman">for all</span> <var>a</var> =&lt; <var>i</var> &lt; <var>b</var>
+          </pre>
+          </ol>
+
+     <p><var>Options</var> is a list of zero or more of the following, where
+<var>Boolean</var> must be <code>true</code> or <code>false</code> (<code>false</code> is the
+default, except for the <code>bounds_only</code> option):
+
+          <dl>
+<dt><code>limit(</code><var>L</var><code>)</code><dd><a name="index-limit_002f1-_0028cumulative_002f2-option_0029-3259"></a>See above.
+
+          <br><dt><code>precedences(</code><var>Ps</var><code>)</code><dd><a name="index-precedences_002f1-_0028cumulative_002f2-option_0029-3260"></a><var>Ps</var> encodes a set of precedence constraints to apply to the tasks. 
+<var>Ps</var> should be a list of terms of the form
+
+          <pre class="display">               <var>Ti</var><code>-</code><var>Tj</var><code> #= </code><var>Dij</var>
+          </pre>
+          <p>where <var>Ti</var> and <var>Tj</var> should be
+task identifiers, and <var>Dij</var> should be a
+a domain variable (or an integer), denoting:
+
+          <pre class="display">               S_i-S_j = D_ij \land D_ij \in r
+          </pre>
+          <!-- [MC] 4.0 disabled -->
+<!-- @item resource(@var{R}) -->
+<!-- @findex resource/1 (cumulative/2 option) -->
+<!-- @var{R} is unified with a term that can be passed to -->
+<!-- @code{order_resource/2} (@pxref{Enumeration Predicates}) in order to -->
+<!-- find a consistent ordering of the tasks. -->
+<br><dt><code>global(</code><var>Boolean</var><code>)</code><dd><a name="index-global_002f1-_0028cumulative_002f2-option_0029-3261"></a>if <code>true</code>, a more expensive algorithm will be used in order to
+achieve tighter pruning of the bounds of the parameters. 
+</dl>
+
+     <p>This constraint is due to Aggoun and Beldiceanu
+[Aggoun &amp; Beldiceanu 93]. 
+<!-- BOGUS in SP4 -->
+<!-- @code{cumulative/2} can model a set of tasks to be serialized with -->
+<!-- sequence-dependent setup times.  For example, the following constraint -->
+<!-- models three tasks, all with duration 5, where task 1 must precede task -->
+<!-- 2 and task 3 must either complete before task 2 or start at least 10 -->
+<!-- time units after task 2 started: -->
+
+     <!-- @example -->
+<!-- @group -->
+<!-- ?- @kbd{domain([S1,S2,S3], 0, 20),} -->
+<!-- @kbd{cumulative([S1,S2,S3], [5,5,5], } -->
+<!-- @kbd{[precedences([d(2,1,sup),d(2,3,10)])]).} -->
+<!-- S1 in 0..15, -->
+<!-- S2 in 5..20, -->
+<!-- S3 in 0..20 -->
+<!-- @end group -->
+<!-- @end example -->
+<!-- The bounds of @code{S1} and @code{S2} changed because of the precedence -->
+<!-- constraint.  Setting @code{S2} to 5 will propagate @code{S1=0} and @code{S3 -->
+<!-- in 15..20}. -->
+</dl>
+
+   <p>The following constraint can be thought of as constraining <var>n</var>
+tasks to be placed in time and on <var>m</var> machines.  Each machine has a
+resource limit, which is interpreted as a lower or upper bound on
+the total amount of resource used on that machine at any point in time
+that intersects with some task.
+
+     <dl>
+<dt><code>cumulatives(</code><var>+Tasks</var><code>,</code><var>+Machines</var><code>)</code><dt><code>cumulatives(</code><var>+Tasks</var><code>,</code><var>+Machines</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-cumulatives_002f_005b2_002c3_005d-_0028clpfd_0029-3262"></a><a name="index-cumulatives_002f_005b2_002c3_005d-_0028clpfd_0029-3263"></a>
+
+     <p>A task is represented by a term
+<code>task(O_i,D_i,E_i,H_i,M_i)</code> where O_i is the start
+time, D_i the duration, E_i the end time, H_i the
+resource consumption, and M_i a machine identifier.
+
+     <p>A machine is represented by a term <code>machine(M_j,L_j)</code>
+where M_j is the identifier and L_j is the resource limit
+of the machine.
+
+     <p>All fields are domain variables with bounded domains, or integers. 
+L_j must be an integer.  D_i must be non-negative, but
+H_i may be either positive or negative.  Negative resource
+consumption is interpreted as resource production.
+
+     <p><var>Options</var> is a list of zero or more of the following, where
+<var>Boolean</var> must be <code>true</code> or <code>false</code> (<code>false</code> is the
+default):
+
+          <dl>
+<dt><code>bound(</code><var>B</var><code>)</code><dd><a name="index-bound_002f1-_0028cumulatives_002f3-option_0029-3264"></a>If <code>lower</code> (the default), each resource limit is treated
+as a lower bound. 
+If <code>upper</code>, each resource limit is treated
+as an upper bound.
+
+          <br><dt><code>prune(</code><var>P</var><code>)</code><dd><a name="index-prune_002f1-_0028cumulatives_002f3-option_0029-3265"></a>If <code>all</code> (the default), the constraint will try to prune as many
+variables as possible.  If <code>next</code>, only variables that
+occur in the first non-ground task term (wrt. the order
+given when the constraint was posted) can be pruned.
+
+          <br><dt><code>generalization(</code><var>Boolean</var><code>)</code><dd><a name="index-generalization_002f1-_0028cumulatives_002f3-option_0029-3266"></a>If <code>true</code>, extra reasoning based on assumptions on machine
+assignment will be done to infer more.
+
+          <br><dt><code>task_intervals(</code><var>Boolean</var><code>)</code><dd><a name="index-task_005fintervals_002f1-_0028cumulatives_002f3-option_0029-3267"></a>If <code>true</code>, extra global reasoning will be performed in an attempt
+to infer more. 
+</dl>
+     </dl>
+
+   <p>The following constraint captures the relation between a list of
+values, a list of the values in ascending order, and their
+positions in the original list:
+
+     <dl>
+<dt><code>sorting(</code><var>+Xs</var><code>,</code><var>+Ps</var><code>,</code><var>+Ys</var><code>)</code><dd><a name="index-sorting_002f3-_0028clpfd_0029-3268"></a><a name="index-sorting_002f3-_0028clpfd_0029-3269"></a>
+where <var>Xs</var> = [X_1,\ldots,X_n], <var>Ps</var> =
+[P_1,\ldots,P_n], and <var>Ys</var> = [Y_1,\ldots,Y_n] are
+lists of domain variables or integers.  The constraint holds
+if the following are true:
+
+          <ul>
+<li><var>Ys</var> is in ascending order.
+
+          <li><var>Ps</var> is a permutation of [1,n].
+
+          <li>\forall i \in [1,n] : X_i = Y_(P_i)
+</ul>
+
+     <p>In practice, the underlying algorithm [Mehlhorn 00] is likely to achieve
+bound-consistency, and is guaranteed to do so if <var>Ps</var> is
+ground or completely free. 
+</dl>
+
+   <p>The following constraints model a set or lines or rectangles, respectively,
+so that no pair of objects overlap:
+
+     <dl>
+<dt><code>disjoint1(</code><var>+Lines</var><code>)</code><dt><code>disjoint1(</code><var>+Lines</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-disjoint1_002f_005b1_002c2_005d-_0028clpfd_0029-3270"></a><a name="index-disjoint1_002f_005b1_002c2_005d-_0028clpfd_0029-3271"></a>
+where <var>Lines</var> is a list of terms F(S_j,D_j) or
+F(S_j,D_j,T_j), S_j and D_j are domain
+variables with finite bounds or integers denoting the origin and
+length of line j respectively, F is any functor, and
+the optional T_j is an atomic term denoting the type
+of the line.  T_j defaults to 0 (zero).
+
+     <p><var>Options</var> is a list of zero or more of the following, where
+<var>Boolean</var> must be <code>true</code> or <code>false</code> (<code>false</code> is the
+default):
+
+          <dl>
+<dt><code>decomposition(</code><var>Boolean</var><code>)</code><dd><a name="index-decomposition_002f1-_0028disjoint1_002f2-option_0029-3272"></a>if <code>true</code>, an attempt is made to decompose the constraint each time
+it is resumed.
+
+          <br><dt><code>global(</code><var>Boolean</var><code>)</code><dd><a name="index-global_002f1-_0028disjoint1_002f2-option_0029-3273"></a>if <code>true</code>, a redundant algorithm using global reasoning is used
+to achieve more complete pruning.
+
+          <br><dt><code>wrap(</code><var>Min</var><code>,</code><var>Max</var><code>)</code><dd><a name="index-wrap_002f2-_0028disjoint1_002f2-option_0029-3274"></a>If used, the space in which the lines are placed should be thought of as
+a circle where positions <var>Min</var> and <var>Max</var> coincide, where
+<var>Min</var> and <var>Max</var> should be integers.  That is, the space wraps
+around.  Furthermore, this option forces the domains of the origin
+variables to be inside <var>[Min,Max-1]</var>.
+
+          <br><dt><code>margin(T_1,T_2,D)</code><dd><a name="index-margin_002f3-_0028disjoint1_002f2-option_0029-3275"></a>This option imposes a minimal distance D between the end point of any line
+of type T_1 and the origin of any line of type T_2. 
+D should be a positive integer or <code>sup</code>.  If <code>sup</code> is
+used, all lines of type T_2 must be placed before any line of type
+T_1.
+
+          <p>This option interacts with the <code>wrap/2</code> option in the sense that
+distances are counted with possible wrap-around, and the distance
+between any end point and origin is always finite. 
+</dl>
+
+     <p>The file <code>library('clpfd/examples/bridge.pl')</code> contains an example where
+<code>disjoint1/2</code> is used for scheduling non-overlapping tasks.
+
+     <br><dt><code>disjoint2(</code><var>+Rectangles</var><code>)</code><dt><code>disjoint2(</code><var>+Rectangles</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-disjoint2_002f_005b1_002c2_005d-_0028clpfd_0029-3276"></a><a name="index-disjoint2_002f_005b1_002c2_005d-_0028clpfd_0029-3277"></a>
+where <var>Rectangles</var> is a list of terms
+F(S_(j_1),D_(j_1),S_(j_2),D_(j_2)) or
+F(S_(j_1),D_(j_1),S_(j_2),D_(j_2),T_j), S_(j_1) and
+D_(j_1) are domain variables with finite bounds or integers
+denoting the origin and size of rectangle j in the X dimension,
+S_(j_2) and D_(j_2) are the values for the Y dimension,
+F is any functor, and the optional T_j is an
+atomic term denoting the type of the rectangle.  T_j
+defaults to 0 (zero).
+
+     <p><var>Options</var> is a list of zero or more of the following, where
+<var>Boolean</var> must be <code>true</code> or <code>false</code> (<code>false</code> is the
+default):
+
+          <dl>
+<dt><code>decomposition(</code><var>Boolean</var><code>)</code><dd><a name="index-decomposition_002f1-_0028disjoint2_002f2-option_0029-3278"></a>If <code>true</code>, an attempt is made to decompose the constraint each time
+it is resumed.
+
+          <br><dt><code>global(</code><var>Boolean</var><code>)</code><dd><a name="index-global_002f1-_0028disjoint2_002f2-option_0029-3279"></a>If <code>true</code>, a redundant algorithm using global reasoning is used
+to achieve more complete pruning.
+
+          <br><dt><code>wrap(</code><var>Min1</var><code>,</code><var>Max1</var><code>,</code><var>Min2</var><code>,</code><var>Max2</var><code>)</code><dd><a name="index-wrap_002f4-_0028disjoint2_002f2-option_0029-3280"></a><var>Min1</var> and <var>Max1</var> should be either integers or the atoms
+<code>inf</code> and <code>sup</code> respectively.  If they are integers, the space
+in which the rectangles are placed should be thought of as a cylinder
+wrapping around the X dimension where positions <var>Min1</var> and
+<var>Max1</var> coincide.  Furthermore, this option forces the domains of the
+S_(j_1) variables to be inside <var>[Min1,Max1-1]</var>.
+
+          <p><var>Min2</var> and <var>Max2</var> should be either integers or the atoms
+<code>inf</code> and <code>sup</code> respectively.  If they are integers, the space
+in which the rectangles are placed should be thought of as a cylinder
+wrapping around the Y dimension where positions <var>Min2</var> and
+<var>Max2</var> coincide.  Furthermore, this option forces the domains of the
+S_(j_2) variables to be inside <var>[Min2,Max2-1]</var>.
+
+          <p>If all four are integers, the space is a toroid wrapping around both dimensions.
+
+          <br><dt><code>margin(T_1,T_2,D_1,D_2)</code><dd><a name="index-margin_002f4-_0028disjoint2_002f2-option_0029-3281"></a>This option imposes minimal distances D_1 in the X dimension and
+D_2 in the Y dimension between the end point of any rectangle of
+type T_1 and the origin of any rectangle of type T_2. 
+D_1 and D_2 should be positive integers or <code>sup</code>.  If
+<code>sup</code> is used, all rectangles of type T_2 must be placed
+before any rectangle of type T_1 in the relevant dimension.
+
+          <p>This option interacts with the <code>wrap/4</code> option in the sense that
+distances are counted with possible wrap-around, and the distance
+between any end point and origin is always finite.
+
+          <br><dt><code>synchronization(</code><var>Boolean</var><code>)</code><dd><a name="index-synchronization_002f1-_0028disjoint2_002f2-option_0029-3282"></a>Let the <dfn>assignment dimension</dfn> and the <dfn>temporal dimension</dfn>
+denote the two dimensions, no matter which is the X and which
+is the Y dimension. 
+If <var>Boolean</var> is <code>true</code>, a redundant algorithm is used
+to achieve more complete pruning for the following case:
+
+               <ul>
+<li>All rectangles have size 1 in the assignment dimension.
+
+               <li>Some rectangles have the same origin and size in the
+temporal dimension, and that origin is not yet fixed. 
+</ul>
+
+          <p>The following example shows an artificial placement problem involving 25
+rectangles including four groups of rectangles whose left and right
+borders must be aligned.  If <code>Synch</code> is <code>true</code>, it can be
+solved with first-fail labeling in 23 backtracks.  If <code>Synch</code>
+is <code>false</code>, 60 million backtracks do not suffice to solve it.
+
+          <pre class="example">               ex([O1,Y1a,Y1b,Y1c,
+                   O2,Y2a,Y2b,Y2c,Y2d,
+                   O3,Y3a,Y3b,Y3c,Y3d,
+                   O4,Y4a,Y4b,Y4c],
+                  Synch) :-
+                       domain([Y1a,Y1b,Y1c,
+                               Y2a,Y2b,Y2c,Y2d,
+                               Y3a,Y3b,Y3c,Y3d,
+                               Y4a,Y4b,Y4c], 1, 5),
+                       O1 in 1..28,
+                       O2 in 1..26,
+                       O3 in 1..22,
+                       O4 in 1..25,
+                       disjoint2([t(1,1,5,1),    t(20,4,5,1),
+                                  t(1,1,4,1),    t(14,4,4,1),
+                                  t(1,2,3,1),    t(24,2,3,1),
+                                  t(1,2,2,1),    t(21,1,2,1),
+                                  t(1,3,1,1),    t(14,2,1,1),
+                                  t(O1,3,Y1a,1),
+                                  t(O1,3,Y1b,1),
+                                  t(O1,3,Y1c,1),
+                                  t(O2,5,Y2a,1),
+                                  t(O2,5,Y2b,1),
+                                  t(O2,5,Y2c,1),
+                                  t(O2,5,Y2d,1),
+                                  t(O3,9,Y3a,1),
+                                  t(O3,9,Y3b,1),
+                                  t(O3,9,Y3c,1),
+                                  t(O3,9,Y3d,1),
+                                  t(O4,6,Y4a,1),
+                                  t(O4,6,Y4b,1),
+                                  t(O4,6,Y4c,1)],
+                                 [synchronization(Synch)]).
+          </pre>
+          </dl>
+
+     <p>The file <code>library('clpfd/examples/squares.pl')</code> contains an example where
+<code>disjoint2/2</code> is used for tiling squares.
+
+   </dl>
+
+   <p>The following constraints express the fact that several vectors of
+domain variables are in ascending lexicographic order:
+
+     <dl>
+<dt><code>lex_chain(</code><var>+Vectors</var><code>)</code><dt><code>lex_chain(</code><var>+Vectors</var><code>,</code><var>+Options</var><code>)</code><dd><a name="index-lex_005fchain_002f_005b1_002c2_005d-_0028clpfd_0029-3283"></a><a name="index-lex_005fchain_002f_005b1_002c2_005d-_0028clpfd_0029-3284"></a>
+where <var>Vectors</var> is a list of vectors (lists) of domain
+variables with finite bounds or integers.  The constraint holds if
+<var>Vectors</var> are in ascending lexicographic order.
+
+     <p><var>Options</var> is a list of zero or more of the following:
+
+          <dl>
+<dt><code>op(</code><var>Op</var><code>)</code><dd><a name="index-op_002f1-_0028lex_005fchain-option_0029-3285"></a>If <var>Op</var> is the atom <code>#=&lt;</code> (the default), the constraints
+holds if <var>Vectors</var> are in non-descending lexicographic order.  If
+<var>Op</var> is the atom <code>#&lt;</code>, the constraints holds if
+<var>Vectors</var> are in strictly ascending lexicographic order.
+
+          <br><dt><code>increasing</code><dd><a name="index-increasing_002f0-_0028lex_005fchain-option_0029-3286"></a>This option imposes the additional constraint that each vector in
+<var>Vectors</var> be sorted in strictly ascending order.
+
+          <br><dt><code>among(</code><var>Least</var><code>,</code><var>Most</var><code>,</code><var>Values</var><code>)</code><dd><a name="index-among_002f3-_0028lex_005fchain-option_0029-3287"></a>If given, <var>Least</var> and <var>Most</var> should be integers such that
+0 \leq \Least \leq \Most and <var>Values</var> should be a
+list of distinct integers.  This option imposes the
+additional constraint on each vector in <var>Vectors</var> that at least
+<var>Least</var> and at most <var>Most</var> elements belong to
+<var>Values</var>. 
+</dl>
+
+     <p>Unless the <code>increasing/0</code> or <code>among/3</code> options are given,
+the underlying algorithm [Carlsson &amp; Beldiceanu 02] guarantees
+arc-consistency. 
+</dl>
+
+   <p><a name="index-constraint-checker-3288"></a><a name="index-checker_002c-constraint-3289"></a>
+The following constraint provides a general way of defining any
+constraint involving sequences whose <dfn>checker</dfn>, i.e. a procedure
+that classifies ground instances as solutions or non-solutions, can be
+expressed by a finite automaton, extended with counter operations on
+its arcs. The point is that it is very much easier to come up with
+such a checker that to come up with a filtering algorithm for the
+constraint of interest.
+
+     <dl>
+<dt><code>automaton(...)</code><dd><a name="index-automaton_002f8-_0028clpfd_0029-3290"></a><a name="index-automaton_002f8-_0028clpfd_0029-3291"></a>
+The constraint has the form <var>ctr</var> according to the
+grammar shown below, which describes its abstract syntax. 
+The arguments are:
+
+          <dl>
+<dt><var>sequence</var><dd>The sequence of terms of interest.
+
+          <br><dt><var>template</var><dd>A template for an item of the sequence.  Only relevant if some state
+transition involving counter arithmetic mentions a variable occurring
+in <var>template</var>, in which case the corresponding term in a sequence
+element will be accessed.
+
+          <br><dt><var>signature</var><dd>The <dfn>signature</dfn> of <var>sequence</var>.  The automaton is not driven by
+the <var>sequence</var> itself, but by <var>signature</var>, which ranges over
+an alphabet, defined in the following argument. 
+In addition to <code>automaton/8</code>, you must call a constraint that
+maps <var>sequence</var> to <var>signature</var>.
+
+          <br><dt><var>nodes</var><dd>The nodes of the automaton, classified as source, sink or internal.
+
+          <br><dt><var>arcs</var><dd>The arcs (transitions) of the automaton. 
+Any transition not mentioned is assumed to go to an implicit failure
+node. An arc optionally contains expressions for updated counter
+values; by default, the counters remain unchanged. Conditional updates
+can be specified.
+
+          <br><dt><var>counters</var><dd>For <var>k</var> counters, a list of <var>k</var> variables.
+
+          <br><dt><var>initial</var><dd>For <var>k</var> counters, a list of <var>k</var> initial values, usually instantiated.
+
+          <br><dt><var>final</var><dd>For <var>k</var> counters, a list of <var>k</var> final values, usually uninstantiated. 
+</dl>
+
+     <p>Abstract syntax:
+
+     <p><table summary=""><tr align="left"><td valign="top" width="20%"><var>ctr</var> </td><td valign="top" width="40%">::= <code>automaton(</code><var>sequence</var><code>, </code><var>template</var><code>, </code><var>signature</var><code>,</code>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"><var>nodes</var><code>, </code><var>arcs</var><code>, </code>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"><var>counters</var><code>, </code><var>initial</var><code>, </code><var>final</var><code>)</code>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>sequence</var> </td><td valign="top" width="40%">::= <var>list of template</var> </td><td valign="top" width="40%"><span class="roman">{all of which of the same shape}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>template</var> </td><td valign="top" width="40%">::= <var>term</var> </td><td valign="top" width="40%"><span class="roman">{most general shape of the </span><var>sequence</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{its variables should be local to </span><var>ctr</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>signature</var> </td><td valign="top" width="40%">::= <var>list of variable</var>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>nodes</var> </td><td valign="top" width="40%">::= <var>list of nodespec</var> </td><td valign="top" width="40%"><span class="roman">{all of which of the same shape}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>nodespec</var> </td><td valign="top" width="40%">::= <code>source(</code><var>node</var><code>)</code> </td><td valign="top" width="40%"><span class="roman">{the initial state}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">               </td><td valign="top" width="40%">| <code>sink(</code><var>node</var><code>)</code> </td><td valign="top" width="40%"><span class="roman">{an accept state}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>node</var> </td><td valign="top" width="40%">::= <var>atomic</var>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>arcs</var> </td><td valign="top" width="40%">::= <var>list of arc</var> </td><td valign="top" width="40%"><span class="roman">{all of which of the same shape}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>arc</var> </td><td valign="top" width="40%">::= <code>arc(</code><var>node</var><code>,</code><var>integer</var><code>,</code><var>node</var><code>)</code> </td><td valign="top" width="40%"><span class="roman">{from node, integer, to node}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%">| <code>arc(</code><var>node</var><code>,</code><var>integer</var><code>,</code><var>node</var><code>,</code><var>exprs</var><code>)</code></td><td valign="top" width="40%"><span class="roman">{</span><var>exprs</var><span class="roman"> correspond to new counter values}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%">| <code>arc(</code><var>node</var><code>,</code><var>integer</var><code>,</code><var>node</var><code>,</code><var>conditional</var><code>)</code>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>conditional</var> </td><td valign="top" width="40%">::= <var>(cond -&gt; exprs)</var>
+<br></td></tr><tr align="left"><td valign="top" width="20%">                  </td><td valign="top" width="40%">| <var>(conditional ; conditional)</var>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>exprs</var> </td><td valign="top" width="40%">::= <var>list of Expr</var> </td><td valign="top" width="40%"><span class="roman">{of same length as </span><var>counters</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">            </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{</span><var>Expr</var><span class="roman"> as defined in <a href="Syntax-of-Arithmetic-Expressions.html#Syntax-of-Arithmetic-Expressions">Syntax of Arithmetic Expressions</a>}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">            </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{over </span><var>counters</var><span class="roman">, </span><var>template</var><span class="roman"> and constants}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{variables occurring in </span><var>counters</var><span class="roman"> correspond to old counter values}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{variables occurring in </span><var>template</var><span class="roman"> refer to the current element of </span><var>sequence</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>cond</var> </td><td valign="top" width="40%">::= <var>constraint</var> </td><td valign="top" width="40%"><span class="roman">{over </span><var>counters</var><span class="roman">, </span><var>template</var><span class="roman"> and constants}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">          </td><td valign="top" width="40%"></td><td valign="top" width="40%"><span class="roman">{must be reifiable or </span><code>true</code><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>counters</var> </td><td valign="top" width="40%">::= <var>list of variable</var> </td><td valign="top" width="40%"><span class="roman">{should be local to </span><var>ctr</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>initial</var> </td><td valign="top" width="40%">::= <var>list of integer</var> </td><td valign="top" width="40%"><span class="roman">{of same length as </span><var>counters</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%"><br></td></tr><tr align="left"><td valign="top" width="20%"><var>final</var> </td><td valign="top" width="40%">::= <var>list of variable</var> </td><td valign="top" width="40%"><span class="roman">{of same length as </span><var>counters</var><span class="roman">}</span>
+<br></td></tr><tr align="left"><td valign="top" width="20%">
+     <br></td></tr></table>
+
+     <p>If no counters are used, the arguments <var>counters</var>, <var>initial</var> and
+<var>final</var> should be <code>[]</code>.  The arguments <var>template</var> and
+<var>sequence</var> are only relevant if some <var>Expr</var> mentions a variable
+in <var>template</var>, in which case the corresponding position in <var>sequence</var>
+will be used at that point.
+
+     <p>The constraint holds for a ground instance <var>sequence</var> if:
+
+          <ul>
+<li><var>signature</var> is the signature corresponding to <var>sequence</var>. 
+<li>The finite automaton encoded by <var>nodes</var> and <var>arcs</var> stops in an
+accept state. 
+<li>Any counter arithmetic on the transitions map their <var>initial</var>
+values to the <var>final</var> values. 
+</ul>
+
+     <p>Here is an example. 
+Suppose that you want to define the predicate <code>inflexion(</code><var>N</var><code>,</code><var>L</var><code>)</code>
+which should hold if <var>L</var> is a list of domain variables, and
+<var>N</var> is the number of times that the sequence order switches between
+strictly increasing and strictly decreasing.  For example, the
+sequence <code>[1,1,4,8,8,2,7,1]</code> switches order three times.
+
+     <p>Such a constraint is conveniently expressed by a finite automaton over
+the alphabet <code>[&lt;,=,&gt;]</code> denoting the order between consecutive
+list elements.  A counter is incremented when the order switches, and
+is mapped to the first argument of the constraint.  The automaton
+could look as follows:
+
+     <pre class="sp">
+     
+     </pre>
+     <img src="images/inflexion2.png" alt="images/inflexion2.png">
+<div align="center">Automaton for <code>inflexion/2</code></div>
+
+     <p>The following piece of code encodes this using <code>automaton/8</code>.  The
+auxiliary predicate <code>inflexion_signature/2</code> maps the sequence to
+a signature where the consecutive element order is encoded over the
+alphabet <code>[0,1,2]</code>.  We use one counter with initial value 0 and
+final value <var>N</var> (an argument of <code>inflexion/2</code>). 
+Two transitions increment the counter. 
+All states are accept states.
+
+     <pre class="example">          inflexion(N, VARIABLES) :-
+                  inflexion_signature(VARIABLES, SIGNATURE),
+                  automaton(_, _, SIGNATURE,
+                            [source(s),sink(i),sink(j),sink(s)],
+                            [arc(s,1,s      ),
+                             arc(s,2,i      ),
+                             arc(s,0,j      ),
+                             arc(i,1,i      ),
+                             arc(i,2,i      ),
+                             arc(i,0,j,[C+1]),
+                             arc(j,1,j      ),
+                             arc(j,0,j      ),
+                             arc(j,2,i,[C+1])],
+                            [C],[0],[N]).
+          
+          inflexion_signature([], []).
+          inflexion_signature([_], []) :- !.
+          inflexion_signature([VAR1,VAR2|VARs], [S|Ss]) :-
+                  S in 0..2,
+                  VAR1 #&gt; VAR2 #&lt;=&gt; S #= 0,
+                  VAR1 #= VAR2 #&lt;=&gt; S #= 1,
+                  VAR1 #&lt; VAR2 #&lt;=&gt; S #= 2,
+                  inflexion_signature([VAR2|VARs], Ss).
+     </pre>
+     <p>A couple of queries:
+
+     <pre class="example">          | ?- <kbd>inflexion(N, [1,1,4,8,8,2,7,1]).</kbd>
+          N = 3 ? &lt;RET&gt;
+          yes
+          
+          | ?- <kbd>length(L,4), domain(L,0,1), inflexion(2,L), labeling([],L).</kbd>
+          L = [0,1,0,1] ? <kbd>;</kbd>
+          L = [1,0,1,0] ? <kbd>;</kbd>
+          no
+     </pre>
+     <p>This constraint was introduced in [Beldiceanu, Carlsson &amp; Petit 04].
+
+   </dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="User_002dDefined-Constraints.html#User_002dDefined-Constraints">Next</a>
+<li><a rel="previous" accesskey="p" href="Propositional-Constraints.html#Propositional-Constraints">Previous</a>
+<li><a rel="up" accesskey="u" href="Available-Constraints.html#Available-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Combinatorial-Constraints.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Combinatorial-Constraints.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>mpg-ref-profile_data - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="mpg_002dbpr.html#mpg_002dbpr" title="mpg-bpr">
+<link rel="prev" href="mpg_002dref_002dprint_005fmessage_005flines.html#mpg_002dref_002dprint_005fmessage_005flines" title="mpg-ref-print_message_lines">
+<link rel="next" href="mpg_002dref_002dprofile_005freset.html#mpg_002dref_002dprofile_005freset" title="mpg-ref-profile_reset">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">11.3.159 <code>profile_data/4</code>  <dfn>[development]</dfn></h4>
+
+<p><a name="index-profile_005fdata_002f4-_0028built_002din_002c-ref-page_0029-4252"></a><a name="index-profile_005fdata_002f4-_0028built_002din_002c-ref-page_0029-4253"></a>
+
+<h4 class="subheading">Synopsis</h4>
+
+<p><code>profile_data(</code><var>+Spec</var><code>, </code><var>?Selection</var><code>, </code><var>?Resolution</var><code>, </code><var>?Data</var><code>)</code>
+
+   <p><var>Data</var> is profiling data collected from the predicates
+covered by the generalized predicate spec <var>Spec</var>.
+
+<h4 class="subheading">Arguments</h4>
+
+     <dl>
+<dt><var>:Spec</var><dd><dfn>pred_spec_tree</dfn>
+
+     <p>A predicate specification, or a list of such.
+
+     <br><dt><var>Selection</var><dd><dfn>one of </dfn><code>[calls,choice_points,instructions]</code>
+
+     <p>The kind of profiling data to be collected.
+
+     <br><dt><var>Resolution</var><dd><dfn>one of </dfn><code>[predicate,clause]</code>
+
+     <p>The level of resolution of the profiling data.
+
+     <br><dt><var>Data</var><dd><dfn>list of pair</dfn>
+
+     <p>Will be instantiated to a list of key-value pairs. 
+</dl>
+
+<h4 class="subheading">Description</h4>
+
+<p>The <var>Selection</var> argument determines the kind of
+profiling data to be collected.  If uninstantiated, the
+predicate will backtrack over its possible values, which
+are:
+
+     <dl>
+<dt><code>calls</code><dd><a name="index-calls-_0028profile_005fdata_002f4-option_0029-4254"></a>All instances of entering a clause by a procedure call are
+counted.  This is equivalent to counting all procedure calls
+<em>that have not been determined to fail by indexing on the
+first argument</em>.
+
+     <br><dt><code>choice_points</code><dd><a name="index-choice_005fpoints-_0028profile_005fdata_002f4-option_0029-4255"></a>All instances of accessing a choicepoint are counted.  This occurs,
+roughly, when there are more than one possibly matching clauses for a
+procedure call, when a disjunction is entered, as well as when profiled code
+is re-entered upon backtracking.
+
+     <br><dt><code>instructions</code><dd><a name="index-instructions-_0028profile_005fdata_002f4-option_0029-4256"></a>The (number of virtual machine instructions) executed in the selected piece of code,
+plus 2*(number of choiceopint accesses). 
+</dl>
+
+   <p>The <var>Resolution</var> argument determines the level of resolution
+of the profiling data to be collected.  If uninstantiated,
+the predicate will backtrack over its possible values, which
+are:
+
+     <dl>
+<dt><code>predicate</code><dd><a name="index-predicate-_0028profile_005fdata_002f4-resolution_0029-4257"></a><var>Data</var> is a list of terms <var>Module:Name/Arity</var><code>-</code><var>Count</var>,
+where <var>Count</var> is a sum of the corresponding counts per clause.
+
+     <br><dt><code>clause</code><dd><a name="index-clause-_0028profile_005fdata_002f4-resolution_0029-4258"></a><var>Data</var> is a list of terms
+<var>Module:Name/Arity/ClauseNo</var><code>-</code><var>Count</var>. 
+</dl>
+
+<h4 class="subheading">Backtracking</h4>
+
+<p>Can be used to backtrack over all profiling data for the given
+<var>Spec</var>.
+
+<h4 class="subheading">See Also</h4>
+
+<p><a href="Execution-Profiling.html#Execution-Profiling">Execution Profiling</a>.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="mpg_002dref_002dprofile_005freset.html#mpg_002dref_002dprofile_005freset">Next</a>
+<li><a rel="previous" accesskey="p" href="mpg_002dref_002dprint_005fmessage_005flines.html#mpg_002dref_002dprint_005fmessage_005flines">Previous</a>
+<li><a rel="up" accesskey="u" href="mpg_002dbpr.html#mpg_002dbpr">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/mpg_002dref_002dprofile_005fdata.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/mpg_002dref_002dprofile_005fdata.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

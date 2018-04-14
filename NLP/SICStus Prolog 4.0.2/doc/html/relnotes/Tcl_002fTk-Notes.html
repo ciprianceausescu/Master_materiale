@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Tcl/Tk Notes - SICStus Prolog Release Notes</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog Release Notes">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Release-Notes-and-Installation-Guide-for-Windows.html#Release-Notes-and-Installation-Guide-for-Windows" title="Release Notes and Installation Guide for Windows">
+<link rel="next" href="Berkeley-DB-Notes.html#Berkeley-DB-Notes" title="Berkeley DB Notes">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h2 class="chapter">5 Tcl/Tk Notes</h2>
+
+<p>Tcl/Tk itself is not included in the SICStus distribution. It must be
+installed in order to use the interface. It can be downloaded from
+the Tcl/Tk primary website:
+
+<!-- [PM] 4.0 checked URL -->
+<pre class="display">     <a href="http://tcl.sourceforge.net">http://tcl.sourceforge.net</a>
+</pre>
+   <p>n
+A better alternative may be to use one of the free installers
+available from:
+
+<pre class="display">     <a href="http://www.activestate.com">http://www.activestate.com</a>
+</pre>
+   <!-- @noindent -->
+<!-- For Mac OS X we installed Tcl/Tk (and the X windows system) -->
+<!-- using @samp{fink}, available at: -->
+<!-- @display -->
+<!-- @uref{http://fink.sourceforge.net} -->
+<!-- @end display -->
+<!-- @ifset MACOSXSUPPORTED -->
+<p>SICStus for Mac OS X uses Aqua Tcl/Tk. The Aqua version of Tcl/Tk uses
+the native Aqua user interface. Mac OS 10.4 includes Aqua Tcl/Tk. For
+earlier versions of Mac OS X, Aqua Tcl/Tk can be downloaded, for free,
+from:
+
+<pre class="display">     <a href="http://www.apple.com/downloads/macosx/unix_open_source/">http://www.apple.com/downloads/macosx/unix_open_source/</a>
+</pre>
+   <!-- @end ifset MACOSXSUPPORTED -->
+<p>The Tcl/Tk interface module included in
+SICStus Prolog 4.0.2
+(<code>library(tcltk)</code>) is verified to work with Tcl/Tk 8.4. The current
+version of the interface is expected to work with version 8.1 and newer.
+
+   <p>Under UNIX, the installation program automatically detects the Tcl/Tk
+version (if the user does not specify it explicitly). Except as noted
+above, the distributed
+files are compiled for Tcl/Tk 8.4.
+
+   <p>Under Windows, the binary distribution is compiled against Tcl/Tk
+8.4. If you need to use another version of Tcl/Tk, you have to recompile
+<code>library(tcltk)</code>; see <a href="../faq/Configuring-the-Tcl_002fTk-library-module-under-Windows.html#Configuring-the-Tcl_002fTk-library-module-under-Windows">Configuring the Tcl/Tk library module under Windows</a>.
+
+   <blockquote>
+<strong>Please note</strong>: You need to have the Tcl/Tk binaries accessible
+from your <samp><span class="env">PATH</span></samp> environment variable, e.g. 
+<samp><span class="file">C:\Program&nbsp;Files\Tcl\bin</span></samp><!-- /@w -->. 
+</blockquote>
+
+   <p>The GUI version of SICStus <samp><span class="command">spwin</span></samp>, like all Windows non-console
+applications, lacks the C standard streams
+(<code>stdin</code>,<code>stdout</code>,<code>stderr</code>) and the Tcl command
+<code>puts</code> and others that use these streams will therefore give
+errors. The solution is to use <samp><span class="command">sicstus</span></samp> instead of
+<samp><span class="command">spwin</span></samp> if the standard streams are required.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">Release Notes</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Berkeley-DB-Notes.html#Berkeley-DB-Notes">Next</a>
+<li><a rel="previous" accesskey="p" href="Release-Notes-and-Installation-Guide-for-Windows.html#Release-Notes-and-Installation-Guide-for-Windows">Previous</a>
+<li><a rel="up" accesskey="u" href="index.html#Top">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/relnotes/Tcl_002fTk-Notes.html&amp;body=Feedback%20on%20documentation%20node%20html/relnotes/Tcl_002fTk-Notes.html%20in%20Release%20Notes.">Send feedback on this subject.</mailto>
+   </body></html>
+

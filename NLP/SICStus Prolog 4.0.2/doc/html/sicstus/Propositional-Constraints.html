@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Propositional Constraints - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Available-Constraints.html#Available-Constraints" title="Available Constraints">
+<link rel="prev" href="Membership-Constraints.html#Membership-Constraints" title="Membership Constraints">
+<link rel="next" href="Combinatorial-Constraints.html#Combinatorial-Constraints" title="Combinatorial Constraints">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.3.3 Propositional Constraints</h5>
+
+<p>Propositional combinators can be used to combine reifiable constraints
+into propositional formulae over such constraints.  Such formulae are
+goal expanded by the system into sequences of reified constraints
+and arithmetic constraints.  For example,
+
+<pre class="example">     X #= 4 #\/ Y #= 6
+</pre>
+   <p class="noindent">expresses the disjunction of two equality constraints.
+
+   <p>The leaves of propositional formulae can be reifiable constraints, the
+constants 0 and 1, or 0/1-variables.  New primitive, reifiable
+constraints can be defined with indexicals as described in <a href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Defining Primitive Constraints</a>.  The following propositional combinators are
+available:
+
+     <dl>
+<dt><code>#\ </code><var>:Q</var><dd><a name="index-g_t_0023-_002f1-_0028clpfd_0029-3179"></a><a name="index-g_t_0023-_002f1-_0028clpfd_0029-3180"></a>
+True if the constraint <var>Q</var> is false.
+
+     <br><dt><var>:P</var><code> #/\ </code><var>:Q</var><dd><a name="index-g_t_0023_002f-_002f2-_0028clpfd_0029-3181"></a><a name="index-g_t_0023_002f-_002f2-_0028clpfd_0029-3182"></a>
+True if the constraints <var>P</var> and <var>Q</var> are both true.
+
+     <br><dt><var>:P</var><code> #\ </code><var>:Q</var><dd><a name="index-g_t_0023-_002f2-_0028clpfd_0029-3183"></a><a name="index-g_t_0023-_002f2-_0028clpfd_0029-3184"></a>
+True if exactly one of the constraints <var>P</var> and <var>Q</var> is true.
+
+     <br><dt><var>:P</var><code> #\/ </code><var>:Q</var><dd><a name="index-g_t_0023_002f-_002f2-_0028clpfd_0029-3185"></a><a name="index-g_t_0023_002f-_002f2-_0028clpfd_0029-3186"></a>
+True if at least one of the constraints <var>P</var> and <var>Q</var> is true.
+
+     <br><dt><var>:P</var><code> #=&gt; </code><var>:Q</var><dt><var>:Q</var><code> #&lt;= </code><var>:P</var><dd><a name="index-g_t_0023_003d_003e-_002f2-_0028clpfd_0029-3187"></a><a name="index-g_t_0023_003d_003e-_002f2-_0028clpfd_0029-3188"></a>
+<a name="index-g_t_0023_003c_003d-_002f2-_0028clpfd_0029-3189"></a><a name="index-g_t_0023_003c_003d-_002f2-_0028clpfd_0029-3190"></a>
+True if the constraint <var>Q</var> is true or the constraint <var>P</var> is false.
+
+     <br><dt><var>:P</var><code> #&lt;=&gt; </code><var>:Q</var><dd><a name="index-g_t_0023_003c_003d_003e-_002f2-_0028clpfd_0029-3191"></a><a name="index-g_t_0023_003c_003d_003e-_002f2-_0028clpfd_0029-3192"></a>
+True if the constraints <var>P</var> and <var>Q</var> are both true or both false. 
+</dl>
+
+   <p>Note that the reification scheme introduced in <a href="Reified-Constraints.html#Reified-Constraints">Reified Constraints</a>
+is a special case of a propositional constraint.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Combinatorial-Constraints.html#Combinatorial-Constraints">Next</a>
+<li><a rel="previous" accesskey="p" href="Membership-Constraints.html#Membership-Constraints">Previous</a>
+<li><a rel="up" accesskey="u" href="Available-Constraints.html#Available-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Propositional-Constraints.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Propositional-Constraints.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

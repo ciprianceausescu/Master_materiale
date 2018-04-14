@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Query Handling Predicates - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="ref_002dmsg.html#ref_002dmsg" title="ref-msg">
+<link rel="prev" href="Query-Processing.html#Query-Processing" title="Query Processing">
+<link rel="next" href="Message-Summary.html#Message-Summary" title="Message Summary">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">4.16.4 Query Handling Predicates</h4>
+
+     <dl>
+<dt><code>ask_query(</code><var>+QueryClass</var><code>, </code><var>+Query</var><code>, </code><var>+Help</var><code>, </code><var>-Answer</var><code>)  </code><dfn>hookable</dfn><dd><a name="index-ask_005fquery_002f4-1614"></a><a name="index-ask_005fquery_002f4-1615"></a>
+Prints the question <var>Query</var>, then reads and processes user input
+according to <var>QueryClass</var>, and returns the result of the processing,
+the abstract answer term <var>Answer</var>.  The <var>Help</var> message is
+printed in case of invalid input.
+
+     <br><dt><code>query_hook(</code><var>+QueryClass</var><code>, </code><var>+Query</var><code>, </code><var>+QueryLines</var><code>, </code><var>+Help</var><code>, </code><var>+HelpLines</var><code>, </code><var>-Answer</var><code>)  </code><dfn>hook</dfn><dt><code>user:query_hook(</code><var>+QueryClass</var><code>, </code><var>+Query</var><code>, </code><var>+QueryLines</var><code>, </code><var>+Help</var><code>, </code><var>+HelpLines</var><code>, </code><var>-Answer</var><code>)</code><dd><a name="index-query_005fhook_002f6-_0028user_002c-hook_0029-1616"></a><a name="index-query_005fhook_002f6-_0028user_002c-hook_0029-1617"></a>
+<a name="index-user_003aquery_005fhook_002f6-_0028hook_0029-1618"></a><a name="index-user_003aquery_005fhook_002f6-_0028hook_0029-1619"></a>
+Called by <code>ask_query/4</code> before processing the query.  If this
+predicate succeeds, it is assumed that the query has been
+processed and nothing further is done.
+
+     <br><dt><code>query_class_hook(</code><var>+QueryClass</var><code>, </code><var>-Prompt</var><code>, </code><var>-InputMethod</var><code>, </code><var>-MapMethod</var><code>, </code><var>-FailureMode</var><code>)  </code><dfn>hook</dfn><dt><code>user:query_class_hook(</code><var>+QueryClass</var><code>, </code><var>-Prompt</var><code>, </code><var>-InputMethod</var><code>, </code><var>-MapMethod</var><code>, </code><var>-FailureMode</var><code>)</code><dd><a name="index-query_005fclass_005fhook_002f5-_0028user_002c-hook_0029-1620"></a><a name="index-query_005fclass_005fhook_002f5-_0028user_002c-hook_0029-1621"></a>
+<a name="index-user_003aquery_005fclass_005fhook_002f5-_0028hook_0029-1622"></a><a name="index-user_003aquery_005fclass_005fhook_002f5-_0028hook_0029-1623"></a>
+Provides the user with a method of overriding the call to
+<code>'SU_messages':query_class/5</code> in the preparation phase of query
+processing.  This way the default query class characteristics can be
+changed.
+
+     <br><dt><code>'SU_messages':query_class(</code><var>+QueryClass</var><code>, </code><var>-Prompt</var><code>, </code><var>-InputMethod</var><code>, </code><var>-MapMethod</var><code>, </code><var>-FailureMode</var><code>)  </code><dfn>extendible</dfn><dd><a name="index-query_005fclass_002f5-_0028SU_005fmessages_0029-1624"></a><a name="index-query_005fclass_002f5-_0028SU_005fmessages_0029-1625"></a>
+<a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fclass_002f5-1626"></a><a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fclass_002f5-1627"></a>
+Predefined query class characteristics table.
+
+     <br><dt><code>'SU_messages':query_abbreviation(</code><var>+QueryClass</var><code>, </code><var>-Prompt</var><code>, </code><var>-Pairs</var><code>)  </code><dfn>extendible</dfn><dd><a name="index-query_005fabbreviation_002f3-_0028SU_005fmessages_0029-1628"></a><a name="index-query_005fabbreviation_002f3-_0028SU_005fmessages_0029-1629"></a>
+<a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fabbreviation_002f3-1630"></a><a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fabbreviation_002f3-1631"></a>
+Predefined query abbreviation table.
+
+     <br><dt><code>query_input_hook(</code><var>+InputMethod</var><code>, </code><var>+Prompt</var><code>, </code><var>-RawInput</var><code>)  </code><dfn>hook</dfn><dt><code>user:query_input_hook(</code><var>+InputMethod</var><code>, </code><var>+Prompt</var><code>, </code><var>-RawInput</var><code>)</code><dd><a name="index-query_005finput_005fhook_002f3-_0028user_002c-hook_0029-1632"></a><a name="index-query_005finput_005fhook_002f3-_0028user_002c-hook_0029-1633"></a>
+<a name="index-user_003aquery_005finput_005fhook_002f3-_0028hook_0029-1634"></a><a name="index-user_003aquery_005finput_005fhook_002f3-_0028hook_0029-1635"></a>
+Provides the user with a method of overriding the call to
+<code>'SU_messages':query_input/3</code> in the input phase of query
+processing.  This way the implementation of the default input methods
+can be changed.
+
+     <br><dt><code>'SU_messages':query_input(</code><var>+InputMethod</var><code>, </code><var>+Prompt</var><code>, </code><var>-RawInput</var><code>)  </code><dfn>extendible</dfn><dd><a name="index-query_005finput_002f3-_0028SU_005fmessages_0029-1636"></a><a name="index-query_005finput_002f3-_0028SU_005fmessages_0029-1637"></a>
+<a name="index-g_t_0027SU_005fmessages_0027_003aquery_005finput_002f3-1638"></a><a name="index-g_t_0027SU_005fmessages_0027_003aquery_005finput_002f3-1639"></a>
+Predefined query input methods.
+
+     <br><dt><code>query_map_hook(</code><var>+MapMethod</var><code>, </code><var>+RawInput</var><code>, </code><var>-Result</var><code>, </code><var>-Answer</var><code>)  </code><dfn>hook</dfn><dt><code>user:query_map_hook(</code><var>+MapMethod</var><code>, </code><var>+RawInput</var><code>, </code><var>-Result</var><code>, </code><var>-Answer</var><code>)</code><dd><a name="index-query_005fmap_005fhook_002f4-_0028user_002c-hook_0029-1640"></a><a name="index-query_005fmap_005fhook_002f4-_0028user_002c-hook_0029-1641"></a>
+<a name="index-user_003aquery_005fmap_005fhook_002f4-_0028hook_0029-1642"></a><a name="index-user_003aquery_005fmap_005fhook_002f4-_0028hook_0029-1643"></a>
+Provides the user with a method of overriding the call to
+<code>'SU_messages':query_map/4</code> in the mapping phase of query
+processing.  This way the implementation of the default map methods
+can be changed.
+
+     <br><dt><code>'SU_messages':query_map(</code><var>+MapMethod</var><code>, </code><var>+RawInput</var><code>, </code><var>-Result</var><code>, </code><var>-Answer</var><code>)  </code><dfn>extendible</dfn><dd><a name="index-query_005fmap_002f4-_0028SU_005fmessages_0029-1644"></a><a name="index-query_005fmap_002f4-_0028SU_005fmessages_0029-1645"></a>
+<a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fmap_002f4-1646"></a><a name="index-g_t_0027SU_005fmessages_0027_003aquery_005fmap_002f4-1647"></a>
+Predefined query map methods. 
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Message-Summary.html#Message-Summary">Next</a>
+<li><a rel="previous" accesskey="p" href="Query-Processing.html#Query-Processing">Previous</a>
+<li><a rel="up" accesskey="u" href="ref_002dmsg.html#ref_002dmsg">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Query-Handling-Predicates.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Query-Handling-Predicates.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

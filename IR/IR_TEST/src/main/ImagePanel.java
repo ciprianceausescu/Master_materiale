@@ -6,7 +6,7 @@ import java.awt.Image;
 
 class ImagePanel extends JComponent {
     private Image image;
-    public ImagePanel(Image image) {
+    ImagePanel(Image image) {
         this.image = image;
     }
     @Override

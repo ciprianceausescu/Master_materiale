@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>ref-iou-sfh-cis - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="ref_002diou_002dsfh.html#ref_002diou_002dsfh" title="ref-iou-sfh">
+<link rel="prev" href="ref_002diou_002dsfh_002denc.html#ref_002diou_002dsfh_002denc" title="ref-iou-sfh-enc">
+<link rel="next" href="ref_002diou_002dsfh_002dcos.html#ref_002diou_002dsfh_002dcos" title="ref-iou-sfh-cos">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">4.6.7.6 Finding the Current Input Stream</h5>
+
+     <ul>
+<li><code>current_input(</code><var>Stream</var><code>)</code> unifies <var>Stream</var> with the current input
+stream. 
+<a name="index-current_005finput_002f1-_0028built_002din_0029-897"></a><a name="index-current_005finput_002f1-_0028built_002din_0029-898"></a>
+
+     <p><a name="index-current-input-streams-899"></a><a name="index-streams_002c-current-input-900"></a><a name="index-current-output-streams-901"></a><a name="index-streams_002c-current-output-902"></a>
+<li><code>seeing(</code><var>S</var><code>)</code> unifies
+<var>S</var> with the current input stream.  This is exactly the
+same as <code>current_input</code>(<var>S</var>), except that <var>S</var> will be unified
+with a filename if the current input stream was opened by <code>see/1</code>
+(see <a href="ref_002diou_002dsfh_002dopn.html#ref_002diou_002dsfh_002dopn">ref-iou-sfh-opn</a>). 
+<a name="index-seeing_002f1-_0028built_002din_0029-903"></a><a name="index-seeing_002f1-_0028built_002din_0029-904"></a>
+
+     <p><code>seeing/1</code> can be used to verify that FileNameOrStream is still the
+current input stream as follows:
+     <pre class="example">          /* nonvar(FileNameOrStream), */
+          see(FileNameOrStream),
+          ...
+          seeing(FileNameOrStream)
+     </pre>
+     <p><a name="index-see_002f1-_0028built_002din_0029-905"></a><a name="index-see_002f1-_0028built_002din_0029-906"></a>
+
+     <p><a name="index-open_002f_005b3_002c4_005d-_0028built_002din_0029-907"></a><a name="index-open_002f_005b3_002c4_005d-_0028built_002din_0029-908"></a>
+
+     <p>If the current input stream has not been changed (or if changed, then
+restored), the above sequence will succeed for all file names and all stream
+objects opened by <code>open/[3,4]</code>.  However, it will fail for all stream objects
+opened by <code>see/1</code> (since only filename access to streams opened by
+<code>see/1</code> is supported).  This includes the stream object <code>user_input</code>
+(since the standard input stream is assumed to be opened by <code>see/1</code>, and
+so <code>seeing/1</code> would return <code>user</code> in this case).
+
+     <p><code>seeing/1</code> can be followed by <code>see/1</code> to ensure that a
+section of code leaves the current input unchanged
+</ul>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="ref_002diou_002dsfh_002dcos.html#ref_002diou_002dsfh_002dcos">Next</a>
+<li><a rel="previous" accesskey="p" href="ref_002diou_002dsfh_002denc.html#ref_002diou_002dsfh_002denc">Previous</a>
+<li><a rel="up" accesskey="u" href="ref_002diou_002dsfh.html#ref_002diou_002dsfh">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002diou_002dsfh_002dcis.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002diou_002dsfh_002dcis.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

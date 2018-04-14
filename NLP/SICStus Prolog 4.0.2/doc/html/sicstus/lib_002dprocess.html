@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>lib-process - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-Prolog-Library.html#The-Prolog-Library" title="The Prolog Library">
+<link rel="prev" href="lib_002dordsets.html#lib_002dordsets" title="lib-ordsets">
+<link rel="next" href="lib_002dqueues.html#lib_002dqueues" title="lib-queues">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">10.15 Process Utilities&mdash;<code>library(process)</code></h3>
+
+<p>This package contains utilities for process creation.
+
+   <p>A process is represented by a <dfn>process reference</dfn>, a ground
+compound term. Both SICStus and the operating system maintain a
+state for each such process reference and they must therefore be
+released, either explicitly with <code>process_release/1</code> or
+implicitly by <code>process_wait/[2,3]</code>. Process references are
+created with <code>process_create/[2,3]</code> if explicitly requested with
+the <code>process/1</code> option. Process references are required in
+order to obtain the exit status of a process. Many of the
+predicates can accept a numeric operating system process id
+(&ldquo;PID&rdquo;) but since process ids are subject to re-use by the OS
+this is less reliable and does not work if the process has already
+exited. 
+Run <samp><span class="command">ls</span></samp> on a home directory in a subshell under UNIX:
+<pre class="example">     | ?- <kbd>absolute_file_name('$SHELL', Shell),</kbd>
+          <kbd>absolute_file_name('~/', Dir),</kbd>
+          <kbd>process_create(Shell, ['-c', [ ls, ' ', file(Dir) ]]).</kbd>
+</pre>
+   <p>Run <samp><span class="command">notepad.exe</span></samp> on a file <samp><span class="file">C:/foo.txt</span></samp> under Windows:
+<pre class="example">     | ?- <kbd>absolute_file_name('$SYSTEMROOT/notepad.exe', Prog),</kbd>
+          <kbd>process_create(Prog, [file('C:/foo.txt')]).</kbd>
+</pre>
+   <p>Exported predicates:
+
+     <dl>
+<dt><code>process_create(</code><var>+File</var><code>, </code><var>+Args</var><code>)</code><dt><code>process_create(</code><var>+File</var><code>, </code><var>+Args</var><code>, </code><var>:Options</var><code>)</code><dd><a name="index-process_005fcreate_002f_005b2_002c3_005d-_0028process_0029-2744"></a><a name="index-process_005fcreate_002f_005b2_002c3_005d-_0028process_0029-2745"></a>
+Start a new process running the program identified by <var>File</var>
+and the arguments specified in <var>Args</var>. The standard streams of
+the new process can be redirected to prolog streams. The exit
+status of the process can be obtained with <code>process_wait/[2,3]</code>.
+
+     <p><var>File</var>, is expanded as if by <code>absolute_file_name/2</code>
+(with argument <code>access(execute)</code>) and
+is used to locate the file to execute.
+
+     <p>The predefined file search path <code>path/1</code> (see <a href="ref_002dfdi.html#ref_002dfdi">ref-fdi</a>)
+is especially useful here since it makes it easy to look up the
+names of an executable in the directories mentioned by the
+<code>PATH</code> environment variable. To run the Windows command shell
+<samp><span class="command">cmd</span></samp> you would simply specify <code>path('cmd.exe')</code>, to
+start the UNIX Bash shell you would specify <code>path(bash)</code>.
+
+     <p><var>Args</var> is a list of argument specifications. Each argument
+specification is either a simple argument specification, see
+below, or a non-empty list of simple argument specifications. The
+expanded value of each element of <var>Args</var> is concatenated to
+produce a single argument to the new process. A <dfn>simple
+argument specification</dfn> can be one of:
+
+          <dl>
+<dt>an atom<dd>The atom name is used as the expanded value. Some operating
+systems only support 7-bit ASCII characters here. Even when some
+larger subset of Unicode is used it may not work correctly
+with all programs.
+
+          <br><dt><code>file(</code><var>File</var><code>)</code><dd><var>File</var>, an atom, is treated as a file name and subject to
+an operating system specific transformation to ensure file name
+syntax and character set is appropriate for the new process. This
+is especially important under Windows where it ensures that the full
+Windows Unicode character set can be used. 
+<strong>Please note</strong>: The <var>File</var> part of
+<code>file(</code><var>File</var><code>)</code> is not subject to syntactic rewriting, the
+argument specification <code>file/1</code> only adjusts for differences
+in file name syntax and character
+encoding between SICStus and the operating system. You
+must explicitly call
+<code>absolute_file_name/[2,3]</code> if you want to expand file search
+paths etc.
+
+     </dl>
+     <var>Options</var> is a list of options:
+
+          <dl>
+<dt><code>stdin(</code><var>Spec</var><code>)</code><dt><code>stdout(</code><var>Spec</var><code>)</code><dt><code>stderr(</code><var>Spec</var><code>)</code><dd>Each <var>Spec</var> specifies how the corresponding standard stream of
+the new process should be created. <var>Spec</var> can be one of:
+               <dl>
+<dt><code>std</code><dd>The new process shares the (OS level) standard stream with the
+Prolog process. This is the default. 
+Note that, especially under Windows, the Prolog process may not have
+any OS level standard streams, or the OS streams may not be
+connected to a console or terminal. In such a case you need to use
+<code>pipe/1</code> spec, see below, and explicitly read (write) data
+from (to) the process. 
+<br><dt><code>null</code><dd>The stream is redirected to a null stream, i.e. a stream that
+discards written data and that is always at end of file when read. 
+<br><dt><code>pipe(</code><var>Stream</var><code>)</code><dd>A new Prolog (text) stream is created and connected to the
+corresponding stream of the new process. It is currently not
+possible to request binary streams or to specify a character set
+different from the OS default. 
+This stream must be closed using <code>close/[1,2]</code>, it is not
+closed automatically when the new process exits. 
+</dl>
+
+          <br><dt><code>process(</code><var>Proc</var><code>)</code><dd><var>Proc</var> will be bound to a process reference that can be used
+in calls to <code>process_wait/[2,3]</code> etc.. This process reference
+must be released, either explicitly with <code>process_release/1</code> or
+implicitly by <code>process_wait/[2,3]</code>.
+
+          <br><dt><code>detached(</code><var>Bool</var><code>)</code><dd><var>Bool</var> is either <code>true</code> or <code>false</code>. Specifies
+whether the new process should be &ldquo;detached&rdquo;, i.e. whether it
+should be notified of terminal events such as <kbd>^C</kbd>
+interrupts. By default a new process is created detached if none
+of the standard streams are specified, explicitly or implicitly,
+as <code>std</code>.
+
+          <br><dt><code>cwd(</code><var>CWD</var><code>)</code><dd>
+<var>CWD</var> is expanded as if by <code>absolute_file_name/2</code> and
+is used as the working directory for the new process.
+
+          <p>By default, the working directory is the same as the Prolog
+working directory.
+
+          <br><dt><code>window(</code><var>Bool</var><code>)</code><dd><var>Bool</var> is either <code>true</code> or
+<code>false</code> (the default). Specifies whether the process should
+open in its own window.
+
+          <p>Specifying <code>window(true)</code> may give unexpected results if the
+standard stream options <code>stdin/1</code>, <code>stdout/1</code> and
+<code>stderr/1</code> are specified with anything but their default
+value <code>std</code>.
+
+          <p>Currently only implemented on Windows.
+
+          <!-- @item daemon(@var{Bool}) -->
+<!-- not documented -->
+</dl>
+     <br><dt><code>process_wait(</code><var>+Process</var><code>, </code><var>-ExitStatus</var><code>)</code><dt><code>process_wait(</code><var>+Process</var><code>, </code><var>-ExitStatus</var><code>, </code><var>+Options</var><code>)</code><dd><a name="index-process_005fwait_002f_005b2_002c3_005d-_0028process_0029-2746"></a><a name="index-process_005fwait_002f_005b2_002c3_005d-_0028process_0029-2747"></a>
+Wait for a process to exit and obtain the exit status.
+
+     <p><var>Process</var> is either a process reference obtained from
+<code>process_create/3</code> or an OS process identifier. Specifying a
+process identifier is not reliable. The process identifier may
+have been re-used by the operating system. Under Windows, it is not
+possible to obtain the exit status using a process identifier if
+the process has already exited.
+
+     <p><var>ExitStatus</var> is one of:
+          <dl>
+<dt><code>exit(</code><var>ExitCode</var><code>)</code><dd>The process has exited with exit code <var>ExitCode</var>. By
+convention processes use exit code zero to signify success and a
+(positive) non-zero value to specify failure. 
+<br><dt><code>killed(</code><var>SignalNumber</var><code>)</code><dd>UNIX only, the process was killed by signal <code>SignalNumber</code> (a
+positive integer).
+
+          <br><dt><code>timeout</code><dd>The <code>timeout/1</code> option was specified and the process did not
+exit within the specified interval. In this case the process
+reference is not released, even if the <code>release/1</code> option is
+specified. 
+</dl>
+     <var>Options</var> is a list of options:
+          <dl>
+<dt><code>timeout(</code><var>Seconds</var><code>)</code><dd>Specify a maximum time, in seconds, to wait for the process to
+terminate. <var>Seconds</var> should be an integer or floating point
+number or the atom <code>infinite</code> (the default) to specify
+infinite wait. If the specified timeout interval passes before the
+process exits, <code>process_wait/3</code> exits with <var>ExitStatus</var>
+set to <code>timeout</code> and the process reference is not released.
+
+          <p>Currently the UNIX implementation supports only timeout values
+0 (zero) and <code>infinite</code>.
+
+          <br><dt><code>release(</code><var>Bool</var><code>)</code><dd><var>Bool</var> is either <code>true</code> (the default) or
+<code>false</code>. Specifies whether the process reference should be
+released when <code>process_wait/3</code> exits successfully. 
+</dl>
+     <br><dt><code>process_id(</code><var>-PID</var><code>)</code><dd><a name="index-process_005fid_002f1-_0028process_0029-2748"></a><a name="index-process_005fid_002f1-_0028process_0029-2749"></a>
+Obtain the process identifier of the current (i.e. Prolog)
+process. 
+<br><dt><code>process_id(</code><var>+Process</var><code>, </code><var>+PID</var><code>)</code><dd><a name="index-process_005fid_002f2-_0028process_0029-2750"></a><a name="index-process_005fid_002f2-_0028process_0029-2751"></a>
+Obtain the process identifier of the process reference
+<var>Process</var>. 
+<br><dt><code>is_process(</code><var>+Thing</var><code>)</code><dd><a name="index-is_005fprocess_002f1-_0028process_0029-2752"></a><a name="index-is_005fprocess_002f1-_0028process_0029-2753"></a>
+Returns true if <var>Thing</var> is a process reference that has not
+been released. 
+<br><dt><code>process_release(</code><var>+Process</var><code>)</code><dd><a name="index-process_005frelease_002f1-_0028process_0029-2754"></a><a name="index-process_005frelease_002f1-_0028process_0029-2755"></a>
+Release a process reference <var>Process</var> that has previously been
+obtained from <code>process_create/3</code>. This ensures that Prolog
+and the operating system can reclaim any resources associated with
+the process reference.
+
+     <p>Usually you would not call this. Either do not request the process
+reference when calling <code>process_create/3</code> or let
+<code>process_wait/[2,3]</code> reclaim the process reference when the
+process terminates. 
+<br><dt><code>process_kill(</code><var>+Process</var><code>)</code><dt><code>process_kill(</code><var>+Process</var><code>, </code><var>+SignalSpec</var><code>)</code><dd><a name="index-process_005fkill_002f_005b1_002c2_005d-_0028process_0029-2756"></a><a name="index-process_005fkill_002f_005b1_002c2_005d-_0028process_0029-2757"></a>
+Send a signal to the process designated by <var>Process</var>. The
+signal can either be a non-negative integer or a signal name as an
+(all uppercase) atom.
+
+     <p>The following signal names are accepted under UNIX if the platform
+defines them: <code>SIGABRT</code>, <code>SIGALRM</code>, <code>SIGBUS</code>,
+<code>SIGCHLD</code>, <code>SIGCONT</code>, <code>SIGFPE</code>, <code>SIGHUP</code>,
+<code>SIGILL</code>, <code>SIGINT</code>, <code>SIGKILL</code> (the default),
+<code>SIGPIPE</code>, <code>SIGPOLL</code>, <code>SIGPROF</code>, <code>SIGQUIT</code>,
+<code>SIGSEGV</code>, <code>SIGSTOP</code>, <code>SIGSYS</code>, <code>SIGTERM</code>,
+<code>SIGTRAP</code>, <code>SIGTSTP</code>, <code>SIGTTIN</code>, <code>SIGTTOU</code>,
+<code>SIGURG</code>, <code>SIGUSR1</code>, <code>SIGUSR2</code>, <code>SIGVTALRM</code>,
+<code>SIGXCPU</code> and <code>SIGXFSZ</code>. However, many of these do not
+make sense to send as signals.
+
+     <p>Under Windows, which does not have the signal
+concept, the signal name <code>SIGKILL</code> (the default) is treated
+specially and terminates the process with
+<code>TerminateProcess(Process, -1)</code>.
+
+   </dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="lib_002dqueues.html#lib_002dqueues">Next</a>
+<li><a rel="previous" accesskey="p" href="lib_002dordsets.html#lib_002dordsets">Previous</a>
+<li><a rel="up" accesskey="u" href="The-Prolog-Library.html#The-Prolog-Library">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/lib_002dprocess.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/lib_002dprocess.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

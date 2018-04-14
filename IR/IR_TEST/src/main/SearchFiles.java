@@ -17,9 +17,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 
-/**
- * Simple command-line based search demo.
- */
 class SearchFiles {
     static String[] search(String word) throws Exception {
         String indexFilesPath = "index";

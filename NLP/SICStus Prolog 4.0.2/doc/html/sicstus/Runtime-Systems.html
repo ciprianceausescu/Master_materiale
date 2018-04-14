@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Runtime Systems - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Stand_002dAlone-Executables.html#Stand_002dAlone-Executables" title="Stand-Alone Executables">
+<link rel="next" href="Runtime-Systems-on-Target-Machines.html#Runtime-Systems-on-Target-Machines" title="Runtime Systems on Target Machines">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">6.7.1 Runtime Systems</h4>
+
+<p>Stand-alone applications containing debugged Prolog code and destined
+for end-users are typically packaged as runtime systems.  No
+SICStus license is needed by a runtime system.  A runtime
+system has the following limitations:
+
+     <ul>
+<li>No top-level.  The executable will restore a saved-state and/or
+load code, and call <code>user:runtime_entry(start)</code>. 
+Alternatively, you may supply a main program and explicitly
+initialize the Prolog engine with <code>SP_initialize()</code>. 
+<code>break/0</code> and <code>require/1</code> are unavailable.
+
+     <li>No debugger.  The Prolog flags <code>debug</code> and
+<code>debugger_print_options</code> have no effect. 
+Predicates annotated as <dfn>[development]</dfn> in the reference pages are unavailable. 
+<!-- The predicates -->
+<!-- @code{debugging/0}, @code{debug/0}, @code{nodebug/0}, @code{trace/0}, @code{notrace/0}, -->
+<!-- @code{zip/0}, @code{nozip/0}, @code{unknown/2}, @code{leash/1}, -->
+<!-- @code{spy/[1,2]}, @code{nospy/1}, @code{nospyall/0}, -->
+<!-- @code{add_breakpoints/2}, @code{remove_breakpoints/1}, -->
+<!-- @code{current_breakpoint/5}, @code{disable_breakpoints/1}, -->
+<!-- @code{enable_breakpoints/1}, and @code{execution_state/[1,2]} are -->
+<!-- unavailable. -->
+<a name="index-debug-_0028prolog-flag_0029-2144"></a><a name="index-debugger_005fprint_005foptions-_0028prolog-flag_0029-2145"></a>
+<li>Except in extended runtime systems: no compiler;
+compiling is replaced by consulting. 
+<!-- @code{fcompile/1} is unavailable. -->
+Extended runtime system contains the compiler.
+
+     <li>The Prolog flags <code>discontiguous_warnings</code>,
+<code>redefine_warnings</code>, <code>single_var_warnings</code> have no effect. 
+The user is not prompted in the event of name clashes. 
+<a name="index-discontiguous_005fwarnings-_0028prolog-flag_0029-2146"></a><a name="index-redefine_005fwarnings-_0028prolog-flag_0029-2147"></a><a name="index-single_005fvar_005fwarnings-_0028prolog-flag_0029-2148"></a>
+<li><a name="index-informational-_0028prolog-flag_0029-2149"></a>The <code>informational</code> Prolog flag is off by default, suppressing
+informational messages.
+
+     <li>No profiler.  The predicates <code>profile_data/4</code> and
+<code>profile_reset/1</code> are unavailable.
+
+     <li>No signal handling except as installed by <code>SP_signal()</code>. 
+</ul>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Runtime-Systems-on-Target-Machines.html#Runtime-Systems-on-Target-Machines">Next</a>
+<li><a rel="up" accesskey="u" href="Stand_002dAlone-Executables.html#Stand_002dAlone-Executables">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Runtime-Systems.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Runtime-Systems.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

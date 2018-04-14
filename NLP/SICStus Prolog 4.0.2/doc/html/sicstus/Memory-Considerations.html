@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Memory Considerations - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Multiple-SICStus-Run_002dTimes.html#Multiple-SICStus-Run_002dTimes" title="Multiple SICStus Run-Times">
+<link rel="next" href="Multiple-SICStus-Run_002dTimes-in-C.html#Multiple-SICStus-Run_002dTimes-in-C" title="Multiple SICStus Run-Times in C">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">8.1 Memory Considerations</h3>
+
+<p>The most pressing restriction when using more than one SICStus run-time
+in a process is that (on 32bit machines) all these run-times must
+compete for the the <em>address-constrained</em> range of virtual memory,
+typically the lower 256MB of memory.
+
+   <p>This is worsened by the fact that, on some platforms,
+each SICStus run-time will attempt to grow its memory area as needed,
+leading to fragmentation. A fix that removes the restriction on useable
+memory is planned for a later release.
+
+   <p>One way to avoid the fragmentation issue to some extent is to make each
+SICStus run-time preallocate a large enough memory area so it will not
+have to grow during run-time. This can be effected by setting the
+environment variables <samp><span class="env">GLOBALSTKSIZE</span></samp>, <samp><span class="env">PROLOGINITSIZE</span></samp> and
+<samp><span class="env">PROLOGMAXSIZE</span></samp>.
+
+   <p>On some platforms, currently <code>Linux</code> and Windows, the default
+bottom memory manager layer will pre-allocate as large a chunk of
+<em>address-constrained</em> memory as possible when the SICStus run-time
+is initialized. In order to use more than one run-time you therefore
+should set the environment variable <samp><span class="env">PROLOGMAXSIZE</span></samp> to limit this
+greedy pre-allocation.
+
+<pre class="example">     bash&gt; <kbd>GLOBALSTKSIZE=10MB; export GLOBALSTKSIZE;</kbd>
+     bash&gt; <kbd>PROLOGINITSIZE=20MB; export PROLOGINITSIZE;</kbd>
+     bash&gt; <kbd>PROLOGMAXSIZE=30MB; export PROLOGMAXSIZE;</kbd>
+</pre>
+   <p>You can use <code>statistics/2</code> to try to determine suitable values for
+thes, but it is bound to be a trial-and-error process.
+
+<!-- @node Multiple SICStus Run-Times in Java -->
+<!-- @section Multiple SICStus Run-Times in Java -->
+<!-- In Java, you can now create more than one @code{se.sics.jasper.SICStus} -->
+<!-- object.  Each will correspond to a completely independent copy of the -->
+<!-- SICStus run-time. Note that a SICStus run-time is not deallocated when -->
+<!-- the corresponding SICStus object is no longer used.  Thus, -->
+<!-- the best way to use multiple SICStus objects is to create them early and -->
+<!-- then re-use them as needed. -->
+<!-- It is probably useful to create each in its own separate thread. One -->
+<!-- reason would be to gain speed on a multi-processor machine. -->
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Multiple-SICStus-Run_002dTimes-in-C.html#Multiple-SICStus-Run_002dTimes-in-C">Next</a>
+<li><a rel="up" accesskey="u" href="Multiple-SICStus-Run_002dTimes.html#Multiple-SICStus-Run_002dTimes">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Memory-Considerations.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Memory-Considerations.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+</body></html>
+

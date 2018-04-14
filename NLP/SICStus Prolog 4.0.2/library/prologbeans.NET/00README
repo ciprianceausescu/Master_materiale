@@ -1,0 +1,6 @@
+The .cs files in this directory are no longer used to build
+prologbeans.dll.
+
+Prologbeans.NET now uses the same source code as PB/Java. Eventually
+we should perhaps remove the *.cs files. Check with PD before you
+remove them from CVS.

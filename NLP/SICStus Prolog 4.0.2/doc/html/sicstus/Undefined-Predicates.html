@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Undefined Predicates - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Run-Intro.html#Run-Intro" title="Run Intro">
+<link rel="prev" href="Syntax-Errors.html#Syntax-Errors" title="Syntax Errors">
+<link rel="next" href="Execution.html#Execution" title="Execution">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h3 class="section">3.6 Undefined Predicates</h3>
+
+<p><a name="index-undefined-predicate-273"></a><a name="index-predicate_002c-undefined-274"></a><a name="index-unknown_002f2-275"></a><a name="index-unknown_002f2-276"></a>
+<a name="index-unknown_005fpredicate_005fhandler_002f3-_0028user_002c-hook_0029-277"></a><a name="index-unknown_005fpredicate_005fhandler_002f3-_0028user_002c-hook_0029-278"></a>
+<a name="index-user_003aunknown_005fpredicate_005fhandler_002f3-_0028hook_0029-279"></a><a name="index-user_003aunknown_005fpredicate_005fhandler_002f3-_0028hook_0029-280"></a>
+
+   <p>There is a difference between predicates that have no definition
+and predicates that have no clauses.  The latter case is
+meaningful e.g. for dynamic predicates
+(see <a href="ref_002dlod_002ddcl.html#ref_002dlod_002ddcl">ref-lod-dcl</a>) that clauses are being added to or removed
+from.  There are good reasons for treating calls to undefined
+predicates as errors, as such calls easily arise from typing
+errors.
+
+   <p>The system can optionally catch calls to predicates that have no
+definition. First the user defined predicate
+<code>user:unknown_predicate_handler/3</code> (see <a href="ref_002dere.html#ref_002dere">ref-ere</a>) is called. 
+If undefined or if the call fails the action is governed by the state of
+the <code>unknown</code> Prolog flag, which can be:
+<a name="index-unknown-_0028prolog-flag_0029-281"></a>
+     <dl>
+<dt><code>trace</code><dd><a name="index-trace-_0028unknown-flag-value_0029-282"></a>which causes calls to undefined predicates to be reported and the
+debugger to be entered at the earliest opportunity.
+
+     <br><dt><code>error</code><dd><a name="index-error-_0028unknown-flag-value_0029-283"></a>which causes calls to such predicates to raise an exception (the
+default state). See <a href="ref_002dere.html#ref_002dere">ref-ere</a>.
+
+     <br><dt><code>warning</code><dd><a name="index-warning-_0028unknown-flag-value_0029-284"></a>which causes calls to such predicates to display a warning message
+and then fail.
+
+     <br><dt><code>fail</code><dd><a name="index-fail-_0028unknown-flag-value_0029-285"></a>which causes calls to such predicates to fail. 
+</dl>
+
+   <p>Calls to predicates that have no clauses are not caught.
+
+   <p>The built-in predicate <code>unknown(</code><var>OldState</var><code>, </code><var>NewState</var><code>)</code>
+unifies <var>OldState</var> with the current state and sets the state to
+<var>NewState</var>.  The built-in predicate <code>debugging/0</code> prints the
+value of this state along with its other information.  This state is
+also controlled by the <code>unknown</code> Prolog flag.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Execution.html#Execution">Next</a>
+<li><a rel="previous" accesskey="p" href="Syntax-Errors.html#Syntax-Errors">Previous</a>
+<li><a rel="up" accesskey="u" href="Run-Intro.html#Run-Intro">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Undefined-Predicates.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Undefined-Predicates.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

@@ -1,0 +1,136 @@
+# spld.config.in: process with configure to produce spld.config ([PM] not exactly true in 3.9)
+
+DEF_PREFIX=C:/cygwin/tmp/sp-xp-x32-sp-4-build-20071106-144423/srcdir/WixTemplateRoot
+SP_DIRNAME=sicstus-4.0.2
+
+# A run-time system foo.exe in directory DIR excpects the sicstus
+# specific files to be found in sub directory DIR/SP_RTSYS_DIRNAME
+# Traditionally this was DIR/lib but on Win32 and MacOS X version
+# specific names are used. Changing this only makes sense on SysV
+# unices when spld --moveable is used.
+SP_RTSYS_DIRNAME=sp-4.0.2
+
+# Keep this list sorted.
+BDBLIB=C:/PROGRA~1/Oracle/BERKEL~1.20/lib/libdb45.lib
+BDB_PATH=/c/PROGRA~1/Oracle/BERKEL~1.20
+CC=cl.exe
+CC_NOLIBPATH=
+CFLAGS= -nologo  /MD   /Z7 /GF /Ox 
+CHARMAINOBJ=charmain.obj cmdproc.obj intrpt.obj 
+SPAUXOBJ=spaux.obj
+CHMOD=chmod
+CODETYPE=compactcode
+CP=cp
+CYGPATH=cygpath -m
+DBLIB=
+DSMAINOBJ=main.obj
+ENABLE_STATLIB=yes
+ENABLE_SP_DISPATCH_API=@ENABLE_SP_DISPATCH_API@
+EXEEXT=.exe
+GCC_PROG_NAME_LD=ld
+HAVE_SYSV_ORIGIN=no
+FLI_FILE=fli_win.c
+ENABLE_PTRSPFUNC=yes
+EXPFILE_SYMBOL_PREFIX=
+IMPLIB=sprt4-0-2.lib
+INCR_CFLAGS= /MD 
+JAVAC=/c/PROGRA~1/Java/JDK15~1.0_0/bin/javac
+JAVAEXEC=/c/PROGRA~1/Java/JDK15~1.0_0/bin/java
+JAVAH=/c/PROGRA~1/Java/JDK15~1.0_0/bin/javah
+JAVALIB=
+JAVA_CLASSPATH=
+JAVA_EXECOPTS= 
+# [PM] 3.11.2 not used JAVA_NOBUILD_TARGETS=@JAVA_NOBUILD_TARGETS@
+JDK_PATH=C:/PROGRA~1/Java/JDK15~1.0_0
+JDK_RPATH=
+JASPER_MODULE=
+TCL_LIBRARY=/c/Tcl-8.4.13/lib/tcl8.4
+TK_LIBRARY=/c/Tcl-8.4.13/lib/tk8.4
+TCLTK_MODULE=tcltk.po
+TCLTK_PATH=C:/Tcl-8.4.13
+TCL_PATH=C:/Tcl-8.4.13
+TK_PATH=C:/Tcl-8.4.13
+LD=dummy_ld
+SPLD_EXE_LDFLAGS=-nologo 
+SPLD_EXE_LIBS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib
+SPLD_EXE_EXTRA_RPATH=
+SPLD_JNI_LIBS=
+SPLFR_SHLD_LASTARG=-IMPLIB:dummy.lib
+SPLD_OPT_WRAPPER_DEFAULT=no
+SPLD_OPT_MOVEABLE_NEEDS_WRAPPER=no
+# SPRM 7579
+SPLD_OPT_MORE_MEMORY_NEEDS_LC_ALL_C=yes
+LD_R=
+CC_ROPT=
+SPLD_SHLD_JNILIB_FLAGS=
+SPLD_SHLD_ROPT=
+# [PM] 4.0 yes or no (Win32 embed VS 2005 manifest)
+SPLD_EMBED_MANIFEST=yes
+# [PM] 4.0 yes or no (Win32 embed VS 2005 manifest)
+SPLFR_EMBED_MANIFEST=yes
+SPLFR_SHLD_ROPT=
+LD_LIBRARY_PATH_name=PATH
+LD_BUILDS_RPATH_FROM_L=no
+SPLFR_LD_r_FLAGS=
+LN=cp -Ruv
+M4=m4
+MV=mv
+# [PM] 4.0 Visual Studio 8 Manifest Tool mt.exe
+MT=mt.exe
+NMEDIT=
+NOLINK_OPT=-c
+NOLINK_OUTPUT_OPT=-Fo
+SHLD_OUTPUT_OPT=-OUT:
+OBJEXT=obj
+# OLDSICSTUS=
+# OPTIONS=@OPTIONS@
+OUTPUT_OPT=-Fe
+# PARMAKE=
+PATHSEP=;
+PERL=/usr/bin/perl
+PLFLAGS=compactcode
+QUOTECHAR="
+RANLIB=:
+RESGEN_TYPE=win32res
+RM=rm
+RTKERNEL_BASENAME_SANS_SUFFIX=sprt4-0-2
+RTKERNEL_BASENAME_WITH_DSO_SUFFIX=sprt4-0-2.dll
+RTKERNEL_BASENAME_WITH_STAT_SUFFIX=sprt4-0-2_static.lib
+# KERNEL_STATLIB=@KERNEL_STATLIB@
+SPLFR_SHLD=link.exe
+SPLFR_SHLDFLAGS=-nologo -dll /INCREMENTAL:NO /SAFESEH /NXCOMPAT kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib -debug
+# 3.9.1
+SPLFR_SHLD_EXPORT_ARG=
+SPLFR_LD_EXPORT_ARG=
+# 3.9.1
+SPLFR_SHLD_POST_PROCESS=
+SPLFR_SHLD_POST_PROCESS_EXPFILE_OPT=
+SPLFR_SHLD_POST_PROCESS_LIB_OPT=
+# 3.9.1
+SPLFR_LD_R_POST_PROCESS=
+SPLFR_LD_R_POST_PROCESS_EXPFILE_OPT=
+SPLFR_LD_R_POST_PROCESS_LIB_OPT=
+#
+SHSFX=dll
+FLI_SHSFX=dll
+FLI_SHARED_PRELINKS=no
+# resource compiler used by spld to compile data resources on Win32
+RCEXE=rc
+SICSTUS_MAJOR_VERSION=4
+SICSTUS_MINOR_VERSION=0
+SICSTUS_REVISION_VERSION=2
+SICSTUS_BETA_VERSION=0
+SICSTUS_VERSION_STRING=4.0.2
+SOCKETLIB=wsock32.lib
+# SPVER=40
+STSFX=lib
+SYSTEMLIB=
+TCLLIB=C:/Tcl-8.4.13/lib/tcl84.lib C:/Tcl-8.4.13/lib/tk84.lib  
+# WHICH=@WHICH@
+WIN32_EXTRAOBJS=win32.obj
+WIN32_SPLD_SHLD_SPECIAL=
+WIN32_SPLD_CC_SPECIAL=/link  /NXCOMPAT /SAFESEH
+WIN32_EMBED_MANIFESTS=yes
+WINMAINOBJ=winmain.obj cmdproc.obj intrpt.obj 
+VERBOSE_FLAG=
+NOVERBOSE_FLAG=-nologo

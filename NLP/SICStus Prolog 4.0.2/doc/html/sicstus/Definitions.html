@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Definitions - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-Constraint-System.html#The-Constraint-System" title="The Constraint System">
+<link rel="next" href="Pitfalls-of-Interval-Reasoning.html#Pitfalls-of-Interval-Reasoning" title="Pitfalls of Interval Reasoning">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.7.1 Definitions</h5>
+
+<p><a name="index-domain-constraint-3339"></a><a name="index-constraint_002c-domain-3340"></a>The constraint system is based on domain constraints and indexicals.  A
+<dfn>domain constraint</dfn> is an expression <var>X</var><code>::</code><var>I</var>, where
+<var>X</var> is a domain variable and <var>I</var> is a nonempty set of
+integers.
+
+   <p><a name="index-constraint-store-3341"></a><a name="index-store_002c-constraint-3342"></a><a name="index-contradictory-store-3343"></a><a name="index-store_002c-contradictory-3344"></a><a name="index-consistent-store-3345"></a><a name="index-store_002c-consistent-3346"></a>A set S of domain constraints is called a
+<dfn>store</dfn>. D(X,S), the <dfn>domain</dfn> of X in S, is
+defined as the intersection of all I such that
+<code>X::I</code> belongs to S.  The store is
+<dfn>contradictory</dfn> if the domain of some variable is empty;
+otherwise, it is <dfn>consistent</dfn>.  A consistent store S' is an
+<dfn>extension</dfn> of a store S iff, for all variables
+X, D(X,S') is contained in D(X,S).
+
+   <p>The following definitions, adapted from [Van Hentenryck et al. 95],
+define important notions of consistency and entailment of constraints
+wrt. stores.
+
+   <p>A ground constraint is <dfn>true</dfn> if it holds and <dfn>false</dfn>
+otherwise.
+
+   <p><a name="index-arc_002dconsistent-3347"></a>A constraint C is <dfn>arc-consistent wrt. S</dfn> iff,
+for each variable X_i and value V_i in
+D(X_i,S), there exist values V_j in D(X_j,S),
+1 \leq j \leq n \land i \neq j, such that
+C(V_1,\ldots,V_n) is true.
+
+   <p><a name="index-arc_002dentailed-3348"></a><a name="index-arc_002ddisentailed-3349"></a>A constraint C is <dfn>arc-entailed by S</dfn> iff, for
+all values V_j in D(X_j,S), 1 \leq j \leq n,
+C(V_1,\ldots,V_n) is true.
+
+   <p>Let D'(X,S) denote the interval [\min(D(X,S)),\max(D(X,S))].
+
+   <p><a name="index-bound_002dconsistent-3350"></a>A constraint C is <dfn>bound-consistent wrt. S</dfn> iff,
+for each variable X_i,
+there exist values V_j and W_j in
+D'(X_j,S), 1 \leq j \leq n, i \neq j, such that
+C(V_1,\ldots,\min(D(X_i,S)),\ldots,V_n) and
+C(W_1,\ldots,\max(D(X_i,S)),\ldots,W_n) are both true.
+
+   <p><a name="index-bound_002dentailed-3351"></a><a name="index-bound_002ddisentailed-3352"></a>A constraint C is <dfn>bound-entailed by S</dfn> iff, for
+all values V_j in D'(X_j,S), 1 \leq j \leq n,
+C(V_1,\ldots,V_n) is true.
+
+   <p>Finally, a constraint is <dfn>arc-disentailed (bound-disentailed) by S</dfn>
+iff its negation is arc-entailed (bound-entailed) by S.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Pitfalls-of-Interval-Reasoning.html#Pitfalls-of-Interval-Reasoning">Next</a>
+<li><a rel="up" accesskey="u" href="The-Constraint-System.html#The-Constraint-System">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Definitions.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Definitions.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

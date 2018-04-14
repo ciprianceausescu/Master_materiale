@@ -1,0 +1,32 @@
+init_harta(V0, V0, []).
+init_harta(V0, Vn, [Cuvant | Cuvinte]) :-
+	V1 is V0 + 1,
+	pentru_fiecare(cuvant(Categorie,Cuvant),
+		adauga_muchie(V0, V1, Categorie, [], [Cuvant, Categorie])),
+	init_harta(V1, Vn, Cuvinte).
+
+pentru_fiecare(X, Y) :- X, executa(Y), fail.
+pentru_fiecare(_, _) :- true.
+
+executa(Y) :- Y, !.
+
+adauga_muchie(V0, V1, Categorie, Categorii, Analiza) :-
+	muchie(V0, V1, Categorie, Categorii, Analiza), !.
+adauga_muchie(V1, V2, Categorie1, [], Analiza) :-
+	asserta(muchie(V1, V2, Categorie1, [], Analiza)),
+	pentru_fiecare(regula(Categorie2, [Categorie1 | Categorii]),
+		adauga_muchie(V1, V1, Categorie2, [Categorie1 | Categorii], [Categorie2])),
+	pentru_fiecare(muchie(V0, V1, Categorie2, [Categorie1 | Categorii], Analize),
+		adauga_muchie(V0, V2, Categorie2, Categorii, [Analiza | Analize])).
+adauga_muchie(V0, V1, Categorie1, [Categorie2 | Categorii], Analize) :-
+	asserta(muchie(V0, V1, Categorie1, [Categorie2 | Categorii], Analize)),
+	pentru_fiecare(muchie(V1, V2, Categorie2, [], Aaliza),
+		adauga_muchie(V0, V2, Categorie1, Categorii, [Analiza | Analize])).
+
+parse(Cat, Sir) :-
+	V0 is 1,
+	init_harta(V0, Vn, Sir),
+	((\+ muchie(V0, Vn, Cat, [], _),
+	retractall(muchie(_, _, _, _, _)), !, fail);
+	(pentru_fiecare(muchie(V0, Vn, Cat, [], Analiza), mwrite(Analiza)),
+	retractall(muchie(_, _, _, _, _)))).

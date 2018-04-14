@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Range Expressions - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="prev" href="Indexicals.html#Indexicals" title="Indexicals">
+<link rel="next" href="Term-Expressions.html#Term-Expressions" title="Term Expressions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.2 Range Expressions</h5>
+
+<p>A range expression has one of the following forms, where R_i
+denote range expressions, T_i denote integer valued <dfn>term
+expressions</dfn>, S(T_i) denotes the integer value of T_i in
+S, X denotes a variable, I denotes an
+integer, and S denotes the current store.
+
+     <dl>
+<dt><code>dom(X)</code><dd>evaluates to D(X,S)
+
+     <br><dt><code>{T_1,\ldots,T_n}</code><dd>evaluates to {S(T_1),\ldots,S(T_n)}.  Any T_i containing
+a variable that is not &ldquo;quantified&rdquo; by <code>unionof/3</code> will
+cause the indexical to suspend until this variable has been assigned.
+
+     <br><dt><code>T_1..T_2</code><dd>evaluates to the interval between S(T_1) and S(T_2).
+
+     <br><dt><code>R_1/\R_2</code><dd>evaluates to the intersection of S(R_1) and S(R_2)
+
+     <br><dt><code>R_1\/R_2</code><dd>evaluates to the union of S(R_1) and S(R_2)
+
+     <br><dt><code>\R_2</code><dd>evaluates to the complement of S(R_2)
+
+     <br><dt><code>R_1+R_2</code><dt><code>R_1+T_2</code><dd>evaluates to S(R_2) or S(T_2) added pointwise to S(R_1)
+
+     <br><dt><code>-R_2</code><dd>evaluates to S(R_2) negated pointwise
+
+     <br><dt><code>R_1-R_2</code><dt><code>R_1-T_2</code><dt><code>T_1-R_2</code><dd>evaluates to S(R_2) or S(T_2) subtracted pointwise from
+S(R_1) or S(T_1)
+
+     <br><dt><code>R_1 mod R_2</code><dt><code>R_1 mod T_2</code><dd>evaluates to S(R_1) pointwise modulo S(R_2) or S(T_2)
+
+     <br><dt><code>R_1 ? R_2</code><dd>evaluates to S(R_2) if S(R_1) is a non-empty set; otherwise,
+evaluates to the empty set.  This expression is commonly used in the
+context <code>(R_1 ? (inf..sup) \/ R_3)</code>, which evaluates to
+S(R_3) if S(R_1) is an empty set; otherwise, evaluates to
+<code>inf..sup</code>.  As an optimization, R_3 is not evaluated
+while the value of R_1 is a non-empty set.
+
+     <br><dt><code>unionof(X,R_1,R_2)</code><dd>evaluates to the union of S(E_1),\ldots,S(E_N), where each
+E_I has been formed by substituting K for X in
+R_2, where K is the I:th element of
+S(R_1).  See <a href="N-Queens.html#N-Queens">N Queens</a>, for an example of usage. 
+<blockquote>
+<strong>Please note</strong>: if S(R_1) is infinite, the evaluation of
+the indexical will be abandoned, and the indexical will simply suspend. 
+</blockquote>
+
+     <br><dt><code>switch(T,</code><var>MapList</var><code>)</code><dd>evaluates to S(E) if S(T_1) equals K and
+<var>MapList</var> contains a pair <code>K-E</code>. 
+Otherwise, evaluates to the empty set.  If T contains a
+variable that is not &ldquo;quantified&rdquo; by <code>unionof/3</code>, the
+indexical will suspend until this variable has been assigned. 
+</dl>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Term-Expressions.html#Term-Expressions">Next</a>
+<li><a rel="previous" accesskey="p" href="Indexicals.html#Indexicals">Previous</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Range-Expressions.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Range-Expressions.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

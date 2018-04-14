@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>ref-ere-err-exi - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="ref_002dere_002derr.html#ref_002dere_002derr" title="ref-ere-err">
+<link rel="prev" href="ref_002dere_002derr_002drep.html#ref_002dere_002derr_002drep" title="ref-ere-err-rep">
+<link rel="next" href="ref_002dere_002derr_002dper.html#ref_002dere_002derr_002dper" title="ref-ere-err-per">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">4.15.4.6 Existence Errors</h5>
+
+<p><a name="index-existence-errors-1563"></a>
+<a name="index-errors_002c-existence-1564"></a>
+
+   <p>An existence error occurs when a predicate attempts to access something that
+does not exist.  For example, trying to compile a file that
+does not exist, erasing a database reference that has already been erased.  A
+less obvious example:  reading past the end of file marker in a stream is
+regarded as asking for an object (the next character) that does not exist.
+
+   <p>The <var>SICStus_Error</var> term associated with an existence error is
+<pre class="example">     existence_error(<var>Goal, ArgNo, ObjectType, Culprit, Message</var>)
+</pre>
+     <dl>
+<dt><var>ArgNo</var><dd>index of argument of <var>Goal</var> where <var>Culprit</var> appears
+
+     <br><dt><var>ObjectType</var><dd>expected type of non-existent object
+
+     <br><dt><var>Culprit</var><dd>name for the non-existent object
+
+     <br><dt><var>Message</var><dd>the constant <code>0</code> or <code>''</code>, or
+some additional information provided by the operating system or other
+support system indicating why <var>Culprit</var> is thought not to exist. 
+</dl>
+
+   <p>For example, `<samp><span class="samp">see('../brother/niece')</span></samp>' might raise the exception
+<pre class="example">     existence_error(see('../brother/niece'),
+             1, file, '/usr/stella/parent/brother/niece',
+             errno(20))
+</pre>
+   <p class="noindent">where the <var>Message</var> encodes the system error <code>ENOTDIR</code> (some component
+of the path is not a directory).
+
+   <p>As a general rule, if <var>Culprit</var> was provided in the goal as some sort of
+context-sensitive name, the Prolog system will try to resolve it to an
+absolute name, as shown here, so that you can see whether the problem is
+just that the name was resolved in the wrong context.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="ref_002dere_002derr_002dper.html#ref_002dere_002derr_002dper">Next</a>
+<li><a rel="previous" accesskey="p" href="ref_002dere_002derr_002drep.html#ref_002dere_002derr_002drep">Previous</a>
+<li><a rel="up" accesskey="u" href="ref_002dere_002derr.html#ref_002dere_002derr">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dere_002derr_002dexi.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dere_002derr_002dexi.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Execution of Propagating Indexicals - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="prev" href="FD-Predicates.html#FD-Predicates" title="FD Predicates">
+<link rel="next" href="Execution-of-Checking-Indexicals.html#Execution-of-Checking-Indexicals" title="Execution of Checking Indexicals">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.6 Execution of Propagating Indexicals</h5>
+
+<p>Consider the definition of a constraint C containing a
+propagating indexical <code>X in R</code>.  Let
+\TV(X,C,S) denote the set of values for X that can make
+C true in some ground extension of the store S. 
+Then the indexical should obey the following coding rules:
+
+     <ul>
+<li>all arguments of C except X should occur in R
+<li>if R is ground in S, S(R) = \TV(X,C,S)
+</ul>
+
+   <p>If the coding rules are observed, S(R) can be proven to contain
+\TV(X,C,S) for all stores in which R is monotone.  Hence
+it is natural for the implementation to wait until R becomes
+monotone before admitting the propagating indexical for execution.  The
+execution of <code>X in R</code> thus involves the following:
+
+     <ul>
+<li>If D(X,S) is disjoint from S(R), a contradiction is detected.
+
+     <li>If D(X,S) is contained in S(R), D(X,S) does not
+contain any values known to be incompatible with C, and the
+indexical suspends, unless R is ground in S, in
+which case C is detected as entailed.
+
+     <li>Otherwise, D(X,S) contains some values that are known to be
+incompatible with C.  Hence, <code>X::S(R)</code> is
+added to the store (X is <dfn>pruned</dfn>), and the indexical
+suspends, unless R is ground in S, in which case
+C is detected as entailed. 
+</ul>
+
+   <p>A propagating indexical is scheduled for execution as follows:
+
+     <ul>
+<li>it is evaluated initially as soon as it has become monotone
+<li>it is re-evaluated when one of the following conditions occurs:
+          <ol type=1 start=1>
+<li>the domain of a variable Y that occurs as <code>dom(Y)</code>
+      or <code>card(Y)</code> in R has been updated
+<li>the lower bound of a variable Y that occurs as <code>min(Y)</code>
+      in R has been updated
+<li>the upper bound of a variable Y that occurs as <code>max(Y)</code>
+      in R has been updated
+          </ol>
+</ul>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Execution-of-Checking-Indexicals.html#Execution-of-Checking-Indexicals">Next</a>
+<li><a rel="previous" accesskey="p" href="FD-Predicates.html#FD-Predicates">Previous</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Execution-of-Propagating-Indexicals.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Execution-of-Propagating-Indexicals.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>PrologSession</TITLE>
+</HEAD>
+<HR>
+<H2><FONT size="-1">
+se.sics.prologbeans</FONT>
+<BR>
+Class PrologSession</H2>
+<HR>
+<P>
+<code>PrologSession</code> handles the connection with the Prolog
+ Server. Currently only synchronous connections with the server are
+ supported.<P>
+<HR>
+&nbsp;
+<A NAME="constructor_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="PrologSession.html#PrologSession()">PrologSession</A></B>()</CODE>
+<BR>
+Creates a new <code>PrologSession</code> instance with default
+ Prolog server settings.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="method_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#getTimeout()">getTimeout</A></B>()</CODE>
+<BR>
+Returns the timeout in milliseconds before the connection to the
+ Prolog server is reset (when a query is not answered).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#setTimeout(int)">setTimeout</A></B>(int&nbsp;timeout)</CODE>
+<BR>
+Sets the timeout in milliseconds before the connection to the
+ Prolog server is reset (when a query is not answered).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PrologSession</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#getPrologSession(string)">getPrologSession</A></B>(string&nbsp;name)</CODE>
+<BR>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PrologSession</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#getPrologSession(string, HttpSession)">getPrologSession</A></B>(string&nbsp;name, HttpSession&nbsp;httpSession)</CODE>
+<BR>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#getPort()">getPort</A></B>()</CODE>
+<BR>
+Returns the port of the Prolog server.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#setPort(int)">setPort</A></B>(int&nbsp;prologServerPort)</CODE>
+<BR>
+Sets the port of the Prolog server (default <code>8066</code>).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#getHost()">getHost</A></B>()</CODE>
+<BR>
+Returns the host of the Prolog server (exactly as registered in
+ <code>setHost</code>).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#setHost(string)">setHost</A></B>(string&nbsp;prologServerHost)</CODE>
+<BR>
+Sets the host of the Prolog server (default is
+ <code>localhost</code>).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#isAlwaysClosing()">isAlwaysClosing</A></B>()</CODE>
+<BR>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#setAlwaysClose(bool)">setAlwaysClose</A></B>(bool&nbsp;close)</CODE>
+<BR>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#setAutoConnect(bool)">setAutoConnect</A></B>(bool&nbsp;autoConnect)</CODE>
+<BR>
+Sets the connection mode of this <code>PrologSession</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#isAutoConnecting()">isAutoConnecting</A></B>()</CODE>
+<BR>
+Returns the state of the auto connect mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;QueryAnswer</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#executeQuery(string)">executeQuery</A></B>(string&nbsp;query)</CODE>
+<BR>
+Sends a query to the Prolog server and waits for the answer
+ before returning the <code>QueryAnswer</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;QueryAnswer</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#executeQuery(string, Bindings)">executeQuery</A></B>(string&nbsp;query, <A HREF="Bindings.html">Bindings</A>&nbsp;bindings)</CODE>
+<BR>
+Sends a query to the Prolog server and waits for the answer
+ before returning the
+ <code>QueryAnswer</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;QueryAnswer</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#executeQuery(string, Bindings, string)">executeQuery</A></B>(string&nbsp;query, <A HREF="Bindings.html">Bindings</A>&nbsp;bindings, string&nbsp;sessionID)</CODE>
+<BR>
+Sends a query to the Prolog server and waits for the answer
+ before returning the
+ <code>QueryAnswer</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#connect()">connect</A></B>()</CODE>
+<BR>
+Connects to the Prolog server.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#isConnected()">isConnected</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if a connection with the Prolog server
+ is open and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PrologSession.html#disconnect()">disconnect</A></B>()</CODE>
+<BR>
+Closes the connection with the Prolog server.</TD>
+</TR>
+</TABLE>
+&nbsp;
+&nbsp;
+<A NAME="constructor_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="PrologSession()"></A>
+<H3>PrologSession</H3>
+<PRE>
+<B>PrologSession</B>()</PRE>
+<DL>
+<DD>Creates a new <code>PrologSession</code> instance with default
+ Prolog server settings.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+&nbsp;
+<A NAME="method_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="getTimeout()"></A>
+<H3>getTimeout</H3>
+<PRE>
+public&nbsp;int <B>getTimeout</B>()</PRE>
+<DL>
+<DD>Returns the timeout in milliseconds before the connection to the
+ Prolog server is reset (when a query is not answered).<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="setTimeout(int)"></A>
+<H3>setTimeout</H3>
+<PRE>
+public&nbsp;void <B>setTimeout</B>(int&nbsp;timeout)</PRE>
+<DL>
+<DD>Sets the timeout in milliseconds before the connection to the
+ Prolog server is reset (when a query is not answered). Setting
+ the timeout to <code>0</code> will disable timeouts for this
+ prolog session. Default is 2000 milliseconds.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>timeout</CODE>
+ - <code>int</code> timeout in milliseconds or
+ <code>0</code> to disable timeouts</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getPrologSession(string)"></A>
+<H3>getPrologSession</H3>
+<PRE>
+public static&nbsp;PrologSession <B>getPrologSession</B>(string&nbsp;name)</PRE>
+<DL>
+<DD>
+ This method can only be used in Prologbeans/Java. If called
+ in .NET it will throw an Error.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - the name of the prolog session<DT><B>Returns: </B><DD>the named prolog session or <code>null</code> if no such
+ session could be found</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getPrologSession(string, HttpSession)"></A>
+<H3>getPrologSession</H3>
+<PRE>
+public static&nbsp;PrologSession <B>getPrologSession</B>(string&nbsp;name, HttpSession&nbsp;httpSession)</PRE>
+<DL>
+<DD>
+ This method can only be used in Prologbeans/Java. If called
+ in .NET it will throw an Error.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>name</CODE>
+ - the name of the prolog session<DD><CODE>httpSession</CODE>
+ - the http session<DT><B>Returns: </B><DD>the named prolog session</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getPort()"></A>
+<H3>getPort</H3>
+<PRE>
+public&nbsp;int <B>getPort</B>()</PRE>
+<DL>
+<DD>Returns the port of the Prolog server.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="setPort(int)"></A>
+<H3>setPort</H3>
+<PRE>
+public&nbsp;void <B>setPort</B>(int&nbsp;prologServerPort)</PRE>
+<DL>
+<DD>Sets the port of the Prolog server (default <code>8066</code>).<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>prologServerPort</CODE>
+ - the port of the Prolog server</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getHost()"></A>
+<H3>getHost</H3>
+<PRE>
+public&nbsp;string <B>getHost</B>()</PRE>
+<DL>
+<DD>Returns the host of the Prolog server (exactly as registered in
+ <code>setHost</code>).<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="setHost(string)"></A>
+<H3>setHost</H3>
+<PRE>
+public&nbsp;void <B>setHost</B>(string&nbsp;prologServerHost)</PRE>
+<DL>
+<DD>Sets the host of the Prolog server (default is
+ <code>localhost</code>). The host can be specified as either
+ IP-address or host name.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>prologServerHost</CODE>
+ - the host as an IP-address or host name</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isAlwaysClosing()"></A>
+<H3>isAlwaysClosing</H3>
+<PRE>
+public&nbsp;bool <B>isAlwaysClosing</B>()</PRE>
+<DL>
+<DD><P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="setAlwaysClose(bool)"></A>
+<H3>setAlwaysClose</H3>
+<PRE>
+public&nbsp;void <B>setAlwaysClose</B>(bool&nbsp;close)</PRE>
+<DL>
+<DD><P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="setAutoConnect(bool)"></A>
+<H3>setAutoConnect</H3>
+<PRE>
+public&nbsp;void <B>setAutoConnect</B>(bool&nbsp;autoConnect)</PRE>
+<DL>
+<DD>Sets the connection mode of this <code>PrologSession</code>. If
+ set to <code>true</code> it will ensure that it is connected to
+ the Prolog server as soon as a call to <code>executeQuery</code>
+ or anything else causing a need for communication happens. This
+ is by default set to <code>true</code>.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isAutoConnecting()"></A>
+<H3>isAutoConnecting</H3>
+<PRE>
+public&nbsp;bool <B>isAutoConnecting</B>()</PRE>
+<DL>
+<DD>Returns the state of the auto connect mode.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="executeQuery(string)"></A>
+<H3>executeQuery</H3>
+<PRE>
+public&nbsp;QueryAnswer <B>executeQuery</B>(string&nbsp;query)</PRE>
+<DL>
+<DD>Sends a query to the Prolog server and waits for the answer
+ before returning the <code>QueryAnswer</code>. Anonymous
+ variables (underscore, <code>_</code>), will be ignored, and thus
+ not accessible in the <code>QueryAnswer</code>.
+ <code>executeQuery</code> throws <code>IOException</code> if
+ communication problems with the server occurs. Please note:
+ <code>executeQuery</code> will only return one answer.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE>
+ - the query to send to the prolog server.
+        The characters in the query are restricted to ISO-8859-1.<DT><B>Returns: </B><DD>the answer from the prolog server<DT><B>Throws: </B><DD>IOException - if an error occurs. A possible cause is a timeout.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="executeQuery(string, Bindings)"></A>
+<H3>executeQuery</H3>
+<PRE>
+public&nbsp;QueryAnswer <B>executeQuery</B>(string&nbsp;query, Bindings&nbsp;bindings)</PRE>
+<DL>
+<DD>Sends a query to the Prolog server and waits for the answer
+ before returning the
+ <code>QueryAnswer</code>. <code>Bindings</code> are variable
+ bindings for the given query and will ensure that the values are
+ stuffed correctly.<p></p>
+
+ An example:<br></br>
+ <code>QueryAnswer answer = executeQuery("evaluate(In,Out)",
+                                  new Bindings().bind("In","4*9."));
+ </code><P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE>
+ - the query to send to the prolog server
+        The characters in the query are restricted to ISO-8859-1.<DD><CODE>bindings</CODE>
+ - the variable bindings to use in the query<DT><B>Returns: </B><DD>the answer from the prolog server<DT><B>Throws: </B><DD>IOException - if an error occurs. A possible cause is a timeout.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="executeQuery(string, Bindings, string)"></A>
+<H3>executeQuery</H3>
+<PRE>
+public&nbsp;QueryAnswer <B>executeQuery</B>(string&nbsp;query, Bindings&nbsp;bindings, string&nbsp;sessionID)</PRE>
+<DL>
+<DD>Sends a query to the Prolog server and waits for the answer
+ before returning the
+ <code>QueryAnswer</code>. <code>Bindings</code> are variable
+ bindings for the given query and will ensure that the values are
+ stuffed correctly.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>query</CODE>
+ - the query to send to the prolog server
+        The characters in the query are restricted to ISO-8859-1.<DD><CODE>bindings</CODE>
+ - the variable bindings to use in the query<DD><CODE>sessionID</CODE>
+ - the session id to give to the prolog server<DT><B>Returns: </B><DD>the answer from the prolog server<DT><B>Throws: </B><DD>IOException - if an error occurs. A possible cause is a timeout.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="connect()"></A>
+<H3>connect</H3>
+<PRE>
+public&nbsp;void <B>connect</B>()</PRE>
+<DL>
+<DD>Connects to the Prolog server. By default
+ <code>executeQuery</code> will automatically connect to the
+ server when called.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isConnected()"></A>
+<H3>isConnected</H3>
+<PRE>
+public&nbsp;bool <B>isConnected</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if a connection with the Prolog server
+ is open and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="disconnect()"></A>
+<H3>disconnect</H3>
+<PRE>
+public&nbsp;void <B>disconnect</B>()</PRE>
+<DL>
+<DD>Closes the connection with the Prolog server. The connection can
+ be opened again with <code>connect</code>.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>

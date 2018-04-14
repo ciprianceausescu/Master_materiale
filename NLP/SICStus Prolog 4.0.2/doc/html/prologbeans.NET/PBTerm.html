@@ -1,0 +1,732 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>PBTerm</TITLE>
+</HEAD>
+<HR>
+<H2><FONT size="-1">
+se.sics.prologbeans</FONT>
+<BR>
+Class PBTerm</H2>
+<HR>
+<P>
+<code>PBTerm</code> is the .NET representations of Prolog terms.<P>
+<HR>
+<A NAME="field_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static final&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#NIL">NIL</A></B><BR>
+The <code>PBTerm</code> <code>NIL</code>, with the printname "[]",
+ represents the empty list.</CODE>
+<BR>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected final&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#name">name</A></B><BR>
+</CODE>
+<BR>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+&nbsp;
+<A NAME="method_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isAtom()">isAtom</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is an atom and
+ <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isAtomic()">isAtomic</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a constant
+ (e.g. integer, floating-point number, or atom) and
+ <code>false</code> if this <code>PBTerm</code> is a compound term or
+ variable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isNumber()">isNumber</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a number and
+ <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isInteger()">isInteger</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is an integer and
+ <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isBignum()">isBignum</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is an bignum
+ integer and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isFloat()">isFloat</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a
+ floating-point number and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isCompound()">isCompound</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a compund
+ term and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isListCell()">isListCell</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a list cell,
+ i.e. a compound term with the functor ./2, and <code>false</code>
+ otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isProperList()">isProperList</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a proper list
+ and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isEmptyList()">isEmptyList</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is the empty list
+ and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isString()">isString</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a proper
+ list and all of its elements are character codes or one character atoms.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#head()">head</A></B>()</CODE>
+<BR>
+Returns the head of this <code>PBTerm</code> if it is a list cell, i.e.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#tail()">tail</A></B>()</CODE>
+<BR>
+Returns the tail of this <code>PBTerm</code> if it is a list cell, i.e.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#isVariable()">isVariable</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if this <code>PBTerm</code> is a variable and
+ <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#getName()">getName</A></B>()</CODE>
+<BR>
+Returns the name of this constant or compound term.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#getArgument(int)">getArgument</A></B>(int&nbsp;index)</CODE>
+<BR>
+Returns the argument at the specified index.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#length()">length</A></B>()</CODE>
+<BR>
+If this <code>PBTerm</code> is a proper list, returns its length.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#getArity()">getArity</A></B>()</CODE>
+<BR>
+Returns the number of arguments of this compound term or 0 if this
+ <code>PBTerm</code> is not a compound term.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#intValue()">intValue</A></B>()</CODE>
+<BR>
+Returns the integer value of this <code>PBTerm</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;BigInteger</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#bigIntegerValue()">bigIntegerValue</A></B>()</CODE>
+<BR>
+Returns the <code>BigInteger</code> value of this <code>PBTerm</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#floatValue()">floatValue</A></B>()</CODE>
+<BR>
+Returns the floating-point value of this PBTerm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#getString()">getString</A></B>()</CODE>
+<BR>
+If this <code>PBTerm</code> is a proper list and all its elements are
+ small integers (less than 256), returns a string with the list elements
+ as the character codes of the string.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public abstract&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#toString()">toString</A></B>()</CODE>
+<BR>
+Returns a string description of this term.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(float)">makeTerm</A></B>(float&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a float value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(double)">makeTerm</A></B>(double&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a double value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(int)">makeTerm</A></B>(int&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing an int value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(long)">makeTerm</A></B>(long&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a long value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(BigInteger)">makeTerm</A></B>(BigInteger&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a BigInteger
+ value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(string)">makeTerm</A></B>(string&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a list with
+ the characters, as integer values, in the string argument as its
+ elements.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(string, se.sics.prologbeans.PBTerm[])">makeTerm</A></B>(string&nbsp;name, <A HREF="PBTerm.html">PBTerm</A>[]&nbsp;arguments)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a compound
+ term.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeTerm(PBTerm, PBTerm)">makeTerm</A></B>(<A HREF="PBTerm.html">PBTerm</A>&nbsp;head, <A HREF="PBTerm.html">PBTerm</A>&nbsp;tail)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing a list cell.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public static&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#makeAtom(string)">makeAtom</A></B>(string&nbsp;value)</CODE>
+<BR>
+Creates a new <code>PBTerm</code> instance representing an atom.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="PBTerm.html#stuffAtom(string)">stuffAtom</A></B>(string&nbsp;atom)</CODE>
+<BR>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="field_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="NIL"></A>
+<H3>NIL</H3>
+<PRE>
+public static final PBTerm <B>NIL</B></PRE>
+<DL>
+<DD>The <code>PBTerm</code> <code>NIL</code>, with the printname "[]",
+ represents the empty list.<P>
+</DL>
+<HR>
+<A NAME="name"></A>
+<H3>name</H3>
+<PRE>
+protected final string <B>name</B></PRE>
+<DL>
+<DD><P>
+</DL>
+<HR>
+&nbsp;
+&nbsp;
+<A NAME="method_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="isAtom()"></A>
+<H3>isAtom</H3>
+<PRE>
+public&nbsp;bool <B>isAtom</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is an atom and
+ <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isAtomic()"></A>
+<H3>isAtomic</H3>
+<PRE>
+public&nbsp;bool <B>isAtomic</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a constant
+ (e.g. integer, floating-point number, or atom) and
+ <code>false</code> if this <code>PBTerm</code> is a compound term or
+ variable.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isNumber()"></A>
+<H3>isNumber</H3>
+<PRE>
+public&nbsp;bool <B>isNumber</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a number and
+ <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isInteger()"></A>
+<H3>isInteger</H3>
+<PRE>
+public&nbsp;bool <B>isInteger</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is an integer and
+ <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isBignum()"></A>
+<H3>isBignum</H3>
+<PRE>
+public&nbsp;bool <B>isBignum</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is an bignum
+ integer and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isFloat()"></A>
+<H3>isFloat</H3>
+<PRE>
+public&nbsp;bool <B>isFloat</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a
+ floating-point number and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isCompound()"></A>
+<H3>isCompound</H3>
+<PRE>
+public&nbsp;bool <B>isCompound</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a compund
+ term and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isListCell()"></A>
+<H3>isListCell</H3>
+<PRE>
+public&nbsp;bool <B>isListCell</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a list cell,
+ i.e. a compound term with the functor ./2, and <code>false</code>
+ otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isProperList()"></A>
+<H3>isProperList</H3>
+<PRE>
+public&nbsp;bool <B>isProperList</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a proper list
+ and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isEmptyList()"></A>
+<H3>isEmptyList</H3>
+<PRE>
+public&nbsp;bool <B>isEmptyList</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is the empty list
+ and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isString()"></A>
+<H3>isString</H3>
+<PRE>
+public&nbsp;bool <B>isString</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a proper
+ list and all of its elements are character codes or one character atoms.
+ Returns <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="head()"></A>
+<H3>head</H3>
+<PRE>
+public&nbsp;PBTerm <B>head</B>()</PRE>
+<DL>
+<DD>Returns the head of this <code>PBTerm</code> if it is a list cell, i.e.
+ a compound term with the functor ./2.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a list cell.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="tail()"></A>
+<H3>tail</H3>
+<PRE>
+public&nbsp;PBTerm <B>tail</B>()</PRE>
+<DL>
+<DD>Returns the tail of this <code>PBTerm</code> if it is a list cell, i.e.
+ a compound term with the functor ./2.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a list cell.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isVariable()"></A>
+<H3>isVariable</H3>
+<PRE>
+public&nbsp;bool <B>isVariable</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if this <code>PBTerm</code> is a variable and
+ <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getName()"></A>
+<H3>getName</H3>
+<PRE>
+public&nbsp;string <B>getName</B>()</PRE>
+<DL>
+<DD>Returns the name of this constant or compound term.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getArgument(int)"></A>
+<H3>getArgument</H3>
+<PRE>
+public&nbsp;PBTerm <B>getArgument</B>(int&nbsp;index)</PRE>
+<DL>
+<DD>Returns the argument at the specified index. Only compound terms
+ have arguments.<br><strong>Note:</strong> the arguments are indexed
+ from 1 to arity.</br><P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>index</CODE>
+ - the (one based) index of the argument<DT><B>Returns: </B><DD>the argument as a PBTerm<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this term is not compound</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="length()"></A>
+<H3>length</H3>
+<PRE>
+public&nbsp;int <B>length</B>()</PRE>
+<DL>
+<DD>If this <code>PBTerm</code> is a proper list, returns its length.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a proper list.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getArity()"></A>
+<H3>getArity</H3>
+<PRE>
+public&nbsp;int <B>getArity</B>()</PRE>
+<DL>
+<DD>Returns the number of arguments of this compound term or 0 if this
+ <code>PBTerm</code> is not a compound term.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="intValue()"></A>
+<H3>intValue</H3>
+<PRE>
+public&nbsp;long <B>intValue</B>()</PRE>
+<DL>
+<DD>Returns the integer value of this <code>PBTerm</code>.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not an integer.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="bigIntegerValue()"></A>
+<H3>bigIntegerValue</H3>
+<PRE>
+public&nbsp;BigInteger <B>bigIntegerValue</B>()</PRE>
+<DL>
+<DD>Returns the <code>BigInteger</code> value of this <code>PBTerm</code>.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a bignum integer.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="floatValue()"></A>
+<H3>floatValue</H3>
+<PRE>
+public&nbsp;double <B>floatValue</B>()</PRE>
+<DL>
+<DD>Returns the floating-point value of this PBTerm.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a number.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getString()"></A>
+<H3>getString</H3>
+<PRE>
+public&nbsp;string <B>getString</B>()</PRE>
+<DL>
+<DD>If this <code>PBTerm</code> is a proper list and all its elements are
+ small integers (less than 256), returns a string with the list elements
+ as the character codes of the string.<P>
+<DD><DL>
+<DT><B>Throws: </B><DD>{@if.java - java.lang.}IllegalStateException if this <code>PBTerm</code> is
+ not a proper list.</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="toString()"></A>
+<H3>toString</H3>
+<PRE>
+public abstract&nbsp;string <B>toString</B>()</PRE>
+<DL>
+<DD>Returns a string description of this term.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(float)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(float&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a float value.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(double)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(double&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a double value.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(int)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(int&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing an int value.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(long)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(long&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a long value.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(BigInteger)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(BigInteger&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a BigInteger
+ value.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(string)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(string&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a list with
+ the characters, as integer values, in the string argument as its
+ elements.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(string, se.sics.prologbeans.PBTerm[])"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(string&nbsp;name, PBTerm[]&nbsp;arguments)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a compound
+ term.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeTerm(PBTerm, PBTerm)"></A>
+<H3>makeTerm</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeTerm</B>(PBTerm&nbsp;head, PBTerm&nbsp;tail)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing a list cell.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="makeAtom(string)"></A>
+<H3>makeAtom</H3>
+<PRE>
+public static&nbsp;PBTerm <B>makeAtom</B>(string&nbsp;value)</PRE>
+<DL>
+<DD>Creates a new <code>PBTerm</code> instance representing an atom.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="stuffAtom(string)"></A>
+<H3>stuffAtom</H3>
+<PRE>
+protected&nbsp;string <B>stuffAtom</B>(string&nbsp;atom)</PRE>
+<DL>
+<DD><P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>

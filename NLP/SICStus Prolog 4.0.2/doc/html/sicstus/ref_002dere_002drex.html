@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>ref-ere-rex - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="ref_002dere.html#ref_002dere" title="ref-ere">
+<link rel="prev" href="ref_002dere_002dove.html#ref_002dere_002dove" title="ref-ere-ove">
+<link rel="next" href="ref_002dere_002dhex.html#ref_002dere_002dhex" title="ref-ere-hex">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">4.15.2 Raising Exceptions</h4>
+
+<p><a name="index-exception-term-1517"></a><a name="index-term_002c-exception-1518"></a>
+<a name="index-raise_005fexception_002f1-_0028built_002din_0029-1519"></a><a name="index-raise_005fexception_002f1-_0028built_002din_0029-1520"></a>
+<a name="index-throw_002f1-_0028built_002din_0029-1521"></a><a name="index-throw_002f1-_0028built_002din_0029-1522"></a>
+
+   <p>You can raise exceptions from your own code using one of the two
+equivalent built-in predicates:
+<pre class="example">     raise_exception(<var>+ExceptionCode</var>)
+     throw(<var>+ExceptionCode</var>)
+</pre>
+   <p>The argument to this predicate is the
+<dfn>exception term</dfn>; it is an arbitrary non-variable term of which
+the principal functor indicates the exception class.  You can use the same
+exception classes as the system (see <a href="ref_002dere_002derr.html#ref_002dere_002derr">ref-ere-err</a>), or you can
+use your own exception classes.
+
+   <p>See <a href="lib_002dtypes.html#lib_002dtypes">lib-types</a> for an alternative interface to raising error
+exceptions, which tries to include line number information for source-linked
+debugging.
+
+   <p>Error messages like the one shown above are printed using the built-in
+predicate <code>print_message/2</code>.  One of the arguments to
+<code>print_message/2</code> is the exception term.  <code>print_message/2</code>
+can be extended, as described in <a href="ref_002dmsg.html#ref_002dmsg">ref-msg</a>, so that you can have
+appropriate error messages printed corresponding to your own exception
+classes.
+
+   <p><strong>Please note</strong>:
+If the exception term contains attributed variables
+(see <a href="lib_002datts.html#lib_002datts">lib-atts</a>) or suspended goals (see <a href="ref_002dsem_002dsec.html#ref_002dsem_002dsec">ref-sem-sec</a>),
+those attributes do not become part of the exception.  To retain the
+attributes, you can use <code>copy_term/3</code> (see <a href="ref_002dlte_002dcpt.html#ref_002dlte_002dcpt">ref-lte-cpt</a>).
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="ref_002dere_002dhex.html#ref_002dere_002dhex">Next</a>
+<li><a rel="previous" accesskey="p" href="ref_002dere_002dove.html#ref_002dere_002dove">Previous</a>
+<li><a rel="up" accesskey="u" href="ref_002dere.html#ref_002dere">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dere_002drex.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dere_002drex.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

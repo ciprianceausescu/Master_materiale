@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Creating and Manipulating SP_term_refs - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Support-Functions.html#Support-Functions" title="Support Functions">
+<link rel="next" href="Atoms-in-C.html#Atoms-in-C" title="Atoms in C">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">6.4.1 Creating and Manipulating SP_term_refs</h4>
+
+<p><a name="index-SP_005fterm_005fref-_0028C-type_0029-2016"></a>Normally, C functions only have indirect access to Prolog terms
+via SP_term_refs.  C functions may receive arguments as
+unconverted Prolog terms, in which case the actual arguments
+received will have the type <code>SP_term_ref</code>.  Also, a C function may
+return an unconverted Prolog term, in which case it must create an
+SP_term_ref.  Finally, any temporary Prolog terms created by
+C code must be handled as SP_term_refs.
+
+   <p>SP_term_refs are motivated by the fact that SICStus Prolog's
+memory manager must have a means of reaching all live Prolog terms
+for memory management purposes, including such terms that are
+being manipulated by the user's C code.  Previous releases of SICStus
+Prolog provided direct access to Prolog terms and the ability to
+tell the memory manager that a given memory address points to a Prolog
+term, but this approach was too low level and highly error-prone. 
+The current design is modeled after and largely compatible with Quintus
+Prolog release 3.
+
+   <p>SP_term_refs are created dynamically.  At any given time, an
+SP_term_ref has a value (a Prolog term, initially
+<code>[]</code>).  This value can be examined, accessed, and updated by the
+support functions described in this section.
+
+   <p>It is important to understand the rules governing the scope of
+SP_term_refs in conjunction with calls from Prolog to C and
+vice versa:
+
+     <ul>
+<li>When a C function called from Prolog returns, all SP_term_refs
+passed to the function or dynamically created by the function become
+invalid.
+
+     <li>When terms are passed to C as a result of calling Prolog, those
+terms and any SP_term_refs created since the start of the
+query are only valid until backtracking into the query
+or an enclosing one. 
+</ul>
+   <!-- @noindent @xref{SPTerm and Memory}, for a discussion (in the context of -->
+<!-- the Java interface) of the lifetime of term references. -->
+
+   <p><a name="index-SP_005fnew_005fterm_005fref_0028_0029-_0028C-function_0029-2017"></a>A new SP_term_ref is created by calling <code>SP_new_term_ref()</code>.
+
+   <p><a name="index-SP_005fput_005fterm_0028_0029-_0028C-function_0029-2018"></a>An SP_term_ref can be assigned the value of another SP_term_ref
+by calling <code>SP_put_term()</code>.
+
+<!-- FIXME Document the issues with various relative age of to, from and -->
+<!-- the terms they point to. Also see PRM 1698, 1580 and the Jasper -->
+<!-- flag se.sics.jasper.SICStus.checkSPTermAge -->
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Atoms-in-C.html#Atoms-in-C">Next</a>
+<li><a rel="up" accesskey="u" href="Support-Functions.html#Support-Functions">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Creating-and-Manipulating-SP_005fterm_005frefs.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Creating-and-Manipulating-SP_005fterm_005frefs.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+</body></html>
+

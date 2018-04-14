@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>MT Foreign Multiple Simple - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="MT-Foreign-Multiple.html#MT-Foreign-Multiple" title="MT Foreign Multiple">
+<link rel="next" href="MT-Foreign-Multiple-Full.html#MT-Foreign-Multiple-Full" title="MT Foreign Multiple Full">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">8.3.2.1 Simplified Support for Multiple SICStus Run-Times</h5>
+
+<p>To make it simpler to convert old foreign resources, there is an
+intermediate level of support for multiple SICStus run-times. This level
+of support makes it possible for several SICStus run-times to call the
+foreign resource, but a mutual exclusion lock ensures that only
+one SICStus run-time at a time can execute code in the foreign
+resource. That is, the mutex is locked upon entry to any function in
+the foreign resource and unlocked when the function returns. This
+makes it possible to use a global variable to hold the SICStus dispatch
+vector, in much the same way as is done when only a single SICStus
+run-time is supported. In addition, a special hook function in the
+foreign resource will be called every time the foreign
+resource is entered. This hook function can then make
+arrangements to ensure that any global variables are set up as
+appropriate.
+
+   <p>To build a foreign resource in this way, use <code>splfr&nbsp;--exclusive-access</code><!-- /@w -->.  In addition to including the generated header
+file, your code needs to define the context switch function. If the
+resource is named <var>resname</var>, the context switch hook
+should look like:
+
+<pre class="example">     void sp_context_switch_hook_<var>resname</var>(int entering)
+</pre>
+   <p>The context switch hook will be called with the SICStus API
+dispatch vector already set up, so calling any SICStus API function from
+the context switch hook will work as expected. The argument
+<code>entering</code> will be non-zero when a SICStus run-time is about to
+call a function in the foreign resource. The hook will be
+called with <code>entering</code> zero when the foreign function is about to
+return to SICStus.
+
+   <p>It is possible to specify a name for the context switch hook with
+the <samp><span class="command">splfr</span></samp> option <samp><span class="option">--context-hook=</span><var>name</var></samp>. If you do
+not require a context switch hook you can specify the
+<samp><span class="command">splfr</span></samp> option <samp><span class="option">--no-context-hook</span></samp>.
+
+   <p>Due to the use of mutual exclusion lock to protect the foreign
+resource, there is a remote possibility of dead-lock. This would happen
+if the foreign resource calls back to SICStus and then passes
+control to a different SICStus run-time in the same thread, which then
+calls the foreign resource.  For this reason it is best to avoid
+<samp><span class="option">--exclusive-access</span></samp> for foreign resources that makes
+call-backs into Prolog.
+
+   <p>The new SICStus API function <code>SP_foreign_stash()</code> provides access
+to a location where the foreign resource can store anything that
+is specific to the calling SICStus run-time. The location is specific to
+each foreign resource and each SICStus
+run-time. See <a href="OS-Threads.html#OS-Threads">OS Threads</a>.
+
+   <p>C code compiled by <code>splfr --exclusive-access</code> will have the C
+pre-processor macro <code>SP_SINGLE_THREADED</code> defined to a non-zero
+value.
+
+   <p>Some of the foreign resources in the SICStus library use this
+technique; see for instance <code>library(system)</code>.
+
+<!-- FIXME more here including examples or references to such. -->
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="MT-Foreign-Multiple-Full.html#MT-Foreign-Multiple-Full">Next</a>
+<li><a rel="up" accesskey="u" href="MT-Foreign-Multiple.html#MT-Foreign-Multiple">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/MT-Foreign-Multiple-Simple.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/MT-Foreign-Multiple-Simple.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+</body></html>
+

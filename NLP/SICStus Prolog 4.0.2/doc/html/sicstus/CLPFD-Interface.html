@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>CLPFD Interface - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="lib_002dclpfd.html#lib_002dclpfd" title="lib-clpfd">
+<link rel="prev" href="CLPFD-Intro.html#CLPFD-Intro" title="CLPFD Intro">
+<link rel="next" href="Available-Constraints.html#Available-Constraints" title="Available Constraints">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">10.34.2 Solver Interface</h4>
+
+<p>The solver contains predicates for checking the consistency and
+entailment of finite domain constraints, as well as solving for solution
+values for your problem variables.
+
+   <p><a name="index-finite-domain-3139"></a><a name="index-domain_002c-finite-3140"></a><a name="index-constraint-3141"></a><a name="index-domain-variable-3142"></a><a name="index-variable_002c-domain-3143"></a>
+In the context of this constraint solver, a <dfn>finite domain</dfn> is a
+subset of small integers, and a <dfn>finite domain constraint</dfn>
+denotes a relation over a tuple of small integers.  Hence, only
+small integers and unbound variables are allowed in
+finite domain constraints.
+
+   <p>All <dfn>domain variables</dfn>, i.e. variables that occur as
+arguments to finite domain constraints get associated with a
+finite domain, either explicitly declared by the program, or
+implicitly imposed by the constraint solver.  Temporarily, the domain of
+a variable may actually be infinite, if it does not have a finite
+lower or upper bound.  If during the computation a variable receives a
+new lower or upper bound that cannot be represented as a small
+integer, an overflow condition is issued.  This is expressed as silent
+failure or as a representation error, subject to the <code>overflow</code>
+option of <code>fd_flag/3</code>.
+
+   <p>The domain of all variables gets smaller and smaller as more
+constraints are added.  If a domain becomes empty, the accumulated
+constraints are unsatisfiable, and the current computation branch fails. 
+At the end of a successful computation, all domains have usually become
+singletons, i.e. the domain variables have become assigned.
+
+   <p>The domains do not become singletons automatically.  Usually, it takes
+some amount of search to find an assignment that satisfies all
+constraints.  It is the programmer's responsibility to do so.  If some
+domain variables are left unassigned in a computation, the
+garbage collector will preserve all constraint data that is
+attached to them.
+
+   <p><strong>Please note</strong>: if a term containing domain variables is copied,
+asserted, collected as a solution to <code>findall/3</code> and friends, or
+raised as an exception, those domain variables will be replaced by
+brand new variables in the copy.  To retain the domain variables and
+any attached constraints, you can use <code>copy_term/3</code> (see <a href="ref_002dlte_002dcpt.html#ref_002dlte_002dcpt">ref-lte-cpt</a>).
+
+<!-- A constraint is @dfn{entailed} when it is true in all possible -->
+<!-- assignments of its arguments.  It is @dfn{disentailed} when there are -->
+<!-- no assignments that can make it true.  Entailment is closely related -->
+<!-- to the concept of @dfn{reification} (@pxref{Reify}). -->
+<p>The heart of the constraint solver is a scheduler for indexicals [Van
+Hentenryck et al. 92] and global constraints.  Both entities act as
+coroutines performing incremental constraint solving or entailment
+checking.  They wake up by changes in the domains of its
+arguments.  All constraints provided by this package are
+implemented as indexicals or global constraints.  New constraints can be
+defined by the user.
+
+   <p>Indexicals are reactive functional rules, which take part in the solver's
+basic constraint solving algorithm, whereas each global constraint is
+associated with its particular constraint solving algorithm.  The
+solver maintains two scheduling queues, giving priority to the queue of
+indexicals.
+
+   <p>The feasibility of integrating the indexical approach with a Prolog
+based on the WAM was clearly demonstrated by Diaz's clp(FD)
+implementation [Diaz &amp; Codognet 93], one of the fastest finite domains
+solvers around.
+
+<a name="Menu"></a>
+<ul class="menu">
+<li><a accesskey="1" href="Posting-Constraints.html#Posting-Constraints">Posting Constraints</a>:  Posting Constraints
+<li><a accesskey="2" href="A-Constraint-Satisfaction-Problem.html#A-Constraint-Satisfaction-Problem">A Constraint Satisfaction Problem</a>:  A Constraint Satisfaction Problem
+<li><a accesskey="3" href="Reified-Constraints.html#Reified-Constraints">Reified Constraints</a>:  Reified Constraints
+</ul>
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Available-Constraints.html#Available-Constraints">Next</a>
+<li><a rel="previous" accesskey="p" href="CLPFD-Intro.html#CLPFD-Intro">Previous</a>
+<li><a rel="up" accesskey="u" href="lib_002dclpfd.html#lib_002dclpfd">Up</a>
+<li><a href="#Menu">Node Menu</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/CLPFD-Interface.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/CLPFD-Interface.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

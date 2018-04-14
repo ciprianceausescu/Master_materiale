@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>QueryAnswer</TITLE>
+</HEAD>
+<HR>
+<H2><FONT size="-1">
+se.sics.prologbeans</FONT>
+<BR>
+Class QueryAnswer</H2>
+<HR>
+<P>
+<code>QueryAnswer</code> is the .NET representation of an answer
+ from the Prolog server. The <code>QueryAnswer</code> is returned by
+  in response to a query
+ and contains variable bindings, errors, and success/failure
+ information. It also contains the variable bindings specified in
+ the query.<P>
+<HR>
+&nbsp;
+<A NAME="constructor_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="QueryAnswer.html#QueryAnswer(PBTerm, Bindings)">QueryAnswer</A></B>(<A HREF="PBTerm.html">PBTerm</A>&nbsp;answer, <A HREF="Bindings.html">Bindings</A>&nbsp;bindings)</CODE>
+<BR>
+Creates a new <code>QueryAnswer</code> instance with the
+ specified information.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="method_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;PBTerm</CODE></FONT></TD>
+<TD><CODE><B><A HREF="QueryAnswer.html#getValue(string)">getValue</A></B>(string&nbsp;variable)</CODE>
+<BR>
+Returns the value of the specified variable or <code>null</code>
+ if the variable is not bound.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="QueryAnswer.html#queryFailed()">queryFailed</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if the query failed (i.e. the Prolog
+ responded with 'no') and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;bool</CODE></FONT></TD>
+<TD><CODE><B><A HREF="QueryAnswer.html#isError()">isError</A></B>()</CODE>
+<BR>
+Returns <code>true</code> if an error occurred while processing
+ the query and <code>false</code> otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="QueryAnswer.html#getError()">getError</A></B>()</CODE>
+<BR>
+Returns the error reason or <code>null</code> if an error has not
+ occurred or if no error reason is known.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>public&nbsp;string</CODE></FONT></TD>
+<TD><CODE><B><A HREF="QueryAnswer.html#toString()">toString</A></B>()</CODE>
+<BR>
+Returns a string description of this answer.</TD>
+</TR>
+</TABLE>
+&nbsp;
+&nbsp;
+<A NAME="constructor_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="QueryAnswer(PBTerm, Bindings)"></A>
+<H3>QueryAnswer</H3>
+<PRE>
+<B>QueryAnswer</B>(PBTerm&nbsp;answer, Bindings&nbsp;bindings)</PRE>
+<DL>
+<DD>Creates a new <code>QueryAnswer</code> instance with the
+ specified information.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>answer</CODE>
+ - a <code>Term</code> value representing the Prolog response<DD><CODE>bindings</CODE>
+ - the variable bindings for the query to which this
+ is an answer</DL>
+</DD>
+</DL>
+<HR>
+&nbsp;
+<A NAME="method_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" DETAIL="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+<A NAME="getValue(string)"></A>
+<H3>getValue</H3>
+<PRE>
+public&nbsp;PBTerm <B>getValue</B>(string&nbsp;variable)</PRE>
+<DL>
+<DD>Returns the value of the specified variable or <code>null</code>
+ if the variable is not bound.<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>variable</CODE>
+ - the name of the variable<DT><B>Returns: </B><DD>the value of the variable as a <code>Term</code> or
+ <code>null</code> if the variable is not bound</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="queryFailed()"></A>
+<H3>queryFailed</H3>
+<PRE>
+public&nbsp;bool <B>queryFailed</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if the query failed (i.e. the Prolog
+ responded with 'no') and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="isError()"></A>
+<H3>isError</H3>
+<PRE>
+public&nbsp;bool <B>isError</B>()</PRE>
+<DL>
+<DD>Returns <code>true</code> if an error occurred while processing
+ the query and <code>false</code> otherwise.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="getError()"></A>
+<H3>getError</H3>
+<PRE>
+public&nbsp;string <B>getError</B>()</PRE>
+<DL>
+<DD>Returns the error reason or <code>null</code> if an error has not
+ occurred or if no error reason is known.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+<A NAME="toString()"></A>
+<H3>toString</H3>
+<PRE>
+public&nbsp;string <B>toString</B>()</PRE>
+<DL>
+<DD>Returns a string description of this answer.<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>

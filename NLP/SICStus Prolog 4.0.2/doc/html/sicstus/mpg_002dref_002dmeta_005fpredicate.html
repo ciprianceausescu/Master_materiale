@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>mpg-ref-meta_predicate - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="mpg_002dbpr.html#mpg_002dbpr" title="mpg-bpr">
+<link rel="prev" href="mpg_002dref_002dinitialization.html#mpg_002dref_002dinitialization" title="mpg-ref-initialization">
+<link rel="next" href="mpg_002dref_002dmode.html#mpg_002dref_002dmode" title="mpg-ref-mode">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h4 class="subsection">11.3.118 <code>(meta_predicate)/1</code>  <dfn>[declaration]</dfn></h4>
+
+<p><a name="index-g_t_0028meta_005fpredicate_0029_002f1-_0028built_002din_002c-ref-page_0029-4138"></a><a name="index-g_t_0028meta_005fpredicate_0029_002f1-_0028built_002din_002c-ref-page_0029-4139"></a>
+
+<h4 class="subheading">Synopsis</h4>
+
+<p><code>:- meta_predicate </code><var>+MetaSpec</var>
+
+   <p>Provides for module name expansion of arguments in calls to the
+predicate given by <var>MetaSpec</var>. All <code>meta_predicate/1</code> declarations
+should be at the beginning of a module.
+
+<h4 class="subheading">Arguments</h4>
+
+     <dl>
+<dt><var>:MetaSpec</var><dd><dfn>callable</dfn>, must be ground
+
+     <p>Goal template or list of goal templates, of the form
+<code>functor(</code><var>Arg1</var><code>, </code><var>Arg2</var><code>,...)</code>. 
+Each <var>Argn</var> is one of:
+
+          <dl>
+<dt>`<samp><span class="samp">:</span></samp>'<dd>requires module name expansion
+
+          <br><dt>`<samp><span class="samp">+</span></samp>'<dt>`<samp><span class="samp">-</span></samp>'<dt>`<samp><span class="samp">?</span></samp>'<dd>ignored
+</dl>
+     </dl>
+
+<h4 class="subheading">Exceptions</h4>
+
+     <dl>
+<dt><code>type_error</code><dt><code>domain_error</code><dd>in <var>MetaSpec</var>
+
+     <br><dt><code>context_error</code><dd>&ldquo;declaration appeared in query&rdquo;
+</dl>
+
+<h4 class="subheading">Examples</h4>
+
+<p>Consider a sort routine,
+<code>mysort/3</code>, to which the name of the comparison predicate is passed as
+an argument:
+<pre class="example">     mysort(<var>CompareProc</var>, <var>InputList</var>, <var>OutputList</var>)
+</pre>
+   <p>If <var>CompareProc</var> is module sensitive, an appropriate <code>meta_predicate</code>
+declaration for <code>mysort/3</code> is:
+<pre class="example">     :- meta_predicate mysort(:, +, -).
+</pre>
+   <p>This means that whenever a goal <code>mysort(</code><var>A</var><code>, </code><var>B</var><code>,
+</code><var>C</var><code>)</code> appears in a clause, it will be transformed at load time
+into <code>mysort(</code><var>M</var><code>:</code><var>A</var><code>, </code><var>B</var><code>, </code><var>C</var><code>)</code>, where <var>M</var>
+is the source module.  The transformation will happen unless:
+
+     <ol type=1 start=1>
+
+     <li><var>A</var> has an explicit module prefix, or
+<li><var>A</var> is a variable and the same variable appears in
+the head of the clause in a module-name-expansion position.
+        </ol>
+
+<h4 class="subheading">See Also</h4>
+
+<p><a href="Meta_002dPredicate-Declarations.html#Meta_002dPredicate-Declarations">Meta-Predicate Declarations</a>, <a href="ref_002dmod_002dmne.html#ref_002dmod_002dmne">ref-mod-mne</a>.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="mpg_002dref_002dmode.html#mpg_002dref_002dmode">Next</a>
+<li><a rel="previous" accesskey="p" href="mpg_002dref_002dinitialization.html#mpg_002dref_002dinitialization">Previous</a>
+<li><a rel="up" accesskey="u" href="mpg_002dbpr.html#mpg_002dbpr">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/mpg_002dref_002dmeta_005fpredicate.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/mpg_002dref_002dmeta_005fpredicate.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+

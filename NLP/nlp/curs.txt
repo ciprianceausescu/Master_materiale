@@ -1,0 +1,24 @@
+Tehnici de procesare a limbajului natural
+
+NLP - natural language processing
+
+Niveluri
+morfologic
+sintactic
+semantic
+pragmatic
+
+S -> NP VP
+s(L1, L) :- np(L1,L2), vp(L2,L).
+
+DCG - definite-clause grammar
+
+s --> np, vp.
+np --> det, n.
+n --> [elev].
+
+s(X, Z) :- np(X, Y), vp(Y, Z).
+np(X, Z) :- det(X, Y), n(Y, Z).
+n([elev|X], X).
+
+gramatici DC - gramatici ale caror reguli de rescriere sunt exprimate in notatia DCG

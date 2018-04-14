@@ -16,8 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.index.IndexNotFoundException;
-import org.apache.tika.exception.TikaException;
-import org.xml.sax.SAXException;
 
 public class InfRetrieval {
   public static void main(String[] args) throws IOException {
@@ -46,17 +44,14 @@ public class InfRetrieval {
         try {
             FileUtils.cleanDirectory(new File("index"));
 
-            IndexFiles.index();
+            //IndexFiles.index();
+            IndexDocuments.index();
 
             JOptionPane.showMessageDialog(null, "Index written successfully",
                 "Index ", JOptionPane.INFORMATION_MESSAGE);
             scrollPane.setVisible(false);
         } catch (IOException ex){
           ex.printStackTrace();
-        } catch (TikaException e1) {
-          e1.printStackTrace();
-        } catch (SAXException e1) {
-          e1.printStackTrace();
         }
       }
     });

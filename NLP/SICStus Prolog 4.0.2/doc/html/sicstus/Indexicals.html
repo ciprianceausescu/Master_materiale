@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+<head>
+<title>Indexicals - SICStus Prolog</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="SICStus Prolog">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints" title="Defining Primitive Constraints">
+<link rel="next" href="Range-Expressions.html#Range-Expressions" title="Range Expressions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h5 class="subsubsection">10.34.9.1 Indexicals</h5>
+
+<p><a name="index-indexical-3448"></a>An <dfn>indexical</dfn> is a reactive functional rule of the form
+<code>X in R</code>, where R is a set valued <dfn>range
+expression</dfn> (see below).  See <a href="Syntax-of-Indexicals.html#Syntax-of-Indexicals">Syntax of Indexicals</a>, for a grammar defining
+indexicals and range expressions.
+
+   <p><a name="index-propagating-indexicals-3449"></a><a name="index-indexicals_002c-propagating-3450"></a><a name="index-checking-indexicals-3451"></a><a name="index-indexicals_002c-checking-3452"></a>Indexicals can play one of two roles: <dfn>propagating indexicals</dfn> are
+used for constraint solving, and <dfn>checking indexicals</dfn> are used for
+entailment checking.  When a propagating indexical fires, R is
+evaluated in the current store S, which is extended by adding the
+new domain constraint <code>X::S(R)</code> to the store, where
+S(R) denotes the value of R in S.  When a checking
+indexical fires, it checks if D(X,S) is contained in S(R),
+and if so, the constraint corresponding to the indexical is detected as
+entailed.
+
+<div class="logo">
+<a href="http://www.sics.se/sicstus/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a rel="next" accesskey="n" href="Range-Expressions.html#Range-Expressions">Next</a>
+<li><a rel="up" accesskey="u" href="Defining-Primitive-Constraints.html#Defining-Primitive-Constraints">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Indexicals.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Indexicals.html%20in%20User's%20Manual.">Send feedback on this subject.</mailto>
+   </body></html>
+
