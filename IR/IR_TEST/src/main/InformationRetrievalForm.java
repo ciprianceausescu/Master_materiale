@@ -67,7 +67,7 @@ public class InformationRetrievalForm {
             String[] result = SearchFiles.search(input);
             if(result.length!=0) {
                 model.addElement("\"" + input + "\" found in " + result.length + " documents: \n");
-                System.out.println("\"" + input + "\" found in " + result.length + " documents:");
+                System.out.println("\n\"" + input + "\" found in " + result.length + " documents:");
             }
             for (int i=0;i<result.length;i++) {
                 model.addElement(result[i]+"\n");
