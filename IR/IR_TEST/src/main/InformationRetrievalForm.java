@@ -17,7 +17,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.apache.lucene.index.IndexNotFoundException;
 
-public class InfRetrieval {
+public class InformationRetrievalForm {
   public static void main(String[] args) throws IOException {
     JFrame frame = new JFrame("Indexer");
     BufferedImage backgroundImage = ImageIO.read(new File("C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\IR_TEST\\src\\bgimg.jpg"));
@@ -44,7 +44,6 @@ public class InfRetrieval {
         try {
             FileUtils.cleanDirectory(new File("index"));
 
-            //IndexFiles.index();
             IndexDocuments.index();
 
             JOptionPane.showMessageDialog(null, "Index written successfully",
@@ -66,10 +65,13 @@ public class InfRetrieval {
             if(input==null) return;
 
             String[] result = SearchFiles.search(input);
-            if(result.length!=0)
+            if(result.length!=0) {
                 model.addElement("\"" + input + "\" found in " + result.length + " documents: \n");
+                System.out.println("\"" + input + "\" found in " + result.length + " documents:");
+            }
             for (int i=0;i<result.length;i++) {
                 model.addElement(result[i]+"\n");
+                System.out.println(result[i]);
             }
             if(result.length==0)
                 JOptionPane.showMessageDialog(null, "There were no results found.",
