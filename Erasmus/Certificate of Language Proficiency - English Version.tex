@@ -1,0 +1,153 @@
+\documentclass[a4paper,9pt,final]{scrartcl}
+% \documentclass[a4paper,10pt]{scrbook}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[romanian]{babel}
+%\usepackage{german}
+\usepackage[left]{eurosym}
+\RequirePackage{graphicx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multicol}
+
+\setlength{\columnseprule}{20pt}
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{23cm}
+\setlength{\oddsidemargin}{0cm}
+
+\setlength\parindent{0pt}%Festlegen des Absatzeinzuges
+
+%opening
+\title{\textbf{TRANSCRIPT OF RECORDS}\\[0.5em]
+Record of study and examination results in the
+Bachelor course of Physics
+with a Minor in \ergfach}
+% \subtitle{foo}
+\author{}
+
+
+\newcommand{\ergfach}{Astrophysics and Electronics}
+\newcounter{firstyear} \setcounter{firstyear}{2009}
+
+%%%%%%%%%%%%%% End of Configuration -- Naja, fast...
+
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\newcommand{\mr}[3]{\multirow{#1}{#2}{#3}}
+
+\newcommand{\first}{\wintersemester{\thefirstyear}}
+
+\newcounter{secondyear} \setcounter{secondyear}{\value{firstyear}} \addtocounter{secondyear}{1}
+\newcommand{\second}{\sommersemester{\thesecondyear}}
+\newcommand{\third}{\wintersemester{\thesecondyear}}
+
+\newcounter{thirdyear} \setcounter{thirdyear}{\value{firstyear}} \addtocounter{thirdyear}{2}
+\newcommand{\fourth}{\sommersemester{\thethirdyear}}
+\newcommand{\fifth}{\wintersemester{\thethirdyear}}
+
+\newcounter{fourthyear} \setcounter{fourthyear}{\value{firstyear}} \addtocounter{fourthyear}{3}
+\newcommand{\sixth}{\sommersemester{\thefourthyear}}
+\newcommand{\seventh}{\wintersemester{\thefourthyear}}
+
+\newcounter{fifthyear} \setcounter{fifthyear}{\value{firstyear}} \addtocounter{fifthyear}{4}
+\newcommand{\eigth}{\sommersemester{\thefifthyear}}
+\newcommand{\nineth}{\wintersemester{\thefifthyear}}
+
+\newcounter{sixthyear} \setcounter{sixthyear}{\value{firstyear}} \addtocounter{sixthyear}{5}
+\newcommand{\tenth}{\sommersemester{\thesixthyear}}
+\newcommand{\eleventh}{\wintersemester{\thesixthyear}}
+
+\newcounter{seventhyear} \setcounter{seventhyear}{\value{firstyear}} \addtocounter{seventhyear}{6}
+\newcommand{\twelveth}{\sommersemester{\seventhyear}}
+
+\newcommand{\lecture}{L}
+\newcommand{\excercise}{E}
+\newcommand{\seminar}{S}
+\newcommand{\practical}{PC}
+\newcommand{\project}{PJ}
+\newcommand{\tutorial}{T}
+
+\newcommand{\written}{we}
+\newcommand{\writtenterm}{wt}
+\newcommand{\oral}{oe}
+\newcommand{\pass}{pass}
+\newcommand{\assignment}{wa}
+\newcommand{\paper}{tp}
+\newcommand{\presentation}{gp}
+
+
+%%%%%%%% Makros von Roland
+\def\instead#1#2{\hbox to 0pt{#2\hss}\phantom{#1}}
+\newbox\insteadboxi
+\newbox\insteadboxii
+\newbox\insteadboxiii
+\newbox\insteadboxiv
+\newbox\insteadboxv
+%%%%%%%%%
+
+\newcommand{\sommersemester}[1]{\instead{ W}{ S }#1}
+\newcommand{\wintersemester}[1]{ W  #1}
+
+\begin{document}
+
+% \maketitle
+
+\begin{tabular}{llcll} 
+	University of Bucharest \hspace{25em} Number: 48 from: 12.01.2017\\
+	Faculty of Foreign Languages and Literature \\
+	Modern Language Department\\
+\vspace{2em}
+\end{tabular}
+\begin{center}
+	\begin{Huge}Certificate of Language Proficiency\end{Huge} 
+\vspace{2em}
+\end{center}
+\begin{tabular}{llcll} 
+	Name and surname: CEAUȘESCU N. CIPRIAN - MIHAI \\
+	Faculty of Mathematics and Computer Science \\
+	Language: ENGLISH
+\vspace{2em}
+\end{tabular}
+
+
+\begin{tabular}{llcll}
+a) \textbf {\underline{The ability to understand the listened text:}} \\
+\vspace{1em}
+\\
+B2 - understands ample messages, TV shows, movies using the standard dialect. \\
+\vspace{1em}
+\\
+b) \textbf {\underline{The ability to understand the text read:}} \\
+\vspace{1em}
+\\
+B2 - read articles and reports, contemporary literary prose. \\
+\vspace{1em}
+\\
+c) \textbf {\underline{The ability for verbal interaction:}} \\
+\vspace{1em}
+\\
+B2 - fluent and spontaneous interaction supporting his/her views. \\
+\vspace{1em}
+\\
+d) \textbf {\underline{The ability for producing an oral speech:}}\\
+\vspace{1em}
+\\
+B2 - expressing clearly and sharply, ability to expressing opinions on various topics. \\
+\vspace{1em}
+\\
+e) \textbf {\underline{The ability to express well in writing:}} \\
+\vspace{1em}
+\\
+B2 - write accurate essays, reports or letters, providing information, reason or personal opinion. \\
+\end{tabular}
+
+\vspace{50pt}
+\paragraph{}
+\begin{Large}
+	\textbf{Dean,  \hspace{9em} Teacher,  \hspace{9em} Department Director,}\\
+	Faculty of Foreign \\ Languages and Literature
+	
+\end{Large}
+	
+\end{document}
