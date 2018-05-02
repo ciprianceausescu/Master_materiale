@@ -1,0 +1,87 @@
+import com.sun.xml.internal.fastinfoset.util.CharArray;
+
+import java.lang.reflect.Array;
+import java.util.Scanner;
+import java.util.*;
+
+
+public class try_me {
+    public static void merger(String[] ceva1,String[] ceva2)
+    {
+        String[] merge = new String[ceva1.length + ceva2.length];
+        int f = 0, s = 0, i = 0;
+        while(f < ceva1.length && s < ceva2.length)
+            if(ceva1[f].compareToIgnoreCase(ceva2[s]) > 0)
+                merge[i++] = ceva2[s++];
+            else
+                merge[i++] = ceva1[f++];
+        while(f < ceva1.length)
+            merge[i++] = ceva1[f++];
+        while(s < ceva2.length)
+            merge[i++] = ceva2[s++];
+        for(int j = 0; j < merge.length; j++)
+            System.out.print(merge[j] + " ");
+    }
+
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int choice = 3;
+        switch(choice) {
+            case 0: { // 4
+                String ceva = sc.nextLine();
+                int nr = 0;
+                String[] numbers = ceva.split(" ");
+                for (int i = 0; i < numbers.length; i++) {
+                    StringBuilder altceva = new StringBuilder(numbers[i]);
+                    if (numbers[i].contentEquals(altceva.reverse().toString()))
+                        nr++;
+                }
+                System.out.println(nr);
+                break;
+            }
+            case 1: // 5
+            {
+                String ceva1 = sc.nextLine();
+                String ceva2 = sc.nextLine();
+                merger(ceva1.split("\\s+"),ceva2.split("\\s+"));
+                break;
+            }
+            case 2: // 6
+            {
+                String[] ceva = sc.nextLine().split("\\s+");
+                Arrays.sort(ceva);
+                System.out.println(Arrays.toString(ceva).substring(1,Arrays.toString(ceva).length()-1).replaceAll(",",""));
+                System.out.println(Arrays.binarySearch(ceva, "ceva") >= 0?"Este":"Nope");
+                break;
+            }
+            case 3: //7 O(n)
+            {
+                String[] ceva = sc.nextLine().split("\\s+");
+                int[] altceva = new int[ceva.length];
+                int p = 0, im=1;
+                for(int i=0; i <ceva.length;i++)
+                    if(Integer.parseInt(ceva[i])%2 == 0)
+                        altceva[p++] = Integer.parseInt(ceva[i]);
+                    else
+                        altceva[ceva.length - im++] = Integer.parseInt(ceva[i]);
+                 System.out.println(Arrays.toString(altceva));
+            }
+            case 4: //7 O(n*log(n))
+            {
+                String[] ceva = sc.nextLine().split("\\s+");
+                Arrays.sort(ceva, new Comparator<String>() {
+                    @Override
+                    public int compare(String o1,String o2) {
+                        if ("02468".indexOf(o1.charAt(o1.length() - 1)) != -1)
+                            return -1;
+                        else
+                            return 1;
+                    }
+                });
+                System.out.println(Arrays.toString(ceva));
+                break;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+CREATE TABLE `contacte`.`agenda` (
+  `Nume` VARCHAR(50) NOT NULL,
+  `Prenume` VARCHAR(50) NOT NULL,
+  `Telefon Mobil` VARCHAR(45) NOT NULL,
+  `Telefon Fix` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Adresa` VARCHAR(70) NOT NULL,
+  `Oras` VARCHAR(45) NOT NULL,
+  `Judet` VARCHAR(45) NOT NULL,
+  `Cod Postal` VARCHAR(45) NOT NULL);
+
+
+
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Petrescu','Ion','0755544312','0211236784','uiiuiuhuhui@yahoo.com','Castelului, nr.14','Bucuresti','Bucuresti','189101');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Crisan','Alexandru','0711223344','0213339988','Crisan.Alexandru@yahoo.com','Aleea Migdalelor, nr.5','Bucuresti','Bucuresti','222444');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Stanescu','Cristina','0787654321','0212224445','Stanescu.Cristina@yahoo.com','Evantai, nr.47','Bucuresti','Bucuresti','000123');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Caramitru','Clara','0733367589','0211112345','Caramitru.Clara@yahoo.com','Baiului, nr.7','Alba-Iulia','Alba','234345');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Olaru','Alexandu','0735473897','0213528495','olaru.yo@gmail.com','Turnlui, nr.40','Bucuresti','Bucuresti','123456');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Olaru','Alexandu','0735473897','0213528495','olaru.yo@gmail.com','Turnlui, nr.40','Bucuresti','Bucuresti','123456');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Olaru','Alexandu','0735473897','0213528495','olaru.yo@gmail.com','Turnlui, nr.40','Bucuresti','Bucuresti','123456');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Manolescu','Stefan','0734256987','0213467892','Manolescu.Stefan@yahoo.com','Teiului, nr.21','Timisoara','Timis','383345');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Popa','Sandra','0735473897','0213528495','Sandra@yahoo.com','Castanului, nr.9','Bucuresti','Bucuresti','123678');
+INSERT INTO `agenda` (`Nume`,`Prenume`,`Telefon Mobil`,`Telefon Fix`,`Email`,`Adresa`,`Oras`,`Judet`,`Cod Postal`) VALUES ('Manolescu','Stefan','0734256987','0213467892','Manolescu.Stefan@yahoo.com','Teiului, nr.21','Timisoara','Timis','383345');

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+import static java.util.Arrays.binarySearch;
+import static java.util.Arrays.sort;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+	//pb 6
+        int n;
+        Scanner tas = new Scanner(System.in);
+
+        System.out.print("n=");
+        n = tas.nextInt();
+        int v[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("v[" + i + "]=");
+            v[i] = tas.nextInt();
+        }
+        sort(v);
+        for (int i = 0; i < n; i++) {
+            System.out.print(v[i]+ " ");
+        }
+        System.out.print("\nSe cauta nr x=");
+        int x = tas.nextInt();
+        System.out.println("Nr se gaseste pe pozitia " + (binarySearch(v, x)+1) + ".");
+
+    }
+}

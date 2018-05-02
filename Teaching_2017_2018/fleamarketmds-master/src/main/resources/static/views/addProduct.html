@@ -1,0 +1,121 @@
+<div class="container" ng-controller='AddProductController'>
+    <style>
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: blue;
+            cursor: inherit;
+            display: block;
+        }
+    </style>
+
+    <form name="addProducts" ng-submit="addProduct()" novalidate>
+
+        <!-- TITLE -->
+        <h1><span class="glyphicon glyphicon-plus-sign"></span>Add Product</h1>
+
+
+        <!-- PRODUCT NAME -->
+        <fieldset class="form-group" ng-class="{'has-error' : addProducts.productName.$invalid}">
+            <label class="control-label">Product Name</label>
+            <input class="form-control"
+                   placeholder="Write product name"
+                   ng-model="productName"
+                   ng-minlength="2"
+                   ng-maxlength="30"
+                   name="productName"
+                   required> </input>
+            <p ng-show="addProducts.productName.$error.minlength"
+               class="help-block">Product name is too short.</p>
+            <p ng-show="addProducts.productName.$error.maxlength"
+               class="help-block">Product name is too long.</p>
+
+        </fieldset>
+
+        <!--PRICE-->
+        <fieldset class="form-group">
+            <label class="control-label">Price </label>
+            <input class="form-control"
+                   ng-model="price"
+                   placeholder="Select a price"
+                   name="price"
+                   required>
+            </input>
+        </fieldset>
+
+        <!-- DESCRIPTION -->
+        <fieldset class="form-group" ng-class="{'has-error' : addProducts.description.$invalid}">
+            <label class="control-label">Description </label>
+            <!--<input class="form-control" ng-model="product.description"  name="description" required>-->
+            <textarea class="form-control"
+                      placeholder="Write a description"
+                      ng-model="description"
+                      ng-minlength="30"
+                      ng-maxlength="255"
+                      name="description"
+                      required></textarea>
+            <p ng-show="addProducts.description.$error.minlength" class="help-block">The description is too short.</p>
+            <p ng-show="addProducts.description.$error.maxlength" class="help-block">The description is too long.</p>
+        </fieldset>
+
+
+        <!--CATEGORY-->
+        <div class="form-group">
+            <label class="control-label" for="field_category">Category</label>
+            <select class="form-control" ng-model="category" name="category" id="field_category">
+                <option value="ELECTRONICS">ELECTRONICS</option>
+                <option value="REAL_ESTATE">REAL_ESTATE</option>
+                <option value="SPORTS">SPORTS</option>
+                <option value="AUTO">AUTO</option>
+                <option value="SERVICES">SERVICES</option>
+                <option value="PETS">PETS</option>
+                <option value="OFFICE_SUPPLIES">OFFICE_SUPPLIES</option>
+                <option value="CLOTHES">CLOTHES</option>
+                <option value="OTHERS">OTHERS</option>
+            </select>
+        </div>
+
+
+        <label class="control-label">Upload an image </label>
+        <div class="row">
+            <div class="col-lg-12">
+                     <span class="btn btn-default btn-file">
+                             Browse <input type="file" file-model="myFile">
+                         <span class="glyphicon glyphicon-upload"></span>
+                     </span>
+            </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <button type="btn btn-primary submit" class="btn btn-lg btn-primary"
+                        ng-hide="userForm.$invalid" align ="left">Save</button>
+            </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+<!-- RETURN & SUBMIT  BUTTONS -->
+<fieldset class="form-group">
+    <!-- RETURN  -->
+    <a href="#/product">
+        <button type=button class="btn btn-primary">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </button>
+    </a>
+</fieldset>
+</form>
+</div>

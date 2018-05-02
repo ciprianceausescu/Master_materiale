@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Flea Market</title>
+
+</head>
+<!-- Jumbotron -->
+<div class="container">
+    <div class="jumbotron">
+        <h1>MDS Flea Market</h1>
+        <p>Sell. Donate. Connect.</p>
+        <p><a class="btn btn-primary" href="/#/product/new">Add a new product</a></p>
+    </div>
+</div>
+</br></br>
+
+
+<div class="container">
+    <h1 class="text-center">Product categories</h1></br>
+    <div class="center">
+        <div class="bar">
+
+            <p>
+                <a ng-href='#/productlist/ELECTRONICS'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>ELECTRONICS</b></a>
+                <a ng-href='#/productlist/REAL_ESTATE'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>REAL ESTATE</b></a>
+                <a ng-href='#/productlist/SPORTS'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>SPORTS</b></a>
+            </p>
+            <p>
+                <a ng-href='#/productlist/AUTO'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>AUTO</b></a>
+                <a ng-href='#/productlist/SERVICES'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>SERVICES</b></a>
+                <a ng-href='#/productlist/OFFICE_SUPPLIES'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>OFFICE SUPPLIES</b></a>
+            </p>
+            <p>
+                <a ng-href='#/productlist/CLOTHES'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>CLOTHES</b></a>
+                <a ng-href='#/productlist/PETS'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>PETS</b></a>
+                <a ng-href='#/productlist/OTHERS'
+                   class="btn btn-primary btn-lg btn-info" role="button"
+                   style="width:33%"><b>OTHERS</b></a>
+            </p>
+        </div>
+    </div>
+</div>
+</br></br>
+
+
+
+<!-- Latest products -->
+<div ng-controller="ProductsActionsController as product" class="container">
+    <h1 class="text-center">Latest products</h1></br>
+    <!--<div class="row">-->
+
+    <div ng-repeat="product in products ">
+        <div class="col-md-2">
+            <a href="#/productview/{{product.id}}">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="panel panel-primary">
+
+                                <div class="panel-heading">
+                                    <h4>
+                                        {{product.productName}}
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <img ng-src="/products/images/{{product.imageUrl}}"
+                                         class="img-responsive" class="img-rounded" style="width:100%" alt="Image">
+                                </div>
+                                <div class="panel-footer">
+                                    <h4><strong>{{product.price}} lei</strong>
+                                    </h4>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--</div>-->
+</div>
+</br></br></br>
+
+</body>
+
+</html>

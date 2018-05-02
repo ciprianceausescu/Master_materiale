@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product List</title>
+
+</head>
+<body>
+
+<div ng-controller="ViewProductsByCategoryController as product" class="container">
+
+    <h1>Search Results</h1>
+    <h2 class="lead">These are the results found for the search.</h2>
+
+    <section  class="col-xs-12 col-sm-6 col-md-12">
+
+        <article ng-repeat="product in products | orderBy:'-id'" class="search-result row">
+
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-3">
+                    <a title="Image" class="thumbnail"><img ng-src="/products/images/{{product.imageUrl}}" height="250" width="140" ></a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <ul class="meta-search">
+
+                        <li><i class="glyphicon glyphicon-tags"></i> <span>{{product.category}}</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                    <h3><a href="#/productview/{{product.id}}" title="">{{product.productName}}</a></h3>
+                    <p>{{product.description}}</p>
+                </div>
+                <span class="clearfix borda"></span>
+            </div>
+        </article>
+    </section>
+</div>
+</body>
+</html>

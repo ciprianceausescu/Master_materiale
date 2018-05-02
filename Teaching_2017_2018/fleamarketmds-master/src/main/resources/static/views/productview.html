@@ -1,0 +1,50 @@
+<div class="container">
+    <body>
+    <form name="viewProd" ng-controller="ViewProductController as product" ng-submit="viewProd.$valid && product.viewProduct(product)">
+
+        <!-- Page Content -->
+        <div class="container">
+            <h5><span class="glyphicon glyphicon-tag"> </span>
+                {{product.category}}
+            </h5>
+            <h1><span class="glyphicon glyphicon-eye-open"> </span>
+                {{product.productName}}
+            </h1>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <img width="400" height="400" class="img-fluid" ng-src="/products/images/{{product.imageUrl}} ">
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div class="col-md-4">
+                    <h1 class="my-2">Price:  {{product.price}} lei</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <article>
+                        <h1 class="my-5">Description</h1>
+                        <h4>{{product.description}} </h4>
+                    </article>
+                </div>
+
+
+                <div class="col-md-10">
+                    <h2>Contact</h2>
+                    <h4 class="my-3"> <span class="glyphicon glyphicon-envelope"> </span> email: {{product.person.email}}</h4>
+                    <h4 class="my-3"> <span class="glyphicon glyphicon-earphone"> </span> telephone number: {{product.person.phoneNumber}}</h4>
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <!-- RETURN  -->
+                <a href="#/">
+                    <button type=button class="btn btn-primary" >
+                        <span class="glyphicon glyphicon-arrow-left" ></span>
+                    </button>
+                </a>
+            </fieldset>
+        </div>
+
+    </form>
+    </body>
+</div>

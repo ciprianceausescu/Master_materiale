@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User</title>
+</head>
+<body>
+
+<div class="container" style="width:100%;">
+    <div id="left" style="float:left; width:30%;" ng-controller="UserDetailsController as user">
+        <article role="profile">
+            <aside class="avatar">
+                <img class="img-circle" align="middle"
+                     src="https://preview.ibb.co/dZSgE5/facebook_no_profile_pic2_jpg.gif"
+                     height="300" width="300"/>
+            </aside>
+        </article>
+
+        <h3 align="center">{{user.email}}</h3>
+        <h3 align="center">{{user.phoneNumber}}</h3>
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="">My Posts</a></li>
+            <li data-toggle="tab"><a href="#/profile/history">History</a></li>
+        </ul>
+
+    </div>
+
+    <div id="right" style="float:right; width:70%;">
+        <div class="container">
+            <br><br><br>
+            <table class="table-bordered">
+                <tbody>
+                <tr ng-controller="ListMyProductsController" ng-repeat="product in myProducts">
+                    <td>
+                        <div style="width: 150px; height: 150px">
+                            <img ng-src="/products/images/{{product.imageUrl}} "
+                                 height="150" width="150"
+                            />
+                        </div>
+                    </td>
+                    <td>
+                        <div style="width: 600px;">
+                            <h2><a ng-href="#/productview/{{product.id}}">{{product.productName}}</a></h2>
+                            <p>
+                                {{product.category}}
+                            </p>
+                            <p>
+                                {{product.status}}
+                            </p>
+                            <p>
+                                {{product.price}}
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="width: 100px" ng-controller="ProductsActionsController">
+                            <a ng-href='#/editProduct/{{product.id}}'>
+                                <span class="glyphicon glyphicon-pencil" style='font-size: 17px'></span>
+                            </a> &nbsp;
+                            <a ng-href='#/productview/{{product.id}}'>
+                                <span class="glyphicon glyphicon-ok" style='font-size: 17px'></span>
+                            </a> &nbsp;
+                            <div ng-click='deleteProduct(product.id)'>
+                                <span class="glyphicon glyphicon-trash" style='font-size: 17px'></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

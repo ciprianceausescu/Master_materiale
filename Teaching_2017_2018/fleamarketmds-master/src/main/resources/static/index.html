@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html ng-app='FleaMarketApp'>
+<head>
+    <title>FleaMarket App</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+
+</head>
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-cookies.js"></script>
+<script src="js/ui-bootstrap-tpls-1.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/product.controller.js"></script>
+<script src="controllers/addproduct.controller.js"></script>
+<script src="services/products.service.js"></script>
+<script src="controllers/login.controller.js"></script>
+<script src="services/authentication.service.js"></script>
+<script src="controllers/register.controller.js"></script>
+<script src="services/registration.service.js"></script>
+<script src="services/httpInterceptor.service.js"></script>
+<script src="services/user.services.js"></script>
+<script src="controllers/user.controller.js"></script>
+
+<script>
+    app.controller('RedirectSearch', function ($scope, $location, $window){
+
+        $scope.redirect = function(enteredWord) {
+
+            document.getElementById("searchTxt").value = "";
+            $window.location.href='/#/search/'+enteredWord;
+        };
+    });
+</script>
+
+<body>
+
+<div class="container-fluid" ng-controller="LoginController" style='background-color: #4086C2'>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-logo" href="/#/" style="color: #000000; position: sticky; top: 200%;font-family: 'Gamja Flower', cursive;font-size: 50px;text-decoration: none;">
+            <img style='top: 16px' src="" width="40"
+                 height="40" alt=""> Flea Market
+        </a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li class="mx-auto">
+            <a ng-controller="RedirectSearch" >
+                <form class="form-inline my-2 my-lg-0">
+                    <input ng-model="enteredWord" class="form-control mr-sm-2" type="searchTxt" id="searchTxt"
+                           placeholder="Search" style='min-width: 150px'>
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="color:black;font-size:20px;" ng-click="redirect(enteredWord)" type="submit">
+                        Search
+                    </button>
+                </form>
+            </a>
+        </li>
+
+        <li>
+            <a href="/#/" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-home"></span> Home</a>
+        </li>
+
+        <!--Add a new product button-->
+        <li ng-show="hasLoggedUser()">
+            <a href="/#/product/new" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-plus-sign"></span> Add a
+                new product</a>
+        </li>
+
+        <!-- Add a new product button when not logged in -->
+        <li ng-show="!hasLoggedUser()">
+            <a href="/#/login" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-plus-sign"></span> Add a
+                new product</a>
+        </li>
+
+        <!-- My profile  -->
+        <li ng-show="hasLoggedUser()">
+            <a href="/#/profile/myProducts" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-tower"></span> My
+                profile</a>
+        </li>
+
+        <li ng-show="hasLoggedUser()">
+            <a href="/#/logout" ng-click="logout()" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+        </li>
+
+        <!--Sign-up and login buttons-->
+        <li ng-show="!hasLoggedUser()">
+            <a href="/#/register" style="color:black;font-size:17px;"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+
+        <li ng-show="!hasLoggedUser()">
+            <a href="/#/login" style="color: #000000; font-size: 17px; background-color: #f2f3f2"><span
+                    class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+
+    </ul>
+
+
+</div>
+<br>
+<br>
+<br>
+
+
+<!--Pagina principala-->
+<div ng-view></div>
+
+<!--Footer :)-->
+<br>
+<br>
+<br>
+<div class="container" >
+    <div class="row" >
+        <div class="col-sm-12 footer-info-item text-center">
+            <h3>Contact Us</h3>
+            <p class="lead"><span class="glyphicon glyphicon-phone-alt"></span> 0749554757<br>
+                flea_market@db.com</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Links -->
+<div class="footer-info" style='background-color: #4086C2'>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 footer-info-item">
+                <h3>Information</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" style='color: #000000'>About Us</a></li>
+                    <li><a href="#" style='color: #000000'>Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 footer-info-item">
+                <h3>My Account</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#" style='color: #000000'>View Cart</a></li>
+                    <li><a href="#" style='color: #000000'>My Wishlist</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 footer-info-item">
+                <h3><span class="glyphicon glyphicon-list-alt"></span> Newsletter</h3>
+                <p>Sign up for exclusive offers.</p>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email address">
+                    <span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									Subscribe!
+								</button>
+							</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Copyright etc -->
+<div class="small-print" style='background-color:#4086C2'>
+    <div class="container">
+        <p><a href="#" style='color: #27434B'>Terms &amp; Conditions</a> | <a href="#" style='color: #27434B'>Contact</a></p>
+        <p>Copyright &copy; @MDS </p>
+    </div>
+</div>
+
+</body>
+</html>

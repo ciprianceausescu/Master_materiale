@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="FleaMarketApp">
+<head>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body ng-controller='LoginController'>
+<p></p>
+<h2 style="text-align: center;">Login Form</h2>
+<p></p>
+<form name="form" ng-submit="form.$valid && login()" novalidate>
+
+    <div class="container">
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.email.$invalid }">
+            <label><b>Email</b></label>
+            <input class="form-control"
+                   ng-model="email"
+                   type="text"
+                   placeholder="Enter email"
+                   name="email"
+                   required>
+            <div ng-messages="form.$submitted && form.email.$error" class="help-block">
+                <div ng-message="required">Email is required</div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.password.$invalid }">
+            <label><b>Password</b></label>
+            <input class="form-control"
+                   type="password"
+                   name="password"
+                   placeholder="Enter Password"
+                   ng-model="password" required/>
+            <div ng-messages="form.$submitted && form.password.$error" class="help-block">
+                <div ng-message="required">Password is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button ng-disabled="loading"
+                    class="btn btn-primary btn-success">Login
+            </button>
+        </div>
+
+        <div ng-if="error" class="alert alert-danger">{{error}}</div>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+
+        <span class="psw">You don't have an <a href="/#/register">account?</a></span>
+    </div>
+</form>
+</body>
+</html>

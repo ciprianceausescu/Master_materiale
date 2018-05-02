@@ -1,0 +1,68 @@
+<div class="container">
+
+    <form name="editProduct" ng-controller="EditProductsController"
+          ng-submit="edit()">
+        <h1>
+            <span class="glyphicon-pencil">
+
+            </span>
+            Edit product
+        </h1>
+        <!--EDIT NAME-->
+        <fieldset class="form-group">
+            <label class="control-label">Product Name</label>
+            <input class="form-control" ng-model="EditProductsController.productName" name="productName">
+            </input>
+        </fieldset>
+        <!--EDIT PRICE-->
+        <fieldset class="form-group">
+            <label class="control-label">Product price:</label>
+            <input class="form-control" ng-model="EditProductsController.price" name="price">
+            </input>
+        </fieldset>
+
+        <!--EDIT CATEGORY-->
+        <fieldset class="form-group">
+            <label class="control-label">Product category:</label>
+            <select class="form-control" ng-model="EditProductsController.category"  name="category">
+                <option value="ELECTRONICS">ELECTRONICS</option>
+                <option value="REAL_ESTATE" >REAL_ESTATE</option>
+                <option value="SPORTS">SPORTS</option>
+                <option value="AUTO" >AUTO</option>
+                <option value="SERVICES" >SERVICES</option>
+                <option value="PETS" >PETS</option>
+                <option value="OFFICE_SUPPLIES" >OFFICE_SUPPLIES</option>
+                <option value="CLOTHES" >CLOTHES</option>
+                <option value="OTHERS" >OTHERS</option>
+            </select>
+        </fieldset>
+
+        <!-- EDIT DESCRIPTION -->
+        <fieldset class="form-group">
+            <label class="control-label">Edit description: </label>
+            <textarea class="form-control" ng-model="EditProductsController.description" name="description">
+            </textarea>
+        </fieldset>
+
+        <!--EDIT STATUS -->
+        <fieldset class="form-group">
+            <label class="control-label">Product status:</label>
+            <select class="form-control" ng-model="EditProductsController.productStatus"  name="category">
+                <option value="ENABLED">ENABLED</option>
+                <option value="DISABLED" >DISABLED</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <!-- RETURN  -->
+            <a href="#/">
+                <button type=button class="btn btn-primary" >
+                    <span class="glyphicon glyphicon-arrow-left" ></span>
+                </button>
+            </a>
+            <!-- SUBMIT  -->
+            <input type="submit" class="btn btn-primary pull-right" value="Save" />
+        </fieldset>
+
+    </form>
+</div>

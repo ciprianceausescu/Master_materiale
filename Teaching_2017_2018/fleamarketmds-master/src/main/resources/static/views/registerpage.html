@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="FleaMarketApp">
+<head>
+    <title>Register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body ng-controller='RegisterController'>
+
+<h2 style="text-align: center;">Register Form</h2>
+
+<form name="form" ng-submit="form.$valid && register()" novalidate>
+
+    <div class="container">
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.email_new.$invalid }">
+            <label><b>Email</b></label>
+            <input class="form-control"
+                   ng-model="email_new"
+                   type="text"
+                   placeholder="Enter email"
+                   name="email_new"
+                   required>
+            <div ng-messages="form.$submitted && form.email_new.$error" class="help-block">
+                <div ng-message="required">Email is required</div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.phone.$invalid }">
+            <label><b>Phone Number</b></label>
+            <input class="form-control"
+                   ng-model="phone"
+                   type="text"
+                   placeholder="Enter your phone number"
+                   name="phone"
+                   required>
+            <div ng-messages="form.$submitted && form.phone.$error" class="help-block">
+                <div ng-message="required">Phone number is required</div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.password_new.$invalid }">
+            <label><b>Password</b></label>
+            <input class="form-control"
+                   ng-model="password_new"
+                   type="password"
+                   placeholder="Enter your new password"
+                   name="password_new"
+                   required>
+            <div ng-messages="form.$submitted && form.password_new.$error" class="help-block">
+                <div ng-message="required">Password is required</div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.repeat_password.$invalid }">
+            <label><b>Repeat Password</b></label>
+            <input class="form-control"
+                   ng-model="repeat_password"
+                   type="password"
+                   placeholder="Re-enter your password"
+                   name="repeat_password"
+                   required>
+            <div ng-messages="form.$submitted && form.repeat_password.$error" class="help-block">
+                <div ng-message="required">Re-entering password is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button ng-disabled="loading"
+                    class="btn btn-primary btn-success">Register
+            </button>
+        </div>
+
+        <div ng-if="error" class="alert alert-danger">{{error}}</div>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <span class="psw">Already have an <a href="/#/login">account?</a></span>
+    </div>
+</form>
+</br></br>
+
+</body>
+</html>

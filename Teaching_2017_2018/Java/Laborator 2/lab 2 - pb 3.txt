@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class MyClass {
+    static int n = 0;
+    static void counter(String v,String s,int nr, int k, int pos)
+    {
+
+        if(nr == k)
+        {
+            System.out.println(s);
+            n++;
+        }
+        for(int i=pos;i<v.length();i++)
+        {
+            if(s.indexOf(v.charAt(i)) != -1)
+                counter(v,s+v.charAt(i),nr,k,i+1);
+            else
+            if(nr<k)
+                counter(v,s+v.charAt(i),nr+1,k,i+1);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Scanner tas = new Scanner(System.in);
+        int k;
+        String s;
+        System.out.println("k=");
+        k = tas.nextInt();
+        System.out.println("Sir dat:");
+        s = tas.next();
+        
+        counter(s,"",0,k,0);
+        System.out.println(n);
+
+    }
+}

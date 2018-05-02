@@ -1,0 +1,122 @@
+graf
+
+public class graf {
+
+    boolean date[][];
+    int n;
+
+    graf(int n)
+    {
+        this.n = n;
+        date = new boolean[n][];
+        for(int i=0;i<n;i++)
+            date[i] = new boolean[n];
+        for(int i=0; i<n; i++)
+            for( int j=0; j<n;j++)
+                date[i][j] = false;
+    }
+
+    public void atr(int i,int j)
+    {
+        i--;
+        j--;
+        if(i<n && j<n && i>=0 && j>=0)
+            date[i][j] = true;
+    }
+    public int insize()
+    {
+        int nr = 0;
+        for(int i = 0;i<n;i++)
+            for(int j = 0;j<n;j++)
+                if(date[i][j])
+                    nr++;
+        return nr;
+    }
+    public boolean isarc(int v,int w)
+    {
+        return date[--v][--w];
+    }
+    public void bfs(int x)
+    {
+        x--;
+        if(x >= 0 && x < n)
+        {
+            boolean[] checked = new boolean[n];
+            checked[x] = true;
+            int[] queue = new int[n];
+            queue[0] = x;
+            int qsize = 1, qleft = 0;
+            while(qsize > qleft)
+            {
+                System.out.print((queue[qleft]+1) + " ");
+                for(int i=0;i<n;i++)
+                    if(date[queue[qleft]][i]  && !checked[i])
+                    {
+                        queue[qsize++] = i;
+                        checked[i] = true;
+                    }
+                qleft++;
+            }
+            System.out.println("");
+        }
+
+    }
+    void dfsr(int xc, boolean[] checked)
+    {
+        checked[xc] =  true;
+        System.out.print((xc+1) + " ");
+        for(int i=0;i<n;i++)
+            if(date[xc][i] && checked[i] == false)
+                dfsr(i,checked);
+    }
+    public void dfs(int x)
+    {
+        x--;
+        if(x >= 0 && x < n)
+        {
+            boolean[] checked = new boolean[n];
+            dfsr(x,checked);
+        }
+    }
+    @Override
+    public String toString()
+    {
+        for(int i=0;i<n;i++, System.out.println(""))
+            for(int j=0;j<n;j++)
+                System.out.print((date[i][j]?1:0) + " ");
+        return "";
+    }
+}
+
+
+grafuri
+
+import java.util.Scanner;
+
+public class grafuri {
+
+    public static void main(String args[])
+    {
+
+        int n,nr,v,w;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Numarul de noduri");
+        n = sc.nextInt();
+        graf g = new graf(n);
+        System.out.println("Numarul de arce: ");
+        nr = sc.nextInt();
+        for(int i=0;i<nr;i++)
+            g.atr(sc.nextInt(),sc.nextInt());
+        System.out.println(g);
+        System.out.println("Din ce varf pornim bfs?");
+        g.bfs(sc.nextInt());
+        System.out.println("Din ce varf pornim dfs?");
+        g.dfs(sc.nextInt());
+        System.out.println(g.insize());
+        System.out.println("Ce arc va intereseaza? (x,y):");
+        v = sc.nextInt();
+        w = sc.nextInt();
+        System.out.println(g.isarc(v,w));
+    }
+
+}
