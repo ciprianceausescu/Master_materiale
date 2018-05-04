@@ -8,25 +8,43 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.SpringLayout;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.file.Paths;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
 import org.apache.commons.io.FileUtils;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexNotFoundException;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.search.similarities.TFIDFSimilarity;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 
 public class InformationRetrievalForm {
   public static void main(String[] args) throws IOException {
     JFrame frame = new JFrame("Indexer");
     BufferedImage backgroundImage = ImageIO.read(new File("C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\IR_TEST\\src\\bgimg.jpg"));
     frame.setContentPane(new ImagePanel(backgroundImage));
+
     SpringLayout layout = new SpringLayout();
     frame.getContentPane().setLayout(layout);
 
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(400,265);
+
+    Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+    int x = (int) ((dimension.getWidth()-frame.getWidth())/2);
+    int y = (int) ((dimension.getHeight()-frame.getHeight())/2);
+    frame.setLocation(x,y);
 
     JButton searchButton = new JButton("Search");
     searchButton.setBounds(159, 94, 121, 23);
@@ -64,7 +82,7 @@ public class InformationRetrievalForm {
             String input = JOptionPane.showInputDialog("Enter search query.","");
             if(input==null) return;
 
-            String[] result = SearchFiles.search(input);
+            /*String[] result = SearchFiles.search(input);
             if(result.length!=0) {
                 model.addElement("\"" + input + "\" found in " + result.length + " documents: \n");
                 System.out.println("\n\"" + input + "\" found in " + result.length + " documents:");
@@ -77,7 +95,37 @@ public class InformationRetrievalForm {
                 JOptionPane.showMessageDialog(null, "There were no results found.",
                   "Results not found ", JOptionPane.INFORMATION_MESSAGE);
             else
+                scrollPane.setVisible(true);*/
+
+            ArrayList<QueryResult> resultList = SearchFiles.searchList(input);
+
+            if(resultList.size()!=0) {
+                Test test = new Test();
+
+                IndexReader reader = null;
+                Directory dir = FSDirectory.open(Paths.get("index"));
+                reader = DirectoryReader.open(dir);
+                int docs = reader.numDocs();
+
+                float idf = test.idf(resultList.size(), docs);
+                DecimalFormat df = new DecimalFormat();
+                df.setMaximumFractionDigits(2);
+
+                model.addElement("IDF: " + df.format(idf) + "\n");
+                model.addElement("\"" + input + "\" found in " + resultList.size() + " documents: \n");
+                System.out.println("\nIDF: " + df.format(idf));
+                System.out.println(input + "\" found in " + resultList.size() + " documents:");
+            }
+            for (int i=0;i<resultList.size();i++) {
+                model.addElement(resultList.get(i) + "\n");
+                System.out.println(resultList.get(i));
+            }
+            if(resultList.size()==0)
+                JOptionPane.showMessageDialog(null, "There were no results found.",
+                        "Results not found ", JOptionPane.INFORMATION_MESSAGE);
+            else
                 scrollPane.setVisible(true);
+
         }  catch (IndexNotFoundException e1) {
           JOptionPane.showMessageDialog(null, "In folderul IndexDir nu s-a gasit index.",
               "Index not found ", JOptionPane.INFORMATION_MESSAGE);
