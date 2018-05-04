@@ -10,12 +10,13 @@ import java.text.DecimalFormat;
 class QueryResult implements Comparable<QueryResult>{
     private String path;
     private double score;
+    private double tf;
 
     @Override
     public String toString(){
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
-        return "Doc: " + this.path + ". Score: " + df.format(score);
+        return "Doc: " + this.path + ". Score: " + df.format(score) + ". TF: " + df.format(tf);
     }
 
     @Override

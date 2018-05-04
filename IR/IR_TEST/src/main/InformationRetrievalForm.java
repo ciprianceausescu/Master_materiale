@@ -14,18 +14,17 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexNotFoundException;
 import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.search.similarities.TFIDFSimilarity;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.similarities.Similarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
@@ -100,21 +99,22 @@ public class InformationRetrievalForm {
             ArrayList<QueryResult> resultList = SearchFiles.searchList(input);
 
             if(resultList.size()!=0) {
-                Test test = new Test();
+                TFIDF TFIDF = new TFIDF();
 
                 IndexReader reader = null;
                 Directory dir = FSDirectory.open(Paths.get("index"));
                 reader = DirectoryReader.open(dir);
                 int docs = reader.numDocs();
 
-                float idf = test.idf(resultList.size(), docs);
+                float idf = TFIDF.idf(resultList.size(), docs);
+
                 DecimalFormat df = new DecimalFormat();
                 df.setMaximumFractionDigits(2);
 
                 model.addElement("IDF: " + df.format(idf) + "\n");
                 model.addElement("\"" + input + "\" found in " + resultList.size() + " documents: \n");
                 System.out.println("\nIDF: " + df.format(idf));
-                System.out.println(input + "\" found in " + resultList.size() + " documents:");
+                System.out.println("\""+ input + "\" found in " + resultList.size() + " documents:");
             }
             for (int i=0;i<resultList.size();i++) {
                 model.addElement(resultList.get(i) + "\n");
