@@ -5,6 +5,7 @@ import org.apache.lucene.search.MultiCollectorManager;
 import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.util.BytesRef;
 
+import java.text.Normalizer;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,6 +60,15 @@ class TFIDF extends TFIDFSimilarity {
     }
 
     public static double tf(List<String> doc, String term) {
-        return (double) doc.stream().filter(s->s.toLowerCase().contains(term.toLowerCase())).collect(Collectors.toList()).size() / doc.size();
+        return (double) doc.stream()
+                           .map(TFIDF::removeAccents)
+                           .filter(s->s.toLowerCase().contains(term.toLowerCase()))
+                           .collect(Collectors.toList()).size() / doc.size();
+    }
+
+    public static String removeAccents(String text) {
+        return text == null ? null :
+                Normalizer.normalize(text, Normalizer.Form.NFD)
+                        .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
 }
