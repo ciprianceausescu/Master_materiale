@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.StringTokenizer;
 
 class SearchFiles {
@@ -57,7 +58,6 @@ class SearchFiles {
     }
     private static ArrayList<QueryResult> resultList(IndexSearcher searcher, Query query)
             throws IOException {
-
         TopDocs topDocsResult = searcher.search(query, LuceneConstants.MAX_HITS);
         ScoreDoc[] hits = topDocsResult.scoreDocs;
 
@@ -65,6 +65,7 @@ class SearchFiles {
         String []res = new String[numTotalHits];
 
         ArrayList<QueryResult> resultList = new ArrayList<QueryResult>();
+        ArrayList<DocResults> docResults = new ArrayList<DocResults>();
         for (int i = 0; i < numTotalHits; i++) {
             Document doc = searcher.doc(hits[i].doc);
 
@@ -86,9 +87,84 @@ class SearchFiles {
 
             //Cream obiecte de tipul QueryResult si le ordonam dupa score
             resultList.add(new QueryResult(doc.get("path"), hits[i].score, TFIDF.tf(wordList, word)));
-
             Collections.sort(resultList);
+
+            /******************************************************************************************/
+
+
+            docResults.add(new DocResults(hits[i].score, i, doc.get("path")));
+
+            //statusQuery(query, docResults, searcher);
         }
         return resultList;
     }
+    /*public static List<QueryStats> statusQuery(Query query, ArrayList<DocResults> results, IndexReader indexReader){
+        if(query==null) return null;
+
+        List<QueryStats> stats = new ArrayList<>();
+
+        List<BooleanClause> clauses = null;
+        if(query instanceof BooleanQuery)
+        {
+            clauses = ((BooleanQuery) query).clauses();
+        }
+
+        if(clauses == null){
+            QueryStats newStat = new QueryStats();
+            newStat.token = query.toString(LuceneConstants.CONTENTS);
+            System.out.println(newStat.token);
+            newStat.tfq = 1;
+            newStat.df = 0;
+
+            if(results!=null) {
+                for (DocResults result : results) {
+                    if(result.hasTerm(newStat.token)){
+                        newStat.df++;
+                    }
+                }
+            }
+
+            if(newStat.idf>0) newStat.idf = (float)Math.log(indexReader.numDocs()/newStat.df);
+
+            stats.add(newStat);
+
+        }else {
+            List<BooleanClause> uniqueClauses = new ArrayList<>();
+            for (BooleanClause clause : clauses) {
+                if(uniqueClauses.contains(clause))  {
+                    for (QueryStats stat : stats) {
+                        if(stat.token.equals(clause.getQuery().toString(LuceneConstants.CONTENTS)))
+                        {
+                            stat.tfq++;
+                        }
+                    }
+                    continue;
+                }
+
+                uniqueClauses.add(clause);
+                QueryStats newStat = new QueryStats();
+                newStat.token = clause.getQuery().toString(LuceneConstants.CONTENTS);
+                newStat.tfq = 1;
+                newStat.df = 0;
+
+                if(results!=null) {
+                    for (DocResults result : results) {
+                        if(result.hasTerm(newStat.token)){
+                            newStat.df++;
+                        }
+                    }
+                }
+
+                if(newStat.df==0) newStat.idf=0;
+                else {
+                    double frac =(double)indexReader.numDocs()/(double)newStat.df;
+                    newStat.idf = Math.log10(frac);
+                    newStat.idf = Math.round(newStat.idf*1000.0)/1000.0;
+                }
+
+                stats.add(newStat);
+            }
+        }
+        return stats;
+    }*/
 }

@@ -1,15 +1,19 @@
 package main;
 
-import org.apache.lucene.index.FieldInvertState;
+import org.apache.lucene.index.*;
 import org.apache.lucene.search.MultiCollectorManager;
 import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.util.BytesRef;
 
+import java.io.IOException;
 import java.text.Normalizer;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.log;
+import static java.lang.Math.log10;
 import static java.lang.Math.sqrt;
 
 class TFIDF extends TFIDFSimilarity {
@@ -30,8 +34,8 @@ class TFIDF extends TFIDFSimilarity {
     }
 
     @Override
-    public float idf(long l, long l1) {
-        return  (float)log(l1/(l+1)) + 1;
+    public float idf(long result, long total) {
+        return  (float)(log10(total/result));
     }
 
     @Override

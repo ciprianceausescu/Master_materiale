@@ -1,0 +1,134 @@
+idf:
+
+public List<QueryStats> statusQuery(){
+    if(q==null) return null;
+
+    List<QueryStats> stats = new ArrayList<>();
+
+    List<BooleanClause> clauses = null;
+    if(q instanceof BooleanQuery)
+    {
+      clauses = ((BooleanQuery) q).clauses();
+    }
+
+    if(clauses == null){
+      QueryStats newStat = new QueryStats();
+      newStat.token = q.toString(LuceneConstants.CONTENTS);
+      newStat.tfq = 1;
+      newStat.df = 0;
+
+      if(results!=null) {
+        for (DocResults result : results) {
+          if(result.hasTerm(newStat.token)){
+            newStat.df++;
+          }
+        }
+      }
+
+      if(newStat.idf>0) newStat.idf = (float)Math.log(indexReader.numDocs()/newStat.df);
+
+      stats.add(newStat);
+
+    }else {
+      List<BooleanClause> uniqueClauses = new ArrayList<>();
+      for (BooleanClause clause : clauses) {
+        if(uniqueClauses.contains(clause))  {
+          for (QueryStats stat : stats) {
+            if(stat.token.equals(clause.getQuery().toString(LuceneConstants.CONTENTS)))
+            {
+              stat.tfq++;
+            }
+          }
+          continue;
+        }
+
+        uniqueClauses.add(clause);
+        QueryStats newStat = new QueryStats();
+        newStat.token = clause.getQuery().toString(LuceneConstants.CONTENTS);
+        newStat.tfq = 1;
+        newStat.df = 0;
+
+        if(results!=null) {
+          for (DocResults result : results) {
+            if(result.hasTerm(newStat.token)){
+              newStat.df++;
+            }
+          }
+        }
+
+        if(newStat.df==0) newStat.idf=0;
+        else {
+          double frac =(double)indexReader.numDocs()/(double)newStat.df;
+          newStat.idf = Math.log10(frac);
+          newStat.idf = Math.round(newStat.idf*1000.0)/1000.0;
+        }
+
+        stats.add(newStat);
+      }
+    }
+    return stats;
+  }
+  
+  
+  
+  tf:
+  
+  public List<TermFrequencies> computeTermFreq(int docId) throws IOException {
+
+    //TFIDFSimilarity tfidfSim = new ClassicSimilarity();
+    List<TermFrequencies> termFrequencies = new ArrayList<>();
+
+    TermsEnum termsEnum = MultiFields.getTerms(indexReader, LuceneConstants.CONTENTS).iterator();
+    PostingsEnum postings = null;
+
+    Terms vector = indexReader.getTermVector(docId, LuceneConstants.CONTENTS);
+
+    try {
+      termsEnum = vector.iterator();
+    } catch (NullPointerException e) {
+      e.printStackTrace();
+    }
+
+    BytesRef bytesRef = null;
+    while ((bytesRef = termsEnum.next()) != null) {
+      if (termsEnum.seekExact(bytesRef)) {
+        String term = bytesRef.utf8ToString();
+        float tf = 0;
+
+        List<BooleanClause> clauses = null;
+        if(q instanceof BooleanQuery)
+        {
+          clauses = ((BooleanQuery) q).clauses();
+        }
+
+        if(clauses == null){
+          if (q.toString(LuceneConstants.CONTENTS).equals(term)) {
+            postings = termsEnum.postings(null, PostingsEnum.FREQS);
+            while (postings.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
+              tf = postings.freq();
+              termFrequencies.add(new TermFrequencies(term, tf));
+            }
+          }
+        }else {
+          for (BooleanClause clause : clauses) {
+            if (clause.getQuery().toString(LuceneConstants.CONTENTS).equals(term)) {
+              postings = termsEnum.postings(null, PostingsEnum.FREQS);
+              while (postings.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
+                tf = postings.freq();
+
+                boolean contains=false;
+                for (TermFrequencies termFrequency : termFrequencies) {
+                  if(termFrequency.term.equals(term)) contains = true;
+                }
+
+                if(!contains) {
+                  termFrequencies.add(new TermFrequencies(term, tf));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return termFrequencies;
+  }

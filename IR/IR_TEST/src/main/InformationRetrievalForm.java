@@ -24,6 +24,7 @@ import org.apache.lucene.index.IndexNotFoundException;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.similarities.ClassicSimilarity;
 import org.apache.lucene.search.similarities.Similarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -81,21 +82,6 @@ public class InformationRetrievalForm {
             String input = JOptionPane.showInputDialog("Enter search query.","");
             if(input==null) return;
 
-            /*String[] result = SearchFiles.search(input);
-            if(result.length!=0) {
-                model.addElement("\"" + input + "\" found in " + result.length + " documents: \n");
-                System.out.println("\n\"" + input + "\" found in " + result.length + " documents:");
-            }
-            for (int i=0;i<result.length;i++) {
-                model.addElement(result[i]+"\n");
-                System.out.println(result[i]);
-            }
-            if(result.length==0)
-                JOptionPane.showMessageDialog(null, "There were no results found.",
-                  "Results not found ", JOptionPane.INFORMATION_MESSAGE);
-            else
-                scrollPane.setVisible(true);*/
-
             ArrayList<QueryResult> resultList = SearchFiles.searchList(input);
 
             if(resultList.size()!=0) {
@@ -115,6 +101,13 @@ public class InformationRetrievalForm {
                 model.addElement("\"" + input + "\" found in " + resultList.size() + " documents: \n");
                 System.out.println("\nIDF: " + df.format(idf));
                 System.out.println("\""+ input + "\" found in " + resultList.size() + " documents:");
+
+                /*ClassicSimilarity similarity = new ClassicSimilarity();
+
+                float tf   = similarity.tf(10);
+                idf   = similarity.idf(resultList.size(), docs);
+                System.out.println("new idf " + idf);*/
+
             }
             for (int i=0;i<resultList.size();i++) {
                 model.addElement(resultList.get(i) + "\n");
