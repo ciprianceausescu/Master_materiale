@@ -1,0 +1,18 @@
+Tema 2: Problema logaritmului discret
+
+Preliminarii:
+1. Algoritmul Pohlig-Hellman de gasire a logaritmului discret. Cand este el eficient? Cand nu este eficient?
+2. Metode de a testa primalitatea (ex: Miller-Rabin, Solovay-Strassen, Fermat test)
+
+Problema:
+Trimiteti-mi pe mail (mirunarosca@gmail.com) doua numere prime p si q, de cel putin 1024 biti 
+si cel mult 4096 biti fiecare, astfel incat q-1 sa fie multiplu de p. Eu voi testa ca numerele de voi sunt intr-adevar prime folosind testul:
+
+def test_primality(n):
+    for i in range(10):
+        if pow(random.randrange(1, n), n - 1, n) != 1:
+            return False
+    return True
+
+Daca ambele numere trec testul, va voi genera un g in range (1,q) si un x in range(1,q-1). Voi calcula g^x=y mod q
+si va voi trimite g si y. Vi se cere sa gasiti puterea x pe care am folosit-o in a genera pe y (sa rezolvati problema logaritmului discret)

@@ -6,12 +6,12 @@ import java.awt.Image;
 
 class ImagePanel extends JComponent {
     private Image image;
-    public ImagePanel(Image image) {
+    ImagePanel(Image image) {
         this.image = image;
     }
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(image, 0, 70, this);
+        g.drawImage(image, 0, 0, this);
     }
 }
