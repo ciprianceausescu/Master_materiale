@@ -15,60 +15,55 @@
  * limitations under the License.
  */
 package main;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class DocResults {
-  private double score;
-  private int docID;
-  private String docName;
-  private List<TermFrequencies> termsFreq;
+    private double docScore;
+    private int docUniquiIdentifier;
+    private String documentName;
+    private List<TermFrequencies> termFrequenciesList;
 
-  public String getDocName() {
-    return docName;
+    public String getDocumentName() {
+    return documentName;
   }
 
-  public void setDocName(String docName) {
-    this.docName = docName;
+    public void setDocumentName(String documentName) {
+    this.documentName = documentName;
   }
 
-  public double getScore() {
+    public double getDocScore() { return this.docScore; }
 
-    return score;
-  }
-
-  @Override
-  public String toString() {
-    String docResultsString = docName + "\t score=" + score + "\t ";
-    for (TermFrequencies termFrequencies : termsFreq) {
-      docResultsString += termFrequencies.toString();
+    @Override
+    public String toString() {
+        String docResultsString = documentName + "\t docScore=" + docScore + "\t ";
+        for (TermFrequencies termFrequencies : termFrequenciesList) {
+          docResultsString += termFrequencies.toString();
+        }
+        return docResultsString;
     }
-  return docResultsString;
+
+    public void setDocScore(double docScore) {
+    this.docScore = docScore;
   }
 
-  public void setScore(double score) {
-    this.score = score;
+    public int getDocUniquiIdentifier() { return docUniquiIdentifier; }
+
+    public void setDocUniquiIdentifier(int docUniquiIdentifier) {
+    this.docUniquiIdentifier = docUniquiIdentifier;
   }
 
-  public int getDocID() {   return docID;  }
-
-  public void setDocID(int docID) {
-    this.docID = docID;
+    public List<TermFrequencies> getTermFrequenciesList() {
+    return termFrequenciesList;
   }
 
-  public List<TermFrequencies> getTermsFreq() {
-    return termsFreq;
+    public void setTermFrequenciesList(List<TermFrequencies> newtermsFreq) {
+    this.termFrequenciesList = newtermsFreq;
   }
 
-  public void setTermsFreq(List<TermFrequencies> newtermsFreq) {
-    this.termsFreq = newtermsFreq;
-  }
-
-  boolean hasTerm(String term){
-    for (TermFrequencies termFrequencies : termsFreq) {
-      if(termFrequencies.term.equals(term)) return true;
+    boolean hasTerm(String term){
+        for (TermFrequencies termFrequencies : termFrequenciesList) {
+            if(termFrequencies.term.equals(term)) return true;
+        }
+        return false;
     }
-    return false;
-  }
 }

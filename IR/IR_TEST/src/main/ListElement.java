@@ -19,9 +19,9 @@ package main;
 import java.awt.Component;
 
 public class ListElement extends Component {
-  public ListElement(String Name)
-  {
-    super();
-    this.setName(Name);
-  }
+    public ListElement(String Name)
+    {
+        super();
+        this.setName(Name);
+    }
 }

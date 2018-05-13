@@ -45,108 +45,102 @@ import static org.apache.lucene.index.IndexOptions.DOCS_AND_FREQS_AND_POSITIONS;
 
 public class Indexer {
 
-  private IndexWriter writer;
+    private IndexWriter writer;
+    public Indexer(String indexDirectoryPath) throws IOException {
+        Directory indexDirectory =
+            FSDirectory.open(Paths.get(indexDirectoryPath));
 
-  public Indexer(String indexDirectoryPath) throws IOException {
-
-    Directory indexDirectory =
-        FSDirectory.open(Paths.get(indexDirectoryPath));
-
-    IndexWriterConfig config = new IndexWriterConfig(new RomanianAnalyzer());
-    //config.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
-
-    writer = new IndexWriter(indexDirectory, config);
-  }
-
-  public void close() throws IOException {
-    writer.close();
-  }
-
-  private Document getDocument(File file) throws IOException {
-    Document document = new Document();
-    Field contents = null;
-    String type = new Tika().detect(file);
-
-    FieldType fieldType = new FieldType();
-    fieldType.setStored(true);
-    fieldType.setStoreTermVectors(true);
-    fieldType.setIndexOptions(DOCS_AND_FREQS_AND_POSITIONS);
-    fieldType.setStoreTermVectorPayloads(true);
-    fieldType.setStoreTermVectorOffsets(true);
-    fieldType.setStoreTermVectorPositions(true);
-
-    if(type.contains("html")) {
-
-      contents = new Field(LuceneConstants.CONTENTS,
-          Jsoup.parse(file,null,"127.0.0.1").text(),
-          fieldType);
-
-    }else if(type.contains("pdf")) {
-
-      contents = new Field(LuceneConstants.CONTENTS,
-          new PDFTextStripper().getText(PDDocument.load(file)),
-          fieldType);
-
-    }else if(type.contains("doc")){
-
-      BufferedInputStream wordInputStream = new BufferedInputStream(new FileInputStream(file.getCanonicalPath()));
-      String text = null;
-      if (FileMagic.valueOf(wordInputStream) == FileMagic.OLE2) {
-        WordExtractor ex = new WordExtractor(wordInputStream);
-        text = ex.getText();
-        ex.close();
-      } else if(FileMagic.valueOf(wordInputStream) == FileMagic.OOXML) {
-        XWPFDocument doc = new XWPFDocument(wordInputStream);
-        XWPFWordExtractor extractor = new XWPFWordExtractor(doc);
-        text = extractor.getText();
-        extractor.close();
-      }
-      contents = new Field(LuceneConstants.CONTENTS, text,
-          fieldType);
-
-    }else if(type.contains("plain")) {
-
-      contents = new Field(LuceneConstants.CONTENTS,
-          new java.util.Scanner(file,"UTF-8").useDelimiter("\\A").next(),
-           fieldType);
+        IndexWriterConfig config = new IndexWriterConfig(new RomanianAnalyzer());
+        writer = new IndexWriter(indexDirectory, config);
     }
-    Field fileNameField = new Field(LuceneConstants.FILE_NAME,
-        file.getName(),StoredField.TYPE);
 
-    Field filePathField = new Field(LuceneConstants.FILE_PATH,
-        file.getCanonicalPath(),StoredField.TYPE);
-
-    if(contents!=null) {
-      document.add(contents);
-      document.add(fileNameField);
-      document.add(filePathField);
+    public void close() throws IOException {
+        writer.close();
     }
-    return document;
-  }
 
-  private void indexFile(File file) throws IOException {
-    System.out.println("Indexing "+file.getCanonicalPath());
-    String type = new Tika().detect(file);
-    System.out.println("Type: "+ type);
-    Document document = getDocument(file);
-    writer.addDocument(document);
-  }
+    private Document getDocument(File file) throws IOException {
+        Document document = new Document();
+        Field contents = null;
+        String type = new Tika().detect(file);
 
-  public int createIndex(String dataDirPath, LuceneFileFilter filter)
-      throws IOException {
+        FieldType fieldType = new FieldType();
+        fieldType.setStored(true);
+        fieldType.setStoreTermVectors(true);
+        fieldType.setIndexOptions(DOCS_AND_FREQS_AND_POSITIONS);
+        fieldType.setStoreTermVectorPayloads(true);
+        fieldType.setStoreTermVectorOffsets(true);
+        fieldType.setStoreTermVectorPositions(true);
 
-    File[] files = new File(dataDirPath).listFiles();
-    int innerDocs=0;
+        if(type.contains("html")) {
+            contents = new Field(LuceneConstants.CONTENTS,
+                Jsoup.parse(file,null,"127.0.0.1").text(), fieldType);
 
-    for (File file : files) {
-      if(!file.isDirectory() && !file.isHidden()
-          && file.exists() && file.canRead() && filter.accept(file)){
-        indexFile(file);
-      }else if(file.isDirectory() && file.exists() && file.canRead()){
-        innerDocs+=createIndex(file.getCanonicalPath(),filter);
-      }
+        }
+        else
+            if(type.contains("pdf")) {
+                contents = new Field(LuceneConstants.CONTENTS,
+                    new PDFTextStripper().getText(PDDocument.load(file)), fieldType);
+
+            }
+            else
+                if(type.contains("doc")){
+                    BufferedInputStream wordInputStream = new BufferedInputStream(new FileInputStream(file.getCanonicalPath()));
+                    String text = null;
+                    if (FileMagic.valueOf(wordInputStream) == FileMagic.OLE2) {
+                        WordExtractor ex = new WordExtractor(wordInputStream);
+                        text = ex.getText();
+                        ex.close();
+                    }
+                    else
+                        if(FileMagic.valueOf(wordInputStream) == FileMagic.OOXML) {
+                            XWPFDocument doc = new XWPFDocument(wordInputStream);
+                            XWPFWordExtractor extractor = new XWPFWordExtractor(doc);
+                            text = extractor.getText();
+                            extractor.close();
+                        }
+                    contents = new Field(LuceneConstants.CONTENTS, text, fieldType);
+                }
+                else
+                    if(type.contains("plain")) {
+                        contents = new Field(LuceneConstants.CONTENTS,
+                                new java.util.Scanner(file,"UTF-8").useDelimiter("\\A").next(), fieldType);
+                    }
+        Field fileNameField = new Field(LuceneConstants.FILE_NAME,
+            file.getName(),StoredField.TYPE);
+
+        Field filePathField = new Field(LuceneConstants.FILE_PATH,
+            file.getCanonicalPath(),StoredField.TYPE);
+
+        if(contents!=null) {
+            document.add(contents);
+            document.add(fileNameField);
+            document.add(filePathField);
+        }
+        return document;
     }
-    return innerDocs+writer.numDocs();
-  }
 
+    private void indexFile(File file) throws IOException {
+        System.out.println("Indexing file from path"+file.getCanonicalPath());
+        String type = new Tika().detect(file);
+        System.out.println("Type of file: "+ type);
+        Document document = getDocument(file);
+        writer.addDocument(document);
+    }
+
+    public int createIndex(String dataDirPath, LuceneFileFilter filter) throws IOException {
+
+        File[] files = new File(dataDirPath).listFiles();
+        int innerDocs=0;
+
+        for (File file : files) {
+            if(!file.isDirectory() && !file.isHidden() && file.exists() && file.canRead() && filter.accept(file)){
+                indexFile(file);
+            }
+            else
+                if(file.isDirectory() && file.exists() && file.canRead()){
+                    innerDocs+=createIndex(file.getCanonicalPath(),filter);
+                }
+        }
+        return innerDocs+writer.numDocs();
+    }
 }
