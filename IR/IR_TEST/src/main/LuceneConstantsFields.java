@@ -1,6 +1,6 @@
 package main;
 
-public class LuceneConstants {
+public class LuceneConstantsFields {
     public static final String CONTENTS = "continut";
     public static final String FILE_NAME = "filename";
     public static final String FILE_PATH = "filepath";

@@ -95,19 +95,19 @@ public class InfRetrieval {
                 if(input==null) return;
 
                 Searcher searcher = new Searcher("index",input);
-                ArrayList<DocResults> results = searcher.getResultedDocuments();
-                List<QueryStats> queryStats = searcher.statusQuery();
+                ArrayList<DocResults> docResults = searcher.getResultedDocuments();
+                List<QueryStats> queryStatsList = searcher.statusQuery();
                 //afisare stat query
-                for (QueryStats queryStat : queryStats) {
-                    model.addElement(queryStat.toString());
+                for (QueryStats queryStatObject : queryStatsList) {
+                    model.addElement(queryStatObject.toString());
                 }
 
                 //afisare rezultate
-                for (DocResults result : results) {
-                    model.addElement(result.toString());
-                    //result.get(LuceneConstants.CONTENTS)+"\n\n");
+                for (DocResults docResult : docResults) {
+                    model.addElement(docResult.toString());
+                    //result.get(LuceneConstantsFields.CONTENTS)+"\n\n");
                 }
-                if(results.size()==0)
+                if(docResults.size()==0)
                     JOptionPane.showMessageDialog(null, "There were no results found.",
                 "Results not found", JOptionPane.INFORMATION_MESSAGE);
                 else

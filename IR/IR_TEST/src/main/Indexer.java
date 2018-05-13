@@ -26,8 +26,6 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
 import org.apache.lucene.document.StoredField;
-import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
@@ -60,8 +58,8 @@ public class Indexer {
 
     private Document getDocument(File file) throws IOException {
         Document document = new Document();
-        Field contents = null;
-        String type = new Tika().detect(file);
+        Field fieldContents = null;
+        String fileType = new Tika().detect(file);
 
         FieldType fieldType = new FieldType();
         fieldType.setStored(true);
@@ -71,19 +69,19 @@ public class Indexer {
         fieldType.setStoreTermVectorOffsets(true);
         fieldType.setStoreTermVectorPositions(true);
 
-        if(type.contains("html")) {
-            contents = new Field(LuceneConstants.CONTENTS,
+        if(fileType.contains("html")) {
+            fieldContents = new Field(LuceneConstantsFields.CONTENTS,
                 Jsoup.parse(file,null,"127.0.0.1").text(), fieldType);
 
         }
         else
-            if(type.contains("pdf")) {
-                contents = new Field(LuceneConstants.CONTENTS,
+            if(fileType.contains("pdf")) {
+                fieldContents = new Field(LuceneConstantsFields.CONTENTS,
                     new PDFTextStripper().getText(PDDocument.load(file)), fieldType);
 
             }
             else
-                if(type.contains("doc")){
+                if(fileType.contains("doc")){
                     BufferedInputStream wordInputStream = new BufferedInputStream(new FileInputStream(file.getCanonicalPath()));
                     String text = null;
                     if (FileMagic.valueOf(wordInputStream) == FileMagic.OLE2) {
@@ -98,21 +96,21 @@ public class Indexer {
                             text = extractor.getText();
                             extractor.close();
                         }
-                    contents = new Field(LuceneConstants.CONTENTS, text, fieldType);
+                    fieldContents = new Field(LuceneConstantsFields.CONTENTS, text, fieldType);
                 }
                 else
-                    if(type.contains("plain")) {
-                        contents = new Field(LuceneConstants.CONTENTS,
+                    if(fileType.contains("plain")) {
+                        fieldContents = new Field(LuceneConstantsFields.CONTENTS,
                                 new java.util.Scanner(file,"UTF-8").useDelimiter("\\A").next(), fieldType);
                     }
-        Field fileNameField = new Field(LuceneConstants.FILE_NAME,
+        Field fileNameField = new Field(LuceneConstantsFields.FILE_NAME,
             file.getName(),StoredField.TYPE);
 
-        Field filePathField = new Field(LuceneConstants.FILE_PATH,
+        Field filePathField = new Field(LuceneConstantsFields.FILE_PATH,
             file.getCanonicalPath(),StoredField.TYPE);
 
-        if(contents!=null) {
-            document.add(contents);
+        if(fieldContents!=null) {
+            document.add(fieldContents);
             document.add(fileNameField);
             document.add(filePathField);
         }
@@ -120,27 +118,27 @@ public class Indexer {
     }
 
     private void indexFile(File file) throws IOException {
-        System.out.println("Indexing file from path"+file.getCanonicalPath());
+        System.out.println("Indexing file from path: "+file.getCanonicalPath());
         String type = new Tika().detect(file);
-        System.out.println("Type of file: "+ type);
+        System.out.println("Type of indexed file: "+ type);
         Document document = getDocument(file);
         writer.addDocument(document);
     }
 
     public int createIndex(String dataDirPath, LuceneFileFilter filter) throws IOException {
 
-        File[] files = new File(dataDirPath).listFiles();
-        int innerDocs=0;
+        File[] allFilesList = new File(dataDirPath).listFiles();
+        int innerDocsVar=0;
 
-        for (File file : files) {
+        for (File file : allFilesList) {
             if(!file.isDirectory() && !file.isHidden() && file.exists() && file.canRead() && filter.accept(file)){
                 indexFile(file);
             }
             else
                 if(file.isDirectory() && file.exists() && file.canRead()){
-                    innerDocs+=createIndex(file.getCanonicalPath(),filter);
+                    innerDocsVar+=createIndex(file.getCanonicalPath(),filter);
                 }
         }
-        return innerDocs+writer.numDocs();
+        return innerDocsVar+writer.numDocs();
     }
 }
