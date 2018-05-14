@@ -16,13 +16,11 @@
  */
 package main;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
 import org.apache.lucene.document.Document;
@@ -83,6 +81,20 @@ public class Searcher {
         ScoreDoc[] hits = docs.scoreDocs;
         for (ScoreDoc hit : hits) {
             DocResults newDoc = new DocResults();
+            String path = indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME);
+            //Eroare daca nu indexezi fisierul pentru ca file
+            File filePath = new File(LuceneConstantsFields.FILES_PATH + "\\" + path);
+
+            int count;
+            try(Scanner sc = new Scanner(new FileInputStream(filePath))){
+                count=0;
+                while(sc.hasNext()){
+                    sc.next();
+                    count++;
+                }
+            }
+
+            newDoc.setOccurenceOfWord(count);
             newDoc.setDocUniquiIdentifier(hit.doc);
             newDoc.setDocScore(Math.round(hit.score*1000.0)/1000.0);
             newDoc.setDocumentName(indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME));
@@ -150,10 +162,13 @@ public class Searcher {
         {
             clauses = ((BooleanQuery) q).clauses();
         }
-
+        //In functie de interogare poate fi null sau o lista cu 2 sau mai multe cuvinte cautare
+        System.out.println(clauses);
         if(clauses == null){
+            //Cand avem un singur element in interogare
             QueryStats newStat = new QueryStats();
             newStat.token = q.toString(LuceneConstantsFields.CONTENTS);
+            //Cred ca aici trebuie sa fie 0 / 1 in cazul in care elementul se gaseste sau nu in document
             newStat.tfq = 1;
             newStat.df = 0;
             if(results!=null) {
@@ -168,6 +183,7 @@ public class Searcher {
         stats.add(newStat);
         }
         else {
+            //Cand avem mai multe elemente in interogare
             List<BooleanClause> uniqueClauses = new ArrayList<>();
             for (BooleanClause clause : clauses) {
                 if(uniqueClauses.contains(clause))  {
@@ -253,7 +269,8 @@ public class Searcher {
                                 tf = postings.freq();
                                 boolean contains=false;
                                 for (TermFrequencies termFrequency : termFrequencies) {
-                                    if(termFrequency.term.equals(term)) contains = true;
+                                    if(termFrequency.term.equals(term))
+                                        contains = true;
                                 }
 
                                 if(!contains) {

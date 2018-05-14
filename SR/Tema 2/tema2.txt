@@ -1,4 +1,4 @@
-Tema 2: Problema logaritmului discret
+ Tema 2: Problema logaritmului discret
 
 Preliminarii:
 1. Algoritmul Pohlig-Hellman de gasire a logaritmului discret. Cand este el eficient? Cand nu este eficient?

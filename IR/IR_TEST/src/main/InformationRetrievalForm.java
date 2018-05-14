@@ -1,13 +1,10 @@
 package main;
 
 import javax.imageio.ImageIO;
-import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -23,13 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexNotFoundException;
 import org.apache.lucene.search.highlight.InvalidTokenOffsetsException;
 
-public class InfRetrieval {
-    private JPanel mainPanel;
-
+public class InformationRetrievalForm {
     public static void main(String[] args) throws IOException {
         JFrame frame = new JFrame("Indexer");
         BufferedImage backgroundImage = ImageIO.read(new File("C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\IR_TEST\\src\\img.png"));
@@ -68,6 +62,7 @@ public class InfRetrieval {
                         String fileName = "index";
                         FileUtils.cleanDirectory(new File(fileName));
                         Indexer indexer = new Indexer(fileName);
+                        LuceneConstantsFields.FILES_PATH = fileopen.getSelectedFile().toString();
                         indexer.createIndex(fileopen.getSelectedFile().toString(), new LuceneFileFilter());
                         indexer.close();
 
@@ -99,11 +94,12 @@ public class InfRetrieval {
                 List<QueryStats> queryStatsList = searcher.statusQuery();
                 //afisare stat query
                 for (QueryStats queryStatObject : queryStatsList) {
-                    model.addElement(queryStatObject.toString());
+                    model.addElement("Token information: " + queryStatObject.toString());
                 }
-
+                model.addElement("\n");
                 //afisare rezultate
                 for (DocResults docResult : docResults) {
+                    model.addElement("Document name: ");
                     model.addElement(docResult.toString());
                     //result.get(LuceneConstantsFields.CONTENTS)+"\n\n");
                 }

@@ -15,13 +15,18 @@
  * limitations under the License.
  */
 package main;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 public class DocResults {
     private double docScore;
     private int docUniquiIdentifier;
     private String documentName;
     private List<TermFrequencies> termFrequenciesList;
+    private int occurenceOfWord;
 
     public String getDocumentName() {
     return documentName;
@@ -35,9 +40,10 @@ public class DocResults {
 
     @Override
     public String toString() {
-        String docResultsString = documentName + "\t docScore=" + docScore + "\t ";
+        String docResultsString = "\"" + documentName + "\" | " + "\t docScore = " + docScore + "\t | ";
         for (TermFrequencies termFrequencies : termFrequenciesList) {
-          docResultsString += termFrequencies.toString();
+            termFrequencies.setTotalWords(occurenceOfWord);
+            docResultsString += termFrequencies.toString();
         }
         return docResultsString;
     }
@@ -65,5 +71,13 @@ public class DocResults {
             if(termFrequencies.term.equals(term)) return true;
         }
         return false;
+    }
+
+    public int getOccurenceOfWord() {
+        return occurenceOfWord;
+    }
+
+    public void setOccurenceOfWord(int occurenceOfWord) {
+        this.occurenceOfWord = occurenceOfWord;
     }
 }
