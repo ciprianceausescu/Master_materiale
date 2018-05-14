@@ -82,8 +82,12 @@ public class Searcher {
         for (ScoreDoc hit : hits) {
             DocResults newDoc = new DocResults();
             String path = indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME);
+            File filePath;
             //Eroare daca nu indexezi fisierul pentru ca file
-            File filePath = new File(LuceneConstantsFields.FILES_PATH + "\\" + path);
+            if(LuceneConstantsFields.FILES_PATH != null)
+                filePath = new File(LuceneConstantsFields.FILES_PATH + "\\" + path);
+            else
+                filePath = new File("C:\\Users\\Ciprian Mihai\\Documents\\Docs\\" + path);
 
             int count;
             try(Scanner sc = new Scanner(new FileInputStream(filePath))){
@@ -163,7 +167,6 @@ public class Searcher {
             clauses = ((BooleanQuery) q).clauses();
         }
         //In functie de interogare poate fi null sau o lista cu 2 sau mai multe cuvinte cautare
-        System.out.println(clauses);
         if(clauses == null){
             //Cand avem un singur element in interogare
             QueryStats newStat = new QueryStats();

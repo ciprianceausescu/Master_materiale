@@ -25,6 +25,6 @@ public class TermFrequencies {
     public String toString() {
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
-        return term + " = " + freq + "/" + totalWords + " = " +df.format(freq/totalWords) +" | ";
+        return "TF: \"" + term + "\" = " + freq + "/" + totalWords + " = " +df.format(freq/totalWords) +" | ";
   }
 }

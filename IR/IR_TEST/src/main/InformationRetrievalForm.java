@@ -92,12 +92,15 @@ public class InformationRetrievalForm {
                 Searcher searcher = new Searcher("index",input);
                 ArrayList<DocResults> docResults = searcher.getResultedDocuments();
                 List<QueryStats> queryStatsList = searcher.statusQuery();
+                model.addElement("Found " + docResults.size() + "hits.");
+                model.addElement("\n");
                 //afisare stat query
                 for (QueryStats queryStatObject : queryStatsList) {
                     model.addElement("Token information: " + queryStatObject.toString());
                 }
                 model.addElement("\n");
                 //afisare rezultate
+
                 for (DocResults docResult : docResults) {
                     model.addElement("Document name: ");
                     model.addElement(docResult.toString());

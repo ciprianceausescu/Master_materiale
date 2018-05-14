@@ -8,8 +8,10 @@ public class QueryStats {
 
     @Override
     public String toString() {
-        return  "\""+ token + "\"" + "\t with DF = " + df +
-            "\t | IDF = " + idf +
-            "\t | TFQ = " + tfq + " " ;
+        /*return  "\""+ token + "\"" + "\t with DF = " + df +
+                "\t | IDF = " + idf +
+                "\t | TFQ = " + tfq + " " ;*/
+        return  "\""+ token + "\"" + "\t with Doc Freq = " + df +
+            "\t | IDF = " + idf;
     }
 }
