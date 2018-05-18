@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
 
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
@@ -45,6 +46,7 @@ import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.highlight.*;
 import org.apache.lucene.search.similarities.ClassicSimilarity;
 import org.apache.lucene.search.similarities.TFIDFSimilarity;
+import org.apache.lucene.search.uhighlight.UnifiedHighlighter;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Bits;
@@ -106,15 +108,8 @@ public class Searcher {
             results.add(newDoc);
         }
 
-        System.out.println("Found " + results.size() + " hits.");
-
-        results.sort(new Comparator<DocResults>() {
-            @Override
-            public int compare(DocResults o1, DocResults o2) {
-                int ret = (int) (o1.getDocScore() - o2.getDocScore());
-                return ret;
-            }
-        });
+        System.out.println("Found results in: " + results.size() + " documents.");
+        Collections.sort(results, new DocResultComparator());
 
         //Uses HTML &lt;B&gt;&lt;/B&gt; tag to highlight the searched terms
         SimpleHTMLFormatter formatter = new SimpleHTMLFormatter();
@@ -123,8 +118,39 @@ public class Searcher {
         //Basically the matching score in layman terms
         QueryScorer scorer = new QueryScorer(q);
 
+        //used to markup highlighted terms found in the best sections of a text
+        UnifiedHighlighter highlighter = new UnifiedHighlighter(indexSearcher, analyzer);
+
+        org.apache.lucene.search.highlight.Highlighter highlighter2 =
+                new org.apache.lucene.search.highlight.Highlighter(formatter, new org.apache.lucene.search.highlight.Scorer() {
+                    @Override
+                    public TokenStream init(TokenStream tokenStream) throws IOException {
+                        return null;
+                    }
+
+                    @Override
+                    public void startFragment(TextFragment newFragment) {
+
+                    }
+
+                    @Override
+                    public float getTokenScore() {
+                        return 0;
+                    }
+
+                    @Override
+                    public float getFragmentScore() {
+                        return 0;
+                    }
+                });
 
         org.apache.lucene.search.highlight.Fragmenter fragmenter =  new SimpleFragmenter();
+        highlighter2.setTextFragmenter(fragmenter);
+        String[] fragments = highlighter2.getBestFragments(analyzer,LuceneConstantsFields.CONTENTS,"iez",5);
+        System.out.println("FRAGMENTS\n");
+        for (String fragment : fragments) {
+            System.out.println("\n\n FRAGMENTS : "+fragment);
+        }
 
         //It breaks text up into same-size texts but does not split up spans
         //SimpleSpanFragmenter fragmenter = new SimpleSpanFragmenter(scorer, 10);
@@ -136,11 +162,11 @@ public class Searcher {
         //highlighter.setTextFragmenter(fragmenter);
 
         //Iterate over found results
-        /*for (int i = 0; i < hits.length; i++)
+        for (int i = 0; i < hits.length; i++)
         {
             int docid = hits[i].doc;
             Document doc = indexSearcher.doc(docid);
-            String title = doc.get("path");
+            String title = indexSearcher.doc(docid).get(LuceneConstantsFields.FILE_NAME);
 
             //Printing - to which document result belongs
             System.out.println("Path " + " : " + title);
@@ -153,7 +179,12 @@ public class Searcher {
 
             //Get highlighted text fragments
             //String[] frags = highlighter.getBestFragments(stream, text, 10);
-        }*/
+        }
+        String[] highlights = highlighter.highlight(LuceneConstantsFields.CONTENTS,q,docs,5);
+        System.out.println("HIGHLIGHTS: ");
+        for (String highlight : highlights) {
+            System.out.println("\n\n HIGHLIGHT  " + highlight);
+        }
     }
 
     public List<QueryStats> statusQuery(){
