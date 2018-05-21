@@ -1,0 +1,8 @@
+com\company\shop\controlers\HomeController.class
+com\company\shop\model\Category.class
+com\company\shop\persistance\ProductDao.class
+com\company\shop\services\ProductService.class
+com\company\shop\filters\error\ExceptionHandler.class
+com\company\shop\model\ProductDto.class
+com\company\shop\model\UserDto.class
+com\company\shop\services\UserService.class

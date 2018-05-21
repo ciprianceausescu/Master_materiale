@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
 
+import com.sun.deploy.util.StringUtils;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
 import org.apache.lucene.document.Document;
@@ -108,7 +109,7 @@ public class Searcher {
             results.add(newDoc);
         }
 
-        System.out.println("Found results in: " + results.size() + " documents.");
+        System.out.println("Found results in: " + results.size() + " documents:");
         Collections.sort(results, new DocResultComparator());
 
         //Uses HTML &lt;B&gt;&lt;/B&gt; tag to highlight the searched terms
@@ -147,7 +148,6 @@ public class Searcher {
         org.apache.lucene.search.highlight.Fragmenter fragmenter =  new SimpleFragmenter();
         highlighter2.setTextFragmenter(fragmenter);
         String[] fragments = highlighter2.getBestFragments(analyzer,LuceneConstantsFields.CONTENTS,"iez",5);
-        System.out.println("FRAGMENTS\n");
         for (String fragment : fragments) {
             System.out.println("\n\n FRAGMENTS : "+fragment);
         }
@@ -169,22 +169,36 @@ public class Searcher {
             String title = indexSearcher.doc(docid).get(LuceneConstantsFields.FILE_NAME);
 
             //Printing - to which document result belongs
-            System.out.println("Path " + " : " + title);
+            System.out.println("Path" + " : " + title);
 
             //Get stored text from found document
             String text = doc.get("contents");
-
-            //Create token stream
-            //TokenStream stream = TokenSources.getAnyTokenStream(reader, docid, "contents", analyzer);
-
-            //Get highlighted text fragments
-            //String[] frags = highlighter.getBestFragments(stream, text, 10);
         }
+
         String[] highlights = highlighter.highlight(LuceneConstantsFields.CONTENTS,q,docs,5);
-        System.out.println("HIGHLIGHTS: ");
+
+        System.out.println("\nHIGHLIGHTS: ");
         for (String highlight : highlights) {
-            System.out.println("\n\n HIGHLIGHT  " + highlight);
+            System.out.println("\nHIGHLIGHT RESULT:\n" + highlight);
         }
+
+        /*ArrayList<String> filteredFragments = new ArrayList<>();
+
+        HashSet<String> alreadyShown = new HashSet<>();
+        for (String highlight : highlights) {
+            int indexOfTerm = highlight.indexOf("<b>") + 3;
+            String term = highlight.substring(indexOfTerm, indexOfTerm + 3);
+            term = term.toLowerCase();
+
+            if (alreadyShown.contains(term))
+                continue;
+            alreadyShown.add(term);
+
+            filteredFragments.add(highlight);
+        }
+        System.out.println();
+        System.out.println("HIGHLIGHTS: ");
+        System.out.println(StringUtils.join(filteredFragments, "..."));*/
     }
 
     public List<QueryStats> statusQuery(){
