@@ -12,8 +12,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException, TikaException, ParseException {
-        RomanianIndexer indexer = new RomanianIndexer("C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\SearchEngine-master\\documents", "C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\SearchEngine-master\\index");
-        RomanianSearcher searcher = new RomanianSearcher("C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\SearchEngine-master\\index");
+        RomanianIndexer indexer = new RomanianIndexer("D:\\F Drive\\master\\an1\\sem2\\IR\\documents", "D:\\F Drive\\master\\an1\\sem2\\IR\\indexInfo");
+        RomanianSearcher searcher = new RomanianSearcher("D:\\F Drive\\master\\an1\\sem2\\IR\\indexInfo");
 
         int option = -1;
         Scanner scanner = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class Main {
                     String query = scanner.nextLine();
 
                     TopDocs topDocsResult = searcher.DoQuery(query);
-                    String results = searcher.InterpretTopDocs(topDocsResult);
+                    String results = searcher.InterpretTopDocs(topDocsResult, query);
                     if (results == "")
                     {
                         results = "No results found!";

@@ -170,9 +170,6 @@ public class Searcher {
 
             //Printing - to which document result belongs
             System.out.println("Path" + " : " + title);
-
-            //Get stored text from found document
-            String text = doc.get("contents");
         }
 
         String[] highlights = highlighter.highlight(LuceneConstantsFields.CONTENTS,q,docs,5);
@@ -181,24 +178,6 @@ public class Searcher {
         for (String highlight : highlights) {
             System.out.println("\nHIGHLIGHT RESULT:\n" + highlight);
         }
-
-        /*ArrayList<String> filteredFragments = new ArrayList<>();
-
-        HashSet<String> alreadyShown = new HashSet<>();
-        for (String highlight : highlights) {
-            int indexOfTerm = highlight.indexOf("<b>") + 3;
-            String term = highlight.substring(indexOfTerm, indexOfTerm + 3);
-            term = term.toLowerCase();
-
-            if (alreadyShown.contains(term))
-                continue;
-            alreadyShown.add(term);
-
-            filteredFragments.add(highlight);
-        }
-        System.out.println();
-        System.out.println("HIGHLIGHTS: ");
-        System.out.println(StringUtils.join(filteredFragments, "..."));*/
     }
 
     public List<QueryStats> statusQuery(){

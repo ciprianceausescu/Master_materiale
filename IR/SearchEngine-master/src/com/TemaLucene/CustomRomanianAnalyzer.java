@@ -27,8 +27,8 @@ import java.util.Scanner;
 
 public class CustomRomanianAnalyzer extends StopwordAnalyzerBase {
     private final CharArraySet stemExclusionSet;
-    public static final String ROMANIAN_STOPWORDS_FILE = "C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\SearchEngine-master\\resources\\stopwords_ro.txt";
-    public static final String DEFAULT_STOPWORDS_FILE = "C:\\Users\\Ciprian Mihai\\Desktop\\Master_materiale\\IR\\SearchEngine-master\\resources\\default_stopwords.txt";
+    public static final String ROMANIAN_STOPWORDS_FILE = "D:\\F Drive\\master\\an1\\sem2\\IR\\resources\\stopwords_ro.txt";
+    public static final String DEFAULT_STOPWORDS_FILE = "D:\\F Drive\\master\\an1\\sem2\\IR\\resources\\default_stopwords.txt";
     private static final String STOPWORDS_COMMENT = "#";
 
     public static CharArraySet getDefaultStopSet() {
@@ -106,6 +106,8 @@ public class CustomRomanianAnalyzer extends StopwordAnalyzerBase {
 
         static {
             try {
+//                ROMANIAN_STOPWORDS_SET = CustomRomanianAnalyzer.loadStopwordSet(true, CustomRomanianAnalyzer.class, ROMANIAN_STOPWORDS_FILE, STOPWORDS_COMMENT);
+//                DEFAULT_STOPWORDS_SET = CustomRomanianAnalyzer.loadStopwordSet(true, CustomRomanianAnalyzer.class, DEFAULT_STOPWORDS_FILE, STOPWORDS_COMMENT);
                 DEFAULT_STOPWORDS_SET = ReadFromFile(DEFAULT_STOPWORDS_FILE);
                 ROMANIAN_STOPWORDS_SET = ReadFromFile(ROMANIAN_STOPWORDS_FILE);
 

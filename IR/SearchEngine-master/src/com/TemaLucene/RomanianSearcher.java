@@ -16,7 +16,6 @@ import org.apache.lucene.store.FSDirectory;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,32 +70,21 @@ public class RomanianSearcher
         return m_indexSearcher.search(query, 100);
     }
 
-    public String InterpretTopDocs(TopDocs topDocsResult) throws IOException {
+    public String InterpretTopDocs(TopDocs topDocsResult, String queryString) throws IOException, ParseException {
         String ret = "";
         for (int i = 0; i < topDocsResult.scoreDocs.length; ++i)
         {
             ScoreDoc scoreDoc = topDocsResult.scoreDocs[i];
             Document retrievedDoc = m_indexSearcher.doc(scoreDoc.doc);
+            RelevantContextTool relevantContextTool = new RelevantContextTool(queryString, retrievedDoc);
             ret += Integer.toString(i) + ". Path: " + retrievedDoc.get("path"); // here we can actually retrieve all the fields we saved
             ret += "\n" + scoreDoc.toString();
+            ret += "\nContext:\n";
+                ret += relevantContextTool.extractMostRelevantContext();
+            ret += "\n";
             ret += "\n";
         }
         return ret;
     }
 
-    public ArrayList<String> InterpretTopDocsList(TopDocs topDocsResult) throws IOException {
-        String ret = "";
-        ArrayList<String> result = new ArrayList<>();
-        for (int i = 0; i < topDocsResult.scoreDocs.length; ++i)
-        {
-            ScoreDoc scoreDoc = topDocsResult.scoreDocs[i];
-            Document retrievedDoc = m_indexSearcher.doc(scoreDoc.doc);
-            String [] items = retrievedDoc.get("path").split("\\\\");
-            result.add(Integer.toString(i) + ". Path: " + items[items.length-1] + ". Score: " + scoreDoc.toString());
-            ret += Integer.toString(i) + ". Path: " + retrievedDoc.get("path"); // here we can actually retrieve all the fields we saved
-            ret += "\n" + scoreDoc.toString();
-            ret += "\n";
-        }
-        return result;
-    }
 }
