@@ -1,54 +1,59 @@
 package main;
+
+/**
+ * Created by Ciprian Mihai on 4/01/2018.
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Diacritice {
+public class DiacriticeRomana {
     public static ArrayList<String> FindAllPossibleDiacriticWords(String query) {
         char[] charArrayStrippedOfDiacritics = stripOfDiacritics(query);
 
-        ArrayList<String> returnArray = new ArrayList<>();
+        ArrayList<String> resultArray = new ArrayList<>();
         ArrayList<Pair> queriesToBeProcessed = new ArrayList<>();
-        returnArray.add(new String(charArrayStrippedOfDiacritics));
+        resultArray.add(new String(charArrayStrippedOfDiacritics));
         queriesToBeProcessed.add(new Pair(charArrayStrippedOfDiacritics,0));
 
         while (!queriesToBeProcessed.isEmpty())
         {
-            Pair queryTested = queriesToBeProcessed.get(0);
+            Pair queryTestedPair = queriesToBeProcessed.get(0);
             queriesToBeProcessed.remove(0);
 
-            for (int i = queryTested.getIndex(); i < queryTested.getQuery().length; i++)
+            for (int i = queryTestedPair.getIndex(); i < queryTestedPair.getQuery().length; i++)
             {
-                char[] queryTestedCopy = Arrays.copyOf(queryTested.getQuery(),queryTested.getQuery().length);
-                switch (queryTested.getQuery()[i])
+                char[] queryTestedPairCopy = Arrays.copyOf(queryTestedPair.getQuery(),queryTestedPair.getQuery().length);
+                switch (queryTestedPair.getQuery()[i])
                 {
                     case 'a':
-                        queryTestedCopy[i]='ă';
-                        returnArray.add(new String(queryTestedCopy));
-                        queriesToBeProcessed.add(new Pair(queryTestedCopy,i+1));
-                        char[] queryTestedCopyCopy = Arrays.copyOf(queryTestedCopy,queryTestedCopy.length);
+                        queryTestedPairCopy[i]='ă';
+                        resultArray.add(new String(queryTestedPairCopy));
+                        queriesToBeProcessed.add(new Pair(queryTestedPairCopy,i+1));
+                        char[] queryTestedCopyCopy = Arrays.copyOf(queryTestedPairCopy,queryTestedPairCopy.length);
                         queryTestedCopyCopy[i]='â';
-                        returnArray.add(new String(queryTestedCopyCopy));
+                        resultArray.add(new String(queryTestedCopyCopy));
                         queriesToBeProcessed.add(new Pair(queryTestedCopyCopy,i+1));
                         break;
                     case 'i':
-                        queryTestedCopy[i]='î';
-                        returnArray.add(new String(queryTestedCopy));
-                        queriesToBeProcessed.add(new Pair(queryTestedCopy,i+1));
+                        queryTestedPairCopy[i]='î';
+                        resultArray.add(new String(queryTestedPairCopy));
+                        queriesToBeProcessed.add(new Pair(queryTestedPairCopy,i+1));
                         break;
                     case 's':
-                        queryTestedCopy[i]=537;
-                        returnArray.add(new String(queryTestedCopy));
-                        queriesToBeProcessed.add(new Pair(queryTestedCopy,i+1));
+                        queryTestedPairCopy[i]=537;
+                        resultArray.add(new String(queryTestedPairCopy));
+                        queriesToBeProcessed.add(new Pair(queryTestedPairCopy,i+1));
                         break;
                     case 't':
-                        queryTestedCopy[i]=539;
-                        returnArray.add(new String(queryTestedCopy));
-                        queriesToBeProcessed.add(new Pair(queryTestedCopy,i+1));
+                        queryTestedPairCopy[i]=539;
+                        resultArray.add(new String(queryTestedPairCopy));
+                        queriesToBeProcessed.add(new Pair(queryTestedPairCopy,i+1));
                         break;
                     }
                 }
             }
-        return returnArray;
+        return resultArray;
     }
 
     public static char[] stripOfDiacritics(String query){

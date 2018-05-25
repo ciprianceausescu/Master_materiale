@@ -1,5 +1,9 @@
 package main;
 
+/**
+ * Created by Ciprian Mihai on 4/01/2018.
+ */
+
 import java.io.File;
 import java.io.FileFilter;
 

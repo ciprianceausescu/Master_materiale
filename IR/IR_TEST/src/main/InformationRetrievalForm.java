@@ -1,5 +1,9 @@
 package main;
 
+/**
+ * Created by Ciprian Mihai on 4/01/2018.
+ */
+
 import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -7,7 +11,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SpringLayout;
 import java.awt.*;
@@ -91,11 +94,11 @@ public class InformationRetrievalForm {
 
                 Searcher searcher = new Searcher("index",input);
                 ArrayList<DocResults> docResults = searcher.getResultedDocuments();
-                List<QueryStats> queryStatsList = searcher.statusQuery();
+                List<QueryStatuses> queryStatusesList = searcher.statusQuery();
                 model.addElement("Found " + docResults.size() + "hits.");
                 model.addElement("\n");
                 //afisare stat query
-                for (QueryStats queryStatObject : queryStatsList) {
+                for (QueryStatuses queryStatObject : queryStatusesList) {
                     model.addElement("Token information: " + queryStatObject.toString());
                 }
                 model.addElement("\n");

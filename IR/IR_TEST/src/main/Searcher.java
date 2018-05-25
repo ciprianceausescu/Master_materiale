@@ -1,20 +1,8 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package main;
+
+/**
+ * Created by Ciprian Mihai on 3/20/2018.
+ */
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +10,6 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
 
-import com.sun.deploy.util.StringUtils;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.ro.RomanianAnalyzer;
 import org.apache.lucene.document.Document;
@@ -68,7 +55,7 @@ public class Searcher {
         Directory directory = FSDirectory.open(Paths.get(indexDirectoryPath));
         results = new ArrayList<>();
 
-        String queryWithoutDiacritics = new String(Diacritice.stripOfDiacritics(query));
+        String queryWithoutDiacritics = new String(DiacriticeRomana.stripOfDiacritics(query));
         try {
             q= new QueryParser(LuceneConstantsFields.CONTENTS, analyzer).parse(queryWithoutDiacritics);
         }
@@ -102,10 +89,10 @@ public class Searcher {
             }
 
             newDoc.setOccurenceOfWord(count);
-            newDoc.setDocUniquiIdentifier(hit.doc);
-            newDoc.setDocScore(Math.round(hit.score*1000.0)/1000.0);
+            newDoc.setDocumentUniquiIdentifier(hit.doc);
+            newDoc.setDocumentScore(Math.round(hit.score*1000.0)/1000.0);
             newDoc.setDocumentName(indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME));
-            newDoc.setTermFrequenciesList(computeTermFreq(hit.doc));
+            newDoc.setTermFrequenciesSimpleList(computeTermFreq(hit.doc));
             results.add(newDoc);
         }
 
@@ -180,10 +167,10 @@ public class Searcher {
         }
     }
 
-    public List<QueryStats> statusQuery(){
+    public List<QueryStatuses> statusQuery(){
         if(q==null) return null;
 
-        List<QueryStats> stats = new ArrayList<>();
+        List<QueryStatuses> stats = new ArrayList<>();
 
         List<BooleanClause> clauses = null;
         if(q instanceof BooleanQuery)
@@ -193,14 +180,14 @@ public class Searcher {
         //In functie de interogare poate fi null sau o lista cu 2 sau mai multe cuvinte cautare
         if(clauses == null){
             //Cand avem un singur element in interogare
-            QueryStats newStat = new QueryStats();
-            newStat.token = q.toString(LuceneConstantsFields.CONTENTS);
+            QueryStatuses newStat = new QueryStatuses();
+            newStat.tokenElement = q.toString(LuceneConstantsFields.CONTENTS);
             //Cred ca aici trebuie sa fie 0 / 1 in cazul in care elementul se gaseste sau nu in document
             newStat.tfq = 1;
             newStat.df = 0;
             if(results!=null) {
                 for (DocResults result : results) {
-                    if(result.hasTerm(newStat.token)){
+                    if(result.hasTerm(newStat.tokenElement)){
                         newStat.df++;
                     }
                 }
@@ -214,8 +201,8 @@ public class Searcher {
             List<BooleanClause> uniqueClauses = new ArrayList<>();
             for (BooleanClause clause : clauses) {
                 if(uniqueClauses.contains(clause))  {
-                    for (QueryStats stat : stats) {
-                        if(stat.token.equals(clause.getQuery().toString(LuceneConstantsFields.CONTENTS)))
+                    for (QueryStatuses stat : stats) {
+                        if(stat.tokenElement.equals(clause.getQuery().toString(LuceneConstantsFields.CONTENTS)))
                         {
                             stat.tfq++;
                         }
@@ -224,14 +211,14 @@ public class Searcher {
                 }
 
                 uniqueClauses.add(clause);
-                QueryStats newStat = new QueryStats();
-                newStat.token = clause.getQuery().toString(LuceneConstantsFields.CONTENTS);
+                QueryStatuses newStat = new QueryStatuses();
+                newStat.tokenElement = clause.getQuery().toString(LuceneConstantsFields.CONTENTS);
                 newStat.tfq = 1;
                 newStat.df = 0;
 
                 if(results!=null) {
                     for (DocResults result : results) {
-                        if(result.hasTerm(newStat.token)){
+                        if(result.hasTerm(newStat.tokenElement)){
                             newStat.df++;
                         }
                     }

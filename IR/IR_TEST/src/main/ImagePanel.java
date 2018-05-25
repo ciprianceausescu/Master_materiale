@@ -1,5 +1,9 @@
 package main;
 
+/**
+ * Created by Ciprian Mihai on 4/01/2018.
+ */
+
 import javax.swing.JComponent;
 import java.awt.Graphics;
 import java.awt.Image;
