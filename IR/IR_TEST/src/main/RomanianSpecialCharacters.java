@@ -6,16 +6,18 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
-public class DiacriticeRomana {
+//Această clasă este folosită pentru indexarea documentelor care conțin diacritice
+public class RomanianSpecialCharacters {
     public static ArrayList<String> FindAllPossibleDiacriticWords(String query) {
+        //Vector de caractere obținut prin apelul metodei stripOfDiactritics
         char[] charArrayStrippedOfDiacritics = stripOfDiacritics(query);
 
         ArrayList<String> resultArray = new ArrayList<>();
+        //Se crează o listă de interogări care vor fi procesate
         ArrayList<Pair> queriesToBeProcessed = new ArrayList<>();
         resultArray.add(new String(charArrayStrippedOfDiacritics));
         queriesToBeProcessed.add(new Pair(charArrayStrippedOfDiacritics,0));
-
+        //Dacă lista de interogări are elemente vom itera prin toate elementele acestei liste
         while (!queriesToBeProcessed.isEmpty())
         {
             Pair queryTestedPair = queriesToBeProcessed.get(0);
@@ -56,23 +58,29 @@ public class DiacriticeRomana {
         return resultArray;
     }
 
+    //Metoda stripOfDiacritics realizează conversia dintre caracterele speciale, cu diacritice, în caracterele
+    //echivalente, dar fără diactritice
     public static char[] stripOfDiacritics(String query){
         char[] charArrayStrippedOfDiacritics = query.toLowerCase().toCharArray();
         for(int i=0; i<query.length();i++) {
             switch (charArrayStrippedOfDiacritics[i])
             {
+                //Cazul în care avem ă sau â
                 case 'ă':
                 case 'â':
                     charArrayStrippedOfDiacritics[i] = 'a';
                     break;
+                //Cazul în care avem ș
                 case 537:
                 case 351:
                     charArrayStrippedOfDiacritics[i] = 's';
                     break;
+                //Cazul în care avem ț
                 case 539:
                 case 355:
                     charArrayStrippedOfDiacritics[i] = 't';
                     break;
+                //Cazul în care avem î
                 case 'î':
                     charArrayStrippedOfDiacritics[i] = 'i';
                     break;

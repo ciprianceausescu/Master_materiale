@@ -6,7 +6,7 @@ package main;
 
 import java.io.File;
 import java.io.FileFilter;
-
+//Clasă care filtrează după tipurile de fișiere acceptate pentru a fi indexate
 public class LuceneFileFilter implements FileFilter {
 
     @Override

@@ -39,41 +39,41 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRef;
+//Clasa Searcher, care realizează interogările din aplicație
+public class LuceneCustomRomanianSearcher {
 
-public class Searcher {
+    IndexReader indexReaderObject;
 
-    IndexReader indexReader;
-
-    IndexSearcher indexSearcher;
+    IndexSearcher indexSearcherObject;
 
     ArrayList<DocResults> results;
 
-    Query q;
+    Query query;
 
-    public Searcher(String indexDirectoryPath, String query) throws IndexNotFoundException, IOException, InvalidTokenOffsetsException {
+    public LuceneCustomRomanianSearcher(String indexDirectoryPath, String query) throws IndexNotFoundException, IOException, InvalidTokenOffsetsException {
         RomanianAnalyzer analyzer = new RomanianAnalyzer();
         Directory directory = FSDirectory.open(Paths.get(indexDirectoryPath));
         results = new ArrayList<>();
 
-        String queryWithoutDiacritics = new String(DiacriticeRomana.stripOfDiacritics(query));
+        String queryWithoutDiacritics = new String(RomanianSpecialCharacters.stripOfDiacritics(query));
         try {
-            q= new QueryParser(LuceneConstantsFields.CONTENTS, analyzer).parse(queryWithoutDiacritics);
+            this.query = new QueryParser(LuceneConstantsFields.CONTENTS, analyzer).parse(queryWithoutDiacritics);
         }
         catch (ParseException e) {
             e.printStackTrace();
         }
 
         int hitsPerPage = 100;
-        indexReader = DirectoryReader.open(directory);
-        indexSearcher = new IndexSearcher(indexReader);
-        TopDocs docs = indexSearcher.search(q, hitsPerPage);
+        indexReaderObject = DirectoryReader.open(directory);
+        indexSearcherObject = new IndexSearcher(indexReaderObject);
+        TopDocs docs = indexSearcherObject.search(this.query, hitsPerPage);
 
         ScoreDoc[] hits = docs.scoreDocs;
         for (ScoreDoc hit : hits) {
             DocResults newDoc = new DocResults();
-            String path = indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME);
+            String path = indexSearcherObject.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME);
             File filePath;
-            //Eroare daca nu indexezi fisierul pentru ca file
+
             if(LuceneConstantsFields.FILES_PATH != null)
                 filePath = new File(LuceneConstantsFields.FILES_PATH + "\\" + path);
             else
@@ -91,7 +91,7 @@ public class Searcher {
             newDoc.setOccurenceOfWord(count);
             newDoc.setDocumentUniquiIdentifier(hit.doc);
             newDoc.setDocumentScore(Math.round(hit.score*1000.0)/1000.0);
-            newDoc.setDocumentName(indexSearcher.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME));
+            newDoc.setDocumentName(indexSearcherObject.doc(hit.doc).get(LuceneConstantsFields.FILE_NAME));
             newDoc.setTermFrequenciesSimpleList(computeTermFreq(hit.doc));
             results.add(newDoc);
         }
@@ -99,18 +99,15 @@ public class Searcher {
         System.out.println("Found results in: " + results.size() + " documents:");
         Collections.sort(results, new DocResultComparator());
 
-        //Uses HTML &lt;B&gt;&lt;/B&gt; tag to highlight the searched terms
-        SimpleHTMLFormatter formatter = new SimpleHTMLFormatter();
+        //Pentru highlighter folosim tag-uri html
+        SimpleHTMLFormatter simpleHTMLFormatterObject = new SimpleHTMLFormatter();
 
-        //It scores text fragments by the number of unique query terms found
-        //Basically the matching score in layman terms
-        QueryScorer scorer = new QueryScorer(q);
+        QueryScorer scorer = new QueryScorer(this.query);
 
-        //used to markup highlighted terms found in the best sections of a text
-        UnifiedHighlighter highlighter = new UnifiedHighlighter(indexSearcher, analyzer);
+        UnifiedHighlighter unifiedHighlighterObject = new UnifiedHighlighter(indexSearcherObject, analyzer);
 
         org.apache.lucene.search.highlight.Highlighter highlighter2 =
-                new org.apache.lucene.search.highlight.Highlighter(formatter, new org.apache.lucene.search.highlight.Scorer() {
+                new org.apache.lucene.search.highlight.Highlighter(simpleHTMLFormatterObject, new org.apache.lucene.search.highlight.Scorer() {
                     @Override
                     public TokenStream init(TokenStream tokenStream) throws IOException {
                         return null;
@@ -139,27 +136,18 @@ public class Searcher {
             System.out.println("\n\n FRAGMENTS : "+fragment);
         }
 
-        //It breaks text up into same-size texts but does not split up spans
-        //SimpleSpanFragmenter fragmenter = new SimpleSpanFragmenter(scorer, 10);
-
-        //breaks text up into same-size fragments with no concerns over spotting sentence boundaries.
-        //Fragmenter fragmenter = new SimpleFragmenter(10);
-
-        //set fragmenter to highlighter
-        //highlighter.setTextFragmenter(fragmenter);
-
-        //Iterate over found results
+        //Iterăm prin rezultate
         for (int i = 0; i < hits.length; i++)
         {
             int docid = hits[i].doc;
-            Document doc = indexSearcher.doc(docid);
-            String title = indexSearcher.doc(docid).get(LuceneConstantsFields.FILE_NAME);
+            Document doc = indexSearcherObject.doc(docid);
+            String title = indexSearcherObject.doc(docid).get(LuceneConstantsFields.FILE_NAME);
 
-            //Printing - to which document result belongs
+            //Afișăm rezultatele
             System.out.println("Path" + " : " + title);
         }
 
-        String[] highlights = highlighter.highlight(LuceneConstantsFields.CONTENTS,q,docs,5);
+        String[] highlights = unifiedHighlighterObject.highlight(LuceneConstantsFields.CONTENTS, this.query,docs,5);
 
         System.out.println("\nHIGHLIGHTS: ");
         for (String highlight : highlights) {
@@ -168,21 +156,21 @@ public class Searcher {
     }
 
     public List<QueryStatuses> statusQuery(){
-        if(q==null) return null;
+        if(query ==null) return null;
 
         List<QueryStatuses> stats = new ArrayList<>();
 
         List<BooleanClause> clauses = null;
-        if(q instanceof BooleanQuery)
+        if(query instanceof BooleanQuery)
         {
-            clauses = ((BooleanQuery) q).clauses();
+            clauses = ((BooleanQuery) query).clauses();
         }
-        //In functie de interogare poate fi null sau o lista cu 2 sau mai multe cuvinte cautare
+        //In funcție de interogare poate fi null sau o listă cu 2 sau mai multe cuvinte căutate
         if(clauses == null){
-            //Cand avem un singur element in interogare
+            //Când avem un singur element în interogare
             QueryStatuses newStat = new QueryStatuses();
-            newStat.tokenElement = q.toString(LuceneConstantsFields.CONTENTS);
-            //Cred ca aici trebuie sa fie 0 / 1 in cazul in care elementul se gaseste sau nu in document
+            newStat.tokenElement = query.toString(LuceneConstantsFields.CONTENTS);
+            //Aici trebuie să fie 0 / 1 în cazul în care elementul se găsește sau nu în document
             newStat.tfq = 1;
             newStat.df = 0;
             if(results!=null) {
@@ -193,11 +181,11 @@ public class Searcher {
                 }
             }
         if(newStat.idf>0)
-            newStat.idf = (float)Math.log(indexReader.numDocs()/newStat.df);
+            newStat.idf = (float)Math.log(indexReaderObject.numDocs()/newStat.df);
         stats.add(newStat);
         }
         else {
-            //Cand avem mai multe elemente in interogare
+            //Când avem mai multe elemente în interogare
             List<BooleanClause> uniqueClauses = new ArrayList<>();
             for (BooleanClause clause : clauses) {
                 if(uniqueClauses.contains(clause))  {
@@ -227,7 +215,7 @@ public class Searcher {
                 if(newStat.df==0)
                     newStat.idf=0;
                 else {
-                    double frac =(double)indexReader.numDocs()/(double)newStat.df;
+                    double frac =(double) indexReaderObject.numDocs()/(double)newStat.df;
                     newStat.idf = Math.log10(frac);
                     newStat.idf = Math.round(newStat.idf*1000.0)/1000.0;
                 }
@@ -240,13 +228,12 @@ public class Searcher {
 
     public List<TermFrequencies> computeTermFreq(int docId) throws IOException {
 
-        //TFIDFSimilarity tfidfSim = new ClassicSimilarity();
-        List<TermFrequencies> termFrequencies = new ArrayList<>();
+        List<TermFrequencies> termFrequenciesList = new ArrayList<>();
 
-        TermsEnum termsEnum = MultiFields.getTerms(indexReader, LuceneConstantsFields.CONTENTS).iterator();
+        TermsEnum termsEnum = MultiFields.getTerms(indexReaderObject, LuceneConstantsFields.CONTENTS).iterator();
         PostingsEnum postings = null;
 
-        Terms vector = indexReader.getTermVector(docId, LuceneConstantsFields.CONTENTS);
+        Terms vector = indexReaderObject.getTermVector(docId, LuceneConstantsFields.CONTENTS);
 
         try {
             termsEnum = vector.iterator();
@@ -261,17 +248,17 @@ public class Searcher {
                 String term = bytesRef.utf8ToString();
                 float tf = 0;
                 List<BooleanClause> clauses = null;
-                if(q instanceof BooleanQuery)
+                if(query instanceof BooleanQuery)
                 {
-                    clauses = ((BooleanQuery) q).clauses();
+                    clauses = ((BooleanQuery) query).clauses();
                 }
 
                 if(clauses == null){
-                    if (q.toString(LuceneConstantsFields.CONTENTS).equals(term)) {
+                    if (query.toString(LuceneConstantsFields.CONTENTS).equals(term)) {
                         postings = termsEnum.postings(null, PostingsEnum.FREQS);
                         while (postings.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
                             tf = postings.freq();
-                            termFrequencies.add(new TermFrequencies(term, tf));
+                            termFrequenciesList.add(new TermFrequencies(term, tf));
                         }
                     }
                 }
@@ -282,13 +269,13 @@ public class Searcher {
                             while (postings.nextDoc() != DocIdSetIterator.NO_MORE_DOCS) {
                                 tf = postings.freq();
                                 boolean contains=false;
-                                for (TermFrequencies termFrequency : termFrequencies) {
+                                for (TermFrequencies termFrequency : termFrequenciesList) {
                                     if(termFrequency.term.equals(term))
                                         contains = true;
                                 }
 
                                 if(!contains) {
-                                    termFrequencies.add(new TermFrequencies(term, tf));
+                                    termFrequenciesList.add(new TermFrequencies(term, tf));
                                 }
                             }
                         }
@@ -296,18 +283,18 @@ public class Searcher {
                 }
             }
         }
-        return termFrequencies;
+        return termFrequenciesList;
     }
 
     Map<String, Float> getTFs(Map<String, Float> docFrequencies) throws IOException {
         TFIDFSimilarity tfidfSim = new ClassicSimilarity();
         Map<String, Float> termFrequencies = new HashMap<>();
 
-        for (int docID = 0; docID < indexReader.maxDoc(); docID++) {
-            TermsEnum termsEnum = MultiFields.getTerms(indexReader, LuceneConstantsFields.CONTENTS).iterator();
+        for (int docID = 0; docID < indexReaderObject.maxDoc(); docID++) {
+            TermsEnum termsEnum = MultiFields.getTerms(indexReaderObject, LuceneConstantsFields.CONTENTS).iterator();
             PostingsEnum docsEnum = null;
 
-            Terms vector = indexReader.getTermVector(docID, LuceneConstantsFields.CONTENTS);
+            Terms vector = indexReaderObject.getTermVector(docID, LuceneConstantsFields.CONTENTS);
 
             try {
                 termsEnum = vector.iterator();
@@ -336,25 +323,25 @@ public class Searcher {
     }
 
     Map<String, Float> getIdfs(String field) throws IOException {
-        /** GET FIELDS **/
-        Fields fields = MultiFields.getFields(indexReader); //Get the Fields of the index
 
-        Map<String, Float> docFrequencies = new HashMap<>();
+        Fields fieldsObject = MultiFields.getFields(indexReaderObject); //Get the Fields of the index
+
+        Map<String, Float> docFrequenciesHashMap = new HashMap<>();
 
         TFIDFSimilarity tfidfSIM = new ClassicSimilarity();
 
-        for (String fiel : fields) {
-            TermsEnum termEnum = MultiFields.getTerms(indexReader, fiel).iterator();
+        for (String fiel : fieldsObject) {
+            TermsEnum termEnum = MultiFields.getTerms(indexReaderObject, fiel).iterator();
             BytesRef bytesRef;
             while ((bytesRef = termEnum.next()) != null) {
                 if (termEnum.seekExact(bytesRef)) {
                     String term = bytesRef.utf8ToString();
                     float idf = termEnum.docFreq();
-                    docFrequencies.put(term, idf);
+                    docFrequenciesHashMap.put(term, idf);
                 }
             }
         }
-        return docFrequencies;
+        return docFrequenciesHashMap;
     }
 
     public ArrayList<DocResults> getResultedDocuments() {
@@ -364,31 +351,31 @@ public class Searcher {
     public ArrayList<Document> getDocuments(ArrayList<Integer> docIds) throws IOException {
         ArrayList<Document> resultedDocuments = new ArrayList<>();
         for (Integer docId : docIds) {
-            resultedDocuments.add(indexSearcher.doc(docId));
+            resultedDocuments.add(indexSearcherObject.doc(docId));
         }
         return resultedDocuments;
     }
 
     public void close() throws IOException {
-        indexReader.close();
+        indexReaderObject.close();
     }
 
     public void Backup() throws IOException {
-        long sumTotalTermFreq = indexReader.getSumTotalTermFreq(LuceneConstantsFields.CONTENTS);
-        long sumtDocFreq = indexReader.getSumDocFreq(LuceneConstantsFields.CONTENTS);
-        Terms termVector = indexReader.getTermVector(0, LuceneConstantsFields.CONTENTS);
-        Terms[] docFreqs = new Terms[indexReader.numDocs()];
+        long sumTotalTermFreq = indexReaderObject.getSumTotalTermFreq(LuceneConstantsFields.CONTENTS);
+        long sumtDocFreq = indexReaderObject.getSumDocFreq(LuceneConstantsFields.CONTENTS);
+        Terms termVector = indexReaderObject.getTermVector(0, LuceneConstantsFields.CONTENTS);
+        Terms[] docFreqs = new Terms[indexReaderObject.numDocs()];
 
-        for (int i = 0; i < indexReader.numDocs(); i++) {
-            docFreqs[i] = indexReader.getTermVector(i, LuceneConstantsFields.CONTENTS);
+        for (int i = 0; i < indexReaderObject.numDocs(); i++) {
+            docFreqs[i] = indexReaderObject.getTermVector(i, LuceneConstantsFields.CONTENTS);
         }
-        Bits liveDocs = MultiFields.getLiveDocs(indexReader);
-        TermsEnum termEnum = MultiFields.getTerms(indexReader, LuceneConstantsFields.CONTENTS).iterator();
+        Bits liveDocs = MultiFields.getLiveDocs(indexReaderObject);
+        TermsEnum termEnum = MultiFields.getTerms(indexReaderObject, LuceneConstantsFields.CONTENTS).iterator();
         BytesRef term = null;
-        int docCount = indexReader.numDocs();
+        int docCount = indexReaderObject.numDocs();
 
         while ((term = termEnum.next()) != null) {
-            List<LeafReaderContext> leafs = indexReader.leaves();
+            List<LeafReaderContext> leafs = indexReaderObject.leaves();
         }
     }
 }

@@ -29,22 +29,25 @@ import org.apache.tika.Tika;
 import org.jsoup.Jsoup;
 
 import static org.apache.lucene.index.IndexOptions.DOCS_AND_FREQS_AND_POSITIONS;
-
-public class Indexer {
-
-    private IndexWriter writer;
-    public Indexer(String indexDirectoryPath) throws IOException {
-        Directory indexDirectory =
-            FSDirectory.open(Paths.get(indexDirectoryPath));
-
+//Clasa indexer realizează indexarea documentelor
+public class LuceneCustomRomanianIndexer {
+    //Obiectul care se va ocupa de scrierea index-ului
+    private IndexWriter indexWriterObject;
+    //Constructorul clasei care setează folderul în care se va scrie index-ul
+    public LuceneCustomRomanianIndexer(String indexDirectoryPath) throws IOException {
+        //Directorul în care se va scrie index-ul
+        Directory indexDirectoryObject = FSDirectory.open(Paths.get(indexDirectoryPath));
+        //Se va realiza un indexer pentru Limba Română
         IndexWriterConfig config = new IndexWriterConfig(new RomanianAnalyzer());
-        writer = new IndexWriter(indexDirectory, config);
+        //Se va instanția obiectul indexWriterObject, cu obiectul config instanțiat anterior, pentru Limba Română
+        indexWriterObject = new IndexWriter(indexDirectoryObject, config);
     }
 
+    //Metoda de închidere a index-ului
     public void close() throws IOException {
-        writer.close();
+        indexWriterObject.close();
     }
-
+    //Crearea efectivă a index-ului
     private Document getDocument(File file) throws IOException {
         Document document = new Document();
         Field fieldContents = null;
@@ -111,7 +114,7 @@ public class Indexer {
         String type = new Tika().detect(file);
         System.out.println("Type of indexed file: "+ type);
         Document document = getDocument(file);
-        writer.addDocument(document);
+        indexWriterObject.addDocument(document);
     }
 
     public int createIndex(String dataDirPath, LuceneFileFilter filter) throws IOException {
@@ -128,6 +131,6 @@ public class Indexer {
                     innerDocsVar+=createIndex(file.getCanonicalPath(),filter);
                 }
         }
-        return innerDocsVar+writer.numDocs();
+        return innerDocsVar+ indexWriterObject.numDocs();
     }
 }

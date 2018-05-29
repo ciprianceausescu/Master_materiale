@@ -3,7 +3,7 @@ package main;
 /**
  * Created by Ciprian Mihai on 5/01/2018.
  */
-
+//Clasă care oferă informații despre interogare
 public class Pair{
     private char[] query;
     private int index;
