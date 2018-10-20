@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_eu-018-reg.xml'>
+   <table id='1'>
+      <region id='1' page='1'>
+         <bounding-box x1='88' y1='607' x2='506' y2='712'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='1'>
+         <bounding-box x1='88' y1='270' x2='506' y2='418'/>
+      </region>
+   </table>
+</document>

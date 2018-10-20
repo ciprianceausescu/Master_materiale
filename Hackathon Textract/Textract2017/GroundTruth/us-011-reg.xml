@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-011-reg.xml'>
+   <table id='1'>
+      <region id='1' page='2'>
+         <bounding-box x1='85' y1='159' x2='510' y2='512'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='3'>
+         <bounding-box x1='85' y1='422' x2='510' y2='597'/>
+      </region>
+   </table>
+</document>

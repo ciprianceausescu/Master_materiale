@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-region-model.xsd" filename='bm_eu-014-reg.xml'>
+   <table id='1'>
+      <region id='1' page='2'>
+         <bounding-box x1='76' y1='140' x2='500' y2='299'/>
+      </region>
+   </table>
+</document>

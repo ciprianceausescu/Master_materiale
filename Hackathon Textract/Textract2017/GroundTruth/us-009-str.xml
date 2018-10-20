@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-009-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='1'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='104' y1='620' x2='159' y2='628'/>
+            <content>Cost Category</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='197' y1='620' x2='241' y2='640'/>
+            <content>Total Costs
+All Funds</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='249' y1='620' x2='300' y2='651'/>
+            <content>Less:
+Exclusions &amp;
+Unallowables</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='312' y1='620' x2='341' y2='640'/>
+            <content>Indirect
+Costs</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='4'>
+            <bounding-box x1='354' y1='620' x2='398' y2='640'/>
+            <content>Total Direct
+Costs</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='5'>
+            <bounding-box x1='410' y1='620' x2='442' y2='640'/>
+            <content>Federal
+Program</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='6'>
+            <bounding-box x1='453' y1='620' x2='502' y2='640'/>
+            <content>Non-Federal
+Programs (3)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='71' y1='607' x2='114' y2='615'/>
+            <content>Salaries (a)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='203' y1='607' x2='239' y2='615'/>
+            <content>1,314,000</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3'>
+            <bounding-box x1='315' y1='607' x2='344' y2='615'/>
+            <content>373,250</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='4'>
+            <bounding-box x1='368' y1='607' x2='397' y2='615'/>
+            <content>940,750</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='5'>
+            <bounding-box x1='415' y1='607' x2='444' y2='615'/>
+            <content>141,000</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='6'>
+            <bounding-box x1='467' y1='607' x2='496' y2='615'/>
+            <content>799,750</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='71' y1='596' x2='142' y2='604'/>
+            <content>Fringe Benefits (b)</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='210' y1='596' x2='239' y2='604'/>
+            <content>352,000</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='320' y1='596' x2='344' y2='604'/>
+            <content>99,988</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='368' y1='596' x2='397' y2='604'/>
+            <content>252,012</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='5'>
+            <bounding-box x1='419' y1='596' x2='444' y2='604'/>
+            <content>37,772</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='6'>
+            <bounding-box x1='467' y1='596' x2='496' y2='604'/>
+            <content>214,240</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='71' y1='584' x2='148' y2='592'/>
+            <content>Consultant Services</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='214' y1='584' x2='239' y2='592'/>
+            <content>26,000</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='320' y1='584' x2='344' y2='592'/>
+            <content>14,000</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='372' y1='584' x2='397' y2='592'/>
+            <content>12,000</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5'>
+            <bounding-box x1='424' y1='584' x2='444' y2='592'/>
+            <content>1,800</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='6'>
+            <bounding-box x1='472' y1='584' x2='496' y2='592'/>
+            <content>10,200</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='71' y1='572' x2='115' y2='580'/>
+            <content>Staff Travel</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='214' y1='572' x2='239' y2='580'/>
+            <content>94,000</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='320' y1='572' x2='344' y2='580'/>
+            <content>20,000</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4'>
+            <bounding-box x1='372' y1='572' x2='397' y2='580'/>
+            <content>74,000</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5'>
+            <bounding-box x1='419' y1='572' x2='444' y2='580'/>
+            <content>11,100</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='6'>
+            <bounding-box x1='472' y1='572' x2='496' y2='580'/>
+            <content>62,900</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='71' y1='560' x2='111' y2='568'/>
+            <content>Bad Debts</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='214' y1='560' x2='239' y2='568'/>
+            <content>10,000</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2'>
+            <bounding-box x1='265' y1='560' x2='304' y2='568'/>
+            <content>10,000 (1)</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='71' y1='549' x2='114' y2='557'/>
+            <content>Office Rent</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1'>
+            <bounding-box x1='210' y1='549' x2='239' y2='557'/>
+            <content>170,000</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3'>
+            <bounding-box x1='315' y1='549' x2='344' y2='557'/>
+            <content>170,000</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4'>
+            <bounding-box x1='368' y1='549' x2='397' y2='557'/>
+            <content>150,000</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5'>
+            <bounding-box x1='419' y1='549' x2='444' y2='557'/>
+            <content>22,500</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='6'>
+            <bounding-box x1='467' y1='549' x2='496' y2='557'/>
+            <content>127,500</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='71' y1='537' x2='155' y2='545'/>
+            <content>Consumable Supplies</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='210' y1='537' x2='239' y2='545'/>
+            <content>161,000</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3'>
+            <bounding-box x1='320' y1='537' x2='344' y2='545'/>
+            <content>11,000</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='4'>
+            <bounding-box x1='372' y1='537' x2='397' y2='545'/>
+            <content>68,000</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='5'>
+            <bounding-box x1='419' y1='537' x2='444' y2='545'/>
+            <content>10,200</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='6'>
+            <bounding-box x1='472' y1='537' x2='496' y2='545'/>
+            <content>57,800</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='0'>
+            <bounding-box x1='71' y1='525' x2='122' y2='533'/>
+            <content>Subcontracts</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1'>
+            <bounding-box x1='210' y1='525' x2='239' y2='533'/>
+            <content>175,000</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='2'>
+            <bounding-box x1='261' y1='525' x2='304' y2='533'/>
+            <content>107,000 (2)</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='0'>
+            <bounding-box x1='71' y1='513' x2='178' y2='521'/>
+            <content>Purchase, Equipment Lease</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1'>
+            <bounding-box x1='214' y1='513' x2='239' y2='521'/>
+            <content>82,000</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='2'>
+            <bounding-box x1='265' y1='513' x2='304' y2='521'/>
+            <content>22,100 (2)</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='3'>
+            <bounding-box x1='320' y1='513' x2='344' y2='521'/>
+            <content>59,900</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='0'>
+            <bounding-box x1='71' y1='502' x2='111' y2='510'/>
+            <content>Telephone</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='1'>
+            <bounding-box x1='210' y1='502' x2='239' y2='510'/>
+            <content>109,400</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='3'>
+            <bounding-box x1='320' y1='502' x2='344' y2='510'/>
+            <content>55,000</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4'>
+            <bounding-box x1='372' y1='502' x2='397' y2='510'/>
+            <content>54,400</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='5'>
+            <bounding-box x1='424' y1='502' x2='444' y2='510'/>
+            <content>8,200</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='6'>
+            <bounding-box x1='472' y1='502' x2='496' y2='510'/>
+            <content>46,200</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='0'>
+            <bounding-box x1='71' y1='490' x2='125' y2='498'/>
+            <content>Entertainment</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1'>
+            <bounding-box x1='219' y1='490' x2='239' y2='498'/>
+            <content>1,800</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='2'>
+            <bounding-box x1='269' y1='490' x2='304' y2='498'/>
+            <content>1,800 (1)</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='0'>
+            <bounding-box x1='71' y1='478' x2='163' y2='486'/>
+            <content>Printing &amp; Reproduction</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='1'>
+            <bounding-box x1='214' y1='478' x2='239' y2='486'/>
+            <content>48,000</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='3'>
+            <bounding-box x1='320' y1='478' x2='344' y2='486'/>
+            <content>11,000</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='4'>
+            <bounding-box x1='372' y1='478' x2='397' y2='486'/>
+            <content>37,000</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='5'>
+            <bounding-box x1='424' y1='478' x2='444' y2='486'/>
+            <content>5,500</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='6'>
+            <bounding-box x1='472' y1='478' x2='496' y2='486'/>
+            <content>31,500</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='0'>
+            <bounding-box x1='71' y1='466' x2='160' y2='474'/>
+            <content>Insurance and Bonding</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='1'>
+            <bounding-box x1='214' y1='466' x2='239' y2='474'/>
+            <content>42,000</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='3'>
+            <bounding-box x1='320' y1='466' x2='344' y2='474'/>
+            <content>42,000</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='0'>
+            <bounding-box x1='71' y1='455' x2='117' y2='463'/>
+            <content>Fundraising</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='1'>
+            <bounding-box x1='210' y1='455' x2='239' y2='463'/>
+            <content>120,000</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='4'>
+            <bounding-box x1='368' y1='455' x2='397' y2='463'/>
+            <content>120,000</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='6'>
+            <bounding-box x1='467' y1='455' x2='496' y2='463'/>
+            <content>120,000</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='0'>
+            <bounding-box x1='71' y1='443' x2='152' y2='451'/>
+            <content>Postage and Delivery</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='1'>
+            <bounding-box x1='214' y1='443' x2='239' y2='451'/>
+            <content>34,000</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='3'>
+            <bounding-box x1='324' y1='443' x2='344' y2='451'/>
+            <content>5,100</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='4'>
+            <bounding-box x1='372' y1='443' x2='397' y2='451'/>
+            <content>28,900</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='5'>
+            <bounding-box x1='424' y1='443' x2='444' y2='451'/>
+            <content>4,300</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='6'>
+            <bounding-box x1='472' y1='443' x2='496' y2='451'/>
+            <content>24,600</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='0'>
+            <bounding-box x1='71' y1='431' x2='120' y2='439'/>
+            <content>Depreciation</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='1'>
+            <bounding-box x1='214' y1='431' x2='239' y2='439'/>
+            <content>28,800</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='3'>
+            <bounding-box x1='324' y1='431' x2='344' y2='439'/>
+            <content>8,800</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='4'>
+            <bounding-box x1='372' y1='431' x2='397' y2='439'/>
+            <content>20,000</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='5'>
+            <bounding-box x1='424' y1='431' x2='444' y2='439'/>
+            <content>3,000</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='6'>
+            <bounding-box x1='472' y1='431' x2='496' y2='439'/>
+            <content>17,000</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='0'>
+            <bounding-box x1='71' y1='419' x2='115' y2='427'/>
+            <content>Allowances</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='1'>
+            <bounding-box x1='210' y1='419' x2='239' y2='427'/>
+            <content>148,000</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='2'>
+            <bounding-box x1='261' y1='419' x2='304' y2='427'/>
+            <content>148,000 (2)</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='0'>
+            <bounding-box x1='71' y1='408' x2='159' y2='416'/>
+            <content>Emergency Assistance</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='1'>
+            <bounding-box x1='214' y1='408' x2='239' y2='416'/>
+            <content>54,000</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='2'>
+            <bounding-box x1='265' y1='408' x2='304' y2='416'/>
+            <content>54,000 (2)</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='0'>
+            <bounding-box x1='71' y1='396' x2='140' y2='404'/>
+            <content>Training Materials</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='1'>
+            <bounding-box x1='214' y1='396' x2='239' y2='404'/>
+            <content>82,000</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='4'>
+            <bounding-box x1='372' y1='396' x2='397' y2='404'/>
+            <content>82,000</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='5'>
+            <bounding-box x1='419' y1='396' x2='444' y2='404'/>
+            <content>12,300</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='6'>
+            <bounding-box x1='472' y1='396' x2='496' y2='404'/>
+            <content>69,700</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='0'>
+            <bounding-box x1='71' y1='384' x2='170' y2='392'/>
+            <content>Participant Support Costs</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='1'>
+            <bounding-box x1='214' y1='384' x2='239' y2='392'/>
+            <content>36,000</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='2'>
+            <bounding-box x1='267' y1='384' x2='304' y2='392'/>
+            <content>36,000 (2)</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='0'>
+            <bounding-box x1='76' y1='372' x2='119' y2='380'/>
+            <content>Total Costs</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='1'>
+            <bounding-box x1='203' y1='372' x2='239' y2='380'/>
+            <content>3,088,000</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='2'>
+            <bounding-box x1='268' y1='372' x2='297' y2='380'/>
+            <content>378,900</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='3'>
+            <bounding-box x1='315' y1='372' x2='344' y2='380'/>
+            <content>870,038</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='4'>
+            <bounding-box x1='361' y1='372' x2='397' y2='380'/>
+            <content>1,839,062</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='5'>
+            <bounding-box x1='415' y1='372' x2='444' y2='380'/>
+            <content>257,672</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='6'>
+            <bounding-box x1='461' y1='372' x2='496' y2='380'/>
+            <content>1,581,390</content>
+         </cell>
+      </region>
+   </table>
+</document>

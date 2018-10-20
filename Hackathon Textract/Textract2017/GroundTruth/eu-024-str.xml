@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-024-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='2'>
+            <cell id="1" start-col="0" start-row="0">
+                <bounding-box x1="59" x2="158" y1="462" y2="471"/>
+                <content>Perceived Discrimination</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="0">
+                <bounding-box x1="175" x2="218" y1="462" y2="471"/>
+                <content>Frequently</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="0">
+                <bounding-box x1="234" x2="285" y1="462" y2="471"/>
+                <content>Occasionally</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="0">
+                <bounding-box x1="316" x2="340" y1="462" y2="471"/>
+                <content>Never</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="1">
+                <bounding-box x1="59" x2="75" y1="447" y2="456"/>
+                <content>Age</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="186" x2="207" y1="447" y2="456"/>
+                <content>1.5%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="1">
+                <bounding-box x1="249" x2="270" y1="447" y2="456"/>
+                <content>3.6%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="1">
+                <bounding-box x1="315" x2="341" y1="447" y2="456"/>
+                <content>94.9%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="59" x2="106" y1="433" y2="442"/>
+                <content>Social class</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="186" x2="207" y1="433" y2="442"/>
+                <content>0.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="2">
+                <bounding-box x1="249" x2="270" y1="433" y2="442"/>
+                <content>6.8%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="2">
+                <bounding-box x1="315" x2="341" y1="433" y2="442"/>
+                <content>92.8%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="59" x2="142" y1="419" y2="428"/>
+                <content>Physical appearance</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="186" x2="207" y1="419" y2="428"/>
+                <content>0.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="3">
+                <bounding-box x1="249" x2="270" y1="419" y2="428"/>
+                <content>5.7%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="3">
+                <bounding-box x1="315" x2="341" y1="419" y2="428"/>
+                <content>93.8%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="59" x2="95" y1="405" y2="414"/>
+                <content>Disability</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="186" x2="207" y1="405" y2="414"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="4">
+                <bounding-box x1="249" x2="270" y1="405" y2="414"/>
+                <content>1.1%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="4">
+                <bounding-box x1="315" x2="341" y1="405" y2="414"/>
+                <content>98.9%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="59" x2="91" y1="391" y2="400"/>
+                <content>Religion</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="186" x2="207" y1="391" y2="400"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="5">
+                <bounding-box x1="249" x2="270" y1="391" y2="400"/>
+                <content>2.3%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="5">
+                <bounding-box x1="315" x2="341" y1="391" y2="400"/>
+                <content>97.7%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="59" x2="93" y1="377" y2="386"/>
+                <content>Ethnicity</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="189" x2="204" y1="377" y2="386"/>
+                <content>.2%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="6">
+                <bounding-box x1="249" x2="270" y1="377" y2="386"/>
+                <content>1.5%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="6">
+                <bounding-box x1="315" x2="341" y1="377" y2="386"/>
+                <content>98.3%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="59" x2="89" y1="363" y2="372"/>
+                <content>Gender</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="189" x2="204" y1="363" y2="372"/>
+                <content>.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="7">
+                <bounding-box x1="249" x2="270" y1="363" y2="372"/>
+                <content>5.5%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="7">
+                <bounding-box x1="315" x2="341" y1="363" y2="372"/>
+                <content>94.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="8">
+                <bounding-box x1="59" x2="131" y1="348" y2="357"/>
+                <content>Sexual orientation</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="8">
+                <bounding-box x1="186" x2="207" y1="348" y2="357"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="8">
+                <bounding-box x1="249" x2="270" y1="348" y2="357"/>
+                <content>1.7%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="8">
+                <bounding-box x1="315" x2="341" y1="348" y2="357"/>
+                <content>98.3%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="9">
+                <bounding-box x1="59" x2="99" y1="334" y2="343"/>
+                <content>Language</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="9">
+                <bounding-box x1="189" x2="204" y1="334" y2="343"/>
+                <content>.6%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="9">
+                <bounding-box x1="247" x2="272" y1="334" y2="343"/>
+                <content>10.6%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="9">
+                <bounding-box x1="315" x2="341" y1="334" y2="343"/>
+                <content>88.8%</content>
+            </cell>
+        </region>
+    </table>
+</document>

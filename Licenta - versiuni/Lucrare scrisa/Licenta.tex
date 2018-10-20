@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{report}
+%adaugat acum
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+%****%
+\usepackage[romanian]{babel}
+\usepackage{blindtext}
+\usepackage{nameref}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{tabu}
+\usepackage{amssymb} 
+\usepackage[utf8]{inputenc}
+%\usepackage[left=3cm, top=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage[left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{esvect}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[nottoc]{tocbibind}
+\usepackage{amsmath,amssymb}
+\DeclareMathOperator{\Exists}{\exists}
+\DeclareMathOperator{\Forall}{\forall}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\titleformat{\chapter}[display]
+{\normalfont\large\bfseries\centering}{\chaptertitlename\ \thechapter}{0pt}{\large}
+% this alters "before" spacing (the second length argument) to 0
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+
+
+\begin{document}
+\chapter* {Rezumat lucrare de licență - Corectarea automată a testelor grilă \\ Absolvent: Ciprian-Mihai CEAUȘESCU}
+
+\tab \\ \tab În plină ascensiune tehnologică obiectivul urmărit de către cercetători este acela de a crea sisteme care să automatizeze procesele executate de către oameni. Domeniul \textit{inteligenței artificiale} își propune construirea de maşini inteligente care să modeleze sistemul de gândire și rațiune al individului. \textit{Vederea artificială}, subdomeniu al ramurii inteligenței artificiale, urmărește dezvoltarea de algoritmi capabili să reproducă funcționalitățile sistemului vizual uman. Lucrarea de licență pe care am realizat-o prezintă în detaliu etapele unui proces automat de corectare a testelor grilă prin efectuarea unui set de operații asupra acestor teste în format digital. 
+\\ \tab Un prim pas în realizarea acestui proces constă din extragerea grilelor existente în lucrare și detectarea pozițiilor pe care se găsesc răspunsurile alese de către elev sau student. Mașina de calcul trebuie să fie capabilă să parcurgă acest pas fără a întâmpina probleme.
+Lucrarea care se corectează este scanată, iar ulterior zgomotul apărut în imaginea digitală este redus folosind filtrul Gaussian de blurare de dimnesiune $3 \times 3$. Ulterior, se detectează muchiile existente în imagine folosind detectorul Canny, fiind necesare două valori de prag inferior și superior. Daca maginitudinea gradientului muchiei respective are o valoare peste cea a valorii superioare, aceasta este selectată. În schimb, dacă valoarea magnitudinii este sub valoarea pragului inferior, aceasta este respinsă. În cel de-al treilea caz, în care maginitudinea are o valoarea cuprinsă între cele două valori de prag, muchia este acceptată doar dacă este conectată cu o altă muchie care a fost acceptată anterior. În consecință, dacă se folosesc valori de prag mici, se vor detecta aproximativ toate muchiile din lucrare, iar dacă se folosesc valori de prag ridicate, se vor detecta doar muchiile cele mai ``importante``. După detecția muchiilor, se vor extrage conturile a căror aproximare (cu algoritmul Ramer–Douglas–Peucker) oferă ca răspuns un obiect care are 4 laturi, printre care și grilele din lucrare. Algoritmul Ramer–Douglas–Peucker presupune aproximarea unei curbe formate din mai multe segmente de dreaptă, la o curbă similară, formată din mai puține segmente de dreaptă. 
+\\ \tab În continuare, sistemul automat trece printr-o etapă de învățare supervizată. Tehnica utilizată este similară cu modalitatea abordată de către un profesor în școală care supervizează activitățile efectuate de către elevi. Astfel, se cunosc răspunsurile corecte pentru o anumită problemă, iar sistemul va face predicții asupra acestora, analizându-se totodată performanța obținută. Scopul acestei etape este acela de determinare automată a numărului grilei la care a răspuns elevul. Tehnica învățării supervizate este de două tipuri, și anume:
+\begin{itemize}
+\item \textit{clasificarea} - împărțirea datelor în mai multe clase de obiecte (puncte verzi, roșii) 
+\item \textit{regresia} - atunci când datele reprezintă valori concrete (înălțime, greutate). 
+\end{itemize}
+\tab În acest sens se antrenează un clasificator liniar - \textit{Support Vector Machine} (SVM) al cărui rol este acela de a împărți obiectele existente în mai multe clase, de exemplu puncte verzi și puncte roșii. În vederea realizării clasificării, pentru fiecare imagine digitală se va determina descriptorul ei, operație realizată cu ajutorul \textit{Histogramelor de Gradienți Orientați} (HOG). Aceste histograme vor fi calculate pe baza maginitudinii și a orientării tuturor pixelilor din imaginile digitale. La fiecare pas al procesului învățării supervizate, imaginea se împarte în mai multe celule, iar pentru fiecare celulă se va calcula câte o histogramă. În funcție de numărul de celule în care se împarte imaginea, se observă faptul că acuratețea clasificatorului liniar crește. Pentru setul de date MNIST (reprezentat de cifre scrise de mână, 60000 - antrenare si 10000 - testare), acuratețea pentru histogramele cu 4 celule este de 94.85\%, iar pentru histogramele cu 16 celule aceasta ajunge până la 99.3\%.
+\\ \tab În final, rezultatele vor fi oferite către utilizatorul aplicației într-un format ușor de înțeles și analizat.
+\\ \tab În concluzie, lucrarea prezentată descrie o implementare a unui proces automat de corectare a testelor grilă. În momentul în care se utilizează o astfel de aplicație, procesul trebuie urmărit foarte atent pentru a nu apărea erori în momentul evaluării lucrărilor. 
+
+\vspace {3cm}
+
+18 iulie 2017 \hspace{8cm} Ciprian-Mihai CEAUȘESCU
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

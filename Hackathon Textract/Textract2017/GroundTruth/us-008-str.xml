@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-008-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='1'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='98' y1='667' x2='153' y2='678'/>
+            <content>Age Cohort</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='191' y1='667' x2='276' y2='678'/>
+            <content>Head Start Group</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='306' y1='667' x2='377' y2='678'/>
+            <content>Control Group</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='418' y1='667' x2='481' y2='678'/>
+            <content>Total Sample</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='77' y1='654' x2='127' y2='666'/>
+            <content>3-year-olds</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='221' y1='654' x2='246' y2='666'/>
+            <content>1,530</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2'>
+            <bounding-box x1='329' y1='654' x2='354' y2='666'/>
+            <content>1,029</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3'>
+            <bounding-box x1='437' y1='654' x2='462' y2='666'/>
+            <content>2,559</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='77' y1='640' x2='127' y2='651'/>
+            <content>4-year-olds</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='221' y1='640' x2='246' y2='651'/>
+            <content>1,253</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='337' y1='640' x2='353' y2='651'/>
+            <content>855</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='437' y1='640' x2='462' y2='651'/>
+            <content>2,108</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='77' y1='626' x2='102' y2='637'/>
+            <content>Total</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='221' y1='626' x2='246' y2='637'/>
+            <content>2,783</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='329' y1='626' x2='354' y2='637'/>
+            <content>1,884</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='437' y1='626' x2='462' y2='637'/>
+            <content>4,667</content>
+         </cell>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' col-increment='0' row-increment='0' page='3'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='127' y1='642' x2='196' y2='653'/>
+            <content>Sample Group</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='268' y1='642' x2='330' y2='678'/>
+            <content>Some Year 1
+Head Start
+Participation</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='364' y1='642' x2='426' y2='678'/>
+            <content>No Year 1
+Head Start
+Participation</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='479' y1='642' x2='504' y2='653'/>
+            <content>Total</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='77' y1='629' x2='240' y2='640'/>
+            <content>All Randomly Assigned (N=4,667):</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='113' y1='616' x2='203' y2='627'/>
+            <content>3-Year-Old Cohort</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='168' y1='604' x2='246' y2='615'/>
+            <content>Head Start Group</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='285' y1='604' x2='313' y2='615'/>
+            <content>85.1%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='381' y1='604' x2='410' y2='615'/>
+            <content>14.9%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='479' y1='604' x2='504' y2='615'/>
+            <content>100%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='181' y1='591' x2='246' y2='602'/>
+            <content>Control Group</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='285' y1='591' x2='313' y2='602'/>
+            <content>17.3%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='381' y1='591' x2='409' y2='602'/>
+            <content>82.7%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='479' y1='591' x2='504' y2='602'/>
+            <content>100%</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='113' y1='578' x2='203' y2='589'/>
+            <content>4-Year-Old Cohort</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='168' y1='566' x2='246' y2='577'/>
+            <content>Head Start Group</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1'>
+            <bounding-box x1='285' y1='566' x2='313' y2='577'/>
+            <content>79.8%</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2'>
+            <bounding-box x1='381' y1='566' x2='409' y2='577'/>
+            <content>20.2%</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3'>
+            <bounding-box x1='479' y1='566' x2='504' y2='577'/>
+            <content>100%</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='181' y1='553' x2='246' y2='564'/>
+            <content>Control Group</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='285' y1='553' x2='313' y2='564'/>
+            <content>13.9%</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2'>
+            <bounding-box x1='381' y1='553' x2='409' y2='564'/>
+            <content>86.1%</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3'>
+            <bounding-box x1='479' y1='553' x2='504' y2='564'/>
+            <content>100%</content>
+         </cell>
+      </region>
+   </table>
+</document>

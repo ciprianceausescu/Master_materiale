@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd" filename='bm_us-021-str.xml'>
+   <table id='1'>
+      <region page='2' id='1' col-increment='0' row-increment='0'>
+         <cell id='1' start-row='1' start-col='1' end-row='2' end-col='1'>
+            <bounding-box x1='35' y1='666' x2='134' y2='674'/>
+            <content>Content domain and process</content>
+         </cell>
+         <cell id='2' start-row='1' start-col='2' end-row='1' end-col='3'>
+            <bounding-box x1='306' y1='678' x2='335' y2='686'/>
+            <content>All items</content>
+         </cell>
+         <cell id='3' start-row='1' start-col='4' end-row='1' end-col='5'>
+            <bounding-box x1='398' y1='678' x2='434' y2='686'/>
+            <content>New items</content>
+         </cell>
+         <cell id='4' start-row='1' start-col='6' end-row='1' end-col='7'>
+            <bounding-box x1='490' y1='678' x2='531' y2='686'/>
+            <content>Trend items</content>
+         </cell>
+         <cell id='5' start-row='2' start-col='2' end-row='2' end-col='2'>
+            <bounding-box x1='286' y1='666' x2='314' y2='674'/>
+            <content>Number</content>
+         </cell>
+         <cell id='6' start-row='2' start-col='3' end-row='2' end-col='3'>
+            <bounding-box x1='326' y1='666' x2='353' y2='674'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='7' start-row='2' start-col='4' end-row='2' end-col='4'>
+            <bounding-box x1='381' y1='666' x2='409' y2='674'/>
+            <content>Number</content>
+         </cell>
+         <cell id='8' start-row='2' start-col='5' end-row='2' end-col='5'>
+            <bounding-box x1='421' y1='666' x2='448' y2='674'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='9' start-row='2' start-col='6' end-row='2' end-col='6'>
+            <bounding-box x1='477' y1='666' x2='504' y2='674'/>
+            <content>Number</content>
+         </cell>
+         <cell id='10' start-row='2' start-col='7' end-row='2' end-col='7'>
+            <bounding-box x1='516' y1='666' x2='543' y2='674'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='11' start-row='3' start-col='1' end-row='3' end-col='1'>
+            <bounding-box x1='44' y1='655' x2='85' y2='663'/>
+            <content>Total items</content>
+         </cell>
+         <cell id='12' start-row='3' start-col='2' end-row='3' end-col='2'>
+            <bounding-box x1='301' y1='655' x2='314' y2='663'/>
+            <content>135</content>
+         </cell>
+         <cell id='13' start-row='3' start-col='3' end-row='3' end-col='3'>
+            <bounding-box x1='340' y1='655' x2='353' y2='663'/>
+            <content>100</content>
+         </cell>
+         <cell id='14' start-row='3' start-col='4' end-row='3' end-col='4'>
+            <bounding-box x1='400' y1='655' x2='409' y2='663'/>
+            <content>60</content>
+         </cell>
+         <cell id='15' start-row='3' start-col='5' end-row='3' end-col='5'>
+            <bounding-box x1='435' y1='655' x2='448' y2='663'/>
+            <content>100</content>
+         </cell>
+         <cell id='16' start-row='3' start-col='6' end-row='3' end-col='6'>
+            <bounding-box x1='495' y1='655' x2='504' y2='663'/>
+            <content>75</content>
+         </cell>
+         <cell id='17' start-row='3' start-col='7' end-row='3' end-col='7'>
+            <bounding-box x1='530' y1='655' x2='543' y2='663'/>
+            <content>100</content>
+         </cell>
+         <cell id='18' start-row='4' start-col='1' end-row='4' end-col='1'>
+            <bounding-box x1='39' y1='645' x2='113' y2='652'/>
+            <content>Purposes of reading</content>
+         </cell>
+         <cell id='19' start-row='5' start-col='1' end-row='5' end-col='1'>
+            <bounding-box x1='44' y1='634' x2='110' y2='642'/>
+            <content>Literary experience</content>
+         </cell>
+         <cell id='20' start-row='5' start-col='2' end-row='5' end-col='2'>
+            <bounding-box x1='305' y1='634' x2='314' y2='642'/>
+            <content>72</content>
+         </cell>
+         <cell id='21' start-row='5' start-col='3' end-row='5' end-col='3'>
+            <bounding-box x1='344' y1='634' x2='353' y2='642'/>
+            <content>53</content>
+         </cell>
+         <cell id='22' start-row='5' start-col='4' end-row='5' end-col='4'>
+            <bounding-box x1='400' y1='634' x2='409' y2='642'/>
+            <content>33</content>
+         </cell>
+         <cell id='23' start-row='5' start-col='5' end-row='5' end-col='5'>
+            <bounding-box x1='439' y1='634' x2='448' y2='642'/>
+            <content>55</content>
+         </cell>
+         <cell id='24' start-row='5' start-col='6' end-row='5' end-col='6'>
+            <bounding-box x1='495' y1='634' x2='504' y2='642'/>
+            <content>39</content>
+         </cell>
+         <cell id='25' start-row='5' start-col='7' end-row='5' end-col='7'>
+            <bounding-box x1='534' y1='634' x2='543' y2='642'/>
+            <content>52</content>
+         </cell>
+         <cell id='26' start-row='6' start-col='1' end-row='6' end-col='1'>
+            <bounding-box x1='44' y1='623' x2='141' y2='631'/>
+            <content>Acquire and use information</content>
+         </cell>
+         <cell id='27' start-row='6' start-col='2' end-row='6' end-col='2'>
+            <bounding-box x1='305' y1='623' x2='314' y2='631'/>
+            <content>63</content>
+         </cell>
+         <cell id='28' start-row='6' start-col='3' end-row='6' end-col='3'>
+            <bounding-box x1='344' y1='623' x2='353' y2='631'/>
+            <content>47</content>
+         </cell>
+         <cell id='29' start-row='6' start-col='4' end-row='6' end-col='4'>
+            <bounding-box x1='400' y1='623' x2='409' y2='631'/>
+            <content>27</content>
+         </cell>
+         <cell id='30' start-row='6' start-col='5' end-row='6' end-col='5'>
+            <bounding-box x1='439' y1='623' x2='448' y2='631'/>
+            <content>45</content>
+         </cell>
+         <cell id='31' start-row='6' start-col='6' end-row='6' end-col='6'>
+            <bounding-box x1='495' y1='623' x2='504' y2='631'/>
+            <content>36</content>
+         </cell>
+         <cell id='32' start-row='6' start-col='7' end-row='6' end-col='7'>
+            <bounding-box x1='534' y1='623' x2='543' y2='631'/>
+            <content>48</content>
+         </cell>
+         <cell id='33' start-row='7' start-col='1' end-row='7' end-col='1'>
+            <bounding-box x1='37' y1='606' x2='145' y2='614'/>
+            <content>Processes of comprehension</content>
+         </cell>
+         <cell id='34' start-row='8' start-col='1' end-row='8' end-col='1'>
+            <bounding-box x1='44' y1='595' x2='215' y2='603'/>
+            <content>Focuson and retrieve explicitly stated information</content>
+         </cell>
+         <cell id='35' start-row='8' start-col='2' end-row='8' end-col='2'>
+            <bounding-box x1='305' y1='595' x2='314' y2='603'/>
+            <content>33</content>
+         </cell>
+         <cell id='36' start-row='8' start-col='3' end-row='8' end-col='3'>
+            <bounding-box x1='344' y1='595' x2='353' y2='603'/>
+            <content>24</content>
+         </cell>
+         <cell id='37' start-row='8' start-col='4' end-row='8' end-col='4'>
+            <bounding-box x1='400' y1='595' x2='409' y2='603'/>
+            <content>14</content>
+         </cell>
+         <cell id='38' start-row='8' start-col='5' end-row='8' end-col='5'>
+            <bounding-box x1='439' y1='595' x2='448' y2='603'/>
+            <content>23</content>
+         </cell>
+         <cell id='39' start-row='8' start-col='6' end-row='8' end-col='6'>
+            <bounding-box x1='495' y1='595' x2='504' y2='603'/>
+            <content>19</content>
+         </cell>
+         <cell id='40' start-row='8' start-col='7' end-row='8' end-col='7'>
+            <bounding-box x1='534' y1='595' x2='543' y2='603'/>
+            <content>25</content>
+         </cell>
+         <cell id='41' start-row='9' start-col='1' end-row='9' end-col='1'>
+            <bounding-box x1='44' y1='585' x2='155' y2='592'/>
+            <content>Makes traightforward inferences</content>
+         </cell>
+         <cell id='42' start-row='9' start-col='2' end-row='9' end-col='2'>
+            <bounding-box x1='305' y1='585' x2='314' y2='592'/>
+            <content>46</content>
+         </cell>
+         <cell id='43' start-row='9' start-col='3' end-row='9' end-col='3'>
+            <bounding-box x1='344' y1='585' x2='353' y2='592'/>
+            <content>34</content>
+         </cell>
+         <cell id='44' start-row='9' start-col='4' end-row='9' end-col='4'>
+            <bounding-box x1='400' y1='585' x2='409' y2='592'/>
+            <content>20</content>
+         </cell>
+         <cell id='45' start-row='9' start-col='5' end-row='9' end-col='5'>
+            <bounding-box x1='439' y1='585' x2='448' y2='592'/>
+            <content>33</content>
+         </cell>
+         <cell id='46' start-row='9' start-col='6' end-row='9' end-col='6'>
+            <bounding-box x1='495' y1='585' x2='504' y2='592'/>
+            <content>26</content>
+         </cell>
+         <cell id='47' start-row='9' start-col='7' end-row='9' end-col='7'>
+            <bounding-box x1='534' y1='585' x2='543' y2='592'/>
+            <content>35</content>
+         </cell>
+         <cell id='48' start-row='10' start-col='1' end-row='10' end-col='1'>
+            <bounding-box x1='44' y1='574' x2='197' y2='582'/>
+            <content>Interpret and integrate ideas and information</content>
+         </cell>
+         <cell id='49' start-row='10' start-col='2' end-row='10' end-col='2'>
+            <bounding-box x1='305' y1='574' x2='314' y2='582'/>
+            <content>38</content>
+         </cell>
+         <cell id='50' start-row='10' start-col='3' end-row='10' end-col='3'>
+            <bounding-box x1='344' y1='574' x2='353' y2='582'/>
+            <content>28</content>
+         </cell>
+         <cell id='51' start-row='10' start-col='4' end-row='10' end-col='4'>
+            <bounding-box x1='400' y1='574' x2='409' y2='582'/>
+            <content>18</content>
+         </cell>
+         <cell id='52' start-row='10' start-col='5' end-row='10' end-col='5'>
+            <bounding-box x1='439' y1='574' x2='448' y2='582'/>
+            <content>30</content>
+         </cell>
+         <cell id='53' start-row='10' start-col='6' end-row='10' end-col='6'>
+            <bounding-box x1='495' y1='574' x2='504' y2='582'/>
+            <content>20</content>
+         </cell>
+         <cell id='54' start-row='10' start-col='7' end-row='10' end-col='7'>
+            <bounding-box x1='534' y1='574' x2='543' y2='582'/>
+            <content>27</content>
+         </cell>
+         <cell id='55' start-row='11' start-col='1' end-row='11' end-col='1'>
+            <bounding-box x1='44' y1='562' x2='260' y2='570'/>
+            <content>Examine and evaluate content, language, and textual elements</content>
+         </cell>
+         <cell id='56' start-row='11' start-col='2' end-row='11' end-col='2'>
+            <bounding-box x1='305' y1='562' x2='314' y2='570'/>
+            <content>18</content>
+         </cell>
+         <cell id='57' start-row='11' start-col='3' end-row='11' end-col='3'>
+            <bounding-box x1='344' y1='562' x2='352' y2='570'/>
+            <content>13</content>
+         </cell>
+         <cell id='58' start-row='11' start-col='4' end-row='11' end-col='4'>
+            <bounding-box x1='405' y1='562' x2='409' y2='570'/>
+            <content>8</content>
+         </cell>
+         <cell id='59' start-row='11' start-col='5' end-row='11' end-col='5'>
+            <bounding-box x1='439' y1='562' x2='448' y2='570'/>
+            <content>13</content>
+         </cell>
+         <cell id='60' start-row='11' start-col='6' end-row='11' end-col='6'>
+            <bounding-box x1='495' y1='562' x2='504' y2='570'/>
+            <content>10</content>
+         </cell>
+         <cell id='61' start-row='11' start-col='7' end-row='11' end-col='7'>
+            <bounding-box x1='534' y1='562' x2='543' y2='570'/>
+            <content>13</content>
+         </cell>
+      </region>
+   </table>
+   <table id='2'>
+      <region page='2' id='1' col-increment='0' row-increment='0'>
+         <cell id='1' start-row='1' start-col='1' end-row='1' end-col='1'>
+            <bounding-box x1='166' y1='121' x2='208' y2='128'/>
+            <content>Item Format</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2' end-row='1' end-col='2'>
+            <bounding-box x1='341' y1='121' x2='368' y2='138'/>
+            <content>Number
+ofitems</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3' end-row='1' end-col='3'>
+            <bounding-box x1='382' y1='121' x2='409' y2='138'/>
+            <content>Percent
+ofitems</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1' end-row='2' end-col='1'>
+            <bounding-box x1='175' y1='110' x2='193' y2='118'/>
+            <content>Total</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2' end-row='2' end-col='2'>
+            <bounding-box x1='355' y1='110' x2='368' y2='118'/>
+            <content>135</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3' end-row='2' end-col='3'>
+            <bounding-box x1='396' y1='110' x2='409' y2='118'/>
+            <content>100</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1' end-row='3' end-col='1'>
+            <bounding-box x1='166' y1='99' x2='217' y2='107'/>
+            <content>Multiple choice</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2' end-row='3' end-col='2'>
+            <bounding-box x1='360' y1='99' x2='368' y2='107'/>
+            <content>74</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3' end-row='3' end-col='3'>
+            <bounding-box x1='400' y1='99' x2='409' y2='107'/>
+            <content>55</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1' end-row='4' end-col='1'>
+            <bounding-box x1='166' y1='87' x2='242' y2='95'/>
+            <content>Constructed response</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2' end-row='4' end-col='2'>
+            <bounding-box x1='360' y1='87' x2='368' y2='95'/>
+            <content>61</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3' end-row='4' end-col='3'>
+            <bounding-box x1='400' y1='87' x2='409' y2='95'/>
+            <content>45</content>
+         </cell>
+      </region>
+   </table>
+</document>

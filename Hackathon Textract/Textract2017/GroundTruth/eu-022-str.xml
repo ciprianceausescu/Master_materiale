@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-022-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='2'>
+            <cell id="1" start-col="0" start-row="0" end-row="1">
+                <bounding-box x1="83" x2="130" y1="483" y2="493"/>
+                <content>Substance</content>
+            </cell>
+            <cell id="1" start-col="1" end-col="4" start-row="0">
+                <bounding-box x1="191" x2="328" y1="495" y2="505"/>
+                <content>Frequency of substance abuse</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="164" x2="203" y1="472" y2="492"/>
+                <content>In the last
+month</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="1">
+                <bounding-box x1="218" x2="257" y1="472" y2="492"/>
+                <content>In the last
+year</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="1">
+                <bounding-box x1="271" x2="311" y1="472" y2="492"/>
+                <content>More than
+a year</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="1">
+                <bounding-box x1="329" x2="353" y1="483" y2="492"/>
+                <content>Never</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="62" x2="101" y1="460" y2="469"/>
+                <content>Cannabis</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="173" x2="193" y1="460" y2="469"/>
+                <content>9.6%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="2">
+                <bounding-box x1="227" x2="247" y1="460" y2="469"/>
+                <content>4.0%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="2">
+                <bounding-box x1="281" x2="301" y1="460" y2="469"/>
+                <content>6.3%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="2">
+                <bounding-box x1="328" x2="353" y1="460" y2="469"/>
+                <content>80.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="62" x2="99" y1="449" y2="458"/>
+                <content>Inhalants</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="173" x2="193" y1="449" y2="458"/>
+                <content>2.7%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="3">
+                <bounding-box x1="227" x2="247" y1="449" y2="458"/>
+                <content>1.6%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="3">
+                <bounding-box x1="281" x2="301" y1="449" y2="458"/>
+                <content>4.1%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="3">
+                <bounding-box x1="328" x2="353" y1="449" y2="458"/>
+                <content>91.6%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="62" x2="94" y1="438" y2="447"/>
+                <content>Ecstasy</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="173" x2="193" y1="438" y2="447"/>
+                <content>2.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="4">
+                <bounding-box x1="227" x2="247" y1="438" y2="447"/>
+                <content>0.9%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="4">
+                <bounding-box x1="281" x2="301" y1="438" y2="447"/>
+                <content>3.0%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="4">
+                <bounding-box x1="328" x2="353" y1="438" y2="447"/>
+                <content>94.0%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="62" x2="131" y1="427" y2="436"/>
+                <content>Anabolic steroids</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="173" x2="193" y1="427" y2="436"/>
+                <content>2.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="5">
+                <bounding-box x1="227" x2="247" y1="427" y2="436"/>
+                <content>0.2%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="5">
+                <bounding-box x1="281" x2="301" y1="427" y2="436"/>
+                <content>0.7%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="5">
+                <bounding-box x1="328" x2="353" y1="427" y2="436"/>
+                <content>97.0%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="62" x2="136" y1="416" y2="425"/>
+                <content>Magic mushrooms</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="173" x2="193" y1="416" y2="425"/>
+                <content>2.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="6">
+                <bounding-box x1="227" x2="247" y1="416" y2="425"/>
+                <content>0.5%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="6">
+                <bounding-box x1="281" x2="301" y1="416" y2="425"/>
+                <content>1.1%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="6">
+                <bounding-box x1="328" x2="353" y1="416" y2="425"/>
+                <content>96.3%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="62" x2="89" y1="405" y2="414"/>
+                <content>Heroin</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="173" x2="193" y1="405" y2="414"/>
+                <content>0.5%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="7">
+                <bounding-box x1="227" x2="247" y1="405" y2="414"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="7">
+                <bounding-box x1="281" x2="301" y1="405" y2="414"/>
+                <content>0.5%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="7">
+                <bounding-box x1="328" x2="353" y1="405" y2="414"/>
+                <content>99.0%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="8">
+                <bounding-box x1="62" x2="123" y1="394" y2="403"/>
+                <content>Amphetamines</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="8">
+                <bounding-box x1="173" x2="193" y1="394" y2="403"/>
+                <content>2.5%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="8">
+                <bounding-box x1="227" x2="247" y1="394" y2="403"/>
+                <content>0.7%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="8">
+                <bounding-box x1="281" x2="301" y1="394" y2="403"/>
+                <content>0.7%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="8">
+                <bounding-box x1="328" x2="353" y1="394" y2="403"/>
+                <content>96.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="9">
+                <bounding-box x1="62" x2="101" y1="383" y2="392"/>
+                <content>Ketamine</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="9">
+                <bounding-box x1="173" x2="193" y1="383" y2="392"/>
+                <content>2.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="9">
+                <bounding-box x1="227" x2="247" y1="383" y2="392"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="9">
+                <bounding-box x1="281" x2="301" y1="383" y2="392"/>
+                <content>0.5%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="9">
+                <bounding-box x1="328" x2="353" y1="383" y2="392"/>
+                <content>97.4%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="10">
+                <bounding-box x1="62" x2="80" y1="372" y2="381"/>
+                <content>LSD</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="10">
+                <bounding-box x1="173" x2="193" y1="372" y2="381"/>
+                <content>2.3%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="10">
+                <bounding-box x1="227" x2="247" y1="372" y2="381"/>
+                <content>0.9%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="10">
+                <bounding-box x1="281" x2="301" y1="372" y2="381"/>
+                <content>1.4%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="10">
+                <bounding-box x1="328" x2="353" y1="372" y2="381"/>
+                <content>95.4%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="11">
+                <bounding-box x1="62" x2="96" y1="361" y2="370"/>
+                <content>Cocaine</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="11">
+                <bounding-box x1="173" x2="193" y1="361" y2="370"/>
+                <content>4.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="11">
+                <bounding-box x1="227" x2="247" y1="361" y2="370"/>
+                <content>1.6%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="11">
+                <bounding-box x1="281" x2="301" y1="361" y2="370"/>
+                <content>1.8%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="11">
+                <bounding-box x1="328" x2="353" y1="361" y2="370"/>
+                <content>92.2%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="12">
+                <bounding-box x1="62" x2="82" y1="350" y2="359"/>
+                <content>GHB</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="12">
+                <bounding-box x1="173" x2="193" y1="350" y2="359"/>
+                <content>1.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="12">
+                <bounding-box x1="227" x2="247" y1="350" y2="359"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="12">
+                <bounding-box x1="281" x2="301" y1="350" y2="359"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="12">
+                <bounding-box x1="328" x2="353" y1="350" y2="359"/>
+                <content>98.9%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="13">
+                <bounding-box x1="62" x2="116" y1="338" y2="347"/>
+                <content>Tranquillisers</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="13">
+                <bounding-box x1="173" x2="193" y1="338" y2="347"/>
+                <content>3.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="13">
+                <bounding-box x1="227" x2="247" y1="338" y2="347"/>
+                <content>1.4%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="13">
+                <bounding-box x1="281" x2="301" y1="338" y2="347"/>
+                <content>1.8%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="13">
+                <bounding-box x1="328" x2="353" y1="338" y2="347"/>
+                <content>93.4%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="14">
+                <bounding-box x1="62" x2="88" y1="327" y2="336"/>
+                <content>Ritalin</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="14">
+                <bounding-box x1="173" x2="193" y1="327" y2="336"/>
+                <content>1.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="14">
+                <bounding-box x1="227" x2="247" y1="327" y2="336"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="14">
+                <bounding-box x1="281" x2="301" y1="327" y2="336"/>
+                <content>0.0%</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="14">
+                <bounding-box x1="328" x2="353" y1="327" y2="336"/>
+                <content>98.9%</content>
+            </cell>
+        </region>
+    </table>
+</document>

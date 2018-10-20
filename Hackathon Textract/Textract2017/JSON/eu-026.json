@@ -1,0 +1,2614 @@
+{
+    "0": {
+        "words": [
+            {
+                "text": "Duetoitemnon-response,theSAVEdatasetisimputedusinganiterativemultiple",
+                "x": 92.515,
+                "y": 79.43,
+                "w": 428.893,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "imputationprocedurebasedonaMarkov-ChainMonte-Carlomethod(Schunk(2008)).",
+                "x": 74.956,
+                "y": 98.701,
+                "w": 446.477,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Thegoalofthisprocedureistoincreasethee\ufb03ciencyofourestimatesduetoalarger",
+                "x": 74.956,
+                "y": 117.972,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "numberofobservationsandtoreducetheitemnon-responsebiasthatoccursifobser-",
+                "x": 74.956,
+                "y": 137.242,
+                "w": 446.469,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "vationswithandwithoutmissingvaluesdi\ufb00ersystematically.Forouranalysis,all\ufb01ve",
+                "x": 74.956,
+                "y": 156.513,
+                "w": 446.445,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "multiplyimputeddatasetsareusedandtheresultsarederivedusingRubin'smethod",
+                "x": 74.956,
+                "y": 175.784,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "(Rubin(1987,1996)).",
+                "x": 74.956,
+                "y": 195.055,
+                "w": 114.23,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Inthecaseofourexplainedvariables(absoluteandrelative",
+                "x": 199.684,
+                "y": 195.055,
+                "w": 321.717,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "loss)andkeyexplanatoryvariables(\ufb01nancialliteracyandcognitiveabilities),wedonot",
+                "x": 74.956,
+                "y": 214.325,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "useimputedvalues.Thus,ourbasicsampleconsistsof2,012households.Thesocio-",
+                "x": 74.956,
+                "y": 233.596,
+                "w": 446.445,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "demographiccharacteristicsofthesampleareprovidedinTableC1intheappendix.",
+                "x": 74.956,
+                "y": 252.867,
+                "w": 433.637,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "AlldescriptivestatisticsareweightedandresultsarerepresentativefortheGerman",
+                "x": 92.515,
+                "y": 272.137,
+                "w": 428.9,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "population.11Fortheregressionanalysesnoweightsareused.12",
+                "x": 74.956,
+                "y": 291.408,
+                "w": 325.594,
+                "h": 6.856,
+                "bold": false
+            },
+            {
+                "text": "3.2MeasuringFinancialLosses",
+                "x": 74.956,
+                "y": 330.13,
+                "w": 230.124,
+                "h": 14.361,
+                "bold": false
+            },
+            {
+                "text": "3.2.1ReportedLosses",
+                "x": 74.956,
+                "y": 359.051,
+                "w": 137.507,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "AbsoluteFinancialLosses.Wemeasurelossesduetothe\ufb01nancialcrisisbydirectly",
+                "x": 74.956,
+                "y": 386.043,
+                "w": 446.437,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "askinghouseholds.ThequestioninSAVE2009wasphrasedinthefollowingway:Have",
+                "x": 74.956,
+                "y": 405.314,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "youand/oryourpartnerpersonallysu\ufb00eredlossesinwealthduetothe\ufb01nancialcrisis?",
+                "x": 74.956,
+                "y": 424.584,
+                "w": 446.485,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Ifyes,howhighwasyourtotallossin2008inEuros?13Atthispointitisunclearif",
+                "x": 74.956,
+                "y": 443.855,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "householdsreportedpaperorrealizedlosses.However,wewillelaborateonthisinthe",
+                "x": 74.956,
+                "y": 463.126,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "courseofouranalysis.",
+                "x": 74.956,
+                "y": 482.396,
+                "w": 113.352,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "About79.5%ofthehouseholdsrespondedthattheydidnotincur\ufb01nanciallossesdue",
+                "x": 92.515,
+                "y": 501.667,
+                "w": 428.883,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "tothecrisis.20.5%reportedaloss.Theaveragelossreportedbyhouseholdsconditional",
+                "x": 74.956,
+                "y": 520.938,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "onreportingalossis13,153Euros.Themedianlossis5,000Euros.Thedistribution",
+                "x": 74.956,
+                "y": 540.209,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "oflossesisskewedtotherightandisplottedin\ufb01gureA1intheappendix.Theun-",
+                "x": 74.956,
+                "y": 559.479,
+                "w": 446.448,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "conditionalaveragelossofallhouseholdsinGermanyis2,562Euros.Incomparison,",
+                "x": 74.956,
+                "y": 578.75,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "theaveragelossofGermanhouseholdscalculatedonthebasisofaggregate\ufb01nancial",
+                "x": 74.956,
+                "y": 598.021,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "11ThereferencestatistictocalibrateweightsaccordingtoincomeandageclassesistheGerman",
+                "x": 84.449,
+                "y": 619.885,
+                "w": 436.978,
+                "h": 11.17,
+                "bold": false
+            },
+            {
+                "text": "Mikrozensus.ForadetaileddescriptionseeB\u00a8orsch-Supanetal.(2009),pp.48-52.",
+                "x": 74.956,
+                "y": 633.047,
+                "w": 358.784,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "12Deaton(1997)mentionsthat\"whenthesectors[subpopulations]arehomogeneous,OLSismore",
+                "x": 84.449,
+                "y": 643.796,
+                "w": 436.965,
+                "h": 11.169,
+                "bold": false
+            },
+            {
+                "text": "e\ufb03cient,andwhentheyarenot,bothestimatorsareinconsistent.Inneithercaseisthereanargument",
+                "x": 74.956,
+                "y": 656.957,
+                "w": 446.462,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "forweighting.\"(p.70).",
+                "x": 74.956,
+                "y": 668.912,
+                "w": 102.144,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "13Wedonotcomparehouseholds'balancesheetsattheendof2007and2008asthenetwealth",
+                "x": 84.449,
+                "y": 679.661,
+                "w": 436.978,
+                "h": 11.17,
+                "bold": false
+            },
+            {
+                "text": "positionofhouseholdscanalsobein\ufb02uencedbyconsumption-savingdecisionsandbequests,etc.",
+                "x": 74.956,
+                "y": 692.823,
+                "w": 421.493,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 533.229,
+                "y": 794.391,
+                "w": 8.755,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 465.125,
+                "y": 802.991,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 488.07,
+                "y": 802.991,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 504.547,
+                "y": 802.991,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 520.978,
+                "y": 802.991,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 530.09,
+                "y": 802.991,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 508.392,
+                "y": 811.591,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 530.09,
+                "y": 811.591,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "13",
+                "x": 553.768,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 544.394,
+                "y": 796.535,
+                "w": 22.677,
+                "h": 22.678
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    },
+    "1": {
+        "words": [
+            {
+                "text": "accountstatisticsoftheDeutscheBundesbankis3,105Euros.14Thedi\ufb00erencemay",
+                "x": 73.251,
+                "y": 79.482,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "atleastpartlybeexplainedbythefactthatsomehouseholdshavenotreportedpaper",
+                "x": 73.251,
+                "y": 98.753,
+                "w": 446.456,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "losses.",
+                "x": 73.251,
+                "y": 118.024,
+                "w": 31.411,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Inordertoevaluatehowwellhouseholdsestimatetheirlosseswesimulate\ufb01nancial",
+                "x": 90.81,
+                "y": 137.294,
+                "w": 428.886,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "lossesonthebasisoftheirportfoliosattheendof2007.Weapplytheapproachtaken",
+                "x": 73.251,
+                "y": 156.565,
+                "w": 446.446,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "byB\u00a8orsch-Supanetal.(2010),i.e.,weusehouseholds'portfoliocompositionattheend",
+                "x": 73.251,
+                "y": 175.836,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "of2007andapplyaveragerealizedreturnsoftheseassetsduring2008.Wedeductthe",
+                "x": 73.251,
+                "y": 195.107,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "simulatedwealthlevelattheendof2008fromthewealthlevelattheendof2007to",
+                "x": 73.251,
+                "y": 214.377,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "obtainpaperlossesandgainsduring2008.Toconstructoursimulatedlossvariablewe",
+                "x": 73.251,
+                "y": 233.648,
+                "w": 446.446,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "excludegainsasourdirectquestiononlycoveredlosses.Accordingtothesimulation",
+                "x": 73.251,
+                "y": 252.919,
+                "w": 446.444,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "about29.6%ofhouseholdsinGermanywerea\ufb00ectedbylossesin\ufb01nancialwealth.The",
+                "x": 73.251,
+                "y": 272.189,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "di\ufb00erencecomparedtoreportedlossescanbeduetotworeasons:First,someofthe",
+                "x": 73.251,
+                "y": 291.46,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "householdsdidnotreporttheirpaperlosseswhenaskeddirectlyandsomehouseholds",
+                "x": 73.251,
+                "y": 310.731,
+                "w": 446.465,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "mightbeunawareofthefactthattheywerea\ufb00ectedbythe\ufb01nancialcrisis.Wewill",
+                "x": 73.251,
+                "y": 330.002,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "commentonthisaspectafterweintroducemeasuresof\ufb01nancialliteracyandcognitive",
+                "x": 73.251,
+                "y": 349.272,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "abilities.Second,inSAVEwehaveinformationonratherbroadclassesofassets.We",
+                "x": 73.251,
+                "y": 368.543,
+                "w": 446.47,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "calculatedthereturnsonassetclassesusingaveragereturnsoftheseassetsaswedonot",
+                "x": 73.251,
+                "y": 387.814,
+                "w": 446.484,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "haveinformationoftheprecisecompositionofhouseholds'portfolios.Thus,forsome",
+                "x": 73.251,
+                "y": 407.084,
+                "w": 446.479,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "householdsthesimulatedlossmightnotre\ufb02ecttheirtruesituationverywell.",
+                "x": 73.251,
+                "y": 426.355,
+                "w": 394.5,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Theaveragesimulatedlossofhouseholdsis2,658Euro.Thisisquiteclosetothe",
+                "x": 90.81,
+                "y": 445.626,
+                "w": 428.893,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "reportedaveragelossof2,562Euros.15Conditionalonreportingalosstheaverage",
+                "x": 73.251,
+                "y": 464.897,
+                "w": 446.475,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "simulatedlossis10,692Euros,i.e.thevalueisbelowtheaveragereportedlossof13,153",
+                "x": 73.251,
+                "y": 484.167,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Euros.Wealsoanalyzethedi\ufb00erencebetweensimulatedandreportedlossesonthe",
+                "x": 73.251,
+                "y": 503.438,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "individualleveland\ufb01ndthatabout13%reportlossesbelowthesimulatedlossand",
+                "x": 73.251,
+                "y": 522.709,
+                "w": 446.451,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "about22%reportlossesabovethesimulatedloss.For64%oftherespondentreported",
+                "x": 73.251,
+                "y": 541.979,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "andsimulatedlossesbotharezero.Againthedeviationscanbeduetomisreportingof",
+                "x": 73.251,
+                "y": 561.25,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "thehouseholdsaswellasduetotheimpreciseestimationofsimulatedreturnstowealth",
+                "x": 73.251,
+                "y": 580.521,
+                "w": 446.439,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "during2008.Overall,wecometotheconclusionthathouseholdsonaverageseemto",
+                "x": 73.251,
+                "y": 599.792,
+                "w": 446.448,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "haveaplausiblenotionoftheirlossesduringthe\ufb01nancialcrisis.Wewillcommenton",
+                "x": 73.251,
+                "y": 619.062,
+                "w": 446.451,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "thedeviationinmoredetailsbelow.",
+                "x": 73.251,
+                "y": 638.333,
+                "w": 183.79,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "14Estimated",
+                "x": 82.744,
+                "y": 657.873,
+                "w": 52.912,
+                "h": 11.169,
+                "bold": false
+            },
+            {
+                "text": "on",
+                "x": 148.738,
+                "y": 659.079,
+                "w": 10.516,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "the",
+                "x": 172.339,
+                "y": 659.079,
+                "w": 13.837,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "basis",
+                "x": 199.258,
+                "y": 659.079,
+                "w": 21.135,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "ofDeutscheBundesbank",
+                "x": 233.47,
+                "y": 659.079,
+                "w": 127.012,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "(2009):",
+                "x": 373.564,
+                "y": 659.079,
+                "w": 30.442,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Verbindlichkeiten",
+                "x": 73.251,
+                "y": 671.035,
+                "w": 75.577,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "der",
+                "x": 161.908,
+                "y": 671.035,
+                "w": 13.865,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "privatenHaushalte.",
+                "x": 188.867,
+                "y": 671.035,
+                "w": 95.089,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Tabelle",
+                "x": 317.684,
+                "y": 671.035,
+                "w": 31.545,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "aus",
+                "x": 362.316,
+                "y": 671.035,
+                "w": 14.446,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "der",
+                "x": 389.843,
+                "y": 671.035,
+                "w": 13.864,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "http://www.bundesbank.de/statistik/statistikwirtschaftsdatentabellen.php",
+                "x": 73.251,
+                "y": 682.99,
+                "w": 333.321,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "15Thecorrelationofsimulatedandreportedlossesis0.52(p-value0.000).",
+                "x": 82.744,
+                "y": 693.739,
+                "w": 321.012,
+                "h": 11.169,
+                "bold": false
+            },
+            {
+                "text": "Geldverm\u00a8ogen",
+                "x": 427.95,
+                "y": 659.079,
+                "w": 62.087,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "und",
+                "x": 503.118,
+                "y": 659.079,
+                "w": 16.593,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Finanzierungsrechnung;",
+                "x": 416.801,
+                "y": 671.035,
+                "w": 102.915,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 53.291,
+                "y": 794.391,
+                "w": 8.756,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 53.291,
+                "y": 802.991,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 76.236,
+                "y": 802.991,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 92.713,
+                "y": 802.991,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 109.144,
+                "y": 802.991,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 118.256,
+                "y": 802.991,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 53.291,
+                "y": 811.591,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 74.989,
+                "y": 811.591,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "14",
+                "x": 28.063,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 28.346,
+                "y": 796.535,
+                "w": 22.677,
+                "h": 22.678
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    },
+    "2": {
+        "words": [
+            {
+                "text": "RelativeFinancialLosses.Wedivide\ufb01nanciallossesbyhouseholds'total\ufb01nancial",
+                "x": 92.233,
+                "y": 79.594,
+                "w": 428.893,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wealthattheendof2007.Total\ufb01nancialwealthisconstructedusingdepositsheldin",
+                "x": 74.674,
+                "y": 98.865,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "savingsaccounts,buildingsavingscontracts,\ufb01xedincomesecurities,stocks,stockmutual",
+                "x": 74.674,
+                "y": 118.136,
+                "w": 446.484,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "andrealestatefunds,lifeinsurancecontracts,privateandemployer-basedpensionwealth",
+                "x": 74.674,
+                "y": 137.406,
+                "w": 446.474,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "aswellasother\ufb01nancialassets.Onaveragehouseholdslostabout3.6%oftheirgross",
+                "x": 74.674,
+                "y": 156.677,
+                "w": 446.459,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "\ufb01nancialwealth.Conditionalonsu\ufb00eringaloss,householdslostabout18.6%oftheir",
+                "x": 74.674,
+                "y": 175.948,
+                "w": 446.477,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "gross\ufb01nancialwealth.Themedianlossis9.5%.Overall,about9.2%ofthehouseholds",
+                "x": 74.674,
+                "y": 195.219,
+                "w": 446.44,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "lostmorethan10%andabout1.8%lostmorethanhalfoftheir\ufb01nancialassets.The",
+                "x": 74.674,
+                "y": 214.489,
+                "w": 446.495,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "averagesimulatedlossrelativeto\ufb01nancialwealthattheendof2007is3.7%whichis",
+                "x": 74.674,
+                "y": 233.76,
+                "w": 446.433,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "againquiteclosetothereportedone.",
+                "x": 74.674,
+                "y": 253.031,
+                "w": 191.257,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Additionallywerelatelossestototalwealth.Thus,weaddhousingandbusiness",
+                "x": 92.233,
+                "y": 272.301,
+                "w": 428.89,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wealthaswellasotherrealassets(e.g.jewelery,antiquesetc.)toour\ufb01nancialwealth",
+                "x": 74.674,
+                "y": 291.572,
+                "w": 446.45,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "variable.Relatedtotheirtotalgrosswealthattheendof2007,householdsonaverage",
+                "x": 74.674,
+                "y": 310.843,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "lost1.7%oftheirwealth.Conditionalonreportingaloss,thefractionoftotalwealth",
+                "x": 74.674,
+                "y": 330.114,
+                "w": 446.474,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "lostis8.9%withamedianof2.5%.3.8%lostafractionofwealthhigherthan10%of",
+                "x": 74.674,
+                "y": 349.384,
+                "w": 446.488,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "allassets.Lessthan1%ofallhouseholdslostmorethanhalfoftheirtotalwealth.",
+                "x": 74.674,
+                "y": 368.655,
+                "w": 423.412,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "3.2.2RealizedLosses",
+                "x": 74.674,
+                "y": 404.655,
+                "w": 132.21,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Asafollowupquestionweaskedrespondents:Whatdidyoudowiththeassetsthatlost",
+                "x": 74.674,
+                "y": 431.646,
+                "w": 446.462,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "invalue?Wekepttheassets./Wesoldsomeoftheassets./Wesoldallofthem.",
+                "x": 74.674,
+                "y": 450.917,
+                "w": 426.873,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Thisquestionwasonlyaskedconditionalonreportingaloss.Thus,458households",
+                "x": 92.233,
+                "y": 470.188,
+                "w": 428.902,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "gaveananswertothisquestion.75.2%respondedthattheykepttheloserassetsintheir",
+                "x": 74.674,
+                "y": 489.459,
+                "w": 446.465,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "portfolio.Thus,thesehouseholdsreportedpaperlosses.13.2%reportthattheysold",
+                "x": 74.674,
+                "y": 508.729,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "alloftheassetsthatlostinvalueand11.6%soldatleastsomeofthem(seeTable1).",
+                "x": 74.674,
+                "y": 528.0,
+                "w": 446.472,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Fortheanalysisconductedlateronweconstructavariableequalto1ifhouseholdssold",
+                "x": 74.674,
+                "y": 547.271,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "someoralloftheirassets.",
+                "x": 74.674,
+                "y": 566.541,
+                "w": 133.913,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Table1alsorelatestheabsoluteandrelativelossesofhouseholdstotheirreaction.",
+                "x": 92.233,
+                "y": 585.812,
+                "w": 428.895,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "We\ufb01ndthattheaveragelossofhouseholdswhokepttheirassetsislittleover12,000",
+                "x": 74.674,
+                "y": 605.083,
+                "w": 446.471,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Euros.Theaveragelossofhouseholdswhosoldsomeoftheassetsisalmosttwiceas",
+                "x": 74.674,
+                "y": 624.354,
+                "w": 446.464,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "large(about23,500Euros).However,thelossofhouseholdswhosoldalltheirassetsis",
+                "x": 74.674,
+                "y": 643.624,
+                "w": 446.469,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "onlyaround9,000Euros.Investorswhokepttheirassetsonaveragelost17.4%oftheir",
+                "x": 74.674,
+                "y": 662.895,
+                "w": 446.477,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wealthwhichisabout23%lessthantheaveragerelativelossesofinvestorswhosold",
+                "x": 74.674,
+                "y": 682.166,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "someoralloftheirassetsandwhosu\ufb00eredanaveragerelativelossof22.5%.",
+                "x": 74.674,
+                "y": 701.436,
+                "w": 394.579,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 533.229,
+                "y": 794.391,
+                "w": 8.755,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 465.125,
+                "y": 802.991,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 488.07,
+                "y": 802.991,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 504.547,
+                "y": 802.991,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 520.978,
+                "y": 802.991,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 530.09,
+                "y": 802.991,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 508.392,
+                "y": 811.591,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 530.09,
+                "y": 811.591,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "15",
+                "x": 553.768,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 544.394,
+                "y": 796.535,
+                "w": 22.677,
+                "h": 22.678
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    },
+    "3": {
+        "words": [
+            {
+                "text": "Table1:Households'ReactiontoFinancialLosses",
+                "x": 167.377,
+                "y": 79.594,
+                "w": 258.008,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Thistablecontainsthefrequencyandtheproportionofrespondentswhogavetherespectiveanswers",
+                "x": 80.382,
+                "y": 90.577,
+                "w": 431.993,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "tothequestion\"Whatdidyoudowiththeassetsthatlostinvalue?\"Additionallytheaverageloss",
+                "x": 80.382,
+                "y": 102.532,
+                "w": 432.024,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "andtheaveragefractionofwealthlostarereported.",
+                "x": 80.382,
+                "y": 114.487,
+                "w": 227.411,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Freq.",
+                "x": 236.735,
+                "y": 125.191,
+                "w": 22.035,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Percent",
+                "x": 306.294,
+                "y": 125.191,
+                "w": 32.835,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "MeanLoss",
+                "x": 375.863,
+                "y": 125.191,
+                "w": 46.463,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "I/wekepttheassets",
+                "x": 80.382,
+                "y": 151.891,
+                "w": 87.612,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "344",
+                "x": 236.735,
+                "y": 151.891,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "I/wesoldsomeoftheassets",
+                "x": 80.382,
+                "y": 163.846,
+                "w": 122.316,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "53",
+                "x": 236.735,
+                "y": 163.846,
+                "w": 9.962,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "I/wesoldallofthem",
+                "x": 80.382,
+                "y": 175.802,
+                "w": 91.111,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "61",
+                "x": 236.735,
+                "y": 175.802,
+                "w": 9.962,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Total",
+                "x": 80.382,
+                "y": 190.546,
+                "w": 22.971,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "458",
+                "x": 236.735,
+                "y": 190.546,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Source:SAVE2009,dataisweighted.",
+                "x": 80.382,
+                "y": 202.501,
+                "w": 165.177,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "75.2",
+                "x": 306.294,
+                "y": 151.891,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "11.6",
+                "x": 306.294,
+                "y": 163.846,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "13.2",
+                "x": 306.294,
+                "y": 175.802,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "100.0",
+                "x": 306.294,
+                "y": 190.546,
+                "w": 22.693,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "12196",
+                "x": 375.853,
+                "y": 151.891,
+                "w": 24.906,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "23518",
+                "x": 375.853,
+                "y": 163.846,
+                "w": 24.906,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "9187",
+                "x": 375.853,
+                "y": 175.802,
+                "w": 19.925,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "13153",
+                "x": 375.853,
+                "y": 190.546,
+                "w": 24.906,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "3.3MeasuringFinancialLiteracy",
+                "x": 73.153,
+                "y": 234.421,
+                "w": 243.847,
+                "h": 14.361,
+                "bold": false
+            },
+            {
+                "text": "Fraction",
+                "x": 445.422,
+                "y": 125.191,
+                "w": 36.148,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "of",
+                "x": 494.996,
+                "y": 125.191,
+                "w": 8.026,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "WealthLost",
+                "x": 445.402,
+                "y": 137.146,
+                "w": 53.332,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "17.4%",
+                "x": 445.402,
+                "y": 151.891,
+                "w": 26.013,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "22.5%",
+                "x": 445.402,
+                "y": 163.846,
+                "w": 26.013,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "22.5%",
+                "x": 445.402,
+                "y": 175.802,
+                "w": 26.013,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "18.7%",
+                "x": 445.402,
+                "y": 190.546,
+                "w": 26.013,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Wemeasure\ufb01nancialsophisticationusingan\"objective\"-asopposedtoa\"subjec-",
+                "x": 73.153,
+                "y": 263.342,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "tive\",i.e.self-assessed-measureof\ufb01nancialliteracy.Asetofthreequiz-likequestions",
+                "x": 73.153,
+                "y": 282.613,
+                "w": 446.465,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wasdevelopedbyLusardiandMitchell(2006)fortheHealthandRetirementStudyin",
+                "x": 73.153,
+                "y": 301.884,
+                "w": 446.491,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "2004.Thequestionsaredesignedtoassessthefundamentalskillsthatareatthecoreof",
+                "x": 73.153,
+                "y": 321.154,
+                "w": 446.441,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "individualsavingandinvestmentdecisions.Inthemeantime,thesame(orverysimilar)",
+                "x": 73.153,
+                "y": 340.425,
+                "w": 446.446,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "questionswereincludedinseveralhouseholdsurveysaroundtheworld,includingthe",
+                "x": 73.153,
+                "y": 359.696,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "GermanSAVEsurvey.Twoofthequestionsareclassi\ufb01edasmeasuringbasic\ufb01nancial",
+                "x": 73.153,
+                "y": 378.966,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "concepts(vanRooijetal.(2007)).The\ufb01rstquestionconcernstheunderstandingof",
+                "x": 73.153,
+                "y": 398.237,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "interestandrequirestheabilitytocalculate.Thesecondquestionexaminestheunder-",
+                "x": 73.153,
+                "y": 417.508,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "standingofthejointe\ufb00ectsofinterestandin\ufb02ation.Thethirdquestioniscategorized",
+                "x": 73.153,
+                "y": 436.779,
+                "w": 446.47,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "asmeasuringadvanced\ufb01nancialknowledgeanddealswithriskanddiversi\ufb01cation.The",
+                "x": 73.153,
+                "y": 456.049,
+                "w": 446.448,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wordingofthequestionscanbefoundinappendixD.",
+                "x": 73.153,
+                "y": 475.32,
+                "w": 276.043,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Weusetheanswerstothe\ufb01nancialquizfromtheSAVEsurveyin2007becausethe",
+                "x": 90.712,
+                "y": 494.591,
+                "w": 428.871,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "\ufb01nancialcrisismighthavechanged\ufb01nancialknowledgeofhouseholds.Thesurveywas",
+                "x": 73.153,
+                "y": 513.862,
+                "w": 446.441,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "conductedintheearlysummerof2007beforethestartofthe\ufb01nancialcrisis.In2007",
+                "x": 73.153,
+                "y": 533.132,
+                "w": 446.448,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "respondentswererequestedtoanswer\ufb01nancialliteracyquestionsforthe\ufb01rsttimein",
+                "x": 73.153,
+                "y": 552.403,
+                "w": 446.444,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "SAVE.",
+                "x": 73.153,
+                "y": 571.674,
+                "w": 33.967,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Finally,wede\ufb01netwomeasuresof\ufb01nancialliteracy.Weconstructanindextaking",
+                "x": 90.712,
+                "y": 590.944,
+                "w": 428.89,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "values0to3accordingtothenumberofcorrectanswersgivenbyeachrespondent.",
+                "x": 73.153,
+                "y": 610.215,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "TheanswersgivenbytherespondentsaredisplayedinTable2.Thesecondvariable",
+                "x": 73.153,
+                "y": 629.486,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "isadummy,whichtakesthevalue1ifallquestionswereansweredcorrectlyand0",
+                "x": 73.153,
+                "y": 648.757,
+                "w": 446.462,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "otherwise.Inoursample53.2%oftherespondentswereabletoanswerallthree\ufb01nancial",
+                "x": 73.153,
+                "y": 668.027,
+                "w": 446.453,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "literacyquestionscorrectly,whereas46.8%hadaleastoneincorrectansweror\"donot",
+                "x": 73.153,
+                "y": 687.298,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 53.291,
+                "y": 794.391,
+                "w": 8.756,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 53.291,
+                "y": 802.991,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 76.236,
+                "y": 802.991,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 92.713,
+                "y": 802.991,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 109.144,
+                "y": 802.991,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 118.256,
+                "y": 802.991,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 53.291,
+                "y": 811.591,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 74.989,
+                "y": 811.591,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "16",
+                "x": 28.063,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 28.346,
+                "y": 796.535,
+                "w": 22.677,
+                "h": 22.678
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    },
+    "4": {
+        "words": [
+            {
+                "text": "know\".16AcomparisonoftheseresponseswithresultsfromearlierstudieslikeLusardi",
+                "x": 75.213,
+                "y": 79.969,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "andMitchell(2006)andvanRooijetal.(2007)isdi\ufb03cultduetothemissing\"donot",
+                "x": 75.213,
+                "y": 99.24,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "know\"optioninSAVE.WecomparetheanswersacrosscountriesonthebasisofSAVE",
+                "x": 75.213,
+                "y": 118.511,
+                "w": 446.458,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "2009inBucher-KoenenandLusardi(2010).",
+                "x": 75.213,
+                "y": 137.781,
+                "w": 224.411,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Table2:FinancialLiteracy2007",
+                "x": 214.876,
+                "y": 171.982,
+                "w": 167.126,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Thistablecontainsthefrequencyandtheproportionofrespondentswhowereabletoanswerzero",
+                "x": 82.442,
+                "y": 185.289,
+                "w": 432.003,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "tothreequestionsonthe\ufb01nancialliteracytask.",
+                "x": 82.442,
+                "y": 197.245,
+                "w": 208.616,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "no.ofcorrectanswers",
+                "x": 82.442,
+                "y": 207.949,
+                "w": 95.934,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Freq.",
+                "x": 238.795,
+                "y": 207.949,
+                "w": 22.035,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Percent",
+                "x": 322.76,
+                "y": 207.949,
+                "w": 32.825,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Cum.",
+                "x": 406.724,
+                "y": 207.949,
+                "w": 23.801,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "0",
+                "x": 82.442,
+                "y": 222.694,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "138",
+                "x": 238.795,
+                "y": 222.694,
+                "w": 14.943,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "6.9",
+                "x": 322.75,
+                "y": 222.694,
+                "w": 12.73,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "6.9",
+                "x": 406.705,
+                "y": 222.694,
+                "w": 12.729,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "1",
+                "x": 82.442,
+                "y": 234.649,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "178",
+                "x": 238.795,
+                "y": 234.649,
+                "w": 14.943,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "8.8",
+                "x": 322.75,
+                "y": 234.649,
+                "w": 12.73,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "15.7",
+                "x": 406.705,
+                "y": 234.649,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "2",
+                "x": 82.442,
+                "y": 246.604,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "626",
+                "x": 238.795,
+                "y": 246.604,
+                "w": 14.943,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "31.1",
+                "x": 322.75,
+                "y": 246.604,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "46.8",
+                "x": 406.705,
+                "y": 246.604,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "3",
+                "x": 82.442,
+                "y": 258.559,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "1070",
+                "x": 238.795,
+                "y": 258.559,
+                "w": 19.925,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "53.2",
+                "x": 322.75,
+                "y": 258.559,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "100.0",
+                "x": 406.705,
+                "y": 258.559,
+                "w": 22.692,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Source:SAVE2007,dataisweightedaccordingtosampleweights2009,N=2012.",
+                "x": 82.442,
+                "y": 273.304,
+                "w": 358.771,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Previousanalysisof\ufb01nancialliteracyamongSAVErespondentsrevealedthat\ufb01nan-",
+                "x": 92.772,
+                "y": 304.501,
+                "w": 428.904,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "cialliteracyisrelativelylowamongwomen,individualswithloweducation,lowincome",
+                "x": 75.213,
+                "y": 323.772,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "andindividualslivingineastGermany(Bucher-KoenenandLusardi(2010)).",
+                "x": 75.213,
+                "y": 343.043,
+                "w": 395.679,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "3.4MeasuringCognitiveAbilities",
+                "x": 75.213,
+                "y": 381.506,
+                "w": 248.031,
+                "h": 14.361,
+                "bold": false
+            },
+            {
+                "text": "Cognitiveabilitiesaremeasuredusingthecognitivere\ufb02ectiontest(CRT)developedand",
+                "x": 75.213,
+                "y": 410.427,
+                "w": 446.474,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "testedbyFrederick(2005).Toourknowledge,SAVEisthe\ufb01rstrepresentativesample",
+                "x": 75.213,
+                "y": 429.698,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "whichcontainsthismeasure.TheCRTconsistsofthreequiz-likequestions.Allquestions",
+                "x": 75.213,
+                "y": 448.969,
+                "w": 446.452,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "haveanintuitivebutincorrectanswerandacorrectanswerthatisalittlemoretrickyto",
+                "x": 75.213,
+                "y": 468.239,
+                "w": 446.495,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "\ufb01nd.TheCRThasbeenfoundtobeaverye\ufb03cientwaytoestimatecognitiveabilities",
+                "x": 75.213,
+                "y": 487.51,
+                "w": 446.464,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "ofindividualsinquestionnaires.Itcorrelateswellwithmorecomprehensiveintelligence",
+                "x": 75.213,
+                "y": 506.781,
+                "w": 446.457,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "tests.ThewordingofthequestionscanbefoundinappendixD.",
+                "x": 75.213,
+                "y": 526.051,
+                "w": 332.089,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "TheCRTwasonlyintroducedintheSAVEsurveyin2009.However,thereisno",
+                "x": 92.772,
+                "y": 545.322,
+                "w": 428.888,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "reasontoassumethatthecrisisin\ufb02uencedcognitiveabilitiesofourrespondents.Thus",
+                "x": 75.213,
+                "y": 564.593,
+                "w": 446.433,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "wedonotseeanydi\ufb03cultyinusingthisdata.",
+                "x": 75.213,
+                "y": 583.864,
+                "w": 237.251,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Similartoourmeasuresof\ufb01nancialliteracywede\ufb01neameasureofcognitiveabilities.",
+                "x": 92.772,
+                "y": 603.134,
+                "w": 428.867,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Weconstructanindextakingthevalues0to3correspondingtothenumberofcorrect",
+                "x": 75.213,
+                "y": 622.405,
+                "w": 446.486,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "answersgiven.TheresultscanbefoundinTable3.43%ofourrespondentsgave",
+                "x": 75.213,
+                "y": 641.676,
+                "w": 446.445,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "nocorrectanswer.Around20%gaveoneand21%twocorrectanswers.15%ofthe",
+                "x": 75.213,
+                "y": 660.946,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "16Inthequestionnaire2007theinterestandthein\ufb02ationquestiondidnothavea\"donotknow\"",
+                "x": 84.706,
+                "y": 682.311,
+                "w": 436.993,
+                "h": 11.169,
+                "bold": false
+            },
+            {
+                "text": "option.Forthisreasonwetreatmissinganswersas\"donotknow\"anddonotdropthemfromthe",
+                "x": 75.213,
+                "y": 695.472,
+                "w": 446.472,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "sample.",
+                "x": 75.213,
+                "y": 707.427,
+                "w": 32.71,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 533.229,
+                "y": 794.391,
+                "w": 8.755,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 465.125,
+                "y": 802.991,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 488.07,
+                "y": 802.991,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 504.547,
+                "y": 802.991,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 520.978,
+                "y": 802.991,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 530.09,
+                "y": 802.991,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 508.392,
+                "y": 811.591,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 530.09,
+                "y": 811.591,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "17",
+                "x": 553.768,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 544.394,
+                "y": 796.535,
+                "w": 22.677,
+                "h": 22.678
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    },
+    "5": {
+        "words": [
+            {
+                "text": "respondentswereabletoanswerallthreequestionscorrectly.Moreover,weconstructa",
+                "x": 73.652,
+                "y": 79.594,
+                "w": 446.45,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "dummyvariablewhichtakesthevalue1ifallquestionswerecorrectlyanswered.The",
+                "x": 73.652,
+                "y": 98.865,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "percentageofindividualswiththreecorrectresponsesinthestudybyFrederick(2005)",
+                "x": 73.652,
+                "y": 118.136,
+                "w": 446.467,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "rangesbetween48%(sampleof61studentsatMassachusettsInstituteofTechnology)",
+                "x": 73.652,
+                "y": 137.406,
+                "w": 446.436,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "and5%(sampleof138studentsattheUniversityofToledo).Onaveragearound17%",
+                "x": 73.652,
+                "y": 156.677,
+                "w": 446.481,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "oftheparticipants-mostlyyounguniversitystudents-inhissamplesgivethreecorrect",
+                "x": 73.652,
+                "y": 175.948,
+                "w": 446.451,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "answers.",
+                "x": 73.652,
+                "y": 195.219,
+                "w": 42.73,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Table3:CognitiveRe\ufb02ectionTest",
+                "x": 208.973,
+                "y": 227.431,
+                "w": 175.816,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Thistablecontainsthefrequencyandtheproportionofrespondentswhowereabletoanswerzero",
+                "x": 80.881,
+                "y": 240.738,
+                "w": 432.003,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "tothreequestionsonthecognitiveabilitiestask.",
+                "x": 80.881,
+                "y": 252.694,
+                "w": 212.232,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "no.ofcorrectanswers",
+                "x": 80.881,
+                "y": 263.398,
+                "w": 95.935,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Freq.",
+                "x": 237.234,
+                "y": 263.398,
+                "w": 22.035,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "0",
+                "x": 80.881,
+                "y": 278.143,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "871",
+                "x": 237.234,
+                "y": 278.143,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "1",
+                "x": 80.881,
+                "y": 290.098,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "434",
+                "x": 237.234,
+                "y": 290.098,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "2",
+                "x": 80.881,
+                "y": 302.053,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "403",
+                "x": 237.234,
+                "y": 302.053,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "3",
+                "x": 80.881,
+                "y": 314.008,
+                "w": 4.981,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "303",
+                "x": 237.234,
+                "y": 314.008,
+                "w": 14.944,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Source:SAVE2009,dataisweighted,N=2012.",
+                "x": 80.881,
+                "y": 328.753,
+                "w": 209.741,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Percent",
+                "x": 321.199,
+                "y": 263.398,
+                "w": 32.825,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "43.3",
+                "x": 321.189,
+                "y": 278.143,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "21.6",
+                "x": 321.189,
+                "y": 290.098,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "20.0",
+                "x": 321.189,
+                "y": 302.053,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "15.1",
+                "x": 321.189,
+                "y": 314.008,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Cum.",
+                "x": 405.164,
+                "y": 263.398,
+                "w": 23.8,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "43.3",
+                "x": 405.144,
+                "y": 278.143,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "64.9",
+                "x": 405.144,
+                "y": 290.098,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "84.9",
+                "x": 405.144,
+                "y": 302.053,
+                "w": 17.711,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "100.0",
+                "x": 405.144,
+                "y": 314.008,
+                "w": 22.692,
+                "h": 9.963,
+                "bold": false
+            },
+            {
+                "text": "Thereisasigni\ufb01cantlypositivecorrelation(spearmanrankcorrelation:0.2899,p-",
+                "x": 91.211,
+                "y": 363.94,
+                "w": 428.897,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "value0.000)betweenourmeasuresof\ufb01nancialliteracyandcognitiveabilities.About",
+                "x": 73.652,
+                "y": 383.211,
+                "w": 446.448,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "4.3%oftherespondentsanswernoneofthequestionscorrectlyand11.2%givesix",
+                "x": 73.652,
+                "y": 402.481,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "correctanswers.Financialliteracyincreaseswithcognitivecapacity:Amongthosewith",
+                "x": 73.652,
+                "y": 421.752,
+                "w": 446.443,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "lowcognitiveabilities(0correctanswers)37%givethreecorrectanswersonthe\ufb01nancial",
+                "x": 73.652,
+                "y": 441.023,
+                "w": 446.46,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "literacytaskwhereasamongthosewithhighcognitiveabilities(3correctanswers)the",
+                "x": 73.652,
+                "y": 460.293,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "probabilityofcorrectlyansweringall\ufb01nancialliteracyquestionsisroughly75%.",
+                "x": 73.652,
+                "y": 479.564,
+                "w": 411.273,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "4Empiricalstrategiesandresults",
+                "x": 73.652,
+                "y": 522.573,
+                "w": 297.141,
+                "h": 17.233,
+                "bold": false
+            },
+            {
+                "text": "4.1Whoisa\ufb00ectedby\ufb01nanciallossesduetothecrisis?",
+                "x": 73.652,
+                "y": 560.651,
+                "w": 404.263,
+                "h": 14.361,
+                "bold": false
+            },
+            {
+                "text": "4.1.1Modeltotesthypothesis1",
+                "x": 73.652,
+                "y": 589.571,
+                "w": 198.785,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "Insection2.1wearguedthattheprobabilityofincurringa\ufb01nanciallossduringthecrisis",
+                "x": 73.652,
+                "y": 616.563,
+                "w": 446.436,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "dependsonwhetherthehouseholdinvestedinriskyassets,whichinturndependson",
+                "x": 73.652,
+                "y": 635.834,
+                "w": 446.451,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "factorslikeparticipationcost,incomevolatility,andriskpreferences.Inordertotest",
+                "x": 73.652,
+                "y": 655.104,
+                "w": 446.455,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "hypothesis1wesubstitutethedeterminantsofriskyassetinvestmentintotheequation",
+                "x": 73.652,
+                "y": 674.375,
+                "w": 446.457,
+                "h": 11.967,
+                "bold": false
+            },
+            {
+                "text": "ECB",
+                "x": 53.291,
+                "y": 794.392,
+                "w": 8.756,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Working",
+                "x": 53.291,
+                "y": 802.992,
+                "w": 19.882,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Paper",
+                "x": 76.236,
+                "y": 802.992,
+                "w": 13.414,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Series",
+                "x": 92.713,
+                "y": 802.992,
+                "w": 13.368,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "No",
+                "x": 109.144,
+                "y": 802.992,
+                "w": 6.049,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "1299",
+                "x": 118.256,
+                "y": 802.992,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "Febuary",
+                "x": 53.291,
+                "y": 811.592,
+                "w": 18.636,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "2011",
+                "x": 74.989,
+                "y": 811.592,
+                "w": 11.894,
+                "h": 9.504,
+                "bold": false
+            },
+            {
+                "text": "18",
+                "x": 28.063,
+                "y": 800.269,
+                "w": 13.87,
+                "h": 23.76,
+                "bold": false
+            }
+        ],
+        "drawn_lines": [
+            {
+                "x": 28.346,
+                "y": 796.536,
+                "w": 22.677,
+                "h": 22.677
+            }
+        ],
+        "w": 595.276001,
+        "h": 841.889954
+    }
+}

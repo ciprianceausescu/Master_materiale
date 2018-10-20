@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-027-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='3'>
+            <cell id="1" start-col="0" start-row="0">
+                <bounding-box x1="82" x2="118" y1="677" y2="687"/>
+                <content>Variable</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="0">
+                <bounding-box x1="287" x2="311" y1="677" y2="687"/>
+                <content>Mean</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="0">
+                <bounding-box x1="327" x2="369" y1="677" y2="687"/>
+                <content>Std. Dev.</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="0">
+                <bounding-box x1="381" x2="399" y1="677" y2="687"/>
+                <content>Min</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="0">
+                <bounding-box x1="453" x2="472" y1="677" y2="687"/>
+                <content>Max</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="1">
+                <bounding-box x1="82" x2="99" y1="662" y2="672"/>
+                <content>Age</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="290" x2="308" y1="662" y2="672"/>
+                <content>50.8</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="1">
+                <bounding-box x1="339" x2="357" y1="662" y2="672"/>
+                <content>15.9</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="1">
+                <bounding-box x1="385" x2="395" y1="662" y2="672"/>
+                <content>21</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="1">
+                <bounding-box x1="457" x2="467" y1="662" y2="672"/>
+                <content>90</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="82" x2="101" y1="650" y2="660"/>
+                <content>Men</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="290" x2="308" y1="650" y2="660"/>
+                <content>0.47</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="2">
+                <bounding-box x1="339" x2="357" y1="650" y2="660"/>
+                <content>0.50</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="2">
+                <bounding-box x1="387" x2="392" y1="650" y2="660"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="2">
+                <bounding-box x1="460" x2="465" y1="650" y2="660"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="82" x2="102" y1="638" y2="648"/>
+                <content>East</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="290" x2="308" y1="638" y2="648"/>
+                <content>0.28</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="3">
+                <bounding-box x1="339" x2="357" y1="638" y2="648"/>
+                <content>0.45</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="3">
+                <bounding-box x1="387" x2="392" y1="638" y2="648"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="3">
+                <bounding-box x1="460" x2="465" y1="638" y2="648"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="82" x2="106" y1="626" y2="636"/>
+                <content>Rural</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="290" x2="308" y1="626" y2="636"/>
+                <content>0.15</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="4">
+                <bounding-box x1="339" x2="357" y1="626" y2="636"/>
+                <content>0.36</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="4">
+                <bounding-box x1="387" x2="392" y1="626" y2="636"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="4">
+                <bounding-box x1="460" x2="465" y1="626" y2="636"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="82" x2="117" y1="614" y2="624"/>
+                <content>Married</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="290" x2="308" y1="614" y2="624"/>
+                <content>0.57</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="5">
+                <bounding-box x1="339" x2="357" y1="614" y2="624"/>
+                <content>0.50</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="5">
+                <bounding-box x1="387" x2="392" y1="614" y2="624"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="5">
+                <bounding-box x1="460" x2="465" y1="614" y2="624"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="82" x2="108" y1="602" y2="612"/>
+                <content>Single</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="290" x2="308" y1="602" y2="612"/>
+                <content>0.21</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="6">
+                <bounding-box x1="339" x2="357" y1="602" y2="612"/>
+                <content>0.40</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="6">
+                <bounding-box x1="387" x2="392" y1="602" y2="612"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="6">
+                <bounding-box x1="460" x2="465" y1="602" y2="612"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="82" x2="121" y1="590" y2="600"/>
+                <content>Divorced</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="290" x2="308" y1="590" y2="600"/>
+                <content>0.13</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="7">
+                <bounding-box x1="339" x2="357" y1="590" y2="600"/>
+                <content>0.33</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="7">
+                <bounding-box x1="387" x2="392" y1="590" y2="600"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="7">
+                <bounding-box x1="460" x2="465" y1="590" y2="600"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="8">
+                <bounding-box x1="82" x2="122" y1="578" y2="588"/>
+                <content>Widowed</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="8">
+                <bounding-box x1="290" x2="308" y1="578" y2="588"/>
+                <content>0.08</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="8">
+                <bounding-box x1="339" x2="357" y1="578" y2="588"/>
+                <content>0.26</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="8">
+                <bounding-box x1="387" x2="392" y1="578" y2="588"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="8">
+                <bounding-box x1="460" x2="465" y1="578" y2="588"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="9">
+                <bounding-box x1="82" x2="125" y1="566" y2="576"/>
+                <content>Separated</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="9">
+                <bounding-box x1="290" x2="308" y1="566" y2="576"/>
+                <content>0.03</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="9">
+                <bounding-box x1="339" x2="357" y1="566" y2="576"/>
+                <content>0.16</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="9">
+                <bounding-box x1="387" x2="392" y1="566" y2="576"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="9">
+                <bounding-box x1="460" x2="465" y1="566" y2="576"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="10">
+                <bounding-box x1="82" x2="115" y1="554" y2="564"/>
+                <content>Partner</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="10">
+                <bounding-box x1="290" x2="308" y1="554" y2="564"/>
+                <content>0.65</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="10">
+                <bounding-box x1="339" x2="357" y1="554" y2="564"/>
+                <content>0.48</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="10">
+                <bounding-box x1="387" x2="392" y1="554" y2="564"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="10">
+                <bounding-box x1="460" x2="465" y1="554" y2="564"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="11">
+                <bounding-box x1="82" x2="125" y1="542" y2="552"/>
+                <content>Employed</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="11">
+                <bounding-box x1="290" x2="308" y1="542" y2="552"/>
+                <content>0.55</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="11">
+                <bounding-box x1="339" x2="357" y1="542" y2="552"/>
+                <content>0.50</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="11">
+                <bounding-box x1="387" x2="392" y1="542" y2="552"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="11">
+                <bounding-box x1="460" x2="465" y1="542" y2="552"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="12">
+                <bounding-box x1="82" x2="118" y1="530" y2="540"/>
+                <content>Fulltime</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="12">
+                <bounding-box x1="290" x2="308" y1="530" y2="540"/>
+                <content>0.34</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="12">
+                <bounding-box x1="339" x2="357" y1="530" y2="540"/>
+                <content>0.47</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="12">
+                <bounding-box x1="387" x2="392" y1="530" y2="540"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="12">
+                <bounding-box x1="460" x2="465" y1="530" y2="540"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="13">
+                <bounding-box x1="82" x2="121" y1="518" y2="528"/>
+                <content>Parttime</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="13">
+                <bounding-box x1="290" x2="308" y1="518" y2="528"/>
+                <content>0.20</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="13">
+                <bounding-box x1="339" x2="357" y1="518" y2="528"/>
+                <content>0.40</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="13">
+                <bounding-box x1="387" x2="392" y1="518" y2="528"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="13">
+                <bounding-box x1="460" x2="465" y1="518" y2="528"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="14">
+                <bounding-box x1="82" x2="136" y1="506" y2="516"/>
+                <content>Unemployed</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="14">
+                <bounding-box x1="290" x2="308" y1="506" y2="516"/>
+                <content>0.08</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="14">
+                <bounding-box x1="339" x2="357" y1="506" y2="516"/>
+                <content>0.28</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="14">
+                <bounding-box x1="387" x2="392" y1="506" y2="516"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="14">
+                <bounding-box x1="460" x2="465" y1="506" y2="516"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="15">
+                <bounding-box x1="82" x2="134" y1="494" y2="504"/>
+                <content>Homemaker</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="15">
+                <bounding-box x1="290" x2="308" y1="494" y2="504"/>
+                <content>0.19</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="15">
+                <bounding-box x1="339" x2="357" y1="494" y2="504"/>
+                <content>0.40</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="15">
+                <bounding-box x1="387" x2="392" y1="494" y2="504"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="15">
+                <bounding-box x1="460" x2="465" y1="494" y2="504"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="16">
+                <bounding-box x1="82" x2="114" y1="482" y2="492"/>
+                <content>Retired</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="16">
+                <bounding-box x1="290" x2="308" y1="482" y2="492"/>
+                <content>0.28</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="16">
+                <bounding-box x1="339" x2="357" y1="482" y2="492"/>
+                <content>0.45</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="16">
+                <bounding-box x1="387" x2="392" y1="482" y2="492"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="16">
+                <bounding-box x1="460" x2="465" y1="482" y2="492"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="17">
+                <bounding-box x1="82" x2="146" y1="470" y2="480"/>
+                <content>Household size</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="17">
+                <bounding-box x1="290" x2="308" y1="470" y2="480"/>
+                <content>2.43</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="17">
+                <bounding-box x1="339" x2="357" y1="470" y2="480"/>
+                <content>1.22</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="17">
+                <bounding-box x1="387" x2="392" y1="470" y2="480"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="17">
+                <bounding-box x1="460" x2="465" y1="470" y2="480"/>
+                <content>9</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="18">
+                <bounding-box x1="82" x2="192" y1="458" y2="468"/>
+                <content>Households with children</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="18">
+                <bounding-box x1="290" x2="308" y1="458" y2="468"/>
+                <content>0.37</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="18">
+                <bounding-box x1="339" x2="357" y1="458" y2="468"/>
+                <content>0.48</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="18">
+                <bounding-box x1="387" x2="392" y1="458" y2="468"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="18">
+                <bounding-box x1="460" x2="465" y1="458" y2="468"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="19">
+                <bounding-box x1="82" x2="166" y1="446" y2="456"/>
+                <content>Number of children</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="19">
+                <bounding-box x1="290" x2="308" y1="446" y2="456"/>
+                <content>1.67</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="19">
+                <bounding-box x1="339" x2="357" y1="446" y2="456"/>
+                <content>1.38</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="19">
+                <bounding-box x1="387" x2="392" y1="446" y2="456"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="19">
+                <bounding-box x1="460" x2="465" y1="446" y2="456"/>
+                <content>8</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="20">
+                <bounding-box x1="82" x2="200" y1="433" y2="443"/>
+                <content>Lower secondary education</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="20">
+                <bounding-box x1="290" x2="308" y1="433" y2="443"/>
+                <content>0.08</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="20">
+                <bounding-box x1="339" x2="357" y1="433" y2="443"/>
+                <content>0.27</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="20">
+                <bounding-box x1="387" x2="392" y1="433" y2="443"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="20">
+                <bounding-box x1="460" x2="465" y1="433" y2="443"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="21">
+                <bounding-box x1="82" x2="201" y1="421" y2="431"/>
+                <content>Upper secondary education</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="21">
+                <bounding-box x1="290" x2="308" y1="421" y2="431"/>
+                <content>0.60</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="21">
+                <bounding-box x1="339" x2="357" y1="421" y2="431"/>
+                <content>0.49</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="21">
+                <bounding-box x1="387" x2="392" y1="421" y2="431"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="21">
+                <bounding-box x1="460" x2="465" y1="421" y2="431"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="22">
+                <bounding-box x1="82" x2="238" y1="409" y2="419"/>
+                <content>Post secondary, non tert. education</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="22">
+                <bounding-box x1="290" x2="308" y1="409" y2="419"/>
+                <content>0.12</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="22">
+                <bounding-box x1="339" x2="357" y1="409" y2="419"/>
+                <content>0.33</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="22">
+                <bounding-box x1="387" x2="392" y1="409" y2="419"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="22">
+                <bounding-box x1="460" x2="465" y1="409" y2="419"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="23">
+                <bounding-box x1="82" x2="210" y1="397" y2="407"/>
+                <content>First stage tertiary education</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="23">
+                <bounding-box x1="290" x2="308" y1="397" y2="407"/>
+                <content>0.17</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="23">
+                <bounding-box x1="339" x2="357" y1="397" y2="407"/>
+                <content>0.38</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="23">
+                <bounding-box x1="387" x2="392" y1="397" y2="407"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="23">
+                <bounding-box x1="460" x2="465" y1="397" y2="407"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="24">
+                <bounding-box x1="82" x2="153" y1="385" y2="395"/>
+                <content>Other education</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="24">
+                <bounding-box x1="290" x2="308" y1="385" y2="395"/>
+                <content>0.03</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="24">
+                <bounding-box x1="339" x2="357" y1="385" y2="395"/>
+                <content>0.17</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="24">
+                <bounding-box x1="387" x2="392" y1="385" y2="395"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="24">
+                <bounding-box x1="460" x2="465" y1="385" y2="395"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="25">
+                <bounding-box x1="82" x2="226" y1="373" y2="383"/>
+                <content>Household income (Euro/month)</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="25">
+                <bounding-box x1="287" x2="310" y1="373" y2="383"/>
+                <content>2,127</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="25">
+                <bounding-box x1="337" x2="360" y1="373" y2="383"/>
+                <content>1,389</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="25">
+                <bounding-box x1="385" x2="395" y1="373" y2="383"/>
+                <content>22</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="25">
+                <bounding-box x1="448" x2="476" y1="373" y2="383"/>
+                <content>22,500</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="26">
+                <bounding-box x1="82" x2="231" y1="361" y2="371"/>
+                <content>Gross wealth - end of 2007 (Euro)</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="26">
+                <bounding-box x1="282" x2="315" y1="361" y2="371"/>
+                <content>187,281</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="26">
+                <bounding-box x1="332" x2="364" y1="361" y2="371"/>
+                <content>384,198</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="26">
+                <bounding-box x1="387" x2="392" y1="361" y2="371"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="26">
+                <bounding-box x1="442" x2="482" y1="361" y2="371"/>
+                <content>7,720,000</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="27">
+                <bounding-box x1="82" x2="271" y1="349" y2="359"/>
+                <content>Gross financial wealth - end of 2007 (Euro)</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="27">
+                <bounding-box x1="285" x2="313" y1="349" y2="359"/>
+                <content>38,855</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="27">
+                <bounding-box x1="332" x2="365" y1="349" y2="359"/>
+                <content>114,128</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="27">
+                <bounding-box x1="387" x2="392" y1="349" y2="359"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="27">
+                <bounding-box x1="442" x2="482" y1="349" y2="359"/>
+                <content>2,870,000</content>
+            </cell>
+        </region>
+    </table>
+</document>

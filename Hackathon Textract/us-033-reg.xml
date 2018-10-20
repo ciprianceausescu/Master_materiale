@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-region-model.xsd" filename='bm_us-033-reg.xml'>
+   <table id='1'>
+      <region id='1' page='1'>
+         <bounding-box x1='74' y1='302' x2='725' y2='498'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='2'>
+         <bounding-box x1='72' y1='314' x2='251' y2='428'/>
+      </region>
+   </table>
+   <table id='3'>
+      <region id='1' page='2'>
+         <bounding-box x1='71' y1='148' x2='251' y2='236'/>
+      </region>
+   </table>
+</document>

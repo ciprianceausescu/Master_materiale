@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-023-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='3'>
+            <cell id="1" start-col="0" start-row="0">
+                <bounding-box x1="62" x2="190" y1="379" y2="388"/>
+                <content>How often do you feel this way?</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="0">
+                <bounding-box x1="230" x2="254" y1="379" y2="388"/>
+                <content>Never</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="0">
+                <bounding-box x1="269" x2="315" y1="379" y2="388"/>
+                <content>Sometimes</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="0">
+                <bounding-box x1="330" x2="353" y1="379" y2="388"/>
+                <content>Often</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="1">
+                <bounding-box x1="62" x2="129" y1="368" y2="377"/>
+                <content>Left out of things</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="229" x2="254" y1="368" y2="377"/>
+                <content>27.9%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="1">
+                <bounding-box x1="279" x2="305" y1="368" y2="377"/>
+                <content>52.2%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="1">
+                <bounding-box x1="329" x2="354" y1="368" y2="377"/>
+                <content>19.9%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="62" x2="97" y1="357" y2="366"/>
+                <content>Helpless</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="229" x2="254" y1="357" y2="366"/>
+                <content>25.5%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="2">
+                <bounding-box x1="279" x2="305" y1="357" y2="366"/>
+                <content>50.1%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="2">
+                <bounding-box x1="329" x2="354" y1="357" y2="366"/>
+                <content>24.4%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="62" x2="100" y1="346" y2="355"/>
+                <content>Hopeless</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="229" x2="254" y1="346" y2="355"/>
+                <content>32.4%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="3">
+                <bounding-box x1="279" x2="305" y1="346" y2="355"/>
+                <content>43.5%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="3">
+                <bounding-box x1="329" x2="354" y1="346" y2="355"/>
+                <content>24.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="62" x2="157" y1="334" y2="343"/>
+                <content>Tense and stressed out</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="231" x2="252" y1="334" y2="343"/>
+                <content>3.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="4">
+                <bounding-box x1="279" x2="305" y1="334" y2="343"/>
+                <content>31.4%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="4">
+                <bounding-box x1="329" x2="354" y1="334" y2="343"/>
+                <content>65.5%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="62" x2="199" y1="323" y2="332"/>
+                <content>Overwhelmed by all you had to do</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="231" x2="252" y1="323" y2="332"/>
+                <content>6.2%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="5">
+                <bounding-box x1="279" x2="305" y1="323" y2="332"/>
+                <content>27.7%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="5">
+                <bounding-box x1="329" x2="354" y1="323" y2="332"/>
+                <content>66.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="62" x2="212" y1="312" y2="321"/>
+                <content>Exhausted (not from physical activity)</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="231" x2="252" y1="312" y2="321"/>
+                <content>7.2%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="6">
+                <bounding-box x1="279" x2="305" y1="312" y2="321"/>
+                <content>34.3%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="6">
+                <bounding-box x1="329" x2="354" y1="312" y2="321"/>
+                <content>58.5%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="62" x2="198" y1="301" y2="310"/>
+                <content>Depressed and difficult to function</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="229" x2="254" y1="301" y2="310"/>
+                <content>38.2%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="7">
+                <bounding-box x1="279" x2="305" y1="301" y2="310"/>
+                <content>37.6%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="7">
+                <bounding-box x1="329" x2="354" y1="301" y2="310"/>
+                <content>24.2%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="8">
+                <bounding-box x1="62" x2="177" y1="290" y2="299"/>
+                <content>Seriously considered suicide</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="8">
+                <bounding-box x1="229" x2="254" y1="290" y2="299"/>
+                <content>85.6%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="8">
+                <bounding-box x1="279" x2="305" y1="290" y2="299"/>
+                <content>11.3%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="8">
+                <bounding-box x1="331" x2="352" y1="290" y2="299"/>
+                <content>3.1%</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="9">
+                <bounding-box x1="62" x2="143" y1="277" y2="288"/>
+                <content>Attempted suicide</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="9">
+                <bounding-box x1="229" x2="254" y1="279" y2="288"/>
+                <content>97.1%</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="9">
+                <bounding-box x1="282" x2="302" y1="279" y2="288"/>
+                <content>1.9%</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="9">
+                <bounding-box x1="331" x2="352" y1="279" y2="288"/>
+                <content>1.0%</content>
+            </cell>
+        </region>
+    </table>
+</document>

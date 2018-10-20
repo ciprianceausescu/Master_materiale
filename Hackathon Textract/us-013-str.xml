@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-013-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='2'>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='152' y1='564' x2='236' y2='572'/>
+            <content>General Assessment</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='242' y1='549' x2='331' y2='587'/>
+            <content>Alternate Assessment
+Based on Grade-Level
+Achievement
+Standards</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='339' y1='554' x2='436' y2='582'/>
+            <content>Alternate Assessment
+Based on Modified
+Achievement Standards</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='4'>
+            <bounding-box x1='445' y1='549' x2='534' y2='587'/>
+            <content>Alternate Assessment
+Based on Alternate
+Achievement
+Standards</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='73' y1='515' x2='143' y2='543'/>
+            <content>Content standards
+taught and
+assessed</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='73' y1='490' x2='123' y2='509'/>
+            <content>Achievement
+standards</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='73' y1='465' x2='120' y2='484'/>
+            <content>Participating
+students</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='151' y1='535' x2='194' y2='543'/>
+            <content>Grade level</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2'>
+            <bounding-box x1='240' y1='535' x2='283' y2='543'/>
+            <content>Grade level</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3'>
+            <bounding-box x1='336' y1='535' x2='380' y2='543'/>
+            <content>Grade level</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='4'>
+            <bounding-box x1='442' y1='535' x2='528' y2='543'/>
+            <content>Grade level extensions</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='151' y1='500' x2='194' y2='509'/>
+            <content>Grade level</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='240' y1='500' x2='283' y2='509'/>
+            <content>Grade level</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='336' y1='500' x2='388' y2='509'/>
+            <content>Modified level</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='442' y1='500' x2='496' y2='509'/>
+            <content>Alternate level</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='151' y1='426' x2='230' y2='484'/>
+            <content>All general education
+students, most
+students with
+disabilities (with or
+without
+accommodations)</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='240' y1='446' x2='326' y2='484'/>
+            <content>Students who need
+alternate ways to show
+mastery of grade-level
+content</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='336' y1='426' x2='437' y2='484'/>
+            <content>Students with disabilities
+who can make progress
+toward, but may not reach,
+grade-level achievement
+standards in the time
+frame covered by their IEP</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='442' y1='456' x2='528' y2='484'/>
+            <content>Students with the most
+significant cognitive
+disabilities</content>
+         </cell>
+      </region>
+   </table>
+</document>

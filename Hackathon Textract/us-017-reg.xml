@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-017-6-reg.xml'>
+   <table id='1'>
+      <region id='1' page='2'>
+         <bounding-box x1='42' y1='376' x2='576' y2='718'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='3'>
+         <bounding-box x1='36' y1='376' x2='569' y2='718'/>
+      </region>
+   </table>
+   <table id='3'>
+      <region id='1' page='4'>
+         <bounding-box x1='42' y1='374' x2='575' y2='718'/>
+      </region>
+   </table>
+   <table id='4'>
+      <region id='1' page='5'>
+         <bounding-box x1='35' y1='356' x2='569' y2='718'/>
+      </region>
+   </table>
+   <table id='5'>
+      <region id='1' page='6'>
+         <bounding-box x1='42' y1='356' x2='575' y2='718'/>
+      </region>
+   </table>
+   <table id='6'>
+      <region id='1' page='7'>
+         <bounding-box x1='35' y1='356' x2='569' y2='718'/>
+      </region>
+   </table>
+</document>

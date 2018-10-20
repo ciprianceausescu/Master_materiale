@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-007-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='2'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='172' y1='664' x2='213' y2='675'/>
+            <content>Measure</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='325' y1='665' x2='380' y2='701'/>
+            <content>Age 4
+(Head Start
+Year)</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='408' y1='665' x2='417' y2='676'/>
+            <content>K</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='450' y1='665' x2='480' y2='689'/>
+            <content>1
+Grade</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='4'>
+            <bounding-box x1='503' y1='664' x2='533' y2='689'/>
+            <content>3
+Grade</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0' end-col='4'>
+            <bounding-box x1='72' y1='650' x2='247' y2='661'/>
+            <content>Language, Literacy, and Pre-Writing</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='81' y1='636' x2='168' y2='647'/>
+            <content>Color Identification</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='343' y1='636' x2='362' y2='647'/>
+            <content>0.16</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='407' y1='636' x2='419' y2='644'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='459' y1='636' x2='471' y2='644'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='512' y1='636' x2='524' y2='644'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='81' y1='623' x2='257' y2='634'/>
+            <content>Pre-Writing (McCarthy Draw a Design)</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='407' y1='622' x2='419' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='459' y1='622' x2='471' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='512' y1='622' x2='524' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='81' y1='610' x2='256' y2='621'/>
+            <content>Emergent Literacy Scale (parent report)</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='343' y1='610' x2='362' y2='621'/>
+            <content>0.31</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='407' y1='609' x2='419' y2='617'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='459' y1='609' x2='471' y2='617'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4'>
+            <bounding-box x1='512' y1='609' x2='524' y2='617'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='81' y1='597' x2='145' y2='608'/>
+            <content>Letter Naming</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='343' y1='597' x2='362' y2='608'/>
+            <content>0.25</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='3'>
+            <bounding-box x1='459' y1='596' x2='471' y2='604'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4'>
+            <bounding-box x1='512' y1='596' x2='524' y2='604'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='81' y1='584' x2='307' y2='595'/>
+            <content>Test of Phonological Processing (CTOPPP Elision)</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3'>
+            <bounding-box x1='459' y1='583' x2='471' y2='591'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4'>
+            <bounding-box x1='512' y1='583' x2='524' y2='591'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='81' y1='570' x2='216' y2='582'/>
+            <content>Receptive Vocabulary (PPVT)</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='343' y1='570' x2='362' y2='581'/>
+            <content>0.09</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3'>
+            <bounding-box x1='456' y1='570' x2='475' y2='581'/>
+            <content>0.09</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='0'>
+            <bounding-box x1='81' y1='557' x2='233' y2='568'/>
+            <content>Letter-Word Identification (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1'>
+            <bounding-box x1='343' y1='557' x2='362' y2='568'/>
+            <content>0.22</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='0'>
+            <bounding-box x1='81' y1='544' x2='153' y2='555'/>
+            <content>Spelling (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1'>
+            <bounding-box x1='343' y1='544' x2='362' y2='555'/>
+            <content>0.15</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='4'>
+            <bounding-box x1='512' y1='543' x2='524' y2='552'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='0'>
+            <bounding-box x1='81' y1='531' x2='208' y2='542'/>
+            <content>Oral Comprehension (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4'>
+            <bounding-box x1='512' y1='530' x2='524' y2='538'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='0'>
+            <bounding-box x1='81' y1='518' x2='207' y2='529'/>
+            <content>Pre-Academic Skills (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1'>
+            <bounding-box x1='343' y1='518' x2='362' y2='529'/>
+            <content>0.19</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='4'>
+            <bounding-box x1='512' y1='517' x2='524' y2='525'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='0'>
+            <bounding-box x1='81' y1='505' x2='245' y2='516'/>
+            <content>Phonetic Skills/ Word Attack (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='1'>
+            <bounding-box x1='347' y1='504' x2='359' y2='512'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='4'>
+            <bounding-box x1='512' y1='504' x2='524' y2='512'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='0'>
+            <bounding-box x1='81' y1='492' x2='180' y2='503'/>
+            <content>Basic Reading (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='1'>
+            <bounding-box x1='347' y1='491' x2='359' y2='499'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='4'>
+            <bounding-box x1='512' y1='491' x2='524' y2='499'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='0'>
+            <bounding-box x1='81' y1='478' x2='220' y2='489'/>
+            <content>Academic Applications (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='1'>
+            <bounding-box x1='347' y1='478' x2='359' y2='486'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='2'>
+            <bounding-box x1='407' y1='478' x2='419' y2='486'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='4'>
+            <bounding-box x1='512' y1='478' x2='524' y2='486'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='0'>
+            <bounding-box x1='81' y1='465' x2='188' y2='476'/>
+            <content>Academic Skills (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='1'>
+            <bounding-box x1='347' y1='465' x2='359' y2='473'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='2'>
+            <bounding-box x1='407' y1='465' x2='419' y2='473'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='4'>
+            <bounding-box x1='512' y1='465' x2='524' y2='473'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='0'>
+            <bounding-box x1='81' y1='452' x2='223' y2='463'/>
+            <content>Passage Comprehension (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='1'>
+            <bounding-box x1='347' y1='451' x2='359' y2='459'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='2'>
+            <bounding-box x1='407' y1='451' x2='419' y2='459'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='4'>
+            <bounding-box x1='512' y1='451' x2='524' y2='459'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='0'>
+            <bounding-box x1='81' y1='439' x2='159' y2='450'/>
+            <content>ECLS-K Reading</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='1'>
+            <bounding-box x1='347' y1='438' x2='359' y2='446'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='2'>
+            <bounding-box x1='407' y1='438' x2='419' y2='446'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='4'>
+            <bounding-box x1='508' y1='439' x2='528' y2='450'/>
+            <content>0.11</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='0'>
+            <bounding-box x1='81' y1='426' x2='186' y2='437'/>
+            <content>Writing Sample (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='1'>
+            <bounding-box x1='347' y1='425' x2='359' y2='433'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='2'>
+            <bounding-box x1='407' y1='425' x2='419' y2='433'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='4'>
+            <bounding-box x1='512' y1='425' x2='524' y2='433'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='0' end-col='4'>
+            <bounding-box x1='72' y1='411' x2='158' y2='423'/>
+            <content>Spanish Language</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='0'>
+            <bounding-box x1='81' y1='398' x2='213' y2='409'/>
+            <content>Receptive Vocabulary (TVIP)</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='4'>
+            <bounding-box x1='512' y1='397' x2='524' y2='405'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='0'>
+            <bounding-box x1='81' y1='384' x2='287' y2='395'/>
+            <content>Batería WM Identificación de letras y palabras</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='0' end-col='4'>
+            <bounding-box x1='72' y1='370' x2='97' y2='381'/>
+            <content>Math</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='0'>
+            <bounding-box x1='81' y1='356' x2='256' y2='367'/>
+            <content>One-to-One Counting (Counting Bears)</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='2'>
+            <bounding-box x1='407' y1='355' x2='419' y2='363'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='3'>
+            <bounding-box x1='459' y1='355' x2='471' y2='363'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='4'>
+            <bounding-box x1='512' y1='355' x2='524' y2='363'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='0'>
+            <bounding-box x1='81' y1='343' x2='196' y2='354'/>
+            <content>Applied Problems (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='0'>
+            <bounding-box x1='81' y1='330' x2='214' y2='341'/>
+            <content>Quantitative Concepts (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='1'>
+            <bounding-box x1='347' y1='329' x2='359' y2='337'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='4'>
+            <bounding-box x1='512' y1='329' x2='524' y2='337'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='0'>
+            <bounding-box x1='81' y1='317' x2='189' y2='328'/>
+            <content>Math Reasoning (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='1'>
+            <bounding-box x1='347' y1='316' x2='359' y2='324'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='4'>
+            <bounding-box x1='512' y1='316' x2='524' y2='324'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='0'>
+            <bounding-box x1='81' y1='303' x2='167' y2='315'/>
+            <content>Calculation (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='1'>
+            <bounding-box x1='347' y1='303' x2='359' y2='311'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='2'>
+            <bounding-box x1='407' y1='303' x2='419' y2='311'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='28' start-col='0' end-col='4'>
+            <bounding-box x1='72' y1='289' x2='167' y2='300'/>
+            <content>School Performance</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='0'>
+            <bounding-box x1='81' y1='275' x2='193' y2='286'/>
+            <content>School Accomplishments</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='1'>
+            <bounding-box x1='347' y1='275' x2='359' y2='283'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='4'>
+            <bounding-box x1='512' y1='275' x2='524' y2='283'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='0'>
+            <bounding-box x1='81' y1='262' x2='194' y2='273'/>
+            <content>Promotion (parent report)</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='1'>
+            <bounding-box x1='347' y1='261' x2='359' y2='269'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='31' start-col='0'>
+            <bounding-box x1='81' y1='249' x2='216' y2='260'/>
+            <content>Language and Literacy Ability</content>
+         </cell>
+         <cell id='1' start-row='31' start-col='1'>
+            <bounding-box x1='347' y1='248' x2='359' y2='256'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='0'>
+            <bounding-box x1='81' y1='236' x2='138' y2='247'/>
+            <content>Math Ability</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='1'>
+            <bounding-box x1='347' y1='235' x2='359' y2='243'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='0'>
+            <bounding-box x1='81' y1='223' x2='132' y2='234'/>
+            <content>Math Skills</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='1'>
+            <bounding-box x1='347' y1='222' x2='359' y2='230'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='2'>
+            <bounding-box x1='407' y1='222' x2='419' y2='230'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='3'>
+            <bounding-box x1='459' y1='222' x2='471' y2='230'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='0'>
+            <bounding-box x1='81' y1='209' x2='213' y2='220'/>
+            <content>Reading/Language Arts Skills</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='1'>
+            <bounding-box x1='347' y1='209' x2='359' y2='217'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='2'>
+            <bounding-box x1='407' y1='209' x2='419' y2='217'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='3'>
+            <bounding-box x1='459' y1='209' x2='471' y2='217'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='0'>
+            <bounding-box x1='81' y1='196' x2='233' y2='207'/>
+            <content>Social Studies and Science Ability</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='1'>
+            <bounding-box x1='347' y1='196' x2='359' y2='204'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='4'>
+            <bounding-box x1='512' y1='196' x2='524' y2='204'/>
+            <content>NA</content>
+         </cell>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' col-increment='0' row-increment='0' page='3'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='170' y1='664' x2='211' y2='675'/>
+            <content>Measure</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='321' y1='665' x2='376' y2='700'/>
+            <content>Age 3
+(Head Start
+Year)</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='389' y1='665' x2='416' y2='676'/>
+            <content>Age 4</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='3'>
+            <bounding-box x1='439' y1='665' x2='448' y2='676'/>
+            <content>K</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='4'>
+            <bounding-box x1='471' y1='665' x2='501' y2='689'/>
+            <content>1
+Grade</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='5'>
+            <bounding-box x1='516' y1='664' x2='546' y2='689'/>
+            <content>3
+Grade</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0' end-col='5'>
+            <bounding-box x1='72' y1='650' x2='247' y2='661'/>
+            <content>Language, Literacy, and Pre-Writing</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='81' y1='636' x2='168' y2='647'/>
+            <content>Color Identification</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='438' y1='635' x2='449' y2='643'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='480' y1='635' x2='492' y2='643'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='5'>
+            <bounding-box x1='525' y1='635' x2='536' y2='643'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='81' y1='623' x2='257' y2='634'/>
+            <content>Pre-Writing (McCarthy Draw a Design)</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='339' y1='622' x2='358' y2='633'/>
+            <content>0.14</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='438' y1='622' x2='449' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='480' y1='622' x2='492' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5'>
+            <bounding-box x1='525' y1='622' x2='536' y2='630'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='81' y1='609' x2='256' y2='620'/>
+            <content>Emergent Literacy Scale (parent report)</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='339' y1='609' x2='358' y2='620'/>
+            <content>0.35</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='393' y1='609' x2='412' y2='620'/>
+            <content>0.16</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='438' y1='608' x2='449' y2='616'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4'>
+            <bounding-box x1='480' y1='608' x2='492' y2='616'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5'>
+            <bounding-box x1='525' y1='608' x2='536' y2='616'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='81' y1='596' x2='145' y2='607'/>
+            <content>Letter Naming</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='339' y1='596' x2='358' y2='607'/>
+            <content>0.24</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4'>
+            <bounding-box x1='480' y1='595' x2='492' y2='603'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='5'>
+            <bounding-box x1='525' y1='595' x2='536' y2='603'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='81' y1='582' x2='307' y2='593'/>
+            <content>Test of Phonological Processing (CTOPPP Elision)</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1'>
+            <bounding-box x1='339' y1='582' x2='358' y2='593'/>
+            <content>0.10</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2'>
+            <bounding-box x1='393' y1='582' x2='412' y2='593'/>
+            <content>0.15</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4'>
+            <bounding-box x1='480' y1='582' x2='492' y2='590'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5'>
+            <bounding-box x1='525' y1='582' x2='536' y2='590'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='81' y1='569' x2='216' y2='580'/>
+            <content>Receptive Vocabulary (PPVT)</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='339' y1='569' x2='358' y2='580'/>
+            <content>0.18</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='0'>
+            <bounding-box x1='81' y1='556' x2='233' y2='567'/>
+            <content>Letter-Word Identification (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1'>
+            <bounding-box x1='339' y1='555' x2='358' y2='566'/>
+            <content>0.26</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='0'>
+            <bounding-box x1='81' y1='542' x2='153' y2='553'/>
+            <content>Spelling (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='5'>
+            <bounding-box x1='525' y1='541' x2='536' y2='549'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='0'>
+            <bounding-box x1='81' y1='529' x2='208' y2='540'/>
+            <content>Oral Comprehension (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4'>
+            <bounding-box x1='476' y1='528' x2='496' y2='540'/>
+            <content>0.08</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='5'>
+            <bounding-box x1='525' y1='528' x2='536' y2='536'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='0'>
+            <bounding-box x1='81' y1='515' x2='207' y2='526'/>
+            <content>Pre-Academic Skills (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1'>
+            <bounding-box x1='339' y1='515' x2='358' y2='526'/>
+            <content>0.22</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='5'>
+            <bounding-box x1='525' y1='515' x2='536' y2='523'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='0'>
+            <bounding-box x1='81' y1='502' x2='243' y2='513'/>
+            <content>Phonetic Skills/Word Attack (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='1'>
+            <bounding-box x1='343' y1='501' x2='354' y2='509'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='2'>
+            <bounding-box x1='397' y1='501' x2='408' y2='509'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='5'>
+            <bounding-box x1='525' y1='501' x2='536' y2='509'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='0'>
+            <bounding-box x1='81' y1='489' x2='180' y2='500'/>
+            <content>Basic Reading (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='1'>
+            <bounding-box x1='343' y1='488' x2='354' y2='496'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='2'>
+            <bounding-box x1='397' y1='488' x2='408' y2='496'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='5'>
+            <bounding-box x1='525' y1='488' x2='536' y2='496'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='0'>
+            <bounding-box x1='81' y1='475' x2='220' y2='486'/>
+            <content>Academic Applications (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='1'>
+            <bounding-box x1='343' y1='474' x2='354' y2='482'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='2'>
+            <bounding-box x1='397' y1='474' x2='408' y2='482'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='3'>
+            <bounding-box x1='438' y1='474' x2='449' y2='482'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='5'>
+            <bounding-box x1='525' y1='474' x2='536' y2='482'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='0'>
+            <bounding-box x1='81' y1='462' x2='188' y2='473'/>
+            <content>Academic Skills (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='1'>
+            <bounding-box x1='343' y1='461' x2='354' y2='469'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='2'>
+            <bounding-box x1='397' y1='461' x2='408' y2='469'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='3'>
+            <bounding-box x1='438' y1='461' x2='449' y2='469'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='5'>
+            <bounding-box x1='525' y1='461' x2='536' y2='469'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='0'>
+            <bounding-box x1='81' y1='448' x2='223' y2='459'/>
+            <content>Passage Comprehension (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='1'>
+            <bounding-box x1='343' y1='448' x2='354' y2='456'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='2'>
+            <bounding-box x1='397' y1='448' x2='408' y2='456'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='3'>
+            <bounding-box x1='438' y1='448' x2='449' y2='456'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='5'>
+            <bounding-box x1='525' y1='448' x2='536' y2='456'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='0'>
+            <bounding-box x1='81' y1='435' x2='159' y2='446'/>
+            <content>ECLS-K Reading</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='1'>
+            <bounding-box x1='343' y1='434' x2='354' y2='442'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='2'>
+            <bounding-box x1='397' y1='434' x2='408' y2='442'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='3'>
+            <bounding-box x1='438' y1='434' x2='449' y2='442'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='0'>
+            <bounding-box x1='81' y1='422' x2='186' y2='433'/>
+            <content>Writing Sample (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='1'>
+            <bounding-box x1='343' y1='421' x2='354' y2='429'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='2'>
+            <bounding-box x1='397' y1='421' x2='408' y2='429'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='3'>
+            <bounding-box x1='438' y1='421' x2='449' y2='429'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='5'>
+            <bounding-box x1='525' y1='421' x2='536' y2='429'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='0' end-col='5'>
+            <bounding-box x1='72' y1='407' x2='158' y2='418'/>
+            <content>Spanish Language</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='0'>
+            <bounding-box x1='81' y1='393' x2='213' y2='404'/>
+            <content>Receptive Vocabulary (TVIP)</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='5'>
+            <bounding-box x1='525' y1='393' x2='536' y2='401'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='0'>
+            <bounding-box x1='81' y1='380' x2='287' y2='391'/>
+            <content>Batería WM Identificación de letras y palabras</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='3'>
+            <bounding-box x1='434' y1='380' x2='453' y2='391'/>
+            <content>0.26</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='0' end-col='5'>
+            <bounding-box x1='72' y1='366' x2='97' y2='377'/>
+            <content>Math</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='0'>
+            <bounding-box x1='81' y1='352' x2='249' y2='363'/>
+            <content>One-to-One Counting/Counting Bears</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='3'>
+            <bounding-box x1='438' y1='351' x2='449' y2='359'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='4'>
+            <bounding-box x1='480' y1='351' x2='492' y2='359'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='5'>
+            <bounding-box x1='525' y1='351' x2='536' y2='359'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='0'>
+            <bounding-box x1='81' y1='338' x2='196' y2='349'/>
+            <content>Applied Problems (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='1'>
+            <bounding-box x1='339' y1='338' x2='358' y2='349'/>
+            <content>0.15</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='0'>
+            <bounding-box x1='81' y1='325' x2='214' y2='336'/>
+            <content>Quantitative Concepts (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='1'>
+            <bounding-box x1='343' y1='324' x2='354' y2='332'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='2'>
+            <bounding-box x1='397' y1='324' x2='408' y2='332'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='5'>
+            <bounding-box x1='525' y1='324' x2='536' y2='332'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='0'>
+            <bounding-box x1='81' y1='311' x2='188' y2='322'/>
+            <content>Math Reasoning (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='1'>
+            <bounding-box x1='343' y1='311' x2='354' y2='319'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='2'>
+            <bounding-box x1='397' y1='311' x2='408' y2='319'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='26' start-col='5'>
+            <bounding-box x1='525' y1='311' x2='536' y2='319'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='0'>
+            <bounding-box x1='81' y1='298' x2='167' y2='309'/>
+            <content>Calculation (WJIII)</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='1'>
+            <bounding-box x1='343' y1='297' x2='354' y2='305'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='2'>
+            <bounding-box x1='397' y1='297' x2='408' y2='305'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='27' start-col='3'>
+            <bounding-box x1='438' y1='297' x2='449' y2='305'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='28' start-col='0' end-col='5'>
+            <bounding-box x1='72' y1='284' x2='167' y2='295'/>
+            <content>School Performance</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='0'>
+            <bounding-box x1='81' y1='270' x2='193' y2='281'/>
+            <content>School Accomplishments</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='1'>
+            <bounding-box x1='343' y1='269' x2='354' y2='277'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='2'>
+            <bounding-box x1='397' y1='269' x2='408' y2='277'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='29' start-col='5'>
+            <bounding-box x1='525' y1='269' x2='536' y2='277'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='0'>
+            <bounding-box x1='81' y1='256' x2='194' y2='267'/>
+            <content>Promotion (parent report)</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='1'>
+            <bounding-box x1='343' y1='255' x2='354' y2='264'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='2'>
+            <bounding-box x1='397' y1='255' x2='408' y2='264'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='30' start-col='5'>
+            <bounding-box x1='519' y1='256' x2='542' y2='267'/>
+            <content>-0.11</content>
+         </cell>
+         <cell id='1' start-row='31' start-col='0'>
+            <bounding-box x1='81' y1='243' x2='216' y2='254'/>
+            <content>Language and Literacy Ability</content>
+         </cell>
+         <cell id='1' start-row='31' start-col='1'>
+            <bounding-box x1='343' y1='242' x2='354' y2='250'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='31' start-col='2'>
+            <bounding-box x1='397' y1='242' x2='408' y2='250'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='0'>
+            <bounding-box x1='81' y1='229' x2='138' y2='240'/>
+            <content>Math Ability</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='1'>
+            <bounding-box x1='343' y1='229' x2='354' y2='237'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='2'>
+            <bounding-box x1='397' y1='229' x2='408' y2='237'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='32' start-col='3'>
+            <bounding-box x1='432' y1='229' x2='455' y2='240'/>
+            <content>-0.19</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='0'>
+            <bounding-box x1='81' y1='216' x2='132' y2='227'/>
+            <content>Math Skills</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='1'>
+            <bounding-box x1='343' y1='215' x2='354' y2='223'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='2'>
+            <bounding-box x1='397' y1='215' x2='408' y2='223'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='3'>
+            <bounding-box x1='438' y1='215' x2='449' y2='223'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='33' start-col='4'>
+            <bounding-box x1='480' y1='215' x2='492' y2='223'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='0'>
+            <bounding-box x1='81' y1='203' x2='213' y2='214'/>
+            <content>Reading/Language Arts Skills</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='1'>
+            <bounding-box x1='343' y1='202' x2='354' y2='210'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='2'>
+            <bounding-box x1='397' y1='202' x2='408' y2='210'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='3'>
+            <bounding-box x1='438' y1='202' x2='449' y2='210'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='34' start-col='4'>
+            <bounding-box x1='480' y1='202' x2='492' y2='210'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='0'>
+            <bounding-box x1='81' y1='189' x2='233' y2='200'/>
+            <content>Social Studies and Science Ability</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='1'>
+            <bounding-box x1='343' y1='189' x2='354' y2='197'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='2'>
+            <bounding-box x1='397' y1='189' x2='408' y2='197'/>
+            <content>NA</content>
+         </cell>
+         <cell id='1' start-row='35' start-col='5'>
+            <bounding-box x1='525' y1='189' x2='536' y2='197'/>
+            <content>NA</content>
+         </cell>
+      </region>
+   </table>
+</document>

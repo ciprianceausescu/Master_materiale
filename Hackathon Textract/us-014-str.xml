@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-014-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='2'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='74' y1='423' x2='288' y2='442'/>
+            <content>Designation Under State or District Accountability
+Initiative</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='74' y1='403' x2='137' y2='412'/>
+            <content>Low-performing</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='74' y1='380' x2='165' y2='389'/>
+            <content>No special designation</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='74' y1='358' x2='139' y2='367'/>
+            <content>High-performing</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='74' y1='335' x2='132' y2='344'/>
+            <content>Other/not sure</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='74' y1='313' x2='215' y2='322'/>
+            <content>No other system (other than NCLB)</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='333' y1='423' x2='410' y2='452'/>
+            <content>Schools Identified
+Under NCLB
+(n = 469)</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='438' y1='423' x2='533' y2='452'/>
+            <content>Schools Not Identified
+Under NCLB
+(n = 918)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='362' y1='403' x2='380' y2='412'/>
+            <content>34%</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2'>
+            <bounding-box x1='481' y1='403' x2='494' y2='412'/>
+            <content>3%</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='362' y1='380' x2='380' y2='389'/>
+            <content>11%</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='477' y1='380' x2='495' y2='389'/>
+            <content>33%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='365' y1='358' x2='378' y2='367'/>
+            <content>2%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='477' y1='358' x2='495' y2='367'/>
+            <content>18%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='362' y1='335' x2='380' y2='344'/>
+            <content>14%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='481' y1='335' x2='494' y2='344'/>
+            <content>9%</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='362' y1='313' x2='380' y2='322'/>
+            <content>39%</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2'>
+            <bounding-box x1='477' y1='313' x2='495' y2='322'/>
+            <content>37%</content>
+         </cell>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' col-increment='0' row-increment='0' page='3'>
+         <cell id='1' start-row='0' start-col='0'>
+            <bounding-box x1='72' y1='401' x2='211' y2='410'/>
+            <content>Perceived Benefit and Drawback</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='0'>
+            <bounding-box x1='72' y1='381' x2='429' y2='390'/>
+            <content>Gives us a more complete picture of our effectiveness than a single accountability system</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='72' y1='356' x2='341' y2='365'/>
+            <content>Results in staff confusion about our targets for student achievement</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='72' y1='331' x2='258' y2='340'/>
+            <content>Reduces community support for public schools</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='72' y1='306' x2='313' y2='315'/>
+            <content>Allows us to focus on the goals that are most important to us</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='72' y1='281' x2='382' y2='290'/>
+            <content>Helps us make effective decisions about how to improve student achievement</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'>
+            <bounding-box x1='440' y1='401' x2='484' y2='441'/>
+            <content>Percent of
+Districts
+Agreeing
+(n = 154)</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='2'>
+            <bounding-box x1='492' y1='401' x2='536' y2='441'/>
+            <content>Percent of
+Schools
+Agreeing
+(n = 832)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='453' y1='381' x2='471' y2='390'/>
+            <content>69%</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2'>
+            <bounding-box x1='505' y1='381' x2='523' y2='390'/>
+            <content>65%</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='453' y1='356' x2='471' y2='365'/>
+            <content>46%</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='505' y1='356' x2='523' y2='365'/>
+            <content>37%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='453' y1='331' x2='471' y2='340'/>
+            <content>23%</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='505' y1='331' x2='523' y2='340'/>
+            <content>24%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='453' y1='306' x2='471' y2='315'/>
+            <content>56%</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='505' y1='306' x2='523' y2='315'/>
+            <content>52%</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='453' y1='281' x2='471' y2='290'/>
+            <content>71%</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2'>
+            <bounding-box x1='505' y1='281' x2='523' y2='290'/>
+            <content>60%</content>
+         </cell>
+      </region>
+   </table>
+</document> 

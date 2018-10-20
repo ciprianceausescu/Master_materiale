@@ -1,0 +1,9 @@
+pct I din doc de pe moodle
+
+insert
+validari
+alerte/toaters
+apelare formular din alt formular
+campuri imagine
+ptr un hotel sa avem de ex clientii cazati in momentul de fata
+adaugare utilizator baza de date

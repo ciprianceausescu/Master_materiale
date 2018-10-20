@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_us-016-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='2'>
+            <cell id="1" start-col="0" start-row="0">
+                <bounding-box x1="117" x2="143" y1="694" y2="706"/>
+                <content>Type</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="0">
+                <bounding-box x1="317" x2="376" y1="694" y2="706"/>
+                <content>Description</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="1">
+                <bounding-box x1="94" x2="155" y1="668" y2="692"/>
+                <content>Visual analog
+scale (VAS)</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="94" x2="150" y1="614" y2="650"/>
+                <content>Anchored or
+categorized
+VAS</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="94" x2="146" y1="600" y2="611"/>
+                <content>Likert scale</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="94" x2="149" y1="579" y2="590"/>
+                <content>Rating scale</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="94" x2="156" y1="522" y2="559"/>
+                <content>Recording of
+events as they
+occur</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="94" x2="156" y1="509" y2="520"/>
+                <content>Pictorial scale</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="94" x2="136" y1="478" y2="489"/>
+                <content>Checklist</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="176" x2="511" y1="652" y2="692"/>
+                <content>A line of fixed length (usually 100 mm) with words that anchor the scale at the extreme ends
+and no words describing intermediate positions. Patients are instructed to indicate the place
+on the line corresponding to their perceived state. The mark’s position is measured as the
+score.</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="176" x2="514" y1="620" y2="650"/>
+                <content>A VAS that has the addition of one or more intermediate marks positioned along the line with
+reference terms assigned to eachmark to help patients identify the locations between the
+scale’s ends (e.g., half-way).</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="176" x2="502" y1="592" y2="611"/>
+                <content>An ordered set of discrete terms or statements from which patients are asked to choose the
+response that best describes their state or experience.</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="176" x2="513" y1="561" y2="590"/>
+                <content>A set of numerical categories from which patients are asked to choose the category that best
+describes their state or experience. The ends of rating scales are anchored with words but the
+categories are numbered rather than labeled with words.</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="176" x2="513" y1="539" y2="559"/>
+                <content>Specific events are recorded as they occur using an event log that can be included in a patient
+diary or other reporting system (e.g., interactive voice response system).</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="176" x2="508" y1="491" y2="520"/>
+                <content>A set of pictures applied to any of the other response option types. Pictorial scales are often
+used in pediatric questionnaires but also have been used for patients with cognitive
+impairments and for patients who are otherwise unable to speak or write.</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="176" x2="504" y1="459" y2="489"/>
+                <content>Checklists provide a simple choice between a limited set of options, such asYes, No, and
+Don’t know. Some checklists ask patients to place a mark in a space if the statement in the
+item is true. Checklists are reviewed for completeness and nonredundancy.</content>
+            </cell>
+        </region>
+    </table>
+</document>

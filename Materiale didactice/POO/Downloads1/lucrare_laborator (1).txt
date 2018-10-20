@@ -1,0 +1,424 @@
+#include<iostream>
+using namespace std;
+
+class bibliografie
+{
+protected:
+	char **nume_autor, **prenume_autor, *titlu;
+	int nr_autori, an_publicare;
+public:
+	bibliografie();
+	virtual ~bibliografie();
+	virtual void afisare()=0;
+};
+
+bibliografie::bibliografie()
+{
+	an_publicare=0;
+	nr_autori=0;
+	nume_autor=new char*[10];
+	prenume_autor=new char*[10];
+	titlu=new char[20];
+	for (int i=1;i<=10;i++)
+	{	
+		nume_autor[i]=new char[10];
+		prenume_autor[i]=new char[10];
+	}
+}
+
+bibliografie::~bibliografie()
+{
+	an_publicare=0;
+	nr_autori=0;
+	for (int i=1;i<=10;i++)
+	{
+		delete nume_autor[i];
+		delete prenume_autor[i];
+	}
+	delete nume_autor;
+	delete prenume_autor;
+	delete titlu;
+}
+
+class articole:public bibliografie
+{
+	int numar, nr_pagini;
+	char *nume_revista;
+public:
+	~articole();
+	articole();
+	bool verificare_an(int a)
+	{
+		if (an_publicare==a) return true;
+		else return false;
+	}
+	
+	bool verificare_nume(char* nume)
+	{
+		for (int i=1;i<=nr_autori;i++)
+		if (strcmp(nume_autor[i],nume)==0) return true;
+		else return false;
+	}
+	void afisare()
+	{
+		for (int i=1;i<=nr_autori;i++)
+		{
+		cout<<"Numele autorului "<<i<<" : ";
+		cout<<nume_autor[i]<<endl;
+		cout<<"Prenumele autorului "<<i<<" : ";
+		cout<<prenume_autor[i]<<endl;
+		}
+		cout<<"Titlul articolului : ";
+		cout<<titlu<<endl;
+		cout<<"Anul publicarii: ";
+		cout<<an_publicare<<endl;
+		cout<<"Numele revistei :";
+		cout<<nume_revista<<endl;
+		cout<<"Numarul revistei : ";
+		cout<<numar<<endl;
+		cout<<"Numarul de pagini: ";
+		cout<<nr_pagini<<endl;
+	};
+	friend istream& operator>>(istream &, articole&);
+};
+
+articole::articole()
+{
+	nume_revista=new char[10];
+	numar=nr_pagini=0;
+}
+
+articole::~articole()
+{
+	delete nume_revista;
+	numar=nr_pagini=0;
+}
+
+istream& operator>>(istream &in, articole&a)
+{
+	cout<<"Cati autori are cartea ?";
+	in>>a.nr_autori;
+	for (int i=1;i<=a.nr_autori;i++)
+	{
+		cout<<"Numele autorului "<<i<<" : ";
+		in>>a.nume_autor[i];
+		cout<<"Prenumele autorului "<<i<<" : ";
+		in>>a.prenume_autor[i];
+	}
+	cout<<"Titlul articolului : ";
+	char q[10];gets(q); //citesc caracterul /n ramas in buffer pentru a putea citi titlul
+	gets(a.titlu);
+	cout<<"Anul publicarii: ";
+	in>>a.an_publicare;
+	cout<<"Numele revistei :";
+	gets(q); //citesc caracterul /n ramas in buffer pentru a putea citi titlul
+	gets(a.nume_revista);
+	cout<<"Numarul revistei : ";
+	in>>a.numar;
+	cout<<"Numarul de pagini: ";
+	in>>a.nr_pagini;
+	
+	return in;
+}
+
+class carti:public bibliografie
+{
+	char *nume_editura, *oras;
+public:
+	carti();
+	~carti();
+	bool verificare_an(int a)
+	{
+		if (an_publicare==a) return true;
+		else return false;
+	}
+	
+	bool verificare_nume(char* nume)
+	{
+		for (int i=1;i<=nr_autori;i++)
+			if (strcmp(nume_autor[i],nume)==0) return true;
+		else return false;
+	}
+	friend istream& operator>>(istream&,carti&);
+	void afisare(){
+	for (int i=1;i<=nr_autori;i++)
+		{
+		cout<<"Numele autorului "<<i<<" : ";
+		cout<<nume_autor[i]<<endl;
+		cout<<"Prenumele autorului "<<i<<" : ";
+		cout<<prenume_autor[i]<<endl;
+		}
+		cout<<"Titlul carte : ";
+		cout<<titlu<<endl;
+		cout<<"Anul publicarii: ";
+		cout<<an_publicare<<endl;
+		cout<<"editura";
+		cout<<nume_editura<<endl;
+		cout<<"oras";
+		cout<<oras<<endl;
+		
+		}
+};
+
+carti::carti()
+{
+	nume_editura=new char[20];
+	oras=new char[20];
+}
+
+carti::~carti()
+{
+	delete nume_editura;
+	delete oras;
+}
+
+istream& operator>>(istream&in,carti&a)
+{
+	cout<<"Cati autori are cartea ?";
+	in>>a.nr_autori;
+	for (int i=1;i<=a.nr_autori;i++)
+	{
+		cout<<"Numele autorului "<<i<<" : ";
+		in>>a.nume_autor[i];
+		cout<<"Prenumele autorului "<<i<<" : ";
+		in>>a.prenume_autor[i];
+	}
+	cout<<"Titlul cartii : ";
+	char q[10];gets(q); //citesc caracterul /n ramas in buffer pentru a putea citi titlul
+	gets(a.titlu);
+	cout<<"Anul publicarii: ";
+	in>>a.an_publicare;
+	cout<<"Numele editurii: ";
+	in>>a.nume_editura;
+	cout<<"Orasul editurii: ";
+	in>>a.oras;
+	
+	return in;
+}
+
+class web:public bibliografie
+{
+	struct timp
+	{
+		int zi,luna,an;
+	} data;
+	char *organizatie, *url;
+	bool org;
+public:
+	web();
+	~web();
+	bool verificare_nume(char* nume)
+	{
+		if (strcmp(nume_autor[1],nume)==0) return true;
+		else return false;
+	}
+	void afisare(){
+	
+		
+		if (!org)
+		{cout<<"Numele autorului "<<" : ";
+		cout<<nume_autor[1]<<endl;
+		cout<<"Prenumele autorului "<<" : ";
+		cout<<prenume_autor[1]<<endl;}
+		else cout<<organizatie<<endl;
+		
+		cout<<"Titlul site : ";
+		cout<<titlu<<endl;
+		cout<<"Anul publicarii: ";
+		cout<<an_publicare<<endl;
+		cout<<"url";
+		cout<<url<<endl;
+		cout<<"Data";
+		cout<<data.zi<<" "<<data.luna<<" "<<data.an<<endl;
+		};
+	friend istream& operator>>(istream&,web&);
+};
+
+web::web()
+{
+	org=false;
+	data.zi=data.luna=data.an=0;
+	organizatie=new char[30];
+	url=new char[100];
+}
+
+web::~web()
+{
+	org=false;
+	data.zi=data.luna=data.an=0;
+	delete organizatie;
+	delete url;
+}
+
+istream& operator>>(istream&in, web&a)
+{
+	cout<<"Site-ul web are drept proprietar :"<<endl<<"1.Persoana"<<endl<<"2.Organizatie";
+	int aux;
+	in>>aux;
+	if (aux==1) 
+	{
+		in>>a.nume_autor[1];
+		in>>a.prenume_autor[1];
+	}
+	else
+	{
+		a.org=true;
+		in>>a.organizatie;
+	}
+	cout<<"Titlul site : ";
+	char q[10];gets(q); //citesc caracterul /n ramas in buffer pentru a putea citi titlul
+	gets(a.titlu);
+	cout<<"URL :";
+	in>>a.url;
+	cout<<"Data publcarii, ziua:";
+	in>>a.data.zi;
+	cout<<"Luna : ";
+	in>>a.data.luna;
+	cout<<" An : ";
+	in>>a.data.an;
+	
+	return in;
+}	
+
+int main()
+{
+	int nr_publicatii;
+	bibliografie **publicatii;
+	char referinta[12];
+	cout<<"Numarul de publicatii este: ";
+	cin>>nr_publicatii;
+	publicatii=new bibliografie*[nr_publicatii];
+	
+	for (int i=1;i<=nr_publicatii;i++)
+	{
+		cout<<"Tipul de referinta este  (articol/carte/webografie) : ";
+		cin>>referinta;
+		if (strcmp(referinta,"articol")==0)
+		{
+			publicatii[i]=new articole();
+			articole *a;
+				if (a=dynamic_cast<articole*>(publicatii[i]))
+					cin>>*a;
+		}
+		else if (strcmp(referinta,"carte")==0)
+		{
+			publicatii[i]=new carti();
+			carti *c;
+				if (c=dynamic_cast<carti*>(publicatii[i]))
+					cin>>*c;
+		}
+		else if (strcmp(referinta,"webografie")==0)
+		{
+			publicatii[i]=new web();
+			web *w;
+				if (w=dynamic_cast<web*>(publicatii[i]))
+					cin>>*w;
+		}
+	}
+	
+	int ok=1,k;
+	while (ok)
+	{
+		system("cls");
+		cout<<"Optiunea dumneavoastra este:"<<endl<<"1.Afisati toate referintele"<<endl<<"2.Afisati toate referintele in format tiparit, publicate intr-un an"<<endl;
+		cout<<"3.Afisati toate referintele in format tiparit care au numele unuia dintre autori egal cu un nume dat"<<endl;
+		cout<<"4.Afisati toate referintele in format electronic care au numele proprietarului egal cu un nume dat"<<endl;
+		cout<<"5.Stop";
+		cin>>k;
+		if (k==1) 
+		{
+			for (int i=1;i<=nr_publicatii;i++)
+				if (typeid(*publicatii[i])==typeid(articole))
+				{
+					articole *a;
+					if (a=dynamic_cast<articole*>(publicatii[i]))
+						a->afisare();
+				}
+				else if (typeid(*publicatii[i])==typeid(carti))
+				{
+					carti *c;
+					if (c=dynamic_cast<carti*>(publicatii[i]))
+						c->afisare();
+				}
+				else if (typeid(*publicatii[i])==typeid(web))
+				{
+					web *w;
+					if (w=dynamic_cast<web*>(publicatii[i]))
+						w->afisare();
+				}
+		}
+		else if (k==2)
+		{
+			for (int i=1;i<=nr_publicatii;i++)
+				if (typeid(*publicatii[i])==typeid(articole))
+				{
+					articole *a;
+					if (a=dynamic_cast<articole*>(publicatii[i]))
+						{
+							cout<<"Anul de verificat:";
+							int anul;
+							cin>>anul;
+							if (a->verificare_an(anul)) a->afisare();
+						}
+				}
+				else if (typeid(*publicatii[i])==typeid(carti))
+				{
+					carti *c;
+					if (c=dynamic_cast<carti*>(publicatii[i]))
+						{
+							cout<<"Anul de verificat:";
+							int anul;
+							cin>>anul;
+							if (c->verificare_an(anul)) c->afisare();
+						}
+				}
+		}
+		else if (k==3)
+		{
+			for (int i=1;i<=nr_publicatii;i++)
+				if (typeid(*publicatii[i])==typeid(articole))
+				{
+					articole *a;
+					if (a=dynamic_cast<articole*>(publicatii[i]))
+						{
+							cout<<"Numele:";
+							char numele[10];
+							cin>>numele;
+							if (a->verificare_nume(numele)) a->afisare();
+						}
+				}
+				else if (typeid(*publicatii[i])==typeid(carti))
+				{
+					carti *c;
+					if (c=dynamic_cast<carti*>(publicatii[i]))
+						{
+							cout<<"Numele: ";
+							char numele[10];
+							cin>>numele;
+							if (c->verificare_nume(numele)) c->afisare();
+						}
+				}
+		}
+		else if (k==4)
+		{
+			for (int i=1;i<=nr_publicatii;i++)
+				if (typeid(*publicatii[i])==typeid(web))
+				{
+					web *w;
+					if (w=dynamic_cast<web*>(publicatii[i]))
+						{
+							cout<<"Numele: ";
+							char numele[10];
+							cin>>numele;
+							if (w->verificare_nume(numele)) w->afisare();
+						}
+				}
+		}
+		else if (k==5) ok=0;
+		system("pause");
+	}
+	return 0;
+}
+	
+	
+	

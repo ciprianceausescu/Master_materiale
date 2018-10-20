@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-010-str.xml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd">
+    <table id="1">
+        <region col-increment="0" id="1" page="1" row-increment="0">
+            <cell end-col="0" end-row="0" id="1" start-col="0" start-row="0">
+                <bounding-box x1="216" x2="288" y1="649" y2="659"/>
+                <content>FEMIP Country</content>
+            </cell>
+            <cell end-col="1" end-row="0" id="1" start-col="1" start-row="0">
+                <bounding-box x1="320" x2="376" y1="637" y2="659"/>
+                <content>Signed TA
+(EURm)</content>
+            </cell>
+            <cell end-col="0" end-row="1" id="1" start-col="0" start-row="1">
+                <bounding-box x1="216" x2="247" y1="625" y2="635"/>
+                <content>Algeria</content>
+            </cell>
+            <cell end-col="1" end-row="1" id="1" start-col="1" start-row="1">
+                <bounding-box x1="356" x2="376" y1="625" y2="635"/>
+                <content>6.19</content>
+            </cell>
+            <cell end-col="0" end-row="2" id="1" start-col="0" start-row="2">
+                <bounding-box x1="216" x2="242" y1="613" y2="623"/>
+                <content>Egypt</content>
+            </cell>
+            <cell end-col="1" end-row="2" id="1" start-col="1" start-row="2">
+                <bounding-box x1="356" x2="376" y1="612" y2="623"/>
+                <content>6.60</content>
+            </cell>
+            <cell end-col="0" end-row="3" id="1" start-col="0" start-row="3">
+                <bounding-box x1="216" x2="300" y1="600" y2="610"/>
+                <content>Gaza &amp; West Bank</content>
+            </cell>
+            <cell end-col="1" end-row="3" id="1" start-col="1" start-row="3">
+                <bounding-box x1="356" x2="376" y1="600" y2="610"/>
+                <content>2.60</content>
+            </cell>
+            <cell end-col="0" end-row="4" id="1" start-col="0" start-row="4">
+                <bounding-box x1="216" x2="247" y1="588" y2="598"/>
+                <content>Jordan</content>
+            </cell>
+            <cell end-col="1" end-row="4" id="1" start-col="1" start-row="4">
+                <bounding-box x1="356" x2="376" y1="587" y2="597"/>
+                <content>4.20</content>
+            </cell>
+            <cell end-col="0" end-row="5" id="1" start-col="0" start-row="5">
+                <bounding-box x1="216" x2="255" y1="575" y2="585"/>
+                <content>Lebanon</content>
+            </cell>
+            <cell end-col="1" end-row="5" id="1" start-col="1" start-row="5">
+                <bounding-box x1="356" x2="376" y1="574" y2="585"/>
+                <content>2.57</content>
+            </cell>
+            <cell end-col="0" end-row="6" id="1" start-col="0" start-row="6">
+                <bounding-box x1="216" x2="254" y1="562" y2="572"/>
+                <content>Morocco</content>
+            </cell>
+            <cell end-col="1" end-row="6" id="1" start-col="1" start-row="6">
+                <bounding-box x1="350" x2="376" y1="562" y2="572"/>
+                <content>21.09</content>
+            </cell>
+            <cell end-col="0" end-row="7" id="1" start-col="0" start-row="7">
+                <bounding-box x1="216" x2="255" y1="550" y2="560"/>
+                <content>Regional</content>
+            </cell>
+            <cell end-col="1" end-row="7" id="1" start-col="1" start-row="7">
+                <bounding-box x1="356" x2="376" y1="549" y2="560"/>
+                <content>7.29</content>
+            </cell>
+            <cell end-col="0" end-row="8" id="1" start-col="0" start-row="8">
+                <bounding-box x1="216" x2="239" y1="537" y2="547"/>
+                <content>Syria</content>
+            </cell>
+            <cell end-col="1" end-row="8" id="1" start-col="1" start-row="8">
+                <bounding-box x1="350" x2="376" y1="537" y2="547"/>
+                <content>33.42</content>
+            </cell>
+            <cell end-col="0" end-row="9" id="1" start-col="0" start-row="9">
+                <bounding-box x1="216" x2="248" y1="525" y2="535"/>
+                <content>Tunisia</content>
+            </cell>
+            <cell end-col="1" end-row="9" id="1" start-col="1" start-row="9">
+                <bounding-box x1="350" x2="376" y1="524" y2="535"/>
+                <content>14.50</content>
+            </cell>
+            <cell end-col="0" end-row="10" id="1" start-col="0" start-row="10">
+                <bounding-box x1="216" x2="240" y1="512" y2="522"/>
+                <content>Total</content>
+            </cell>
+            <cell end-col="1" end-row="10" id="1" start-col="1" start-row="10">
+                <bounding-box x1="351" x2="376" y1="512" y2="522"/>
+                <content>98.46</content>
+            </cell>
+        </region>
+    </table>
+</document>

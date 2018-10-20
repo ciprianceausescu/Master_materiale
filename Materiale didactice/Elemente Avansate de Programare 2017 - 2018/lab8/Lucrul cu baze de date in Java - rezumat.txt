@@ -1,0 +1,21 @@
+- instalare driver (pentru conexiunea cu un anumit tip de baza de date): 
+	Class.forName("com.mysql.jdbc.Driver");
+- instantiere conexiune (sesiunea curenta cu baza): 
+	Connection con = DriverManager.getConnection(url, user, pass);
+- instantiere statement (folosit pentru a transmite interogari SQL): 
+	Statement stmt = con.createStatement();
+- interogare SQL: 
+	String query = "select * from persoane";
+- instantiere resultset (obiect sub forma tabelara ce contine datele returnate de interogare, inclusiv meta-datele: numele coloanelor, numarul lor etc.): 
+	ResultSet rs = stmt.executeQuery(query);
+- parcurgere rezultate:
+	while(rs.next()) {
+		String cnp = rs.getString("CNP"); //getTIPDATE(NUMECOLOANA);
+		String nume = rs.getString(2); //getTIPDATE(NUMARCOLOANA); --> ordinea coloanelor incepe de la 1!!!
+		System.out.println(cnp + " " + nume);
+	}
+
+Observatii: 
+- atat instalarea driverului cat si restul operatiilor trebuie prinse in cate un bloc try-catch
+- instalarea driverului arunca ClassNotFoundException
+- operatiile SQL (conexiunea si restul) arunca SQLException

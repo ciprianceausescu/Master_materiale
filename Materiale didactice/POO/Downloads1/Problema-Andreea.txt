@@ -1,0 +1,21 @@
+O regie de transport detine 3 tipuri de mijloace de transport in comun , autobuze,
+ tramvaie , troleibuze.
+Pe director il intereseaza sa stie cat o sa-l coste salariile soferilor si 
+inlocuirea masinilor pana intr-un anumit an (citit de la tastatura, adica ti se
+ da anul si tu trb sa calculezi cati bani cheltuie regia de transport pana in
+ anul respectiv cu tot cu inlocuirea masinilor care ies din uz).
+Toate mijloacele de transport au un an in care au fost cumparate , si mijloacele
+ de transport pe benzina pot functiona 5 ani , in timp ce cele electrice ( tramvai
+ si troleu) 8 ani.
+Dupa ce trece perioada de functionare ele trebuiesc inlocuite (pret constant ptr
+ fiecare tip de masina, il alegi tu).
+Masinile pot avea 2 soferi dar cel putin 1. Soferul are un salariu pe ora.(trebuie
+ luat in calcul si salariul la costuri).
+Va trb luat in calcul si consumul autovehiculelor ( autobuzele merg pe motorina 
+(pret 4 lei/litru) si restul pe curent( 10 lei Kilowatt) o sa pui in fiecare clasa
+ o variabila statica cu consumul care va fi si constanta , autobuzele vor avea 
+consum in litrii pe Km iar celelalte in Kilowatt/ Km).
+Fiecare mijloc de transport are un traseu , adica numarul masinii caruia ii
+ este atasat si un nr de kilometrii pe zi pe care ii face pe traseul ala (probabil
+ o sa ai nevoie si de o clasa traseu) , autobuzele or sa fie intre 100-600 ,
+ tramvaiele intre 1-70 , si troleibuzele cum vrei tu.

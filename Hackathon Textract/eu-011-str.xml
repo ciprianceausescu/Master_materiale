@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-011-str.xml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd">
+    <table id="1">
+        <region col-increment="0" id="1" page="3" row-increment="0">
+            <cell end-col="0" end-row="0" id="1" start-col="0" start-row="0">
+                <bounding-box x1="73" x2="243" y1="536" y2="546"/>
+                <content>Differences with respect to Germany</content>
+            </cell>
+            <cell end-col="1" end-row="0" id="1" start-col="1" start-row="0">
+                <bounding-box x1="279" x2="319" y1="536" y2="546"/>
+                <content>Portugal</content>
+            </cell>
+            <cell end-col="2" end-row="0" id="1" start-col="2" start-row="0">
+                <bounding-box x1="330" x2="361" y1="536" y2="546"/>
+                <content>Greece</content>
+            </cell>
+            <cell end-col="3" end-row="0" id="1" start-col="3" start-row="0">
+                <bounding-box x1="378" x2="405" y1="536" y2="546"/>
+                <content>Spain</content>
+            </cell>
+            <cell end-col="4" end-row="0" id="1" start-col="4" start-row="0">
+                <bounding-box x1="426" x2="448" y1="536" y2="546"/>
+                <content>Italy</content>
+            </cell>
+            <cell end-col="5" end-row="0" id="1" start-col="5" start-row="0">
+                <bounding-box x1="474" x2="506" y1="536" y2="546"/>
+                <content>France</content>
+            </cell>
+            <cell end-col="0" end-row="1" id="1" start-col="0" start-row="1">
+                <bounding-box x1="71" x2="169" y1="518" y2="528"/>
+                <content>Q2 2006 – Q1 2010**</content>
+            </cell>
+            <cell end-col="1" end-row="1" id="1" start-col="1" start-row="1">
+                <bounding-box x1="279" x2="298" y1="518" y2="528"/>
+                <content>0.33</content>
+            </cell>
+            <cell end-col="2" end-row="1" id="1" start-col="2" start-row="1">
+                <bounding-box x1="330" x2="349" y1="518" y2="528"/>
+                <content>0.51</content>
+            </cell>
+            <cell end-col="3" end-row="1" id="1" start-col="3" start-row="1">
+                <bounding-box x1="378" x2="397" y1="518" y2="528"/>
+                <content>0.31</content>
+            </cell>
+            <cell end-col="4" end-row="1" id="1" start-col="4" start-row="1">
+                <bounding-box x1="426" x2="445" y1="518" y2="528"/>
+                <content>0.18</content>
+            </cell>
+            <cell end-col="5" end-row="1" id="1" start-col="5" start-row="1">
+                <bounding-box x1="474" x2="493" y1="518" y2="528"/>
+                <content>0.05</content>
+            </cell>
+            <cell end-col="0" end-row="2" id="1" start-col="0" start-row="2">
+                <bounding-box x1="71" x2="159" y1="503" y2="513"/>
+                <content>Q1 2009 – Q4 2009</content>
+            </cell>
+            <cell end-col="1" end-row="2" id="1" start-col="1" start-row="2">
+                <bounding-box x1="279" x2="302" y1="503" y2="513"/>
+                <content>-0.01</content>
+            </cell>
+            <cell end-col="2" end-row="2" id="1" start-col="2" start-row="2">
+                <bounding-box x1="330" x2="349" y1="503" y2="513"/>
+                <content>0.45</content>
+            </cell>
+            <cell end-col="3" end-row="2" id="1" start-col="3" start-row="2">
+                <bounding-box x1="378" x2="397" y1="503" y2="513"/>
+                <content>0.21</content>
+            </cell>
+            <cell end-col="4" end-row="2" id="1" start-col="4" start-row="2">
+                <bounding-box x1="426" x2="445" y1="503" y2="513"/>
+                <content>0.18</content>
+            </cell>
+            <cell end-col="5" end-row="2" id="1" start-col="5" start-row="2">
+                <bounding-box x1="474" x2="493" y1="503" y2="513"/>
+                <content>0.05</content>
+            </cell>
+            <cell end-col="0" end-row="3" id="1" start-col="0" start-row="3">
+                <bounding-box x1="71" x2="109" y1="488" y2="498"/>
+                <content>Q4 2009</content>
+            </cell>
+            <cell end-col="1" end-row="3" id="1" start-col="1" start-row="3">
+                <bounding-box x1="279" x2="298" y1="488" y2="498"/>
+                <content>0.17</content>
+            </cell>
+            <cell end-col="2" end-row="3" id="1" start-col="2" start-row="3">
+                <bounding-box x1="330" x2="349" y1="488" y2="498"/>
+                <content>0.70</content>
+            </cell>
+            <cell end-col="3" end-row="3" id="1" start-col="3" start-row="3">
+                <bounding-box x1="378" x2="397" y1="488" y2="498"/>
+                <content>0.26</content>
+            </cell>
+            <cell end-col="4" end-row="3" id="1" start-col="4" start-row="3">
+                <bounding-box x1="426" x2="445" y1="488" y2="498"/>
+                <content>0.09</content>
+            </cell>
+            <cell end-col="5" end-row="3" id="1" start-col="5" start-row="3">
+                <bounding-box x1="474" x2="497" y1="488" y2="498"/>
+                <content>-0.01</content>
+            </cell>
+            <cell end-col="0" end-row="4" id="1" start-col="0" start-row="4">
+                <bounding-box x1="71" x2="109" y1="473" y2="483"/>
+                <content>Q1 2010</content>
+            </cell>
+            <cell end-col="1" end-row="4" id="1" start-col="1" start-row="4">
+                <bounding-box x1="279" x2="298" y1="473" y2="483"/>
+                <content>0.64</content>
+            </cell>
+            <cell end-col="2" end-row="4" id="1" start-col="2" start-row="4">
+                <bounding-box x1="330" x2="349" y1="473" y2="483"/>
+                <content>0.72</content>
+            </cell>
+            <cell end-col="3" end-row="4" id="1" start-col="3" start-row="4">
+                <bounding-box x1="378" x2="397" y1="473" y2="483"/>
+                <content>0.56</content>
+            </cell>
+            <cell end-col="4" end-row="4" id="1" start-col="4" start-row="4">
+                <bounding-box x1="426" x2="445" y1="473" y2="483"/>
+                <content>0.43</content>
+            </cell>
+            <cell end-col="5" end-row="4" id="1" start-col="5" start-row="4">
+                <bounding-box x1="474" x2="493" y1="473" y2="483"/>
+                <content>0.25</content>
+            </cell>
+        </region>
+    </table>
+</document>

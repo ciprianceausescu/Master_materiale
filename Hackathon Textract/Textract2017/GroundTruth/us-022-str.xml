@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd" filename='bm_us-022-str.xml'>
+   <table id='1'>
+      <region page='2' id='1' col-increment='0' row-increment='0'>
+         <cell id='1' start-row='1' start-col='1' end-row='1' end-col='1'>
+            <bounding-box x1='109' y1='468' x2='173' y2='479'/>
+            <content>District Totals </content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2' end-row='1' end-col='2'>
+            <bounding-box x1='230' y1='468' x2='269' y2='479'/>
+            <content>FY 2007 </content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3' end-row='1' end-col='3'>
+            <bounding-box x1='288' y1='468' x2='326' y2='479'/>
+            <content>FY 2008 </content>
+         </cell>
+         <cell id='1' start-row='1' start-col='4' end-row='1' end-col='4'>
+            <bounding-box x1='345' y1='468' x2='384' y2='479'/>
+            <content>FY 2009 </content>
+         </cell>
+         <cell id='1' start-row='1' start-col='5' end-row='1' end-col='5'>
+            <bounding-box x1='403' y1='468' x2='441' y2='479'/>
+            <content>FY 2010 </content>
+         </cell>
+         <cell id='1' start-row='1' start-col='6' end-row='1' end-col='6'>
+            <bounding-box x1='460' y1='468' x2='499' y2='479'/>
+            <content>FY 2011 </content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1' end-row='2' end-col='1'>
+            <bounding-box x1='109' y1='435' x2='212' y2='460'/>
+            <content>Investigative Matters Received by AUSAs</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2' end-row='2' end-col='2'>
+            <bounding-box x1='240' y1='442' x2='259' y2='453'/>
+            <content>426 </content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3' end-row='2' end-col='3'>
+            <bounding-box x1='298' y1='442' x2='317' y2='453'/>
+            <content>365 </content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4' end-row='2' end-col='4'>
+            <bounding-box x1='355' y1='442' x2='374' y2='453'/>
+            <content>285 </content>
+         </cell>
+         <cell id='1' start-row='2' start-col='5' end-row='2' end-col='5'>
+            <bounding-box x1='412' y1='442' x2='432' y2='453'/>
+            <content>402 </content>
+         </cell>
+         <cell id='1' start-row='2' start-col='6' end-row='2' end-col='6'>
+            <bounding-box x1='470' y1='442' x2='489' y2='453'/>
+            <content>387 </content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1' end-row='3' end-col='1'>
+            <bounding-box x1='109' y1='416' x2='210' y2='427'/>
+            <content>Defendants Charged</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2' end-row='3' end-col='2'>
+            <bounding-box x1='240' y1='416' x2='259' y2='427'/>
+            <content>290 </content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3' end-row='3' end-col='3'>
+            <bounding-box x1='298' y1='416' x2='317' y2='427'/>
+            <content>259 </content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4' end-row='3' end-col='4'>
+            <bounding-box x1='355' y1='416' x2='374' y2='427'/>
+            <content>235 </content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5' end-row='3' end-col='5'>
+            <bounding-box x1='412' y1='416' x2='432' y2='427'/>
+            <content>259 </content>
+         </cell>
+         <cell id='1' start-row='3' start-col='6' end-row='3' end-col='6'>
+            <bounding-box x1='470' y1='416' x2='489' y2='427'/>
+            <content>215 </content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1' end-row='4' end-col='1'>
+            <bounding-box x1='109' y1='390' x2='180' y2='401'/>
+            <content>Cases Charged</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2' end-row='4' end-col='2'>
+            <bounding-box x1='240' y1='390' x2='259' y2='401'/>
+            <content>217 </content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3' end-row='4' end-col='3'>
+            <bounding-box x1='298' y1='390' x2='317' y2='401'/>
+            <content>197 </content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4' end-row='4' end-col='4'>
+            <bounding-box x1='355' y1='390' x2='374' y2='401'/>
+            <content>173 </content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5' end-row='4' end-col='5'>
+            <bounding-box x1='412' y1='390' x2='432' y2='401'/>
+            <content>177 </content>
+         </cell>
+         <cell id='1' start-row='4' start-col='6' end-row='4' end-col='6'>
+            <bounding-box x1='470' y1='390' x2='489' y2='401'/>
+            <content>168 </content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1' end-row='5' end-col='1'>
+            <bounding-box x1='109' y1='357' x2='166' y2='382'/>
+            <content>Defendants Sentenced</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2' end-row='5' end-col='2'>
+            <bounding-box x1='240' y1='364' x2='259' y2='375'/>
+            <content>287 </content>
+         </cell>
+         <cell id='1' start-row='5' start-col='3' end-row='5' end-col='3'>
+            <bounding-box x1='298' y1='364' x2='317' y2='375'/>
+            <content>242 </content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4' end-row='5' end-col='4'>
+            <bounding-box x1='355' y1='364' x2='374' y2='375'/>
+            <content>223 </content>
+         </cell>
+         <cell id='1' start-row='5' start-col='5' end-row='5' end-col='5'>
+            <bounding-box x1='412' y1='364' x2='432' y2='375'/>
+            <content>207 </content>
+         </cell>
+         <cell id='1' start-row='5' start-col='6' end-row='5' end-col='6'>
+            <bounding-box x1='470' y1='364' x2='489' y2='375'/>
+            <content>208 </content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1' end-row='6' end-col='1'>
+            <bounding-box x1='109' y1='338' x2='182' y2='349'/>
+            <content>No Prison Term</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2' end-row='6' end-col='2'>
+            <bounding-box x1='240' y1='338' x2='259' y2='349'/>
+            <content>148 </content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3' end-row='6' end-col='3'>
+            <bounding-box x1='298' y1='338' x2='317' y2='349'/>
+            <content>107 </content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4' end-row='6' end-col='4'>
+            <bounding-box x1='355' y1='338' x2='374' y2='349'/>
+            <content>126 </content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5' end-row='6' end-col='5'>
+            <bounding-box x1='412' y1='338' x2='432' y2='349'/>
+            <content>121 </content>
+         </cell>
+         <cell id='1' start-row='6' start-col='6' end-row='6' end-col='6'>
+            <bounding-box x1='470' y1='338' x2='489' y2='349'/>
+            <content>102 </content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1' end-row='7' end-col='1'>
+            <bounding-box x1='109' y1='312' x2='170' y2='323'/>
+            <content>1-12 Months</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2' end-row='7' end-col='2'>
+            <bounding-box x1='243' y1='312' x2='257' y2='323'/>
+            <content>52 </content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3' end-row='7' end-col='3'>
+            <bounding-box x1='300' y1='312' x2='314' y2='323'/>
+            <content>48 </content>
+         </cell>
+         <cell id='1' start-row='7' start-col='4' end-row='7' end-col='4'>
+            <bounding-box x1='358' y1='312' x2='371' y2='323'/>
+            <content>35 </content>
+         </cell>
+         <cell id='1' start-row='7' start-col='5' end-row='7' end-col='5'>
+            <bounding-box x1='415' y1='312' x2='429' y2='323'/>
+            <content>38 </content>
+         </cell>
+         <cell id='1' start-row='7' start-col='6' end-row='7' end-col='6'>
+            <bounding-box x1='473' y1='312' x2='486' y2='323'/>
+            <content>27 </content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1' end-row='8' end-col='1'>
+            <bounding-box x1='109' y1='286' x2='176' y2='297'/>
+            <content>13-24 Months</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='2' end-row='8' end-col='2'>
+            <bounding-box x1='243' y1='286' x2='257' y2='297'/>
+            <content>37 </content>
+         </cell>
+         <cell id='1' start-row='8' start-col='3' end-row='8' end-col='3'>
+            <bounding-box x1='300' y1='286' x2='314' y2='297'/>
+            <content>45 </content>
+         </cell>
+         <cell id='1' start-row='8' start-col='4' end-row='8' end-col='4'>
+            <bounding-box x1='358' y1='286' x2='371' y2='297'/>
+            <content>29 </content>
+         </cell>
+         <cell id='1' start-row='8' start-col='5' end-row='8' end-col='5'>
+            <bounding-box x1='415' y1='286' x2='429' y2='297'/>
+            <content>27 </content>
+         </cell>
+         <cell id='1' start-row='8' start-col='6' end-row='8' end-col='6'>
+            <bounding-box x1='473' y1='286' x2='486' y2='297'/>
+            <content>33 </content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1' end-row='9' end-col='1'>
+            <bounding-box x1='109' y1='260' x2='176' y2='271'/>
+            <content>25-36 Months</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='2' end-row='9' end-col='2'>
+            <bounding-box x1='243' y1='260' x2='257' y2='271'/>
+            <content>20 </content>
+         </cell>
+         <cell id='1' start-row='9' start-col='3' end-row='9' end-col='3'>
+            <bounding-box x1='300' y1='260' x2='314' y2='271'/>
+            <content>20 </content>
+         </cell>
+         <cell id='1' start-row='9' start-col='4' end-row='9' end-col='4'>
+            <bounding-box x1='361' y1='260' x2='369' y2='271'/>
+            <content>6 </content>
+         </cell>
+         <cell id='1' start-row='9' start-col='5' end-row='9' end-col='5'>
+            <bounding-box x1='415' y1='260' x2='429' y2='271'/>
+            <content>10 </content>
+         </cell>
+         <cell id='1' start-row='9' start-col='6' end-row='9' end-col='6'>
+            <bounding-box x1='473' y1='260' x2='486' y2='271'/>
+            <content>17 </content>
+         </cell>
+         <cell id='1' start-row='10' start-col='1' end-row='10' end-col='1'>
+            <bounding-box x1='109' y1='234' x2='176' y2='245'/>
+            <content>37-60 Months</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='2' end-row='10' end-col='2'>
+            <bounding-box x1='243' y1='234' x2='257' y2='245'/>
+            <content>14 </content>
+         </cell>
+         <cell id='1' start-row='10' start-col='3' end-row='10' end-col='3'>
+            <bounding-box x1='300' y1='234' x2='314' y2='245'/>
+            <content>19 </content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4' end-row='10' end-col='4'>
+            <bounding-box x1='358' y1='234' x2='371' y2='245'/>
+            <content>18 </content>
+         </cell>
+         <cell id='1' start-row='10' start-col='5' end-row='10' end-col='5'>
+            <bounding-box x1='418' y1='234' x2='426' y2='245'/>
+            <content>7 </content>
+         </cell>
+         <cell id='1' start-row='10' start-col='6' end-row='10' end-col='6'>
+            <bounding-box x1='473' y1='234' x2='486' y2='245'/>
+            <content>21 </content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1' end-row='11' end-col='1'>
+            <bounding-box x1='109' y1='208' x2='167' y2='219'/>
+            <content>60+ Months</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='2' end-row='11' end-col='2'>
+            <bounding-box x1='243' y1='208' x2='257' y2='219'/>
+            <content>16 </content>
+         </cell>
+         <cell id='1' start-row='11' start-col='3' end-row='11' end-col='3'>
+            <bounding-box x1='303' y1='208' x2='311' y2='219'/>
+            <content>3 </content>
+         </cell>
+         <cell id='1' start-row='11' start-col='4' end-row='11' end-col='4'>
+            <bounding-box x1='361' y1='208' x2='369' y2='219'/>
+            <content>9 </content>
+         </cell>
+         <cell id='1' start-row='11' start-col='5' end-row='11' end-col='5'>
+            <bounding-box x1='418' y1='208' x2='426' y2='219'/>
+            <content>4 </content>
+         </cell>
+         <cell id='1' start-row='11' start-col='6' end-row='11' end-col='6'>
+            <bounding-box x1='475' y1='208' x2='483' y2='219'/>
+            <content>8 </content>
+         </cell>
+      </region>
+   </table>
+</document>

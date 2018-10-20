@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd" filename='bm_us-036-str.xml'>
+   <table id='1'>
+      <region page='2' id='1' col-increment='0' row-increment='0'>
+         <cell id='1' start-row='1' start-col='1' end-row='1' end-col='1'>
+            <bounding-box x1='35' y1='335' x2='47' y2='342'/>
+            <content>Item</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2' end-row='1' end-col='2'>
+            <bounding-box x1='124' y1='335' x2='156' y2='342'/>
+            <content>Description</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1' end-row='2' end-col='1'>
+            <bounding-box x1='35' y1='322' x2='53' y2='329'/>
+            <content>Tuition</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2' end-row='2' end-col='2'>
+            <bounding-box x1='124' y1='315' x2='319' y2='329'/>
+            <content>The cost of takinga course varies froms chool to school.To search for tuition costs
+at different colleges, go to www.studentaid.ed.gov/myfsa.</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1' end-row='3' end-col='1'>
+            <bounding-box x1='35' y1='302' x2='78' y2='308'/>
+            <content>Room and board</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2' end-row='3' end-col='2'>
+            <bounding-box x1='124' y1='294' x2='275' y2='308'/>
+            <content>The cost of lodging and food varies froms chool to school. Go to
+www.studentaid.ed.gov/myfsa to search for estimated costs.</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1' end-row='4' end-col='1'>
+            <bounding-box x1='35' y1='274' x2='76' y2='288'/>
+            <content>Books and
+school supplies</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2' end-row='4' end-col='2'>
+            <bounding-box x1='124' y1='259' x2='341' y2='288'/>
+            <content>Books can be expensive. School supplies can include book bags, notebooks, pens, pencils,
+paper, folders, stapler, desk organizing system (trays, penholder, etc.), computer paper, etc.
+According to the College Board,the national average cost for textbooks at four-year public
+colleges in 2009–10 was $1,122.</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1' end-row='5' end-col='1'>
+            <bounding-box x1='35' y1='246' x2='47' y2='253'/>
+            <content>Fees</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2' end-row='5' end-col='2'>
+            <bounding-box x1='124' y1='239' x2='336' y2='253'/>
+            <content>Fees will depend on the school you’re attending. This list can be obtained directly from the
+school. Fees include activity fees,parking decal fees, etc.</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1' end-row='6' end-col='1'>
+            <bounding-box x1='35' y1='219' x2='74' y2='233'/>
+            <content>Equipment and
+room materials</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2' end-row='6' end-col='2'>
+            <bounding-box x1='124' y1='219' x2='338' y2='233'/>
+            <content>Equipment may include a computer, printer, etc. Furnishings or room materials may include
+such items as reading lamps, microwave, refrigerator, sheets, towels, etc.</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1' end-row='7' end-col='1'>
+            <bounding-box x1='35' y1='198' x2='98' y2='212'/>
+            <content>Travel and
+miscellaneous expenses</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2' end-row='7' end-col='2'>
+            <bounding-box x1='124' y1='198' x2='297' y2='212'/>
+            <content>If you live on campus, you’ll probably need to travel during school breaks.
+Other expenses can include clothing and cellphone use.</content>
+         </cell>
+      </region>
+   </table>
+</document>

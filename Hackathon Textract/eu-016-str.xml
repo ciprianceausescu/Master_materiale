@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-016-str.xml">
+    <table id="1">
+        <region col-increment="0" id="1" row-increment="0" page='3'>
+            <cell id="1" start-col="0" start-row="0">
+                <bounding-box x1="88" x2="117" y1="693" y2="701"/>
+                <content>Country</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="0">
+                <bounding-box x1="189" x2="236" y1="693" y2="701"/>
+                <content>domestic(%)</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="0">
+                <bounding-box x1="274" x2="321" y1="693" y2="701"/>
+                <content>Imported(%)</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="0">
+                <bounding-box x1="358" x2="407" y1="693" y2="701"/>
+                <content>Unknown(%)</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="0">
+                <bounding-box x1="453" x2="482" y1="693" y2="701"/>
+                <content>Total(n)</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="1">
+                <bounding-box x1="88" x2="112" y1="675" y2="683"/>
+                <content>Austria</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="1">
+                <bounding-box x1="201" x2="215" y1="675" y2="683"/>
+                <content>86.2</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="1">
+                <bounding-box x1="289" x2="303" y1="675" y2="683"/>
+                <content>13.8</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="1">
+                <bounding-box x1="384" x2="388" y1="675" y2="683"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="1">
+                <bounding-box x1="461" x2="479" y1="675" y2="683"/>
+                <content>3,375</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="2">
+                <bounding-box x1="88" x2="116" y1="661" y2="669"/>
+                <content>Belgium</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="2">
+                <bounding-box x1="211" x2="215" y1="661" y2="669"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="2">
+                <bounding-box x1="299" x2="303" y1="661" y2="669"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="2">
+                <bounding-box x1="370" x2="388" y1="661" y2="669"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="2">
+                <bounding-box x1="461" x2="479" y1="661" y2="669"/>
+                <content>3,973</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="3">
+                <bounding-box x1="88" x2="116" y1="647" y2="655"/>
+                <content>Bulgaria</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="3">
+                <bounding-box x1="211" x2="215" y1="647" y2="655"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="3">
+                <bounding-box x1="299" x2="303" y1="647" y2="655"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="3">
+                <bounding-box x1="370" x2="388" y1="647" y2="655"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="3">
+                <bounding-box x1="461" x2="479" y1="647" y2="655"/>
+                <content>1,136</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="4">
+                <bounding-box x1="88" x2="111" y1="632" y2="640"/>
+                <content>Cyprus</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="4">
+                <bounding-box x1="201" x2="215" y1="632" y2="640"/>
+                <content>81.0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="4">
+                <bounding-box x1="293" x2="303" y1="632" y2="640"/>
+                <content>3.8</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="4">
+                <bounding-box x1="374" x2="388" y1="632" y2="640"/>
+                <content>15.2</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="4">
+                <bounding-box x1="466" x2="479" y1="632" y2="640"/>
+                <content>158</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="5">
+                <bounding-box x1="88" x2="139" y1="618" y2="626"/>
+                <content>CzechRepublic</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="5">
+                <bounding-box x1="201" x2="215" y1="618" y2="626"/>
+                <content>98.6</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="5">
+                <bounding-box x1="293" x2="303" y1="618" y2="626"/>
+                <content>1.4</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="5">
+                <bounding-box x1="384" x2="388" y1="618" y2="626"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="5">
+                <bounding-box x1="457" x2="479" y1="618" y2="626"/>
+                <content>17,655</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="6">
+                <bounding-box x1="88" x2="119" y1="604" y2="612"/>
+                <content>Denmark</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="6">
+                <bounding-box x1="205" x2="215" y1="604" y2="612"/>
+                <content>3.1</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="6">
+                <bounding-box x1="289" x2="303" y1="604" y2="612"/>
+                <content>10.2</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="6">
+                <bounding-box x1="374" x2="388" y1="604" y2="612"/>
+                <content>86.7</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="6">
+                <bounding-box x1="461" x2="479" y1="604" y2="612"/>
+                <content>1,662</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="7">
+                <bounding-box x1="88" x2="113" y1="590" y2="598"/>
+                <content>Estonia</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="7">
+                <bounding-box x1="201" x2="215" y1="590" y2="598"/>
+                <content>94.2</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="7">
+                <bounding-box x1="293" x2="303" y1="590" y2="598"/>
+                <content>5.8</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="7">
+                <bounding-box x1="384" x2="388" y1="590" y2="598"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="7">
+                <bounding-box x1="466" x2="479" y1="590" y2="598"/>
+                <content>430</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="8">
+                <bounding-box x1="88" x2="113" y1="576" y2="584"/>
+                <content>Finland</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="8">
+                <bounding-box x1="201" x2="215" y1="576" y2="584"/>
+                <content>13.6</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="8">
+                <bounding-box x1="289" x2="303" y1="576" y2="584"/>
+                <content>83.0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="8">
+                <bounding-box x1="378" x2="388" y1="576" y2="584"/>
+                <content>3.4</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="8">
+                <bounding-box x1="461" x2="479" y1="576" y2="584"/>
+                <content>2,737</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="9">
+                <bounding-box x1="88" x2="110" y1="562" y2="570"/>
+                <content>France</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="9">
+                <bounding-box x1="211" x2="215" y1="562" y2="570"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="9">
+                <bounding-box x1="299" x2="303" y1="562" y2="570"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="9">
+                <bounding-box x1="370" x2="388" y1="562" y2="570"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="9">
+                <bounding-box x1="461" x2="479" y1="562" y2="570"/>
+                <content>5,510</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="10">
+                <bounding-box x1="88" x2="119" y1="547" y2="555"/>
+                <content>Germany</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="10">
+                <bounding-box x1="201" x2="215" y1="547" y2="555"/>
+                <content>90.5</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="10">
+                <bounding-box x1="293" x2="303" y1="547" y2="555"/>
+                <content>4.4</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="10">
+                <bounding-box x1="378" x2="388" y1="547" y2="555"/>
+                <content>5.1</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="10">
+                <bounding-box x1="457" x2="479" y1="547" y2="555"/>
+                <content>55,400</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="11">
+                <bounding-box x1="88" x2="117" y1="533" y2="541"/>
+                <content>hungary</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="11">
+                <bounding-box x1="201" x2="215" y1="533" y2="541"/>
+                <content>99.8</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="11">
+                <bounding-box x1="293" x2="303" y1="533" y2="541"/>
+                <content>0.2</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="11">
+                <bounding-box x1="384" x2="388" y1="533" y2="541"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="11">
+                <bounding-box x1="461" x2="479" y1="533" y2="541"/>
+                <content>6,575</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="12">
+                <bounding-box x1="88" x2="112" y1="519" y2="527"/>
+                <content>ireland</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="12">
+                <bounding-box x1="201" x2="215" y1="519" y2="527"/>
+                <content>33.9</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="12">
+                <bounding-box x1="289" x2="303" y1="519" y2="527"/>
+                <content>31.6</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="12">
+                <bounding-box x1="374" x2="388" y1="519" y2="527"/>
+                <content>34.5</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="12">
+                <bounding-box x1="466" x2="479" y1="519" y2="527"/>
+                <content>440</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="13">
+                <bounding-box x1="88" x2="102" y1="505" y2="513"/>
+                <content>italy</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="13">
+                <bounding-box x1="211" x2="215" y1="505" y2="513"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="13">
+                <bounding-box x1="299" x2="303" y1="505" y2="513"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="13">
+                <bounding-box x1="370" x2="388" y1="505" y2="513"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="13">
+                <bounding-box x1="461" x2="479" y1="505" y2="513"/>
+                <content>4,499</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="14">
+                <bounding-box x1="88" x2="108" y1="491" y2="499"/>
+                <content>Latvia</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="14">
+                <bounding-box x1="201" x2="215" y1="491" y2="499"/>
+                <content>98.1</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="14">
+                <bounding-box x1="293" x2="303" y1="491" y2="499"/>
+                <content>1.9</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="14">
+                <bounding-box x1="384" x2="388" y1="491" y2="499"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="14">
+                <bounding-box x1="466" x2="479" y1="491" y2="499"/>
+                <content>619</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="15">
+                <bounding-box x1="88" x2="119" y1="476" y2="484"/>
+                <content>Lithuania</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="15">
+                <bounding-box x1="201" x2="215" y1="476" y2="484"/>
+                <content>99.0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="15">
+                <bounding-box x1="293" x2="303" y1="476" y2="484"/>
+                <content>1.0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="15">
+                <bounding-box x1="384" x2="388" y1="476" y2="484"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="15">
+                <bounding-box x1="461" x2="479" y1="476" y2="484"/>
+                <content>2,270</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="16">
+                <bounding-box x1="88" x2="131" y1="462" y2="470"/>
+                <content>Luxembourg</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="16">
+                <bounding-box x1="201" x2="215" y1="462" y2="470"/>
+                <content>93.9</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="16">
+                <bounding-box x1="293" x2="303" y1="462" y2="470"/>
+                <content>6.1</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="16">
+                <bounding-box x1="384" x2="388" y1="462" y2="470"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="16">
+                <bounding-box x1="466" x2="479" y1="462" y2="470"/>
+                <content>163</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="17">
+                <bounding-box x1="88" x2="107" y1="448" y2="456"/>
+                <content>malta</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="17">
+                <bounding-box x1="201" x2="215" y1="448" y2="456"/>
+                <content>96.5</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="17">
+                <bounding-box x1="293" x2="303" y1="448" y2="456"/>
+                <content>3.5</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="17">
+                <bounding-box x1="384" x2="388" y1="448" y2="456"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="17">
+                <bounding-box x1="471" x2="479" y1="448" y2="456"/>
+                <content>85</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="18">
+                <bounding-box x1="88" x2="129" y1="434" y2="442"/>
+                <content>netherlands</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="18">
+                <bounding-box x1="201" x2="215" y1="434" y2="442"/>
+                <content>87.1</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="18">
+                <bounding-box x1="289" x2="303" y1="434" y2="442"/>
+                <content>12.9</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="18">
+                <bounding-box x1="384" x2="388" y1="434" y2="442"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="18">
+                <bounding-box x1="461" x2="479" y1="434" y2="442"/>
+                <content>1,245</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="19">
+                <bounding-box x1="88" x2="111" y1="420" y2="428"/>
+                <content>poland</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="19">
+                <bounding-box x1="211" x2="215" y1="420" y2="428"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="19">
+                <bounding-box x1="299" x2="303" y1="420" y2="428"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="19">
+                <bounding-box x1="370" x2="388" y1="420" y2="428"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="19">
+                <bounding-box x1="457" x2="479" y1="420" y2="428"/>
+                <content>11,155</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="20">
+                <bounding-box x1="88" x2="117" y1="406" y2="414"/>
+                <content>portugal</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="20">
+                <bounding-box x1="211" x2="215" y1="406" y2="414"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="20">
+                <bounding-box x1="293" x2="303" y1="406" y2="414"/>
+                <content>1.0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="20">
+                <bounding-box x1="374" x2="388" y1="406" y2="414"/>
+                <content>99.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="20">
+                <bounding-box x1="466" x2="479" y1="406" y2="414"/>
+                <content>482</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="21">
+                <bounding-box x1="88" x2="118" y1="391" y2="399"/>
+                <content>Romania</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="21">
+                <bounding-box x1="211" x2="215" y1="391" y2="399"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="21">
+                <bounding-box x1="299" x2="303" y1="391" y2="399"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="21">
+                <bounding-box x1="370" x2="388" y1="391" y2="399"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="21">
+                <bounding-box x1="466" x2="479" y1="391" y2="399"/>
+                <content>620</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="22">
+                <bounding-box x1="88" x2="116" y1="377" y2="385"/>
+                <content>Slovakia</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="22">
+                <bounding-box x1="201" x2="215" y1="377" y2="385"/>
+                <content>99.4</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="22">
+                <bounding-box x1="293" x2="303" y1="377" y2="385"/>
+                <content>0.6</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="22">
+                <bounding-box x1="384" x2="388" y1="377" y2="385"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="22">
+                <bounding-box x1="461" x2="479" y1="377" y2="385"/>
+                <content>8,367</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="23">
+                <bounding-box x1="88" x2="116" y1="363" y2="371"/>
+                <content>Slovenia</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="23">
+                <bounding-box x1="211" x2="215" y1="363" y2="371"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="23">
+                <bounding-box x1="299" x2="303" y1="363" y2="371"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="23">
+                <bounding-box x1="370" x2="388" y1="363" y2="371"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="23">
+                <bounding-box x1="461" x2="479" y1="363" y2="371"/>
+                <content>1,346</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="24">
+                <bounding-box x1="88" x2="107" y1="349" y2="357"/>
+                <content>Spain</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="24">
+                <bounding-box x1="197" x2="215" y1="349" y2="357"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="24">
+                <bounding-box x1="299" x2="303" y1="349" y2="357"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="24">
+                <bounding-box x1="384" x2="388" y1="349" y2="357"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="24">
+                <bounding-box x1="461" x2="479" y1="349" y2="357"/>
+                <content>3,658</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="25">
+                <bounding-box x1="88" x2="115" y1="335" y2="343"/>
+                <content>Sweden</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="25">
+                <bounding-box x1="201" x2="215" y1="335" y2="343"/>
+                <content>23.9</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="25">
+                <bounding-box x1="289" x2="303" y1="335" y2="343"/>
+                <content>73.7</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="25">
+                <bounding-box x1="378" x2="388" y1="335" y2="343"/>
+                <content>2.4</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="25">
+                <bounding-box x1="461" x2="479" y1="335" y2="343"/>
+                <content>3,930</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="26">
+                <bounding-box x1="88" x2="143" y1="321" y2="329"/>
+                <content>UnitedKingdom</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="26">
+                <bounding-box x1="201" x2="215" y1="321" y2="329"/>
+                <content>24.0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="26">
+                <bounding-box x1="289" x2="303" y1="321" y2="329"/>
+                <content>21.4</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="26">
+                <bounding-box x1="374" x2="388" y1="321" y2="329"/>
+                <content>54.6</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="26">
+                <bounding-box x1="457" x2="479" y1="321" y2="329"/>
+                <content>13,802</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="27">
+                <bounding-box x1="88" x2="117" y1="306" y2="314"/>
+                <content>EUTotal</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="27">
+                <bounding-box x1="200" x2="215" y1="306" y2="314"/>
+                <content>65.1</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="27">
+                <bounding-box x1="292" x2="303" y1="306" y2="314"/>
+                <content>7.9</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="27">
+                <bounding-box x1="373" x2="388" y1="306" y2="314"/>
+                <content>27.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="27">
+                <bounding-box x1="450" x2="479" y1="306" y2="314"/>
+                <content>151,292</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="28">
+                <bounding-box x1="88" x2="112" y1="292" y2="300"/>
+                <content>iceland</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="28">
+                <bounding-box x1="201" x2="215" y1="292" y2="300"/>
+                <content>19.4</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="28">
+                <bounding-box x1="289" x2="303" y1="292" y2="300"/>
+                <content>66.7</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="28">
+                <bounding-box x1="374" x2="388" y1="292" y2="300"/>
+                <content>14.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="28">
+                <bounding-box x1="471" x2="479" y1="292" y2="300"/>
+                <content>93</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="29">
+                <bounding-box x1="88" x2="133" y1="278" y2="286"/>
+                <content>Liechtenstein</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="29">
+                <bounding-box x1="211" x2="215" y1="278" y2="286"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="29">
+                <bounding-box x1="299" x2="303" y1="278" y2="286"/>
+                <content>0</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="29">
+                <bounding-box x1="370" x2="388" y1="278" y2="286"/>
+                <content>100.0</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="29">
+                <bounding-box x1="475" x2="479" y1="278" y2="286"/>
+                <content>1</content>
+            </cell>
+            <cell id="1" start-col="0" start-row="30">
+                <bounding-box x1="88" x2="114" y1="264" y2="272"/>
+                <content>norway</content>
+            </cell>
+            <cell id="1" start-col="1" start-row="30">
+                <bounding-box x1="201" x2="215" y1="264" y2="272"/>
+                <content>23.7</content>
+            </cell>
+            <cell id="1" start-col="2" start-row="30">
+                <bounding-box x1="289" x2="303" y1="264" y2="272"/>
+                <content>72.2</content>
+            </cell>
+            <cell id="1" start-col="3" start-row="30">
+                <bounding-box x1="378" x2="388" y1="264" y2="272"/>
+                <content>4.1</content>
+            </cell>
+            <cell id="1" start-col="4" start-row="30">
+                <bounding-box x1="461" x2="479" y1="264" y2="272"/>
+                <content>1,649</content>
+            </cell>
+        </region>
+    </table>
+</document>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-structure-model.xsd" filename='bm_us-023-str.xml'>
+   <table id='1'>
+      <region page='2'  id='1' col-increment='0' row-increment='0'>
+         <cell id='1' start-row='1' start-col='1' end-row='2' end-col='1'>
+            <bounding-box x1='45' y1='679' x2='111' y2='687'/>
+            <content>Inequality measure</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2' end-row='1' end-col='12'>
+            <bounding-box x1='379' y1='693' x2='394' y2='701'/>
+            <content>Year</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2' end-row='2' end-col='2'>
+            <bounding-box x1='205' y1='679' x2='222' y2='687'/>
+            <content>1997</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3' end-row='2' end-col='3'>
+            <bounding-box x1='239' y1='679' x2='256' y2='687'/>
+            <content>1998</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4' end-row='2' end-col='4'>
+            <bounding-box x1='274' y1='679' x2='291' y2='687'/>
+            <content>1999</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='5' end-row='2' end-col='5'>
+            <bounding-box x1='308' y1='679' x2='326' y2='687'/>
+            <content>2000</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='6' end-row='2' end-col='6'>
+            <bounding-box x1='343' y1='679' x2='360' y2='687'/>
+            <content>2001</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='7' end-row='2' end-col='7'>
+            <bounding-box x1='378' y1='679' x2='395' y2='687'/>
+            <content>2002</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='8' end-row='2' end-col='8'>
+            <bounding-box x1='412' y1='679' x2='429' y2='687'/>
+            <content>2003</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='9' end-row='2' end-col='9'>
+            <bounding-box x1='447' y1='679' x2='464' y2='687'/>
+            <content>2004</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='10' end-row='2' end-col='10'>
+            <bounding-box x1='481' y1='679' x2='498' y2='687'/>
+            <content>2005</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='11' end-row='2' end-col='11'>
+            <bounding-box x1='516' y1='679' x2='533' y2='687'/>
+            <content>2006</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='12' end-row='2' end-col='12'>
+            <bounding-box x1='550' y1='679' x2='568' y2='687'/>
+            <content>2007</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1' end-row='3' end-col='1'>
+            <bounding-box x1='45' y1='658' x2='134' y2='666'/>
+            <content>Median household income</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2' end-row='3' end-col='2'>
+            <bounding-box x1='200' y1='658' x2='226' y2='666'/>
+            <content>$49,497</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3' end-row='3' end-col='3'>
+            <bounding-box x1='235' y1='658' x2='261' y2='666'/>
+            <content>$51,295</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4' end-row='3' end-col='4'>
+            <bounding-box x1='269' y1='658' x2='296' y2='666'/>
+            <content>$52,587</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5' end-row='3' end-col='5'>
+            <bounding-box x1='304' y1='658' x2='330' y2='666'/>
+            <content>$52,500</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='6' end-row='3' end-col='6'>
+            <bounding-box x1='338' y1='658' x2='365' y2='666'/>
+            <content>$51,356</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='7' end-row='3' end-col='7'>
+            <bounding-box x1='373' y1='658' x2='399' y2='666'/>
+            <content>$50,756</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='8' end-row='3' end-col='8'>
+            <bounding-box x1='408' y1='658' x2='434' y2='666'/>
+            <content>$50,711</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='9' end-row='3' end-col='9'>
+            <bounding-box x1='442' y1='658' x2='468' y2='666'/>
+            <content>$50,535</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='10' end-row='3' end-col='10'>
+            <bounding-box x1='477' y1='658' x2='503' y2='666'/>
+            <content>$51,093</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='11' end-row='3' end-col='11'>
+            <bounding-box x1='511' y1='658' x2='538' y2='666'/>
+            <content>$51,473</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='12' end-row='3' end-col='12'>
+            <bounding-box x1='546' y1='658' x2='572' y2='666'/>
+            <content>$52,163</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1' end-row='4' end-col='1'>
+            <bounding-box x1='44' y1='636' x2='182' y2='644'/>
+            <content>Household income inequality (Gini index)</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2' end-row='4' end-col='2'>
+            <bounding-box x1='202' y1='636' x2='224' y2='644'/>
+            <content>0.4590</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3' end-row='4' end-col='3'>
+            <bounding-box x1='237' y1='636' x2='259' y2='644'/>
+            <content>0.4560</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4' end-row='4' end-col='4'>
+            <bounding-box x1='271' y1='636' x2='294' y2='644'/>
+            <content>0.4580</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5' end-row='4' end-col='5'>
+            <bounding-box x1='306' y1='636' x2='328' y2='644'/>
+            <content>0.4620</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='6' end-row='4' end-col='6'>
+            <bounding-box x1='341' y1='636' x2='363' y2='644'/>
+            <content>0.4660</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='7' end-row='4' end-col='7'>
+            <bounding-box x1='375' y1='636' x2='397' y2='644'/>
+            <content>0.4620</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='8' end-row='4' end-col='8'>
+            <bounding-box x1='410' y1='636' x2='432' y2='644'/>
+            <content>0.4640</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='9' end-row='4' end-col='9'>
+            <bounding-box x1='444' y1='636' x2='466' y2='644'/>
+            <content>0.4660</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='10' end-row='4' end-col='10'>
+            <bounding-box x1='479' y1='636' x2='501' y2='644'/>
+            <content>0.4690</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='11' end-row='4' end-col='11'>
+            <bounding-box x1='513' y1='636' x2='535' y2='644'/>
+            <content>0.4700</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='12' end-row='4' end-col='12'>
+            <bounding-box x1='548' y1='636' x2='570' y2='644'/>
+            <content>0.4630</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1' end-row='5' end-col='1'>
+            <bounding-box x1='44' y1='609' x2='171' y2='626'/>
+            <content>Between-state income inequality (Gini index)</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2' end-row='5' end-col='2'>
+            <bounding-box x1='202' y1='613' x2='224' y2='621'/>
+            <content>0.0628</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='3' end-row='5' end-col='3'>
+            <bounding-box x1='237' y1='613' x2='259' y2='621'/>
+            <content>0.0636</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4' end-row='5' end-col='4'>
+            <bounding-box x1='271' y1='613' x2='294' y2='621'/>
+            <content>0.0612</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='5' end-row='5' end-col='5'>
+            <bounding-box x1='306' y1='613' x2='328' y2='621'/>
+            <content>0.0646</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='6' end-row='5' end-col='6'>
+            <bounding-box x1='341' y1='613' x2='363' y2='621'/>
+            <content>0.0658</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='7' end-row='5' end-col='7'>
+            <bounding-box x1='375' y1='613' x2='397' y2='621'/>
+            <content>0.0671</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='8' end-row='5' end-col='8'>
+            <bounding-box x1='410' y1='613' x2='432' y2='621'/>
+            <content>0.0624</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='9' end-row='5' end-col='9'>
+            <bounding-box x1='444' y1='613' x2='466' y2='621'/>
+            <content>0.0701</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='10' end-row='5' end-col='10'>
+            <bounding-box x1='479' y1='613' x2='501' y2='621'/>
+            <content>0.0677</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='11' end-row='5' end-col='11'>
+            <bounding-box x1='513' y1='613' x2='535' y2='621'/>
+            <content>0.0713</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='12' end-row='5' end-col='12'>
+            <bounding-box x1='548' y1='613' x2='570' y2='621'/>
+            <content>0.0749</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1' end-row='6' end-col='1'>
+            <bounding-box x1='44' y1='586' x2='185' y2='603'/>
+            <content>Premature mortality (years of potential life lost before age 75 yrs/100,000 population)</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2' end-row='6' end-col='2'>
+            <bounding-box x1='202' y1='591' x2='224' y2='599'/>
+            <content>7108.3</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3' end-row='6' end-col='3'>
+            <bounding-box x1='237' y1='591' x2='259' y2='599'/>
+            <content>6960.6</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4' end-row='6' end-col='4'>
+            <bounding-box x1='271' y1='591' x2='294' y2='599'/>
+            <content>6920.0</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5' end-row='6' end-col='5'>
+            <bounding-box x1='306' y1='591' x2='328' y2='599'/>
+            <content>6899.5</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='6' end-row='6' end-col='6'>
+            <bounding-box x1='341' y1='591' x2='363' y2='599'/>
+            <content>6940.6</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='7' end-row='6' end-col='7'>
+            <bounding-box x1='375' y1='591' x2='397' y2='599'/>
+            <content>6965.2</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='8' end-row='6' end-col='8'>
+            <bounding-box x1='410' y1='591' x2='432' y2='599'/>
+            <content>6970.7</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='9' end-row='6' end-col='9'>
+            <bounding-box x1='444' y1='591' x2='466' y2='599'/>
+            <content>6841.5</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='10' end-row='6' end-col='10'>
+            <bounding-box x1='479' y1='591' x2='501' y2='599'/>
+            <content>6912.9</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='11' end-row='6' end-col='11'>
+            <bounding-box x1='513' y1='591' x2='535' y2='599'/>
+            <content>6882.0</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='12' end-row='6' end-col='12'>
+            <bounding-box x1='548' y1='591' x2='570' y2='599'/>
+            <content>6799.5</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1' end-row='7' end-col='1'>
+            <bounding-box x1='44' y1='564' x2='172' y2='581'/>
+            <content>Between-state inequality in premature mortality (Gini index)</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2' end-row='7' end-col='2'>
+            <bounding-box x1='202' y1='568' x2='224' y2='576'/>
+            <content>0.0762</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3' end-row='7' end-col='3'>
+            <bounding-box x1='237' y1='568' x2='259' y2='576'/>
+            <content>0.0785</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='4' end-row='7' end-col='4'>
+            <bounding-box x1='271' y1='568' x2='294' y2='576'/>
+            <content>0.0820</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='5' end-row='7' end-col='5'>
+            <bounding-box x1='306' y1='568' x2='328' y2='576'/>
+            <content>0.0850</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='6' end-row='7' end-col='6'>
+            <bounding-box x1='341' y1='568' x2='363' y2='576'/>
+            <content>0.0819</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='7' end-row='7' end-col='7'>
+            <bounding-box x1='375' y1='568' x2='397' y2='576'/>
+            <content>0.0861</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='8' end-row='7' end-col='8'>
+            <bounding-box x1='410' y1='568' x2='432' y2='576'/>
+            <content>0.0868</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='9' end-row='7' end-col='9'>
+            <bounding-box x1='444' y1='568' x2='466' y2='576'/>
+            <content>0.0926</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='10' end-row='7' end-col='10'>
+            <bounding-box x1='479' y1='568' x2='501' y2='576'/>
+            <content>0.0939</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='11' end-row='7' end-col='11'>
+            <bounding-box x1='513' y1='568' x2='535' y2='576'/>
+            <content>0.0963</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='12' end-row='7' end-col='12'>
+            <bounding-box x1='548' y1='568' x2='570' y2='576'/>
+            <content>0.0956</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1' end-row='8' end-col='1'>
+            <bounding-box x1='44' y1='541' x2='190' y2='558'/>
+            <content>Mean Health and Activities Limitation Index (HALex), ages 18–65 yrs</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='2' end-row='8' end-col='2'>
+            <bounding-box x1='202' y1='546' x2='224' y2='554'/>
+            <content>0.8766</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='3' end-row='8' end-col='3'>
+            <bounding-box x1='237' y1='546' x2='259' y2='554'/>
+            <content>0.8762</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='4' end-row='8' end-col='4'>
+            <bounding-box x1='271' y1='546' x2='294' y2='554'/>
+            <content>0.8779</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='5' end-row='8' end-col='5'>
+            <bounding-box x1='306' y1='546' x2='328' y2='554'/>
+            <content>0.8783</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='6' end-row='8' end-col='6'>
+            <bounding-box x1='341' y1='546' x2='363' y2='554'/>
+            <content>0.8747</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='7' end-row='8' end-col='7'>
+            <bounding-box x1='375' y1='546' x2='397' y2='554'/>
+            <content>0.8722</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='8' end-row='8' end-col='8'>
+            <bounding-box x1='410' y1='546' x2='432' y2='554'/>
+            <content>0.8711</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='9' end-row='8' end-col='9'>
+            <bounding-box x1='444' y1='546' x2='466' y2='554'/>
+            <content>0.8712</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='10' end-row='8' end-col='10'>
+            <bounding-box x1='479' y1='546' x2='501' y2='554'/>
+            <content>0.8708</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='11' end-row='8' end-col='11'>
+            <bounding-box x1='513' y1='546' x2='535' y2='554'/>
+            <content>0.8684</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='12' end-row='8' end-col='12'>
+            <bounding-box x1='548' y1='546' x2='570' y2='554'/>
+            <content>0.8662</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1' end-row='9' end-col='1'>
+            <bounding-box x1='44' y1='521' x2='153' y2='538'/>
+            <content>Inequality in HALex (Giniindex), ages 18–65 yrs</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='2' end-row='9' end-col='2'>
+            <bounding-box x1='202' y1='525' x2='224' y2='533'/>
+            <content>0.0928</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='3' end-row='9' end-col='3'>
+            <bounding-box x1='237' y1='525' x2='259' y2='533'/>
+            <content>0.0872</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='4' end-row='9' end-col='4'>
+            <bounding-box x1='271' y1='525' x2='294' y2='533'/>
+            <content>0.0848</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='5' end-row='9' end-col='5'>
+            <bounding-box x1='306' y1='525' x2='328' y2='533'/>
+            <content>0.0840</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='6' end-row='9' end-col='6'>
+            <bounding-box x1='341' y1='525' x2='363' y2='533'/>
+            <content>0.0871</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='7' end-row='9' end-col='7'>
+            <bounding-box x1='375' y1='525' x2='397' y2='533'/>
+            <content>0.0884</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='8' end-row='9' end-col='8'>
+            <bounding-box x1='410' y1='525' x2='432' y2='533'/>
+            <content>0.0888</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='9' end-row='9' end-col='9'>
+            <bounding-box x1='444' y1='525' x2='466' y2='533'/>
+            <content>0.0878</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='10' end-row='9' end-col='10'>
+            <bounding-box x1='479' y1='525' x2='501' y2='533'/>
+            <content>0.0886</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='11' end-row='9' end-col='11'>
+            <bounding-box x1='513' y1='525' x2='535' y2='533'/>
+            <content>0.0904</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='12' end-row='9' end-col='12'>
+            <bounding-box x1='548' y1='525' x2='570' y2='533'/>
+            <content>0.0862</content>
+         </cell>
+      </region>
+   </table>
+</document>

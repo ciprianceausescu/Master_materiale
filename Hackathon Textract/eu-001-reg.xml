@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-region-model.xsd" filename='bm_eu-001-reg.xml'>
+   <table id='1'>
+      <region id='1' page='1'>
+         <bounding-box x1='100' y1='451' x2='482' y2='543'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='1'>
+         <bounding-box x1='101' y1='243' x2='483' y2='415'/>
+      </region>
+   </table>
+   <table id='3'>
+      <region id='1' page='1'>
+         <bounding-box x1='102' y1='95' x2='476' y2='207'/>
+      </region>
+   </table>
+   <table id='4'>
+      <region id='1' page='2'>
+         <bounding-box x1='102' y1='482' x2='480' y2='747'/>
+      </region>
+   </table>
+   <table id='5'>
+      <region id='1' page='2'>
+         <bounding-box x1='101' y1='201' x2='483' y2='446'/>
+      </region>
+   </table>
+   <table id='6'>
+      <region id='1' page='3'>
+         <bounding-box x1='103' y1='494' x2='484' y2='747'/>
+      </region>
+   </table>
+   <table id='7'>
+      <region id='1' page='3'>
+         <bounding-box x1='105' y1='347' x2='479' y2='449'/>
+      </region>
+   </table>
+</document>

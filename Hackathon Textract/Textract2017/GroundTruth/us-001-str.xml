@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_us-001-str.xml'>
+   <table id='1'>
+      <region id='1' col-increment='0' row-increment='0' page='1'>
+         <cell id='1' start-row='0' start-col='0' end-row='1'>
+            <bounding-box x1='91' y1='504' x2='124' y2='512'/>
+            <content>Category</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='1'  end-col='4'>
+            <bounding-box x1='232' y1='515' x2='250' y2='523'/>
+            <content>2005</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='5' end-col='8'>
+            <bounding-box x1='391' y1='515' x2='409' y2='523'/>
+            <content>2010</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='9' end-col='10'>
+            <bounding-box x1='499' y1='515' x2='536' y2='523'/>
+            <content>Difference</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1'>
+            <bounding-box x1='173' y1='501' x2='201' y2='509'/>
+            <content>Number</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='2'>
+            <bounding-box x1='206' y1='492' x2='239' y2='509'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3'>
+            <bounding-box x1='250' y1='492' x2='278' y2='500'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='4'>
+            <bounding-box x1='286' y1='493' x2='319' y2='510'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='5'>
+            <bounding-box x1='330' y1='493' x2='359' y2='501'/>
+            <content>Number</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='6'>
+            <bounding-box x1='365' y1='493' x2='398' y2='510'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='7'>
+            <bounding-box x1='410' y1='493' x2='437' y2='501'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='8'>
+            <bounding-box x1='443' y1='493' x2='477' y2='510'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='9'>
+            <bounding-box x1='487' y1='493' x2='516' y2='501'/>
+            <content>Number</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='10'>
+            <bounding-box x1='528' y1='493' x2='555' y2='501'/>
+            <content>Percent</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='0'>
+            <bounding-box x1='77' y1='480' x2='161' y2='488'/>
+            <content>All ages . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='173' y1='480' x2='201' y2='488'/>
+            <content>291,099</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='225' y1='480' x2='241' y2='488'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='260' y1='480' x2='280' y2='488'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='309' y1='480' x2='319' y2='488'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='5'>
+            <bounding-box x1='330' y1='480' x2='359' y2='488'/>
+            <content>303,858</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='6'>
+            <bounding-box x1='382' y1='480' x2='398' y2='488'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='7'>
+            <bounding-box x1='417' y1='480' x2='437' y2='488'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='8'>
+            <bounding-box x1='466' y1='480' x2='477' y2='488'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='9'>
+            <bounding-box x1='485' y1='480' x2='516' y2='488'/>
+            <content>**12,760</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='10'>
+            <bounding-box x1='545' y1='480' x2='555' y2='488'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='52' y1='470' x2='161' y2='478'/>
+            <content>With a disability . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='177' y1='470' x2='201' y2='478'/>
+            <content>54,425</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='227' y1='470' x2='241' y2='478'/>
+            <content>894</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='264' y1='470' x2='280' y2='478'/>
+            <content>18.7</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='308' y1='470' x2='319' y2='478'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5'>
+            <bounding-box x1='334' y1='470' x2='359' y2='478'/>
+            <content>56,672</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='6'>
+            <bounding-box x1='385' y1='470' x2='398' y2='478'/>
+            <content>905</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='7'>
+            <bounding-box x1='422' y1='470' x2='437' y2='478'/>
+            <content>18.7</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='8'>
+            <bounding-box x1='465' y1='470' x2='477' y2='478'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='9'>
+            <bounding-box x1='493' y1='470' x2='516' y2='478'/>
+            <content>*2,247</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='10'>
+            <bounding-box x1='551' y1='470' x2='555' y2='478'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='61' y1='461' x2='161' y2='469'/>
+            <content>Severe disability. . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='1'>
+            <bounding-box x1='177' y1='461' x2='201' y2='469'/>
+            <content>34,947</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='227' y1='461' x2='241' y2='469'/>
+            <content>601</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='264' y1='461' x2='280' y2='469'/>
+            <content>12.0</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4'>
+            <bounding-box x1='308' y1='461' x2='319' y2='469'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5'>
+            <bounding-box x1='334' y1='461' x2='359' y2='469'/>
+            <content>38,284</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='6'>
+            <bounding-box x1='385' y1='461' x2='398' y2='469'/>
+            <content>654</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='7'>
+            <bounding-box x1='422' y1='461' x2='437' y2='469'/>
+            <content>12.6</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='8'>
+            <bounding-box x1='466' y1='461' x2='477' y2='469'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='9'>
+            <bounding-box x1='493' y1='461' x2='516' y2='469'/>
+            <content>*3,337</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='10'>
+            <bounding-box x1='541' y1='461' x2='555' y2='469'/>
+            <content>*0.6</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='77' y1='442' x2='161' y2='450'/>
+            <content>Aged 6 and older. . . . .</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='173' y1='442' x2='201' y2='450'/>
+            <content>266,752</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2'>
+            <bounding-box x1='232' y1='442' x2='241' y2='450'/>
+            <content>84</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='3'>
+            <bounding-box x1='260' y1='442' x2='280' y2='450'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4'>
+            <bounding-box x1='309' y1='442' x2='319' y2='450'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='5'>
+            <bounding-box x1='330' y1='442' x2='359' y2='450'/>
+            <content>278,222</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='6'>
+            <bounding-box x1='389' y1='442' x2='398' y2='450'/>
+            <content>88</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='7'>
+            <bounding-box x1='417' y1='442' x2='437' y2='450'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='8'>
+            <bounding-box x1='466' y1='442' x2='477' y2='450'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='9'>
+            <bounding-box x1='488' y1='442' x2='516' y2='450'/>
+            <content>*11,469</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='10'>
+            <bounding-box x1='545' y1='442' x2='555' y2='450'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='52' y1='432' x2='161' y2='440'/>
+            <content>Needed personal assistance. .</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1'>
+            <bounding-box x1='177' y1='432' x2='201' y2='440'/>
+            <content>10,996</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2'>
+            <bounding-box x1='227' y1='432' x2='241' y2='440'/>
+            <content>336</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3'>
+            <bounding-box x1='269' y1='432' x2='280' y2='440'/>
+            <content>4.1</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4'>
+            <bounding-box x1='308' y1='432' x2='319' y2='440'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5'>
+            <bounding-box x1='334' y1='432' x2='359' y2='440'/>
+            <content>12,349</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='6'>
+            <bounding-box x1='385' y1='432' x2='398' y2='440'/>
+            <content>386</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='7'>
+            <bounding-box x1='426' y1='432' x2='437' y2='440'/>
+            <content>4.4</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='8'>
+            <bounding-box x1='465' y1='432' x2='477' y2='440'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='9'>
+            <bounding-box x1='493' y1='432' x2='516' y2='440'/>
+            <content>*1,353</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='10'>
+            <bounding-box x1='541' y1='432' x2='555' y2='440'/>
+            <content>*0.3</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='77' y1='413' x2='161' y2='421'/>
+            <content>Aged 15 and older. . . .</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='173' y1='413' x2='201' y2='421'/>
+            <content>230,391</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2'>
+            <bounding-box x1='225' y1='413' x2='241' y2='421'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3'>
+            <bounding-box x1='260' y1='413' x2='280' y2='421'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='4'>
+            <bounding-box x1='309' y1='413' x2='319' y2='421'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='5'>
+            <bounding-box x1='330' y1='413' x2='359' y2='421'/>
+            <content>241,682</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='6'>
+            <bounding-box x1='382' y1='413' x2='398' y2='421'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='7'>
+            <bounding-box x1='417' y1='413' x2='437' y2='421'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='8'>
+            <bounding-box x1='466' y1='413' x2='477' y2='421'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='9'>
+            <bounding-box x1='485' y1='413' x2='516' y2='421'/>
+            <content>**11,291</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='10'>
+            <bounding-box x1='545' y1='413' x2='555' y2='421'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='0'>
+            <bounding-box x1='52' y1='404' x2='161' y2='412'/>
+            <content>With a disability . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='1'>
+            <bounding-box x1='177' y1='404' x2='201' y2='412'/>
+            <content>49,069</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='2'>
+            <bounding-box x1='227' y1='404' x2='241' y2='412'/>
+            <content>794</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='3'>
+            <bounding-box x1='264' y1='404' x2='280' y2='412'/>
+            <content>21.3</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='4'>
+            <bounding-box x1='308' y1='404' x2='319' y2='412'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='5'>
+            <bounding-box x1='334' y1='404' x2='359' y2='412'/>
+            <content>51,454</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='6'>
+            <bounding-box x1='385' y1='404' x2='398' y2='412'/>
+            <content>838</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='7'>
+            <bounding-box x1='422' y1='404' x2='437' y2='412'/>
+            <content>21.3</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='8'>
+            <bounding-box x1='466' y1='404' x2='477' y2='412'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='9'>
+            <bounding-box x1='493' y1='404' x2='516' y2='412'/>
+            <content>*2,385</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='10'>
+            <bounding-box x1='551' y1='404' x2='555' y2='412'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='0'>
+            <bounding-box x1='61' y1='394' x2='161' y2='402'/>
+            <content>Severe disability. . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1'>
+            <bounding-box x1='177' y1='394' x2='201' y2='402'/>
+            <content>32,771</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='2'>
+            <bounding-box x1='227' y1='394' x2='241' y2='402'/>
+            <content>567</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='3'>
+            <bounding-box x1='264' y1='394' x2='280' y2='402'/>
+            <content>14.2</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='4'>
+            <bounding-box x1='308' y1='394' x2='319' y2='402'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='5'>
+            <bounding-box x1='334' y1='394' x2='359' y2='402'/>
+            <content>35,683</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='6'>
+            <bounding-box x1='385' y1='394' x2='398' y2='402'/>
+            <content>631</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='7'>
+            <bounding-box x1='422' y1='394' x2='437' y2='402'/>
+            <content>14.8</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='8'>
+            <bounding-box x1='466' y1='394' x2='477' y2='402'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='9'>
+            <bounding-box x1='493' y1='394' x2='516' y2='402'/>
+            <content>*2,912</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='10'>
+            <bounding-box x1='541' y1='394' x2='555' y2='402'/>
+            <content>*0.5</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='0'>
+            <bounding-box x1='52' y1='385' x2='161' y2='393'/>
+            <content>Difficulty seeing. . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='1'>
+            <bounding-box x1='181' y1='385' x2='201' y2='393'/>
+            <content>7,793</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='2'>
+            <bounding-box x1='227' y1='385' x2='241' y2='393'/>
+            <content>350</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='3'>
+            <bounding-box x1='269' y1='385' x2='280' y2='393'/>
+            <content>3.4</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4'>
+            <bounding-box x1='308' y1='385' x2='319' y2='393'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='5'>
+            <bounding-box x1='339' y1='385' x2='359' y2='393'/>
+            <content>8,077</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='6'>
+            <bounding-box x1='385' y1='385' x2='398' y2='393'/>
+            <content>354</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='7'>
+            <bounding-box x1='426' y1='385' x2='437' y2='393'/>
+            <content>3.3</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='8'>
+            <bounding-box x1='466' y1='385' x2='477' y2='393'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='9'>
+            <bounding-box x1='503' y1='385' x2='516' y2='393'/>
+            <content>284</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='10'>
+            <bounding-box x1='551' y1='385' x2='555' y2='393'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='0'>
+            <bounding-box x1='60' y1='375' x2='161' y2='383'/>
+            <content>Severe . . . . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1'>
+            <bounding-box x1='181' y1='375' x2='201' y2='383'/>
+            <content>1,783</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='2'>
+            <bounding-box x1='227' y1='375' x2='241' y2='383'/>
+            <content>129</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='3'>
+            <bounding-box x1='269' y1='375' x2='280' y2='383'/>
+            <content>0.8</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='4'>
+            <bounding-box x1='308' y1='375' x2='319' y2='383'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='5'>
+            <bounding-box x1='339' y1='375' x2='359' y2='383'/>
+            <content>2,010</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='6'>
+            <bounding-box x1='385' y1='375' x2='398' y2='383'/>
+            <content>139</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='7'>
+            <bounding-box x1='426' y1='375' x2='437' y2='383'/>
+            <content>0.8</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='8'>
+            <bounding-box x1='466' y1='375' x2='477' y2='383'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='9'>
+            <bounding-box x1='499' y1='375' x2='516' y2='383'/>
+            <content>*228</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='10'>
+            <bounding-box x1='544' y1='375' x2='555' y2='383'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='0'>
+            <bounding-box x1='52' y1='366' x2='161' y2='374'/>
+            <content>Difficulty hearing . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='1'>
+            <bounding-box x1='181' y1='366' x2='201' y2='374'/>
+            <content>7,809</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='2'>
+            <bounding-box x1='227' y1='366' x2='241' y2='374'/>
+            <content>325</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='3'>
+            <bounding-box x1='269' y1='366' x2='280' y2='374'/>
+            <content>3.4</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='4'>
+            <bounding-box x1='308' y1='366' x2='319' y2='374'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='5'>
+            <bounding-box x1='339' y1='366' x2='359' y2='374'/>
+            <content>7,572</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='6'>
+            <bounding-box x1='385' y1='366' x2='398' y2='374'/>
+            <content>320</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='7'>
+            <bounding-box x1='426' y1='366' x2='437' y2='374'/>
+            <content>3.1</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='8'>
+            <bounding-box x1='466' y1='366' x2='477' y2='374'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='9'>
+            <bounding-box x1='498' y1='366' x2='516' y2='374'/>
+            <content>–237</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='10'>
+            <bounding-box x1='537' y1='366' x2='555' y2='374'/>
+            <content>*–0.3</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='0'>
+            <bounding-box x1='60' y1='356' x2='161' y2='364'/>
+            <content>Severe . . . . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='1'>
+            <bounding-box x1='188' y1='356' x2='201' y2='364'/>
+            <content>993</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='2'>
+            <bounding-box x1='227' y1='356' x2='241' y2='364'/>
+            <content>103</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='3'>
+            <bounding-box x1='269' y1='356' x2='280' y2='364'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='4'>
+            <bounding-box x1='315' y1='356' x2='319' y2='364'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='5'>
+            <bounding-box x1='339' y1='356' x2='359' y2='364'/>
+            <content>1,096</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='6'>
+            <bounding-box x1='385' y1='356' x2='398' y2='364'/>
+            <content>122</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='7'>
+            <bounding-box x1='426' y1='356' x2='437' y2='364'/>
+            <content>0.5</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='8'>
+            <bounding-box x1='466' y1='356' x2='477' y2='364'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='9'>
+            <bounding-box x1='503' y1='356' x2='516' y2='364'/>
+            <content>103</content>
+         </cell>
+         <cell id='1' start-row='13' start-col='10'>
+            <bounding-box x1='551' y1='356' x2='555' y2='364'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='0'>
+            <bounding-box x1='77' y1='337' x2='161' y2='345'/>
+            <content>Aged 21 to 64 . . . . . . .</content>
+         </cell>
+
+         <cell id='1' start-row='14' start-col='1'>
+            <bounding-box x1='173' y1='337' x2='201' y2='345'/>
+            <content>170,349</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='2'>
+            <bounding-box x1='227' y1='337' x2='241' y2='345'/>
+            <content>185</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='3'>
+            <bounding-box x1='260' y1='337' x2='280' y2='345'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='4'>
+            <bounding-box x1='309' y1='337' x2='319' y2='345'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='5'>
+            <bounding-box x1='330' y1='337' x2='359' y2='345'/>
+            <content>177,295</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='6'>
+            <bounding-box x1='385' y1='337' x2='398' y2='345'/>
+            <content>193</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='7'>
+            <bounding-box x1='417' y1='337' x2='437' y2='345'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='8'>
+            <bounding-box x1='466' y1='337' x2='477' y2='345'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='9'>
+            <bounding-box x1='493' y1='337' x2='516' y2='345'/>
+            <content>*6,945</content>
+         </cell>
+         <cell id='1' start-row='14' start-col='10'>
+            <bounding-box x1='545' y1='337' x2='555' y2='345'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='0'>
+            <bounding-box x1='52' y1='328' x2='161' y2='336'/>
+            <content>With a disability . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='1'>
+            <bounding-box x1='177' y1='328' x2='201' y2='336'/>
+            <content>28,141</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='2'>
+            <bounding-box x1='227' y1='328' x2='241' y2='336'/>
+            <content>622</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='3'>
+            <bounding-box x1='264' y1='328' x2='280' y2='336'/>
+            <content>16.5</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='4'>
+            <bounding-box x1='308' y1='328' x2='319' y2='336'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='5'>
+            <bounding-box x1='334' y1='328' x2='359' y2='336'/>
+            <content>29,479</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='6'>
+            <bounding-box x1='385' y1='328' x2='398' y2='336'/>
+            <content>705</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='7'>
+            <bounding-box x1='422' y1='328' x2='437' y2='336'/>
+            <content>16.6</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='8'>
+            <bounding-box x1='465' y1='328' x2='477' y2='336'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='9'>
+            <bounding-box x1='493' y1='328' x2='516' y2='336'/>
+            <content>*1,338</content>
+         </cell>
+         <cell id='1' start-row='15' start-col='10'>
+            <bounding-box x1='544' y1='328' x2='555' y2='336'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='0'>
+            <bounding-box x1='61' y1='318' x2='161' y2='326'/>
+            <content>Employed. . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='1'>
+            <bounding-box x1='177' y1='318' x2='201' y2='326'/>
+            <content>12,838</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='2'>
+            <bounding-box x1='227' y1='318' x2='241' y2='326'/>
+            <content>495</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='3'>
+            <bounding-box x1='264' y1='318' x2='280' y2='326'/>
+            <content>45.6</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='4'>
+            <bounding-box x1='308' y1='318' x2='319' y2='326'/>
+            <content>1.2</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='5'>
+            <bounding-box x1='334' y1='318' x2='359' y2='326'/>
+            <content>12,115</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='6'>
+            <bounding-box x1='385' y1='318' x2='398' y2='326'/>
+            <content>432</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='7'>
+            <bounding-box x1='422' y1='318' x2='437' y2='326'/>
+            <content>41.1</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='8'>
+            <bounding-box x1='466' y1='318' x2='477' y2='326'/>
+            <content>1.0</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='9'>
+            <bounding-box x1='495' y1='318' x2='516' y2='326'/>
+            <content>*–723</content>
+         </cell>
+         <cell id='1' start-row='16' start-col='10'>
+            <bounding-box x1='537' y1='318' x2='555' y2='326'/>
+            <content>*–4.5</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='0'>
+            <bounding-box x1='55' y1='309' x2='161' y2='317'/>
+            <content>Severe disability . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='1'>
+            <bounding-box x1='177' y1='309' x2='201' y2='317'/>
+            <content>18,705</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='2'>
+            <bounding-box x1='227' y1='309' x2='241' y2='317'/>
+            <content>469</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='3'>
+            <bounding-box x1='264' y1='309' x2='280' y2='317'/>
+            <content>11.0</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='4'>
+            <bounding-box x1='308' y1='309' x2='319' y2='317'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='5'>
+            <bounding-box x1='334' y1='309' x2='359' y2='317'/>
+            <content>20,286</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='6'>
+            <bounding-box x1='385' y1='309' x2='398' y2='317'/>
+            <content>566</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='7'>
+            <bounding-box x1='422' y1='309' x2='437' y2='317'/>
+            <content>11.4</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='8'>
+            <bounding-box x1='466' y1='309' x2='477' y2='317'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='9'>
+            <bounding-box x1='493' y1='309' x2='516' y2='317'/>
+            <content>*1,581</content>
+         </cell>
+         <cell id='1' start-row='17' start-col='10'>
+            <bounding-box x1='541' y1='309' x2='555' y2='317'/>
+            <content>*0.5</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='0'>
+            <bounding-box x1='69' y1='299' x2='161' y2='307'/>
+            <content>Employed . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='1'>
+            <bounding-box x1='181' y1='299' x2='201' y2='307'/>
+            <content>5,738</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='2'>
+            <bounding-box x1='227' y1='299' x2='241' y2='307'/>
+            <content>277</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='3'>
+            <bounding-box x1='264' y1='299' x2='280' y2='307'/>
+            <content>30.7</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='4'>
+            <bounding-box x1='308' y1='299' x2='319' y2='307'/>
+            <content>1.2</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='5'>
+            <bounding-box x1='339' y1='299' x2='359' y2='307'/>
+            <content>5,570</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='6'>
+            <bounding-box x1='385' y1='299' x2='398' y2='307'/>
+            <content>261</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='7'>
+            <bounding-box x1='422' y1='299' x2='437' y2='307'/>
+            <content>27.5</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='8'>
+            <bounding-box x1='466' y1='299' x2='477' y2='307'/>
+            <content>1.0</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='9'>
+            <bounding-box x1='498' y1='299' x2='516' y2='307'/>
+            <content>–167</content>
+         </cell>
+         <cell id='1' start-row='18' start-col='10'>
+            <bounding-box x1='537' y1='299' x2='555' y2='307'/>
+            <content>*–3.2</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='0'>
+            <bounding-box x1='55' y1='290' x2='161' y2='298'/>
+            <content>Nonsevere disability . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='1'>
+            <bounding-box x1='181' y1='290' x2='201' y2='298'/>
+            <content>9,436</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='2'>
+            <bounding-box x1='227' y1='290' x2='241' y2='298'/>
+            <content>403</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='3'>
+            <bounding-box x1='269' y1='290' x2='280' y2='298'/>
+            <content>5.5</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='4'>
+            <bounding-box x1='308' y1='290' x2='319' y2='298'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='5'>
+            <bounding-box x1='339' y1='290' x2='359' y2='298'/>
+            <content>9,193</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='6'>
+            <bounding-box x1='385' y1='290' x2='398' y2='298'/>
+            <content>374</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='7'>
+            <bounding-box x1='426' y1='290' x2='437' y2='298'/>
+            <content>5.2</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='8'>
+            <bounding-box x1='466' y1='290' x2='477' y2='298'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='9'>
+            <bounding-box x1='498' y1='290' x2='516' y2='298'/>
+            <content>–243</content>
+         </cell>
+         <cell id='1' start-row='19' start-col='10'>
+            <bounding-box x1='537' y1='290' x2='555' y2='298'/>
+            <content>*–0.4</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='0'>
+            <bounding-box x1='69' y1='280' x2='161' y2='288'/>
+            <content>Employed . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='1'>
+            <bounding-box x1='181' y1='280' x2='201' y2='288'/>
+            <content>7,100</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='2'>
+            <bounding-box x1='227' y1='280' x2='241' y2='288'/>
+            <content>356</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='3'>
+            <bounding-box x1='264' y1='280' x2='280' y2='288'/>
+            <content>75.2</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='4'>
+            <bounding-box x1='308' y1='280' x2='319' y2='288'/>
+            <content>1.6</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='5'>
+            <bounding-box x1='339' y1='280' x2='359' y2='288'/>
+            <content>6,544</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='6'>
+            <bounding-box x1='385' y1='280' x2='398' y2='288'/>
+            <content>311</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='7'>
+            <bounding-box x1='422' y1='280' x2='437' y2='288'/>
+            <content>71.2</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='8'>
+            <bounding-box x1='466' y1='280' x2='477' y2='288'/>
+            <content>1.6</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='9'>
+            <bounding-box x1='495' y1='280' x2='516' y2='288'/>
+            <content>*–556</content>
+         </cell>
+         <cell id='1' start-row='20' start-col='10'>
+            <bounding-box x1='537' y1='280' x2='555' y2='288'/>
+            <content>*–4.1</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='0'>
+            <bounding-box x1='53' y1='271' x2='161' y2='279'/>
+            <content>No disability. . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='1'>
+            <bounding-box x1='173' y1='271' x2='201' y2='279'/>
+            <content>142,208</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='2'>
+            <bounding-box x1='227' y1='271' x2='241' y2='279'/>
+            <content>636</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='3'>
+            <bounding-box x1='264' y1='271' x2='280' y2='279'/>
+            <content>83.5</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='4'>
+            <bounding-box x1='308' y1='271' x2='319' y2='279'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='5'>
+            <bounding-box x1='330' y1='271' x2='359' y2='279'/>
+            <content>147,816</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='6'>
+            <bounding-box x1='385' y1='271' x2='398' y2='279'/>
+            <content>733</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='7'>
+            <bounding-box x1='422' y1='271' x2='437' y2='279'/>
+            <content>83.4</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='8'>
+            <bounding-box x1='465' y1='271' x2='477' y2='279'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='9'>
+            <bounding-box x1='493' y1='271' x2='516' y2='279'/>
+            <content>*5,607</content>
+         </cell>
+         <cell id='1' start-row='21' start-col='10'>
+            <bounding-box x1='540' y1='271' x2='555' y2='279'/>
+            <content>–0.1</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='0'>
+            <bounding-box x1='61' y1='261' x2='161' y2='269'/>
+            <content>Employed. . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='1'>
+            <bounding-box x1='173' y1='261' x2='201' y2='269'/>
+            <content>118,707</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='2'>
+            <bounding-box x1='227' y1='261' x2='241' y2='269'/>
+            <content>678</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='3'>
+            <bounding-box x1='264' y1='261' x2='280' y2='269'/>
+            <content>83.5</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='4'>
+            <bounding-box x1='308' y1='261' x2='319' y2='269'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='5'>
+            <bounding-box x1='330' y1='261' x2='359' y2='269'/>
+            <content>116,881</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='6'>
+            <bounding-box x1='385' y1='261' x2='398' y2='269'/>
+            <content>862</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='7'>
+            <bounding-box x1='422' y1='261' x2='437' y2='269'/>
+            <content>79.1</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='8'>
+            <bounding-box x1='466' y1='261' x2='477' y2='269'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='9'>
+            <bounding-box x1='488' y1='261' x2='516' y2='269'/>
+            <content>*–1,826</content>
+         </cell>
+         <cell id='1' start-row='22' start-col='10'>
+            <bounding-box x1='537' y1='261' x2='555' y2='269'/>
+            <content>*–4.4</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='0'>
+            <bounding-box x1='69' y1='242' x2='161' y2='250'/>
+            <content>Aged 65 and older . . . . .</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='1'>
+            <bounding-box x1='177' y1='242' x2='201' y2='250'/>
+            <content>35,028</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='2'>
+            <bounding-box x1='225' y1='242' x2='241' y2='250'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='3'>
+            <bounding-box x1='260' y1='242' x2='280' y2='250'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='4'>
+            <bounding-box x1='309' y1='242' x2='319' y2='250'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='5'>
+            <bounding-box x1='334' y1='242' x2='359' y2='250'/>
+            <content>38,599</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='6'>
+            <bounding-box x1='382' y1='242' x2='398' y2='250'/>
+            <content>*****</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='7'>
+            <bounding-box x1='417' y1='242' x2='437' y2='250'/>
+            <content>100.0</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='8'>
+            <bounding-box x1='466' y1='242' x2='477' y2='250'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='9'>
+            <bounding-box x1='490' y1='242' x2='516' y2='250'/>
+            <content>**3,571</content>
+         </cell>
+         <cell id='1' start-row='23' start-col='10'>
+            <bounding-box x1='545' y1='242' x2='555' y2='250'/>
+            <content>(X)</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='0'>
+            <bounding-box x1='52' y1='233' x2='161' y2='241'/>
+            <content>With a disability . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='1'>
+            <bounding-box x1='177' y1='233' x2='201' y2='241'/>
+            <content>18,132</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='2'>
+            <bounding-box x1='227' y1='233' x2='241' y2='241'/>
+            <content>324</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='3'>
+            <bounding-box x1='264' y1='233' x2='280' y2='241'/>
+            <content>51.8</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='4'>
+            <bounding-box x1='308' y1='233' x2='319' y2='241'/>
+            <content>0.9</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='5'>
+            <bounding-box x1='334' y1='233' x2='359' y2='241'/>
+            <content>19,234</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='6'>
+            <bounding-box x1='385' y1='233' x2='398' y2='241'/>
+            <content>327</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='7'>
+            <bounding-box x1='422' y1='233' x2='437' y2='241'/>
+            <content>49.8</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='8'>
+            <bounding-box x1='465' y1='233' x2='477' y2='241'/>
+            <content>0.8</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='9'>
+            <bounding-box x1='493' y1='233' x2='516' y2='241'/>
+            <content>*1,102</content>
+         </cell>
+         <cell id='1' start-row='24' start-col='10'>
+            <bounding-box x1='537' y1='233' x2='555' y2='241'/>
+            <content>*–1.9</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='0'>
+            <bounding-box x1='55' y1='223' x2='161' y2='231'/>
+            <content>Severe disability . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='1'>
+            <bounding-box x1='177' y1='223' x2='201' y2='231'/>
+            <content>12,942</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='2'>
+            <bounding-box x1='227' y1='223' x2='241' y2='231'/>
+            <content>273</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='3'>
+            <bounding-box x1='264' y1='223' x2='280' y2='231'/>
+            <content>36.9</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='4'>
+            <bounding-box x1='308' y1='223' x2='319' y2='231'/>
+            <content>0.8</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='5'>
+            <bounding-box x1='334' y1='223' x2='359' y2='231'/>
+            <content>14,138</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='6'>
+            <bounding-box x1='385' y1='223' x2='398' y2='231'/>
+            <content>276</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='7'>
+            <bounding-box x1='422' y1='223' x2='437' y2='231'/>
+            <content>36.6</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='8'>
+            <bounding-box x1='465' y1='223' x2='477' y2='231'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='9'>
+            <bounding-box x1='493' y1='223' x2='516' y2='231'/>
+            <content>*1,196</content>
+         </cell>
+         <cell id='1' start-row='25' start-col='10'>
+            <bounding-box x1='540' y1='223' x2='555' y2='231'/>
+            <content>–0.3</content>
+         </cell>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' col-increment='0' row-increment='0' page='3'>
+         <cell id='1' start-row='0' start-col='1' end-col='5'>
+            <bounding-box x1='200' y1='689' x2='296' y2='697'/>
+            <content>Age-adjusted disability rate</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='6' end-col='10'>
+            <bounding-box x1='410' y1='689' x2='499' y2='697'/>
+            <content>Unadjusted disability rate</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='1' end-col='2'>
+            <bounding-box x1='179' y1='677' x2='197' y2='685'/>
+            <content>2005</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='3' end-col='4'>
+            <bounding-box x1='261' y1='677' x2='279' y2='685'/>
+            <content>2010</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='6' end-col='7'>
+            <bounding-box x1='384' y1='677' x2='402' y2='685'/>
+            <content>2005</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='8' end-col='9'>
+            <bounding-box x1='466' y1='677' x2='484' y2='685'/>
+            <content>2010</content>
+         </cell>
+         <cell id='1' start-row='0' start-col='0' end-row='2'>
+            <bounding-box x1='82' y1='672' x2='115' y2='680'/>
+            <content>Category</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='1'>
+            <bounding-box x1='156' y1='662' x2='187' y2='670'/>
+            <content>Estimate</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='2'>
+            <bounding-box x1='192' y1='653' x2='225' y2='670'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='3'>
+            <bounding-box x1='237' y1='653' x2='268' y2='661'/>
+            <content>Estimate</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='4'>
+            <bounding-box x1='276' y1='654' x2='309' y2='672'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='5' end-row='2'>
+            <bounding-box x1='314' y1='654' x2='350' y2='662'/>
+            <content>Difference</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='6'>
+            <bounding-box x1='360' y1='654' x2='391' y2='662'/>
+            <content>Estimate</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='7'>
+            <bounding-box x1='399' y1='654' x2='432' y2='672'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='8'>
+            <bounding-box x1='442' y1='654' x2='473' y2='662'/>
+            <content>Estimate</content>
+         </cell>
+         <cell id='1' start-row='2' start-col='9'>
+            <bounding-box x1='481' y1='654' x2='514' y2='672'/>
+            <content>Margin of
+error (±)</content>
+         </cell>
+         <cell id='1' start-row='1' start-col='10' end-row='2'>
+            <bounding-box x1='550' y1='654' x2='555' y2='662'/>
+            <content>Difference</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='0'>
+            <bounding-box x1='68' y1='642' x2='147' y2='650'/>
+            <content>All people . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='1'>
+            <bounding-box x1='171' y1='642' x2='187' y2='650'/>
+            <content>18.6</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='2'>
+            <bounding-box x1='216' y1='642' x2='228' y2='650'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='3'>
+            <bounding-box x1='253' y1='642' x2='269' y2='650'/>
+            <content>18.1</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='4'>
+            <bounding-box x1='298' y1='642' x2='309' y2='650'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='5'>
+            <bounding-box x1='332' y1='642' x2='350' y2='650'/>
+            <content>*–0.5</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='6'>
+            <bounding-box x1='376' y1='642' x2='391' y2='650'/>
+            <content>18.7</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='7'>
+            <bounding-box x1='421' y1='642' x2='432' y2='650'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='8'>
+            <bounding-box x1='457' y1='642' x2='473' y2='650'/>
+            <content>18.7</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='9'>
+            <bounding-box x1='503' y1='642' x2='514' y2='650'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='3' start-col='10'>
+            <bounding-box x1='550' y1='642' x2='555' y2='650'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='0'>
+            <bounding-box x1='52' y1='623' x2='147' y2='631'/>
+            <content>Male. . . . . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='01'>
+            <bounding-box x1='171' y1='623' x2='187' y2='631'/>
+            <content>17.9</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='2'>
+            <bounding-box x1='216' y1='623' x2='228' y2='631'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='3'>
+            <bounding-box x1='253' y1='623' x2='269' y2='631'/>
+            <content>17.6</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='4'>
+            <bounding-box x1='298' y1='623' x2='309' y2='631'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='5'>
+            <bounding-box x1='335' y1='623' x2='350' y2='631'/>
+            <content>–0.3</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='6'>
+            <bounding-box x1='376' y1='623' x2='391' y2='631'/>
+            <content>17.3</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='7'>
+            <bounding-box x1='421' y1='623' x2='432' y2='631'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='8'>
+            <bounding-box x1='457' y1='623' x2='473' y2='631'/>
+            <content>17.4</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='9'>
+            <bounding-box x1='503' y1='623' x2='514' y2='631'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='4' start-col='10'>
+            <bounding-box x1='544' y1='623' x2='555' y2='631'/>
+            <content>0.2</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='0'>
+            <bounding-box x1='52' y1='613' x2='147' y2='621'/>
+            <content>Female. . . . . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='1'>
+            <bounding-box x1='171' y1='613' x2='187' y2='621'/>
+            <content>19.0</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='2'>
+            <bounding-box x1='216' y1='613' x2='228' y2='621'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='3'>
+            <bounding-box x1='253' y1='613' x2='269' y2='621'/>
+            <content>18.3</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='4'>
+            <bounding-box x1='298' y1='613' x2='309' y2='621'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='5'>
+            <bounding-box x1='332' y1='613' x2='350' y2='621'/>
+            <content>*–0.7</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='6'>
+            <bounding-box x1='376' y1='613' x2='391' y2='621'/>
+            <content>20.1</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='7'>
+            <bounding-box x1='421' y1='613' x2='432' y2='621'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='8'>
+            <bounding-box x1='457' y1='613' x2='473' y2='621'/>
+            <content>19.8</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='9'>
+            <bounding-box x1='503' y1='613' x2='514' y2='621'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='5' start-col='10'>
+            <bounding-box x1='539' y1='613' x2='555' y2='621'/>
+            <content>–0.2</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='0'>
+            <bounding-box x1='52' y1='594' x2='147' y2='602'/>
+            <content>White alone . . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='1'>
+            <bounding-box x1='171' y1='594' x2='187' y2='602'/>
+            <content>17.9</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='2'>
+            <bounding-box x1='216' y1='594' x2='228' y2='602'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='3'>
+            <bounding-box x1='253' y1='594' x2='269' y2='602'/>
+            <content>17.4</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='4'>
+            <bounding-box x1='298' y1='594' x2='309' y2='602'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='5'>
+            <bounding-box x1='332' y1='594' x2='350' y2='602'/>
+            <content>*–0.5</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='6'>
+            <bounding-box x1='376' y1='594' x2='391' y2='602'/>
+            <content>18.6</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='7'>
+            <bounding-box x1='421' y1='594' x2='432' y2='602'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='08'>
+            <bounding-box x1='457' y1='594' x2='473' y2='602'/>
+            <content>18.5</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='9'>
+            <bounding-box x1='503' y1='594' x2='514' y2='602'/>
+            <content>0.3</content>
+         </cell>
+         <cell id='1' start-row='6' start-col='10'>
+            <bounding-box x1='550' y1='594' x2='555' y2='602'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='0'>
+            <bounding-box x1='60' y1='585' x2='147' y2='593'/>
+            <content>Not Hispanic. . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='1'>
+            <bounding-box x1='171' y1='585' x2='187' y2='593'/>
+            <content>18.1</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='2'>
+            <bounding-box x1='216' y1='585' x2='228' y2='593'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='3'>
+            <bounding-box x1='253' y1='585' x2='269' y2='593'/>
+            <content>17.6</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='4'>
+            <bounding-box x1='298' y1='585' x2='309' y2='593'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='5'>
+            <bounding-box x1='335' y1='585' x2='350' y2='593'/>
+            <content>–0.4</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='6'>
+            <bounding-box x1='376' y1='585' x2='391' y2='593'/>
+            <content>19.7</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='7'>
+            <bounding-box x1='421' y1='585' x2='432' y2='593'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='8'>
+            <bounding-box x1='457' y1='585' x2='473' y2='593'/>
+            <content>19.8</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='9'>
+            <bounding-box x1='503' y1='585' x2='514' y2='593'/>
+            <content>0.4</content>
+         </cell>
+         <cell id='1' start-row='7' start-col='10'>
+            <bounding-box x1='544' y1='585' x2='555' y2='593'/>
+            <content>0.1</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='0'>
+            <bounding-box x1='52' y1='575' x2='147' y2='583'/>
+            <content>Black alone . . . . . . . . . . . .</content>
+         </cell>
+
+         <cell id='1' start-row='8' start-col='1'>
+            <bounding-box x1='171' y1='575' x2='187' y2='583'/>
+            <content>23.2</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='2'>
+            <bounding-box x1='216' y1='575' x2='228' y2='583'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='3'>
+            <bounding-box x1='253' y1='575' x2='269' y2='583'/>
+            <content>22.2</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='4'>
+            <bounding-box x1='298' y1='575' x2='309' y2='583'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='5'>
+            <bounding-box x1='335' y1='575' x2='350' y2='583'/>
+            <content>–1.0</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='6'>
+            <bounding-box x1='376' y1='575' x2='391' y2='583'/>
+            <content>20.4</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='7'>
+            <bounding-box x1='421' y1='575' x2='432' y2='583'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='8'>
+            <bounding-box x1='457' y1='575' x2='473' y2='583'/>
+            <content>20.3</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='9'>
+            <bounding-box x1='503' y1='575' x2='514' y2='583'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='8' start-col='10'>
+            <bounding-box x1='539' y1='575' x2='555' y2='583'/>
+            <content>–0.2</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='0'>
+            <bounding-box x1='60' y1='566' x2='147' y2='574'/>
+            <content>Not Hispanic. . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='1'>
+            <bounding-box x1='171' y1='566' x2='187' y2='574'/>
+            <content>23.3</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='2'>
+            <bounding-box x1='216' y1='566' x2='228' y2='574'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='3'>
+            <bounding-box x1='253' y1='566' x2='269' y2='574'/>
+            <content>22.3</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='4'>
+            <bounding-box x1='298' y1='566' x2='309' y2='574'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='5'>
+            <bounding-box x1='332' y1='566' x2='350' y2='574'/>
+            <content>*–1.0</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='6'>
+            <bounding-box x1='376' y1='566' x2='391' y2='574'/>
+            <content>20.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='7'>
+            <bounding-box x1='421' y1='566' x2='432' y2='574'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='8'>
+            <bounding-box x1='457' y1='566' x2='473' y2='574'/>
+            <content>20.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='9'>
+            <bounding-box x1='503' y1='566' x2='514' y2='574'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='9' start-col='10'>
+            <bounding-box x1='550' y1='566' x2='555' y2='574'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='0'>
+            <bounding-box x1='52' y1='556' x2='147' y2='564'/>
+            <content>Asian Alone. . . . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='1'>
+            <bounding-box x1='171' y1='556' x2='187' y2='564'/>
+            <content>14.5</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='2'>
+            <bounding-box x1='216' y1='556' x2='228' y2='564'/>
+            <content>1.3</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='3'>
+            <bounding-box x1='253' y1='556' x2='269' y2='564'/>
+            <content>14.5</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='4'>
+            <bounding-box x1='298' y1='556' x2='309' y2='564'/>
+            <content>1.1</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='5'>
+            <bounding-box x1='346' y1='556' x2='350' y2='564'/>
+            <content>–</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='6'>
+            <bounding-box x1='376' y1='556' x2='391' y2='564'/>
+            <content>12.4</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='7'>
+            <bounding-box x1='421' y1='556' x2='432' y2='564'/>
+            <content>1.2</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='8'>
+            <bounding-box x1='457' y1='556' x2='473' y2='564'/>
+            <content>13.0</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='9'>
+            <bounding-box x1='503' y1='556' x2='514' y2='564'/>
+            <content>1.0</content>
+         </cell>
+         <cell id='1' start-row='10' start-col='10'>
+            <bounding-box x1='544' y1='556' x2='555' y2='564'/>
+            <content>0.6</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='0'>
+            <bounding-box x1='60' y1='547' x2='147' y2='555'/>
+            <content>Not Hispanic. . . . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='1'>
+            <bounding-box x1='171' y1='547' x2='187' y2='555'/>
+            <content>14.6</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='2'>
+            <bounding-box x1='216' y1='547' x2='228' y2='555'/>
+            <content>1.3</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='3'>
+            <bounding-box x1='253' y1='547' x2='269' y2='555'/>
+            <content>14.4</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='4'>
+            <bounding-box x1='298' y1='547' x2='309' y2='555'/>
+            <content>1.1</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='5'>
+            <bounding-box x1='335' y1='547' x2='350' y2='555'/>
+            <content>–0.2</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='6'>
+            <bounding-box x1='376' y1='547' x2='391' y2='555'/>
+            <content>12.5</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='7'>
+            <bounding-box x1='421' y1='547' x2='432' y2='555'/>
+            <content>1.2</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='8'>
+            <bounding-box x1='457' y1='547' x2='473' y2='555'/>
+            <content>13.0</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='9'>
+            <bounding-box x1='503' y1='547' x2='514' y2='555'/>
+            <content>1.1</content>
+         </cell>
+         <cell id='1' start-row='11' start-col='10'>
+            <bounding-box x1='544' y1='547' x2='555' y2='555'/>
+            <content>0.5</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='0'>
+            <bounding-box x1='52' y1='537' x2='147' y2='545'/>
+            <content>Hispanic or Latino . . . . . . .</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='1'>
+            <bounding-box x1='171' y1='537' x2='187' y2='545'/>
+            <content>18.4</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='2'>
+            <bounding-box x1='216' y1='537' x2='228' y2='545'/>
+            <content>0.9</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='3'>
+            <bounding-box x1='253' y1='537' x2='269' y2='545'/>
+            <content>17.8</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='4'>
+            <bounding-box x1='298' y1='537' x2='309' y2='545'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='5'>
+            <bounding-box x1='335' y1='537' x2='350' y2='545'/>
+            <content>–0.6</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='6'>
+            <bounding-box x1='376' y1='537' x2='391' y2='545'/>
+            <content>13.1</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='7'>
+            <bounding-box x1='421' y1='537' x2='432' y2='545'/>
+            <content>0.7</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='8'>
+            <bounding-box x1='457' y1='537' x2='473' y2='545'/>
+            <content>13.2</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='9'>
+            <bounding-box x1='503' y1='537' x2='514' y2='545'/>
+            <content>0.6</content>
+         </cell>
+         <cell id='1' start-row='12' start-col='10'>
+            <bounding-box x1='544' y1='537' x2='555' y2='545'/>
+            <content>0.1</content>
+         </cell>
+      </region>
+   </table>
+</document>

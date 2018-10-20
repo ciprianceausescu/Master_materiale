@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename='bm_eu-026-reg.xml'>
+   <table id='1'>
+      <region id='1' page='4'>
+         <bounding-box x1='80' y1='643' x2='503' y2='718'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='5'>
+         <bounding-box x1='82' y1='575' x2='430' y2='635'/>
+      </region>
+   </table>
+   <table id='3'>
+      <region id='1' page='6'>
+         <bounding-box x1='80' y1='519' x2='428' y2='580'/>
+      </region>
+   </table>
+</document>

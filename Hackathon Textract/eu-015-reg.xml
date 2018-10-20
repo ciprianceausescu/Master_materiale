@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document filename="bm_eu-015-reg.xml">
+    <table id="1">
+        <region id="1" page="1">
+            <bounding-box x1="60" x2="356" y1="292" y2="505"/>
+        </region>
+    </table>
+    <table id="2">
+        <region id="1" page="1">
+            <bounding-box x1="60" x2="356" y1="61" y2="274"/>
+        </region>
+    </table>
+    <table id="3">
+        <region id="1" page="2">
+            <bounding-box x1="58" x2="170" y1="193" y2="505"/>
+        </region>
+    </table>
+    <table id="4">
+        <region id="1" page="2">
+            <bounding-box x1="184" x2="297" y1="183" y2="515"/>
+        </region>
+    </table>
+    <table id="5">
+        <region id="1" page="2">
+            <bounding-box x1="316" x2="428" y1="183" y2="515"/>
+        </region>
+    </table>
+</document>

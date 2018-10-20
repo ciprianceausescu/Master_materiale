@@ -1,0 +1,286 @@
+/* Bunicuta vrea sa faca prajituri. Pentru aceasta ea are la dispozitie n forme de copt. Formele de copt sunt niste prisme
+(obiecte tridimensionale) care au la baza patru categorii de figuri geometrice plane:
+  1. cerc - determinat de raza
+  2. dreptunghi - determinat de latura mica si latura mare
+  3. patrat - determinat de latura
+  4. triunghi dreptunghic - determinat de cateta mica si cateta mare.
+Pe langa baza, formele de copt au si o inaltime .
+Bunicuta intentioneaza sa umple toate formele de copt in interior cu gem iar dupa coacere doreste sa le unga pe intreaga
+suprafata exterioara cu frisca. Conform retetei, bunicuta foloseste 2 grame de gem pentru fiecare centimetru cub de prajitura
+umplut si 1 gram de frisca pentru fiecare centimetru patrat de prajitura uns.
+
+   Scrieti un program care sa o ajute pe Bunicuta sa determine cantitatile necesare de gem si frisca astfel:
+Bunicuta va putea adauga o forma de copt (Comanda ADD) caz in care:
+  - Se citeste pentru forma tipul bazei ei (cerc, dreptunghi, patrat, triunghi)
+  - Se citesc apoi caracteristicele bazei
+  - Se citeste apoi inaltimea formei de copt
+  - Inainte de a trece la urmatoarea comanda se afiseaza cantitatile de gem si frisca necesare pentru aceasta.
+Bunicuta va putea elimina a x-a forma de copt (Comanda REMOVE x) existenta in ordinea introducerii (numerotarea incepe de la 1).
+Bunicuta va putea afisa necesarul curent total al fiecarui ingredient (gem, frisca) pentru formele existente (comanda TOTAL).
+Programul se incheie prin comanda STOP. */
+
+
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+class forma
+    {
+protected:
+    static double gem;
+    static double frisca;
+    int inaltime;
+public:
+    forma (int i=0)
+        {
+        inaltime=i;
+        }
+    ~forma()
+        {
+        inaltime=0;
+//        cout<<"Constructor forma \n";
+        }
+    virtual double arie()=0;
+    virtual double volum()=0;
+    friend ostream& operator << (ostream &,forma &);
+    double get_gem()
+        {
+        return gem;
+        }
+    double get_frisca()
+        {
+        return frisca;
+        }
+    void set_gem(double x)
+        {
+        gem=x;
+        }
+    void set_frisca(double x)
+        {
+        frisca=x;
+        }
+    };
+
+
+
+double forma::gem=0;
+double forma::frisca=0;
+
+
+
+
+
+ostream & operator << (ostream &o,forma &x)
+    {
+    o<<x.inaltime;
+    return o;
+    }
+
+
+
+
+class cerc:public forma
+    {
+    double raza;
+public:
+    cerc(int i=0,int j=0):forma(j)
+        {
+        raza=i;
+        }
+    ~cerc()
+        {
+        raza=0;
+//        cout<<"Destructor cerc \n";
+        }
+    double arie();
+    double volum();
+    };
+
+
+
+
+double cerc::arie()
+{
+return 3.14*raza*raza;
+}
+
+
+
+double cerc::volum()
+{
+return arie()*inaltime;
+}
+
+
+
+
+class dreptunghi:public forma
+    {
+    double lat_mica,lat_mare;
+public:
+    dreptunghi(int i=0,int j=0,int k=0):forma(k)
+        {
+        lat_mica=i;
+        lat_mare=j;
+        }
+    ~dreptunghi()
+        {
+        lat_mica=0;
+        lat_mare=0;
+//        cout<<"Destructor dreptunghi \n";
+        }
+    double arie();
+    double volum();
+    };
+
+
+
+double dreptunghi::arie()
+{
+return lat_mica*lat_mare;
+}
+
+
+
+double dreptunghi::volum()
+{
+return arie()*inaltime;
+}
+
+
+
+
+class patrat:public forma
+    {
+    double latura;
+public:
+    patrat(int i=0,int j=0):forma(j)
+        {
+        latura=i;
+        }
+    ~patrat()
+        {
+        latura=0;
+//        cout<<"Destructor patrat \n";
+        }
+    double arie();
+    double volum();
+    };
+
+
+
+
+double patrat::arie()
+{
+return latura*latura;
+}
+
+
+double patrat::volum()
+{
+return arie()*inaltime;
+}
+
+
+
+
+class triunghi:public forma
+    {
+    double cat_mica,cat_mare;
+public:
+    triunghi(int i=0,int j=0,int k=0):forma(k)
+        {
+        cat_mica=i;
+        cat_mare=j;
+        }
+    ~triunghi()
+        {
+        cat_mica=0;
+        cat_mare=0;
+//        cout<<"Destructor triunghi \n";
+        }
+    double arie();
+    double volum();
+    };
+
+
+double triunghi::arie()
+{
+return cat_mica*cat_mare/2;
+}
+
+
+
+double triunghi::volum()
+{
+return arie()*inaltime;
+}
+
+
+void ADD()
+{
+int x;
+double gemulet,friscuta;
+cin>>x;
+while(x>=1 && x<=4)
+    {
+    switch(x)
+        {
+        case 1:
+            {
+            cerc a(2,1);
+            gemulet=a.get_gem()+(2*a.volum());
+            a.set_gem(gemulet);
+            friscuta=a.get_frisca()+a.volum();
+            a.set_frisca(friscuta);
+            cout<<"Gem="<<gemulet;
+            cout<<"\nFrisca="<<friscuta<<"\n";
+            break;
+            }
+        case 2:
+            {
+            dreptunghi b(2,1,3);
+            gemulet=b.get_gem()+(2*b.volum());
+            b.set_gem(gemulet);
+            friscuta=b.get_frisca()+b.volum();
+            b.set_frisca(friscuta);
+            cout<<"Gem="<<gemulet;
+            cout<<"\nFrisca="<<friscuta<<"\n";
+            break;
+            }
+        case 3:
+            {
+            patrat c(2,2);
+            gemulet=c.get_gem()+(2*c.volum());
+            c.set_gem(gemulet);
+            friscuta=c.get_frisca()+c.volum();
+            c.set_frisca(friscuta);
+            cout<<"Gem="<<gemulet;
+            cout<<"\nFrisca="<<friscuta<<"\n";
+            break;
+            }
+        case 4:
+            {
+            triunghi d(1,2,5);
+            gemulet=d.get_gem()+(2*d.volum());
+            d.set_gem(gemulet);
+            friscuta=d.get_frisca()+d.volum();
+            d.set_frisca(friscuta);
+            cout<<"Gem="<<gemulet;
+            cout<<"\nFrisca="<<friscuta<<"\n";
+            break;
+            }
+        default:
+            cout<<"Eroare!!";
+        }
+    cin>>x;
+    }
+}
+
+
+int main()
+{
+ADD();
+return 0;
+}

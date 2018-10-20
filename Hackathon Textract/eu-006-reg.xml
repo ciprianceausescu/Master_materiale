@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="competition-entry-region-model.xsd" filename='bm_eu-006-reg.xml'>
+   <table id='1'>
+      <region id='1' page='1'>
+         <bounding-box x1='113' y1='536' x2='460' y2='750'/>
+      </region>
+   </table>
+   <table id='2'>
+      <region id='1' page='1'>
+         <bounding-box x1='112' y1='346' x2='461' y2='397'/>
+      </region>
+   </table>
+   <table id='3'>
+      <region id='2' page='2'>
+         <bounding-box x1='193' y1='619' x2='413' y2='711'/>
+      </region>
+   </table>
+   <table id='4'>
+      <region id='1' page='3'>
+         <bounding-box x1='107' y1='641' x2='486' y2='730'/>
+      </region>
+   </table>
+</document>
