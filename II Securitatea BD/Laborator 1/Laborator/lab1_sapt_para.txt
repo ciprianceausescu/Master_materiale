@@ -1,0 +1,210 @@
+--1
+CREATE OR REPLACE PROCEDURE criptare1(text IN VARCHAR2, text_criptat OUT VARCHAR2)
+AS
+    raw_sir RAW(100);
+    raw_parola RAW(100);
+    rezultat RAW(100);
+    cheie VARCHAR2(10):= '12345678';
+    mod_operare NUMBER;
+BEGIN
+    raw_sir := utl_i18n.string_to_raw(text, 'AL32UTF8');
+    raw_parola := utl_i18n.string_to_raw(cheie, 'AL32UTF8');
+    
+    mod_operare := DBMS_CRYPTO.ENCRYPT_DES + DBMS_CRYPTO.PAD_ZERO + DBMS_CRYPTO.CHAIN_ECB;
+    
+    rezultat := DBMS_CRYPTO.ENCRYPT(raw_sir, mod_operare, raw_parola);
+    dbms_output.put_line('Rezultatul este: ' || rezultat);
+    
+    text_criptat := RAWTOHEX(rezultat);
+END;
+/
+
+
+variable rez_criptare VARCHAR2(50);
+execute criptare1('text in clar', :rez_criptare);
+print rez_criptare;
+
+--2
+create or replace  procedure decriptare1(text_criptat IN varchar2, 
+                              text_decriptat OUT varchar2)
+as
+    raw_sir RAW(100);
+    raw_parola RAW(100);
+    rezultat RAW(100);
+    cheie VARCHAR2(10):= '12345678';
+    mod_operare NUMBER;
+begin
+    raw_sir := HEXTORAW(text_criptat);
+    raw_parola := utl_i18n.string_to_raw(cheie, 'AL32UTF8');
+    
+    mod_operare := DBMS_CRYPTO.ENCRYPT_DES + DBMS_CRYPTO.PAD_ZERO + DBMS_CRYPTO.CHAIN_ECB;
+    
+    rezultat := DBMS_CRYPTO.DECRYPT(raw_sir, mod_operare, raw_parola);
+    
+    dbms_output.put_line('Rezultatul este: ' || rezultat);
+    
+    text_decriptat := utl_i18n.raw_to_char(rezultat, 'AL32UTF8');
+end;
+/
+
+variable rez_decriptare VARCHAR2(50);
+execute decriptare1(:rez_criptare, :rez_decriptare);
+print rez_decriptare;
+
+select count(*) from employees;
+
+--3
+create sequence secv_idcheie increment by 1 start with 1;
+
+create table tabel_chei(
+    idcheie number primary key,
+    cheie raw(16) not null,
+    tabel varchar2(30) not null
+);
+
+create table employees_cript (
+    employee_id_cript varchar2(100) primary key,
+    salary_cript varchar2(100)
+);
+
+create or replace procedure criptare_par_impar
+as
+    cheie_impar raw(16);
+    cheie_par raw(16);
+    
+    cursor c is select employee_id, salary from employees;
+    
+    raw_empid raw(100);
+    raw_salary raw(100);
+    
+    mod_operare number;
+    rezultat_empid raw(100);
+    rezultat_salary raw(100);
+    contor number :=1;
+begin
+    cheie_impar := dbms_crypto.randombytes(16);
+    cheie_par := dbms_crypto.randombytes(16);
+    
+    dbms_output.put_line('Cheie impar: ' || cheie_impar);
+    dbms_output.put_line('Cheie par: ' || cheie_par);
+    
+    insert into tabel_chei values(secv_idcheie.nextval, cheie_impar, 'EMPLOYEES');
+    insert into tabel_chei values(secv_idcheie.nextval, cheie_par, 'EMPLOYEES');
+    
+    mod_operare := dbms_crypto.encrypt_aes128 + dbms_crypto.pad_pkcs5 + dbms_crypto.chain_cbc;
+    
+    for l in c loop
+        raw_empid := utl_i18n.string_to_raw(to_char(l.employee_id), 'AL32UTF8');
+        raw_salary := utl_i18n.string_to_raw(to_char(l.salary), 'AL32UTF8');
+        
+        if (mod(contor, 2) = 1)then 
+            rezultat_empid := dbms_crypto.encrypt(raw_empid, mod_operare, cheie_impar);
+            rezultat_salary := dbms_crypto.encrypt(raw_salary, mod_operare, cheie_impar);
+            
+            insert into employees_cript values(rawtohex(rezultat_empid), rawtohex(rezultat_salary));
+            contor := contor + 1;
+        else 
+            rezultat_empid := dbms_crypto.encrypt(raw_empid, mod_operare, cheie_par);
+            rezultat_salary := dbms_crypto.encrypt(raw_salary, mod_operare, cheie_par);
+            
+            insert into employees_cript values(rawtohex(rezultat_empid), rawtohex(rezultat_salary));
+            contor := contor + 1;
+        end if;
+    end loop;
+    commit;
+end;
+/
+
+execute criptare_par_impar;
+
+select * from tabel_chei;
+
+select * from employees_cript;
+
+--4
+select * from (
+    select salary_cript, rownum rn from employees_cript where rownum < 2)
+    where rn = 1;
+    
+update employees_cript 
+set salary_cript = '1F4' where rownum < 2;
+
+--5
+create table employees_decript(empid_decript varchar2(100), 
+                               sal_decript varchar2(100)); 
+
+create or replace procedure decriptare_par_impar AS
+    cheie_impar raw (16);
+    cheie_par raw (16);
+    cursor c is select EMPLOYEE_ID_CRIPT, SALARY_CRIPT from EMPLOYEES_CRIPT;
+    raw_empid raw(100);
+    raw_salary raw(100);
+    mod_operare number;
+    rezultat_empid raw(100);
+    rezultat_salary raw(100);
+    contor number :=1;
+BEGIN
+    select CHEIE into cheie_impar from tabel_chei where IDCHEIE=1;
+    select CHEIE into cheie_par from tabel_chei where IDCHEIE=2;
+
+    dbms_output.put_line('Cheie impar ' || cheie_impar);
+    dbms_output.put_line('Cheie par ' || cheie_par);
+
+    mod_operare:=dbms_crypto.encrypt_aes128+dbms_crypto.pad_pkcs5+dbms_crypto.chain_cbc;
+
+    for l in c loop
+--        raw_empid:=utl_i18n.string_to_raw(to_char(l.employee_id), 'AL32UTF8');
+--        raw_salary:=utl_i18n.string_to_raw(to_char(l.salary), 'AL32UTF8');
+--        utl_i18n.raw_to_char
+
+        if (mod(contor,2) = 1) then 
+               rezultat_empid:=dbms_crypto.decrypt(l.EMPLOYEE_ID_CRIPT, mod_operare,cheie_impar);
+                rezultat_salary:=dbms_crypto.decrypt(l.SALARY_CRIPT, mod_operare,cheie_impar);
+            else
+                rezultat_empid:=dbms_crypto.decrypt(l.EMPLOYEE_ID_CRIPT, mod_operare,cheie_par);
+                rezultat_salary:=dbms_crypto.decrypt(l.SALARY_CRIPT, mod_operare,cheie_par);
+
+        end if;
+        contor :=contor+1;
+        insert into EMPLOYEES_DECRIPT values(utl_i18n.raw_to_char(rezultat_empid,'AL32UTF8'),utl_i18n.raw_to_char(rezultat_salary,'AL32UTF8'));
+    end loop;
+
+    commit;
+
+END;
+/
+
+
+--6
+create or replace function rezum_md5_2 return varchar2
+as
+    rec employees%rowtype;
+    rec_unit varchar2(1000);
+    raw_rec RAW(1000);
+    mod_operare number;
+    rezultat raw(1000);
+begin
+    select * into rec from employees where employee_id=104;
+    
+    rec_unit := to_char(rec.employee_id) || rec.first_name || rec.last_name ||
+                rec.email || rec.phone_number || to_char(rec.hire_date) ||
+                rec.job_id || to_char(rec.salary) || to_char(rec.commission_pct) ||
+                to_char(rec.manager_id) || to_char(rec.department_id);
+                
+    dbms_output.put_line('Inregistrare unita: ' || rec_unit);
+    
+    raw_rec := utl_i18n.string_to_raw(rec_unit, 'AL32UTF8');
+    mod_operare := dbms_crypto.hash_md5;
+    
+    rezultat := dbms_crypto.hash(raw_rec, mod_operare);
+    
+    return rawtohex(rezultat);
+end;
+/
+
+variable rezumat1 varchar2(2000);
+execute :rezumat1 := rezum_md5_2;
+print rezumat1;
+
+update employees set salary = salary*1.2 where employee_id=104;
+
