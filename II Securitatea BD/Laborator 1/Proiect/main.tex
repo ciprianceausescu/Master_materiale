@@ -1,0 +1,262 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\renewcommand{\baselinestretch}{1.5} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{
+    position=above,font=large,labelfont=large
+}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Project - Database Security} % Title of the assignment
+
+\author{Ciprian-Mihai Ceausescu\\ \texttt{ciprian-mihai.ceausescu@my.fmi.unibuc.ro}} % Author name and email address
+
+\date{University of Bucharest --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction}
+\hspace{10mm}In this project is presented a database model for a company that can sells \textbf{products} to \textbf{users} and, also, saves a history of all \textbf{orders}. The entities are the following:
+\begin{itemize}
+\item user -  the main entity contains the following information: \textbf{authentication} e-mail, password, reset password token and timestamp, created and updated timestamps.
+\item role - contains the following information: \textbf{name} of the role, created and updated timestamps.
+\item product -  contains the following information: \textbf{name} of the product, description, price, image url, created and updated timestamps.
+\item order - contains the following information: \textbf{pay type}, how the product is delivered, created and updated timestamps.
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%	Main database diagram
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{Schema_1}
+\caption{Main database diagram}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Audit database diagram
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=1]{Schema_2}
+\caption{Audit database diagram}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Database and tables
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=1]{1}
+\caption{Database and tables - Database}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{2}
+\caption{Database and tables - Configurations}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{3}
+\caption{Database and tables - Users}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{3_1}
+\caption{Database and tables - Users}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{4}
+\caption{Database and tables - Roles}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{5}
+\caption{Database and tables - Users Roles}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{6}
+\caption{Database and tables - Products}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{7}
+\caption{Database and tables - Carts}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{8}
+\caption{Database and tables - Users Carts}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{9}
+\caption{Database and tables - Orders}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{10}
+\caption{Database and tables - Users Orders}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{11}
+\caption{Database and tables - Cart Lines}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{12}
+\caption{Database and tables - Order Lines}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{13}
+\caption{Database and tables - Create roles on database}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{14}
+\caption{Database and tables - Logged Actions}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{15}
+\caption{Database and tables - Root Actions}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Functions
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=1]{f1}
+\caption{Functions - Login vulnerable}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{f2}
+\caption{Functions - Audit login}
+\end{figure} 
+\begin{figure}
+\centering
+\includegraphics[scale=1]{f3}
+\caption{Functions - Login safe}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{f4}
+\caption{Functions - Search product - vulnerable}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{f5}
+\caption{Functions - Search product - safe}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{f6}
+\caption{Functions - Apply function}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{f7}
+\caption{Functions - Audit - check if data is modified}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{f8}
+\caption{Functions - Audit - check if root user made an action}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Data
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{d1}
+\caption{Data - Users}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{d2}
+\caption{Data - Products}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{d3}
+\caption{Data - Orders}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{d4}
+\caption{Data - User Orders}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{d5}
+\caption{Data - Order Lines}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.9]{d6}
+\caption{Data - Logged Actions}
+\end{figure}
+%----------------------------------------------------------------------------------------
+%	Experimental results
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r1}
+\caption{Experimental results - Apply function - avg}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r2}
+\caption{Experimental results - Apply function - sum}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r3}
+\caption{Experimental results - Apply function - count}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r4}
+\caption{Experimental results - SQL INJECTION TESTS - Gain access without password}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r5}
+\caption{Experimental results - SQL INJECTION TESTS - Dump all users}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r6}
+\caption{Experimental results - SQL INJECTION TESTS - Login secure - succes}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r7}
+\caption{Experimental results - SQL INJECTION TESTS - Login secure - failed}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{r8}
+\caption{Experimental results - Search products - vulnerable}
+\end{figure}
+\end{document}

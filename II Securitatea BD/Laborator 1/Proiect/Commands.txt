@@ -1,0 +1,4 @@
+1. install oracle 11g.
+2. sql developer.
+3. SQL Command line: CREATE USER database_security IDENTIFIED BY database_security;
+4. SQL Command line: GRANT CONNECT, RESOURCE, DBA TO database_security;

@@ -1,0 +1,132 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\renewcommand{\baselinestretch}{1.5} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Detection and Prevention of SQL Injection Attack} % Title of the assignment
+
+\author{Ciprian-Mihai Ceausescu\\ \texttt{ciprian-mihai.ceausescu@my.fmi.unibuc.ro}} % Author name and email address
+
+\date{University of Bucharest --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	Introduction
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction}
+\hspace{10mm}\textbf{SQL} (Structure Query Language) injection is one of threats to the applications, which are Web-based
+application, Mobile application and also Desktop application, which are connected to the database in order to make work with necessary data. By implementing SQL injection, the attacker can gain full access to the application or database. After this step, the attacker can remove or change significant data irresponsibly.
+\\ \hspace*{10mm}Applications that do not properly validate the user’s input make them vulnerable against SQL injection. SQL Injection Attacks (SQLIA) occurs when an attacker is able to insert a series of malicious SQL statements into a query through manipulating user input data for execution by the back-end database. Using this type of threats, applications could be hacked easily and steal the confidential data by the attacker.
+\\ \hspace*{10mm}Nowadays, the Internet is becoming a wide-spread information infrastructure. The Utilization and fast progress of
+the Internet infrastructure has motivated the increasing amount of data stored in a database lately. Increasing the
+number of users and the heavy dependence on digital information is led to the importance of securing data or
+information spatially if this information about commercial, corporate businesses, institutions, organizations,
+numerous financial transactions, health information, personal information and other internet based services. Via
+Internet all web applications can be accessed using any web browsers that run on any operating systems. Web
+applications have become the interface that is widely used to retrieve or insert these data or information. The
+web application with a database that stores important information is one of the targets of the SQLIA, since the
+databases are absolutely accessible by attacker by injecting SQL queries that are retrieved by web application. As
+user information is frequently kept in these databases, important information is lost and the security violate.
+
+%----------------------------------------------------------------------------------------
+%	SQL Injection attack
+%----------------------------------------------------------------------------------------
+
+\section*{SQL Injection attack} 
+\hspace*{10mm}SQL Injection is one of the most common threats to a database system in which the attacker adds SQL statement to an application form input box, to gain access the resources or make changes to data stored into database. Lack of input validation in applications causes attacker to be successful. In an SQL Injection attack, the attacker injects a string input through the application, which changes or manipulates the SQL statement to the attacker's advantage. An SQL Injection attack can harm the database in various ways, such as unauthorized manipulation of the database, or retrieval of sensitive data. It can also be used to execute system level commands that may cause the system to deny service to the application. This issue is very risky because it can cause data loss or misuse of data by parties who are not authorized and as result the functionality and confidentiality are destroyed. Basically, the process of SQLIA is illustrated in the following figure:
+\hspace*{10mm} \\
+\begin{center}
+\includegraphics[scale=1]{1}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	Risks
+%----------------------------------------------------------------------------------------
+
+\section*{Risks} 
+\hspace*{10mm}SQL injection is harmful and the risks associated with it provide motivation for attackers to attack the database. The main consequences of these vulnerabilities are attacks on the following characteristics:
+\begin{enumerate}
+\item \textbf{Authorization}: Critical data that are stored in a vulnerable SQL database may be altered by a successful
+SQLIA.
+\item \textbf{Authentication}: If there is no any proper control on input fields inside the authentication page, it may be
+possible to login into a system as a normal user without knowing the authenticated user.
+\item \textbf{Confidentially}: Usually databases are consisting of sensitive data such as personal information, credit card
+numbers and / or social numbers. Therefore, loss of confidentially is a terrible problem with SQL Injection
+vulnerability.
+\item \textbf{Integrity}: By a successful SQLIA not only an attacker reads sensitive information, but also, it is possible to
+change or delete this private information.
+\item \textbf{Database Fingerprinting}: The attacker can determine the type of database being used in backend so that he
+can use database-specific attacks that correspond to weakness in a particular database management system.
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	Classification of SQLIA
+%----------------------------------------------------------------------------------------
+
+\section*{Classical Types SQLIA}
+\begin{enumerate}
+\item \textbf{Tautologies} - Tautology-based attacks work through injecting code by one or more conditional SQL statement queries in order
+to make the SQL command evaluate as a true condition such as (1=1) or (- -).
+\begin{center}
+\includegraphics[scale=1]{2}
+\end{center}
+\item \textbf{Piggy-backed Query} - Piggy-backed queries is a type of attack that compromises a database using a query delimiter, such as
+";", to inject additional query statements to the original query.
+\begin{center}
+\includegraphics[scale=1]{3}
+\end{center}
+\item \textbf{Logically Incorrect} - Logically Incorrect attack takes advantage of the error messages that are returned by the
+database for an incorrect query.
+\begin{center}
+\includegraphics[scale=1]{4}
+\end{center}
+\item \textbf{Union query} - Union query injection is called as statement injection attack. In this attack, attacker insert
+additional statement into the original SQL statement. 
+\begin{center}
+\includegraphics[scale=1]{5}
+\end{center}
+\item \textbf{Stored Procedure} - In this technique, attacker focuses on the stored procedures which are present in the database
+system. Stored procedures run directly by the database engine. it is a piece of code which is exploitable. Stored
+procedure gives true or false values for the authorized or unauthorized clients.
+\begin{center}
+\includegraphics[scale=1]{6}
+\end{center}
+\item \textbf{Inference} - Using Inference attack enable the attacker changing the behavior of a database or application. This
+type of attack can be classified into two well-known techniques, which are: Blind injection and timing attack.
+\begin{center}
+\includegraphics[scale=1]{7}
+\end{center}
+\begin{center}
+\includegraphics[scale=1]{8}
+\end{center}
+\item \textbf{Alternate Encodings} - This type of attack occurs when attacker modify the injection query via using alternate
+encoding, such as hexadecimal, ASCII, and Unicode.
+\begin{center}
+\includegraphics[scale=1]{9}
+\end{center}
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	Bibliography
+%----------------------------------------------------------------------------------------
+\section*{Bibliography} 
+\begin{itemize}
+	\item \textbf{Detection and Prevention of SQL Injection Attack: A Survey}, Zainab S. Alwan and Manal F. Younis2
+\end{itemize}
+\end{document}
