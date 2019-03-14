@@ -1,0 +1,32 @@
+--Users
+INSERT INTO users (email, encrypted_password) VALUES ('user1@test.com','pwd1');
+INSERT INTO users (email, encrypted_password) VALUES ('user2@test.com','pwd2');
+
+UPDATE users SET encrypted_password = crypt('pwd1', gen_salt('md5')) WHERE email='user1@test.com';
+UPDATE users SET encrypted_password = crypt('pwd2', gen_salt('md5')) WHERE email='user2@test.com';
+
+--Orders
+INSERT into orders values (1, 'cash', 'curier');
+INSERT into orders values (2, 'card', 'posta');
+INSERT into orders values (3, 'card', 'curier');
+INSERT into orders values (4, 'cash', 'ridicare personala');
+
+--Users orders
+INSERT into users_orders values (1, 1, 35.45, 'strada 1');
+INSERT into users_orders values (2, 2, 85, 'strada 2');
+INSERT into users_orders values (3, 1, 925.65, 'strada 3');
+INSERT into users_orders values (4, 2, 1585, 'strada 4');
+
+--Products
+INSERT into products(name, description, price, image_url) values ('apple watch', 'watch description', '3600', 'http://watch.jpg');
+INSERT into products(name, description, price, image_url) values ('iphone', 'iphone description', '2100', 'http://iphone.jpg');
+INSERT into products(name, description, price, image_url) values ('laptop', 'laptop description', '4400', 'http://laptop.jpg');
+INSERT into products(name, description, price, image_url) values ('drone', 'drone description', '1600', 'http://drone.jpg');
+INSERT into products(name, description, price, image_url) values ('mouse', 'mouse description', '150', 'http://mouse.jpg');
+
+--Order lines
+INSERT into order_lines(product_id, order_id) values (1, 1);
+INSERT into order_lines(product_id, order_id) values (2, 1);
+INSERT into order_lines(product_id, order_id) values (3, 1);
+INSERT into order_lines(product_id, order_id) values (4, 1);
+INSERT into order_lines(product_id, order_id) values (5, 1);
