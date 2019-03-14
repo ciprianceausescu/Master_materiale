@@ -1,0 +1,59 @@
+
+--1
+select value from v$parameter where name='audit_trail';
+
+show parameter audit_trail;
+
+alter system set audit_trail=db,extended scope=spfile;
+
+audit select table;
+
+select dbms_lob.substr(sqltext, 4000, 1)
+from AUD$
+where OBJ$NAME in ('EMPLOYEES', 'JOBS', 'LOCATIONS');
+
+select count(*), OBJ$NAME, USERID
+from AUD$
+where OBJ$NAME in ('EMPLOYEES', 'JOBS', 'LOCATIONS')
+group by rollup(OBJ$NAME, USERID);
+
+--2
+alter system set audit_trail = xml scope=spfile;
+noaudit all;
+audit select, insert, update, delete on hr.employees by access whenever not successful;
+
+insert into employees values (1500, 'Tom');
+insert into employees values (206, 'Jane');
+insert into employees values (206, 'Jane', 'Smith', 'jane@hr.com', '22.33.44', '07-JUN-05', 
+                             'AC_ACCOUNT', 200, 0, 205, 110);
+
+--3
+
+create table tab_audit_emp (
+	id_secv number(4) primary key,
+	utilizator varchar2(20),
+	sesiune number(10),
+	host varchar2(100),
+	timp date,
+	delta_inreg number(5,2));
+
+create sequence secv_aud_emp start with 1 increment by 1;
+
+create or replace trigger auditare_employees_before
+before delete on hr.employees
+declare
+	st number;
+	sir varchar2(200);
+begin
+	select count(*) into st from hr.employees;
+	select substr(sys_context('userenv', 'current_sql'), 1, 200) into sir from dual;
+
+	dbms_output.put_line('Before: ' || st);
+	dbms_output.put_line('Current sql: ' || sir);
+
+	insert into tab_audit_emp values(secv_aud_emp.nextval, sys_context('userenv', 'session_user'),
+                                   sys_context('userenv', 'sessionid'), sys_context('userenv', 'host'),
+				   sysdate, st);
+end;
+/
+
